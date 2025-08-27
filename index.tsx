@@ -274,7 +274,14 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: any) =
                 {projectsData.map(project => (
                     <div className="project-card" key={project.id} onClick={() => onProjectClick(project)}>
                         <div className="project-image-container">
-                            <img src={project.imageUrl} alt={project.title} className="project-image" />
+                            <img 
+                                src={project.imageUrl} 
+                                alt={`${project.title} for ${project.client}`} 
+                                className="project-image"
+                                loading="lazy"
+                                width="600"
+                                height="400"
+                            />
                         </div>
                         <div className="project-content">
                             <p className="project-client">{project.client}</p>
@@ -483,7 +490,14 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
                         <div className="modal-section">
                             <h3 className="modal-section-title">Visuals</h3>
                             <div className="carousel">
-                                <img src={project.visuals[currentImageIndex]} alt={`Visual ${currentImageIndex + 1}`} className="carousel-image"/>
+                                <img 
+                                    src={project.visuals[currentImageIndex]} 
+                                    alt={`Visual for ${project.title} - ${currentImageIndex + 1}`} 
+                                    className="carousel-image"
+                                    loading="lazy"
+                                    width="800"
+                                    height="450"
+                                />
                                 {project.visuals.length > 1 && (
                                     <>
                                         <button onClick={prevImage} className="carousel-btn prev"><Icon name="chevron-left" /></button>
@@ -506,7 +520,10 @@ const App = () => {
 
     useEffect(() => {
         // @ts-ignore
-        feather.replace();
+        if (window.feather) {
+            // @ts-ignore
+            feather.replace();
+        }
     });
 
     useEffect(() => {
