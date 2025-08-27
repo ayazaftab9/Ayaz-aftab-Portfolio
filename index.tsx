@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 
@@ -26,7 +27,7 @@ const projectsData = [
       'Drove ₹7.95 Lakhs in Amazon Sales',
       'Generated 34,900+ Clicks from Google Ads',
       'Increased organic website traffic by 30%',
-      'Grew YouTube channel to 247,000+ views'
+      'Converted high-intent leads into sales valued from ₹5 Lakhs to ₹13 Lakhs'
     ],
     testimonial: 'Ayaz’s strategies were instrumental in our online growth. His expertise in both paid and organic channels delivered exceptional results.',
     visuals: [
@@ -49,11 +50,31 @@ const projectsData = [
     results: [
       'Generated 9,452 qualified student leads',
       'Achieved a low ₹49.86 Cost Per Lead',
-      'Optimized ad creatives for higher engagement',
+      'Managed a total ad spend of ₹4.7 Lakhs over 7 months',
       'Improved landing page conversion rates'
     ],
     testimonial: 'The lead generation campaigns run by Ayaz were a game-changer for our admissions cycle. The volume and quality of leads exceeded our expectations.',
     visuals: ['https://placehold.co/800x450/000000/FFFFFF/png?text=Meta+Ads+Manager'],
+    liveLink: '#',
+  },
+  {
+    id: 3,
+    client: 'Jaffri Creations',
+    title: 'Organic Growth & Brand Building',
+    imageUrl: 'https://placehold.co/600x400/000000/FFFFFF/png?text=YouTube',
+    keyResult: '247,000+ YouTube Views',
+    challenge: 'To build brand authority and top-of-funnel awareness through organic video content.',
+    role: 'I managed the end-to-end YouTube strategy, from content planning to channel growth and optimization.',
+    strategy: 'Focused on creating valuable content for the target audience, optimizing videos for YouTube search (YouTube SEO), and engaging with the community to foster growth.',
+    execution: 'Grew the channel by consistently publishing optimized video content, resulting in significant increases in views and watch time. This strategy was key in driving brand awareness.',
+    results: [
+      'Accumulated over 247,000 views',
+      'Achieved 5,200+ hours of watch time',
+      'Played a key role in building brand authority',
+      'Drove top-of-funnel awareness'
+    ],
+    testimonial: "Ayaz's work on our YouTube channel has been phenomenal. He built it from the ground up into a significant source of brand discovery for us.",
+    visuals: ['https://placehold.co/800x450/000000/FFFFFF/png?text=YouTube+Analytics'],
     liveLink: '#',
   },
 ];
@@ -65,6 +86,13 @@ const testimonialsData = [
         quote: 'Ayaz’s strategies were instrumental in our online growth. His expertise in both paid and organic channels delivered exceptional results, helping us achieve significant revenue milestones and expand our digital footprint.',
         author: 'Jaffri',
         title: 'Founder, Jaffri Creations'
+    },
+    {
+        projectId: 2,
+        logoUrl: 'https://placehold.co/100x40/000000/FFFFFF/png?text=MTEI',
+        quote: 'The lead generation campaigns run by Ayaz were a game-changer. The sheer volume and quality of qualified leads exceeded our expectations, all while maintaining an impressively low cost-per-lead.',
+        author: 'MTEI Services',
+        title: 'Admissions Director, MTEI'
     }
 ];
 
@@ -186,7 +214,7 @@ const Hero = () => {
                     <span className="typing-cursor"></span>
                 </h2>
                 <p className="hero-summary">
-                    I architect and execute full-funnel strategies that generate leads, boost sales, and enhance brand authority across multiple digital marketing channels.
+                    Results-driven Digital Marketing Specialist with 5+ years of experience specializing in SEO, PPC, and full-funnel eCommerce management. Proven expertise in generating over 15,000 leads, driving ₹7.95 Lakhs in Amazon sales, and increasing organic website traffic by 30% through comprehensive content and SEO strategies.
                 </p>
                 <div className="hero-cta">
                     <a href="#projects" className="btn btn-primary">View My Work</a>
@@ -194,7 +222,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-socials">
                     <a href="mailto:ayazaftab9@gmail.com" className="social-link"><Icon name="mail" /></a>
-                    <a href="https://www.linkedin.com/in/ayaz-aftab-dm" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
+                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
                     <a href="#" className="social-link"><Icon name="twitter" /></a>
                     <a href="#" className="social-link"><Icon name="github" /></a>
                 </div>
@@ -218,17 +246,17 @@ const ProvenImpact = () => (
                 </div>
                 <div className="impact-card">
                     <p className="impact-metric">₹7.95 L+</p>
-                    <p className="impact-label">eCommerce Revenue</p>
+                    <p className="impact-label">Amazon Sales</p>
                 </div>
                 <div className="impact-card">
                      <Icon name="trending-up" size={32} />
-                    <p className="impact-metric">+20%</p>
-                    <p className="impact-label">Avg. Client Acquisition</p>
+                    <p className="impact-metric">+30%</p>
+                    <p className="impact-label">Organic Traffic Growth</p>
                 </div>
                 <div className="impact-card">
                     <Icon name="map-pin" size={32} />
-                    <p className="impact-metric">1,300+</p>
-                    <p className="impact-label">Local Customer Actions</p>
+                    <p className="impact-metric">1,465+</p>
+                    <p className="impact-label">Local Customer Interactions</p>
                 </div>
             </div>
         </AnimatedSection>
@@ -290,6 +318,21 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => vo
     </section>
 );
 
+const Education = () => (
+    <section id="education">
+        <AnimatedSection className="container">
+            <div className="section-header">
+                <h2 className="section-title">Education</h2>
+            </div>
+            <div className="education-item">
+                <h3 className="education-degree">Diploma in Computer Science and Engineering</h3>
+                <p className="education-university">Arka Jain University | Jamshedpur, Jharkhand</p>
+                <p className="education-date">Completed: Jul 2021</p>
+            </div>
+        </AnimatedSection>
+    </section>
+);
+
 const Skills = () => (
     <section id="skills">
         <AnimatedSection className="container">
@@ -300,20 +343,31 @@ const Skills = () => (
                 <div className="skills-category">
                     <div className="skills-header"><Icon name="star" /> <h3 className="skills-title">Core Competencies</h3></div>
                     <ul className="skills-list">
-                        {['Digital Marketing Strategy', 'PPC Campaigns', 'eCommerce Management', 'SEO', 'Lead Generation', 'CRO', 'Data Analysis'].map(s => <li key={s} className="skill-item">{s}</li>)}
+                        {['SEO', 'PPC', 'SEM', 'Performance Marketing', 'eCommerce Management', 'Content Strategy', 'Video Marketing & YouTube SEO', 'CRM Integration', 'Google Ads', 'Meta Ads', 'UI/UX Design', 'CRO'].map(s => <li key={s} className="skill-item">{s}</li>)}
                     </ul>
                 </div>
                 <div className="skills-category">
                      <div className="skills-header"><Icon name="tool" /> <h3 className="skills-title">Technical Stack</h3></div>
                     <ul className="skills-list">
-                        {['Google Ads', 'Meta Ads', 'Amazon Seller Central', 'SEMrush/Ahrefs/Moz', 'Google Analytics (GA4)', 'Google Tag Manager', 'Shopify', 'CRM (HubSpot, Zoho)'].map(s => <li key={s} className="skill-item">{s}</li>)}
+                        {['JavaScript, HTML, CSS', 'Google Analytics', 'Google Tag Manager', 'Semrush', 'WordPress', 'WooCommerce', 'Amazon Seller Central', 'Google Business Profile'].map(s => <li key={s} className="skill-item">{s}</li>)}
                     </ul>
                 </div>
                 <div className="skills-category">
                     <div className="skills-header"><Icon name="award" /> <h3 className="skills-title">Certifications</h3></div>
-                    <ul className="skills-list">
-                        {['Google Ads Certified', 'Google Analytics IQ Certified', 'HubSpot Inbound Marketing', 'Meta Certified', 'SEMrush SEO Toolkit', 'Shopify Product Fundamentals'].map(s => <li key={s} className="skill-item">{s}</li>)}
-                    </ul>
+                    <div className="certifications-list">
+                        <div className="certification-group">
+                            <strong>Google:</strong> The Fundamentals of Digital Marketing, Google Ads, Google Analytics, AI-Powered Performance Ads, AI-Powered Shopping Ads, Conversion Optimization.
+                        </div>
+                        <div className="certification-group">
+                            <strong>Semrush:</strong> Semrush SEO Certification, Mastering YouTube Search Trends & SEO Strategies.
+                        </div>
+                         <div className="certification-group">
+                            <strong>YouTube:</strong> YouTube Music Certification, YouTube Music Rights Management.
+                        </div>
+                         <div className="certification-group">
+                            <strong>Udacity:</strong> Foundation of Digital Marketing (Nanodegree).
+                        </div>
+                    </div>
                 </div>
             </div>
         </AnimatedSection>
@@ -325,12 +379,12 @@ const Footer = () => (
          <AnimatedSection className="container">
             <div className="section-header">
                 <h2 className="section-title">Get In Touch</h2>
-                <p className="section-subtitle">Have a project in mind or a full-time role to discuss? Let's connect. <br/> The fastest way to get in touch is to book a call.</p>
+                <p className="section-subtitle">Have a project in mind or a role to discuss? Let's connect on LinkedIn or book a call.</p>
             </div>
             <a href="#" className="btn btn-primary">Book an Introductory Call</a>
             <div className="hero-socials footer-socials">
                 <a href="mailto:ayazaftab9@gmail.com" className="social-link"><Icon name="mail" /></a>
-                <a href="https://www.linkedin.com/in/ayaz-aftab-dm" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
+                <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
                 <a href="#" className="social-link"><Icon name="twitter" /></a>
                 <a href="#" className="social-link"><Icon name="github" /></a>
             </div>
@@ -353,6 +407,8 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
         return () => window.removeEventListener('keydown', handleEsc);
     }, [onClose]);
 
+    if (!project) return null;
+
     return (
         <div className="modal-overlay" onClick={onClose}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -360,58 +416,91 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
                 <img src={project.imageUrl} alt={project.title} className="modal-header-image" />
                 <div className="modal-body">
                     <h2 className="section-title">{project.title}</h2>
-                    <p className="section-subtitle">{project.client}</p>
-                    
+                    <p className="project-client">{project.client}</p>
+
                     <div className="modal-section">
-                        <h3 className="modal-section-title">The Challenge</h3>
-                        <p className="text-secondary">{project.challenge}</p>
+                        <h3 className="modal-section-title">Challenge</h3>
+                        <p>{project.challenge}</p>
                     </div>
+
                      <div className="modal-section">
                         <h3 className="modal-section-title">My Role</h3>
-                        <p className="text-secondary">{project.role}</p>
+                        <p>{project.role}</p>
                     </div>
+
                      <div className="modal-section">
-                        <h3 className="modal-section-title">Strategy & Execution</h3>
-                        <p className="text-secondary">{project.strategy}</p>
-                        <br/>
-                        <p className="text-secondary">{project.execution}</p>
+                        <h3 className="modal-section-title">Strategy</h3>
+                        <p>{project.strategy}</p>
                     </div>
-                     <div className="modal-section">
-                        <h3 className="modal-section-title">Results</h3>
+
+                    <div className="modal-section">
+                        <h3 className="modal-section-title">Execution</h3>
+                        <p>{project.execution}</p>
+                    </div>
+
+                    <div className="modal-section">
+                        <h3 className="modal-section-title">Key Results</h3>
                         <ul className="modal-results-list">
-                            {project.results.map((result: string) => (
-                                <li key={result} className="modal-result-item"><Icon name="check-circle" size={20} /> <span>{result}</span></li>
+                            {project.results.map((result: string, index: number) => (
+                                <li key={index} className="modal-result-item">
+                                    <Icon name="check-circle" size={16} />
+                                    <span>{result}</span>
+                                </li>
                             ))}
                         </ul>
                     </div>
-                     <div className="modal-section">
-                        <h3 className="modal-section-title">Client Testimonial</h3>
-                        <p className="testimonial-quote">"{project.testimonial}"</p>
-                    </div>
-                     <div className="modal-section">
-                        <h3 className="modal-section-title">Visual Proof</h3>
-                        <div className="carousel">
-                           <img src={project.visuals[currentImageIndex]} alt="Project visual" className="carousel-image"/>
-                           {project.visuals.length > 1 && <>
-                                <button className="carousel-btn prev" onClick={prevImage}><Icon name="chevron-left" /></button>
-                                <button className="carousel-btn next" onClick={nextImage}><Icon name="chevron-right" /></button>
-                           </>}
+                    
+                    {project.visuals && project.visuals.length > 0 && (
+                        <div className="modal-section">
+                            <h3 className="modal-section-title">Visuals</h3>
+                            <div className="carousel">
+                                <img src={project.visuals[currentImageIndex]} alt={`Visual ${currentImageIndex + 1}`} className="carousel-image"/>
+                                {project.visuals.length > 1 && (
+                                    <>
+                                        <button onClick={prevImage} className="carousel-btn prev"><Icon name="chevron-left" /></button>
+                                        <button onClick={nextImage} className="carousel-btn next"><Icon name="chevron-right" /></button>
+                                    </>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-secondary">View Live Project</a>
+                    )}
+
+                    {project.testimonial && (
+                         <div className="modal-section">
+                            <h3 className="modal-section-title">Testimonial</h3>
+                            <blockquote className="testimonial-quote">"{project.testimonial}"</blockquote>
+                        </div>
+                    )}
+                    
+                    {project.liveLink && project.liveLink !== '#' && (
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">View Live Project</a>
+                    )}
                 </div>
             </div>
         </div>
     );
 };
 
+
 const App = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
 
     useEffect(() => {
-        (window as any).feather?.replace();
+        // @ts-ignore
+        feather.replace();
+    });
+
+    useEffect(() => {
+        if (isMenuOpen || selectedProject) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
     }, [isMenuOpen, selectedProject]);
+
+    const handleProjectClick = (project: any) => setSelectedProject(project);
+    const handleCloseModal = () => setSelectedProject(null);
 
     return (
         <>
@@ -420,16 +509,19 @@ const App = () => {
             <main>
                 <Hero />
                 <ProvenImpact />
-                <FeaturedProjects onProjectClick={setSelectedProject} />
-                <Testimonials onProjectClick={setSelectedProject} />
+                <FeaturedProjects onProjectClick={handleProjectClick} />
+                <Testimonials onProjectClick={handleProjectClick} />
+                <Education />
                 <Skills />
             </main>
             <Footer />
-            {selectedProject && <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />}
+            {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
         </>
     );
 };
 
 const container = document.getElementById('root');
-const root = createRoot(container!);
-root.render(<App />);
+if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+}
