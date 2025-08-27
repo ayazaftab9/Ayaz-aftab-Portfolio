@@ -274,7 +274,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: any) =
                 {projectsData.map(project => (
                     <div className="project-card" key={project.id} onClick={() => onProjectClick(project)}>
                         <div className="project-image-container">
-                            <img src={project.imageUrl} alt={project.title} className="project-image" loading="lazy" />
+                            <img src={project.imageUrl} alt={project.title} className="project-image" />
                         </div>
                         <div className="project-content">
                             <p className="project-client">{project.client}</p>
@@ -298,7 +298,7 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => vo
                 {testimonialsData.map(testimonial => (
                     <div className="testimonial-card" key={testimonial.projectId}>
                         <div className="testimonial-header">
-                            <img src={testimonial.logoUrl} alt="Client Logo" className="testimonial-logo" loading="lazy" />
+                            <img src={testimonial.logoUrl} alt="Client Logo" className="testimonial-logo" />
                             <div className="stars">
                                 ★★★★★
                             </div>
@@ -408,7 +408,10 @@ const Footer = () => (
 );
 
 const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void }) => {
-    const galleryRef = useRef<HTMLDivElement>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const nextImage = () => setCurrentImageIndex((i) => (i + 1) % project.visuals.length);
+    const prevImage = () => setCurrentImageIndex((i) => (i - 1 + project.visuals.length) % project.visuals.length);
 
     useEffect(() => {
         const handleEsc = (event: KeyboardEvent) => {
@@ -417,32 +420,6 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
         window.addEventListener('keydown', handleEsc);
         return () => window.removeEventListener('keydown', handleEsc);
     }, [onClose]);
-
-    useEffect(() => {
-        if (!galleryRef.current || !project?.visuals?.length) {
-            return;
-        }
-
-        const container = galleryRef.current;
-        // @ts-ignore
-        const gallery = lightGallery(container, {
-            dynamic: true,
-            dynamicEl: project.visuals.map((url: string) => ({ src: url, thumb: url })),
-            download: false,
-            counter: project.visuals.length > 1,
-            // @ts-ignore
-            plugins: [lgZoom, lgThumbnail],
-        });
-        
-        const openGallery = () => gallery.openGallery(0);
-        container.addEventListener('click', openGallery);
-
-        return () => {
-            container.removeEventListener('click', openGallery);
-            gallery.destroy();
-        };
-    }, [project]);
-
 
     if (!project) return null;
 
@@ -505,13 +482,14 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
                     {project.visuals && project.visuals.length > 0 && (
                         <div className="modal-section">
                             <h3 className="modal-section-title">Visuals</h3>
-                            <div ref={galleryRef} className="visuals-gallery" aria-label="Project visuals gallery, click to open">
-                                <img src={project.visuals[0]} alt={'Visual 1'} className="visuals-gallery-image"/>
-                                <div className="visuals-gallery-overlay">
-                                    <Icon name="zoom-in" size={32} />
-                                    {project.visuals.length > 1 && <p>View Gallery ({project.visuals.length} images)</p>}
-                                    {project.visuals.length === 1 && <p>View Image</p>}
-                                </div>
+                            <div className="carousel">
+                                <img src={project.visuals[currentImageIndex]} alt={`Visual ${currentImageIndex + 1}`} className="carousel-image"/>
+                                {project.visuals.length > 1 && (
+                                    <>
+                                        <button onClick={prevImage} className="carousel-btn prev"><Icon name="chevron-left" /></button>
+                                        <button onClick={nextImage} className="carousel-btn next"><Icon name="chevron-right" /></button>
+                                    </>
+                                )}
                             </div>
                         </div>
                     )}
@@ -529,7 +507,7 @@ const App = () => {
     useEffect(() => {
         // @ts-ignore
         feather.replace();
-    }, [isMenuOpen, selectedProject]);
+    });
 
     useEffect(() => {
         if (isMenuOpen || selectedProject) {
