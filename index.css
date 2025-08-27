@@ -243,7 +243,7 @@ section {
     color: var(--text-secondary);
     white-space: nowrap; /* Prevent wrapping during typing */
     display: inline-block;
-    height: 1.2em; /* Reserve space to prevent layout shift */
+    min-height: 1.2em; /* Reserve space to prevent layout shift */
 }
 
 .hero-dynamic-subheading .typing-text {
@@ -723,6 +723,10 @@ section {
 @media (max-width: 768px) {
     section { padding: 4rem 0; }
     .hero { padding-top: 10rem; }
+    .hero-dynamic-subheading {
+        white-space: normal;
+        min-height: 2.4em; /* Accommodate two lines */
+    }
     .section-title { font-size: 2.5rem; }
     .impact-grid { grid-template-columns: repeat(2, 1fr); }
     .projects-grid { grid-template-columns: 1fr; }
