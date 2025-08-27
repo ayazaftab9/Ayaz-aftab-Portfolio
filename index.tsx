@@ -114,26 +114,28 @@ const Logo = () => (
 
 const AnimatedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
     const ref = useRef<HTMLDivElement>(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        const currentRef = ref.current;
+        if (!currentRef) return;
+
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
-                    setIsVisible(true);
+                    entry.target.classList.add('is-visible');
                     observer.unobserve(entry.target);
                 }
             },
             { threshold: 0.1 }
         );
-        if (ref.current) observer.observe(ref.current);
+        observer.observe(currentRef);
         return () => {
-            if (ref.current) observer.unobserve(ref.current);
+            observer.unobserve(currentRef);
         };
     }, []);
 
     return (
-        <div ref={ref} className={`fade-in-section ${isVisible ? 'is-visible' : ''} ${className}`}>
+        <div ref={ref} className={`fade-in-section ${className}`}>
             {children}
         </div>
     );
@@ -193,40 +195,54 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 
 const Hero = () => {
     const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing', 'Social Media Marketing', 'Content Strategy', 'CRO', 'SEM']).current;
-    const [index, setIndex] = useState(0);
-    const [subIndex, setSubIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-    
-    const typingSpeed = 100;
-    const deletingSpeed = 50;
-    const delay = 2000;
+    const typingTextRef = useRef<HTMLSpanElement>(null);
 
     useEffect(() => {
-        // End of typing: pause then start deleting
-        if (subIndex === specializations[index].length && !isDeleting) {
-            const timer = setTimeout(() => {
-                setIsDeleting(true);
-            }, delay);
-            return () => clearTimeout(timer);
-        }
+        let index = 0;
+        let subIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const delay = 2000;
+        let timeoutId: number;
 
-        // End of deleting: move to next word
-        if (subIndex === 0 && isDeleting) {
-            setIsDeleting(false);
-            setIndex(prevIndex => (prevIndex + 1) % specializations.length);
-            return; // Return to avoid setting another timeout
-        }
+        const type = () => {
+            const currentWord = specializations[index];
 
-        // Typing/deleting interval
-        const timeout = setTimeout(() => {
-            setSubIndex(prevSubIndex => prevSubIndex + (isDeleting ? -1 : 1));
-        }, isDeleting ? deletingSpeed : typingSpeed);
-        
-        return () => clearTimeout(timeout);
+            if (isDeleting) {
+                subIndex--;
+            } else {
+                subIndex++;
+            }
 
-    }, [subIndex, index, isDeleting, specializations, delay, deletingSpeed, typingSpeed]);
+            if (typingTextRef.current) {
+                typingTextRef.current.textContent = currentWord.substring(0, subIndex);
+            }
 
-    const displayText = specializations[index].substring(0, subIndex);
+            // Finished deleting
+            if (isDeleting && subIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % specializations.length;
+                timeoutId = window.setTimeout(type, typingSpeed);
+            }
+            // Finished typing
+            else if (!isDeleting && subIndex === currentWord.length) {
+                isDeleting = true;
+                timeoutId = window.setTimeout(type, delay);
+            }
+            // Continue typing/deleting
+            else {
+                timeoutId = window.setTimeout(type, isDeleting ? deletingSpeed : typingSpeed);
+            }
+        };
+
+        type(); // Start the animation
+
+        return () => {
+            clearTimeout(timeoutId);
+        };
+    }, [specializations]);
+
 
     return (
         <section className="hero">
@@ -234,7 +250,7 @@ const Hero = () => {
                 <h1 className="hero-headline">
                     Hi, I'm <span className="gradient-text">Ayaz Aftab</span>.
                     <br />
-                    <span className="hero-dynamic-subheading">I specialise in <span className="typing-text">{displayText}</span><span className="cursor"></span></span>
+                    <span className="hero-dynamic-subheading">I specialise in <span ref={typingTextRef} className="typing-text"></span><span className="cursor"></span></span>
                 </h1>
                 <p className="hero-summary">
                     Results-driven specialist with 5+ years of experience in SEO, PPC, and full-funnel eCommerce management. I help businesses drive revenue growth through data-driven strategies that generate leads, boost sales, and increase organic traffic.
@@ -670,6 +686,9 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
 };
 
 
+const LazyProjectModal = React.lazy(() => Promise.resolve({ default: ProjectModal }));
+const LazyOffCanvasMenu = React.lazy(() => Promise.resolve({ default: OffCanvasMenu }));
+
 const App = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -680,7 +699,7 @@ const App = () => {
             // @ts-ignore
             feather.replace();
         }
-    });
+    }, []);
 
     useEffect(() => {
         if (isMenuOpen || selectedProject) {
@@ -700,7 +719,9 @@ const App = () => {
     return (
         <>
             <Header onMenuClick={() => setIsMenuOpen(true)} />
-            <OffCanvasMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+             <React.Suspense fallback={<div>Loading...</div>}>
+                <LazyOffCanvasMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+            </React.Suspense>
             <main>
                 <Hero />
                 <ProvenImpact />
@@ -711,7 +732,9 @@ const App = () => {
                 <Skills />
             </main>
             <Footer />
-            {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
+            <React.Suspense fallback={<div></div>}>
+                {selectedProject && <LazyProjectModal project={selectedProject} onClose={handleCloseModal} />}
+            </React.Suspense>
         </>
     );
 };
