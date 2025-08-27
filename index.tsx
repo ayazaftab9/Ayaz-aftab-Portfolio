@@ -153,23 +153,42 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => (
 );
 
 const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
-    if (!isOpen) return null;
+    // This outer div handles the overlay click to close
     return (
-        <div className="off-canvas-menu-overlay open" onClick={onClose}>
+        <div className={`off-canvas-menu-overlay ${isOpen ? 'open' : ''}`} onClick={onClose}>
+            {/* This inner div is the menu itself, stopping click propagation */}
             <div className={`off-canvas-menu ${isOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
-                <button onClick={onClose} className="close-menu-btn" aria-label="Close menu">
-                    <Icon name="x" />
-                </button>
+                <div className="off-canvas-header">
+                     <a href="#" className="logo-container" onClick={onClose}>
+                        <div className="logo-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                               <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
+                               <path d="M50 33 L44 43 L50 53 L56 43 Z" />
+                            </svg>
+                        </div>
+                        <span className="logo-text">Ayaz Aftab</span>
+                    </a>
+                    <button onClick={onClose} className="close-menu-btn" aria-label="Close menu">
+                        <Icon name="x" />
+                    </button>
+                </div>
                 <nav className="menu-links">
-                    <a href="#projects" onClick={onClose} className="menu-link">Projects</a>
-                    <a href="#skills" onClick={onClose} className="menu-link">Skills</a>
-                    <a href="#contact" onClick={onClose} className="menu-link">Contact</a>
+                    <a href="#projects" onClick={onClose} className="menu-link"><Icon name="briefcase" size={20}/> Projects</a>
+                    <a href="#skills" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={20}/> Skills</a>
+                    <a href="#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={20}/> Contact</a>
                 </nav>
-                <a href="#" className="btn btn-primary menu-resume-btn">Download Resume</a>
+                 <a href="#" className="btn btn-primary menu-resume-btn">Download Resume</a>
+
+                <div className="off-canvas-footer">
+                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
+                    <a href="#" className="social-link"><Icon name="twitter" /></a>
+                    <a href="#" className="social-link"><Icon name="github" /></a>
+                </div>
             </div>
         </div>
     );
 };
+
 
 const Hero = () => {
     const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing']).current;
@@ -383,36 +402,108 @@ const Skills = () => (
     </section>
 );
 
-const Footer = () => (
-    <footer id="contact" className="footer">
-         <AnimatedSection className="container">
-            <div className="footer-content">
-                <h2 className="footer-title">Let's build together.</h2>
-                <p className="footer-subtitle">Have a project in mind or a role to discuss? Let's connect.</p>
-                <div className="hero-cta footer-cta">
-                    <a href="mailto:ayazaftab9@gmail.com" className="btn btn-primary">ayazaftab9@gmail.com</a>
-                    <a href="#" className="btn btn-secondary">Book a Call</a>
-                </div>
-                <div className="hero-socials footer-socials">
-                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
-                    <a href="#" className="social-link"><Icon name="twitter" /></a>
-                    <a href="#" className="social-link"><Icon name="github" /></a>
-                </div>
-            </div>
-            <div className="footer-bottom">
-                 <a href="#" className="logo-container">
-                    <div className="logo-icon">
-                         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                           <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
-                           <path d="M50 33 L44 43 L50 53 L56 43 Z" />
-                        </svg>
+const Footer = () => {
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+    const [statusMessage, setStatusMessage] = useState('');
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!formData.name || !formData.email || !formData.message) {
+            setStatusMessage('Please fill out all fields.');
+            setTimeout(() => setStatusMessage(''), 3000);
+            return;
+        }
+
+        const subject = `New Message from ${formData.name}`;
+        const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
+        const mailtoLink = `mailto:ayazaftab9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        window.location.href = mailtoLink;
+
+        setStatusMessage('Your message is ready to send!');
+        setFormData({ name: '', email: '', message: '' });
+        setTimeout(() => setStatusMessage(''), 4000);
+    };
+
+    return (
+        <footer id="contact" className="footer">
+             <AnimatedSection className="container">
+                <div className="footer-content">
+                    <h2 className="footer-title">Let's build together.</h2>
+                    <p className="footer-subtitle">Have a project in mind or a role to discuss? Let's connect.</p>
+                    
+                    <form className="contact-form" onSubmit={handleSubmit}>
+                        <div className="form-row">
+                             <div className="form-group">
+                                <label htmlFor="name" className="form-label">Your Name</label>
+                                <input 
+                                    type="text" 
+                                    id="name"
+                                    name="name" 
+                                    className="form-input" 
+                                    placeholder="e.g., John Doe" 
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    required 
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email" className="form-label">Your Email</label>
+                                <input 
+                                    type="email" 
+                                    id="email"
+                                    name="email" 
+                                    className="form-input" 
+                                    placeholder="e.g., john.doe@example.com"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    required 
+                                />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                             <label htmlFor="message" className="form-label">Message</label>
+                            <textarea 
+                                id="message"
+                                name="message" 
+                                className="form-textarea" 
+                                placeholder="Tell me about your project..."
+                                rows={5}
+                                value={formData.message}
+                                onChange={handleInputChange}
+                                required>
+                            </textarea>
+                        </div>
+                        <button type="submit" className="btn btn-primary form-submit-btn">Send Message</button>
+                        {statusMessage && <p className="form-status-message">{statusMessage}</p>}
+                    </form>
+
+                    <div className="hero-socials footer-socials">
+                        <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
+                        <a href="#" className="social-link"><Icon name="twitter" /></a>
+                        <a href="#" className="social-link"><Icon name="github" /></a>
                     </div>
-                </a>
-                <p className="copyright">&copy; {new Date().getFullYear()} Ayaz Aftab</p>
-            </div>
-         </AnimatedSection>
-    </footer>
-);
+                </div>
+                <div className="footer-bottom">
+                     <a href="#" className="logo-container">
+                        <div className="logo-icon">
+                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                               <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
+                               <path d="M50 33 L44 43 L50 53 L56 43 Z" />
+                            </svg>
+                        </div>
+                    </a>
+                    <p className="copyright">&copy; {new Date().getFullYear()} Ayaz Aftab</p>
+                </div>
+             </AnimatedSection>
+        </footer>
+    );
+};
 
 const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
