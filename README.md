@@ -66,4 +66,4 @@ This site is automatically deployed to Vercel. Every push to the `main` branch t
 
 ## 📧 Contact
 
-Ayaz Aftab - [LinkedIn](https://www.linkedin.com/in/ayazaftab9/) - ayazaftab9@gmail.com
+Ayaz Aftab - [LinkedIn](https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist) - ayazaftab9@gmail.com
