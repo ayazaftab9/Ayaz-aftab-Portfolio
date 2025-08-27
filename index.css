@@ -237,6 +237,40 @@ section {
   text-fill-color: transparent;
 }
 
+.hero-dynamic-subheading {
+    font-weight: 400;
+    font-size: 0.8em; /* Slightly smaller than main headline */
+    color: var(--text-secondary);
+    white-space: nowrap; /* Prevent wrapping during typing */
+    display: inline-block;
+    height: 1.2em; /* Reserve space to prevent layout shift */
+}
+
+.hero-dynamic-subheading .typing-text {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-weight: 600;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.8em;
+    background-color: var(--text-primary);
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    vertical-align: baseline;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 .hero-summary {
   font-size: 1.25rem;
   color: var(--text-secondary);

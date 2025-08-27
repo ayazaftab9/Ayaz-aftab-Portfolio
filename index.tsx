@@ -172,13 +172,49 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 };
 
 const Hero = () => {
+    const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing']).current;
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [isDeleting, setIsDeleting] = useState(false);
+    
+    const typingSpeed = 100;
+    const deletingSpeed = 50;
+    const delay = 2000;
+
+    useEffect(() => {
+        // End of typing: pause then start deleting
+        if (subIndex === specializations[index].length && !isDeleting) {
+            const timer = setTimeout(() => {
+                setIsDeleting(true);
+            }, delay);
+            return () => clearTimeout(timer);
+        }
+
+        // End of deleting: move to next word
+        if (subIndex === 0 && isDeleting) {
+            setIsDeleting(false);
+            setIndex(prevIndex => (prevIndex + 1) % specializations.length);
+            return; // Return to avoid setting another timeout
+        }
+
+        // Typing/deleting interval
+        const timeout = setTimeout(() => {
+            setSubIndex(prevSubIndex => prevSubIndex + (isDeleting ? -1 : 1));
+        }, isDeleting ? deletingSpeed : typingSpeed);
+        
+        return () => clearTimeout(timeout);
+
+    }, [subIndex, index, isDeleting, specializations, delay, deletingSpeed, typingSpeed]);
+
+    const displayText = specializations[index].substring(0, subIndex);
+
     return (
         <section className="hero">
             <AnimatedSection className="container">
                 <h1 className="hero-headline">
                     Hi, I'm <span className="gradient-text">Ayaz Aftab</span>.
                     <br />
-                    Digital Marketing & eCommerce Specialist.
+                    <span className="hero-dynamic-subheading">I specialise in <span className="typing-text">{displayText}</span><span className="cursor"></span></span>
                 </h1>
                 <p className="hero-summary">
                     Results-driven specialist with 5+ years of experience in SEO, PPC, and full-funnel eCommerce management. I help businesses drive revenue growth through data-driven strategies that generate leads, boost sales, and increase organic traffic.
