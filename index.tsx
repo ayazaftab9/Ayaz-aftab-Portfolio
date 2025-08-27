@@ -17,7 +17,7 @@ const projectsData = [
     id: 1,
     client: 'Jaffri Creations',
     title: 'Multi-Platform Revenue Generation',
-    imageUrl: 'https://placehold.co/600x400/000000/FFFFFF/png?text=JC',
+    imageUrl: 'https://picsum.photos/seed/jc-project/600/400',
     keyResult: '₹7.95 Lakhs Revenue',
     challenge: 'To establish a strong eCommerce presence and generate revenue through multiple online channels including Amazon and direct-to-consumer.',
     role: 'As the lead Digital Marketing Executive, I was responsible for end-to-end eCommerce strategy, PPC campaign management, and SEO.',
@@ -31,9 +31,9 @@ const projectsData = [
     ],
     testimonial: 'Ayaz’s strategies were instrumental in our online growth. His expertise in both paid and organic channels delivered exceptional results.',
     visuals: [
-        'https://placehold.co/800x450/000000/FFFFFF/png?text=Dashboard',
-        'https://placehold.co/800x450/000000/FFFFFF/png?text=Ad+Creative',
-        'https://placehold.co/800x450/000000/FFFFFF/png?text=Analytics'
+        'https://picsum.photos/seed/jc-dashboard/800/450',
+        'https://picsum.photos/seed/jc-ad/800/450',
+        'https://picsum.photos/seed/jc-analytics/800/450'
     ],
     liveLink: '#',
   },
@@ -41,7 +41,7 @@ const projectsData = [
     id: 2,
     client: 'MTEI Services',
     title: 'High-Volume Lead Generation Engine',
-    imageUrl: 'https://placehold.co/600x400/000000/FFFFFF/png?text=MTEI',
+    imageUrl: 'https://picsum.photos/seed/mtei-project/600/400',
     keyResult: '9,452 Qualified Leads',
     challenge: 'The primary goal was to generate a high volume of qualified leads for student admissions at a low Cost Per Lead (CPL).',
     role: 'I served as a Freelance Digital Marketing Specialist, focusing on Meta Ads and content strategy.',
@@ -54,14 +54,14 @@ const projectsData = [
       'Improved landing page conversion rates'
     ],
     testimonial: 'The lead generation campaigns run by Ayaz were a game-changer for our admissions cycle. The volume and quality of leads exceeded our expectations.',
-    visuals: ['https://placehold.co/800x450/000000/FFFFFF/png?text=Meta+Ads+Manager'],
+    visuals: ['https://picsum.photos/seed/mtei-ads/800/450'],
     liveLink: '#',
   },
   {
     id: 3,
     client: 'Jaffri Creations',
     title: 'Organic Growth & Brand Building',
-    imageUrl: 'https://placehold.co/600x400/000000/FFFFFF/png?text=YouTube',
+    imageUrl: 'https://picsum.photos/seed/youtube-project/600/400',
     keyResult: '247,000+ YouTube Views',
     challenge: 'To build brand authority and top-of-funnel awareness through organic video content.',
     role: 'I managed the end-to-end YouTube strategy, from content planning to channel growth and optimization.',
@@ -74,7 +74,7 @@ const projectsData = [
       'Drove top-of-funnel awareness'
     ],
     testimonial: "Ayaz's work on our YouTube channel has been phenomenal. He built it from the ground up into a significant source of brand discovery for us.",
-    visuals: ['https://placehold.co/800x450/000000/FFFFFF/png?text=YouTube+Analytics'],
+    visuals: ['https://picsum.photos/seed/youtube-analytics/800/450'],
     liveLink: '#',
   },
 ];
@@ -82,14 +82,14 @@ const projectsData = [
 const testimonialsData = [
     {
         projectId: 1,
-        logoUrl: 'https://placehold.co/100x40/000000/FFFFFF/png?text=Jaffri',
+        logoUrl: 'https://picsum.photos/seed/jaffri-logo/100/40',
         quote: 'Ayaz’s strategies were instrumental in our online growth. His expertise in both paid and organic channels delivered exceptional results, helping us achieve significant revenue milestones and expand our digital footprint.',
         author: 'Jaffri',
         title: 'Founder, Jaffri Creations'
     },
     {
         projectId: 2,
-        logoUrl: 'https://placehold.co/100x40/000000/FFFFFF/png?text=MTEI',
+        logoUrl: 'https://picsum.photos/seed/mtei-logo/100/40',
         quote: 'The lead generation campaigns run by Ayaz were a game-changer. The sheer volume and quality of qualified leads exceeded our expectations, all while maintaining an impressively low cost-per-lead.',
         author: 'MTEI Services',
         title: 'Admissions Director, MTEI'
@@ -101,6 +101,16 @@ const testimonialsData = [
 const Icon = ({ name, size = 24 }: { name: string; size?: number }) => (
     <i data-feather={name} width={size} height={size}></i>
 );
+
+const Logo = () => (
+    <div className="logo-icon">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+           <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
+           <path d="M50 33 L44 43 L50 53 L56 43 Z" />
+        </svg>
+    </div>
+);
+
 
 const AnimatedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
     const ref = useRef<HTMLDivElement>(null);
@@ -136,12 +146,7 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => (
         <div className="container">
             <nav className="nav">
                 <a href="#" className="logo-container">
-                    <div className="logo-icon">
-                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                           <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
-                           <path d="M50 33 L44 43 L50 53 L56 43 Z" />
-                        </svg>
-                    </div>
+                    <Logo />
                     <span className="logo-text">Ayaz Aftab</span>
                 </a>
                 <button onClick={onMenuClick} className="menu-icon" aria-label="Open menu">
@@ -160,12 +165,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             <div className={`off-canvas-menu ${isOpen ? 'open' : ''}`} onClick={(e) => e.stopPropagation()}>
                 <div className="off-canvas-header">
                      <a href="#" className="logo-container" onClick={onClose}>
-                        <div className="logo-icon">
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                               <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
-                               <path d="M50 33 L44 43 L50 53 L56 43 Z" />
-                            </svg>
-                        </div>
+                        <Logo />
                         <span className="logo-text">Ayaz Aftab</span>
                     </a>
                     <button onClick={onClose} className="close-menu-btn" aria-label="Close menu">
@@ -180,9 +180,9 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                  <a href="#" className="btn btn-primary menu-resume-btn">Download Resume</a>
 
                 <div className="off-canvas-footer">
-                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
-                    <a href="#" className="social-link"><Icon name="twitter" /></a>
-                    <a href="#" className="social-link"><Icon name="github" /></a>
+                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+                    <a href="#" className="social-link" aria-label="Twitter"><Icon name="twitter" /></a>
+                    <a href="#" className="social-link" aria-label="Github"><Icon name="github" /></a>
                 </div>
             </div>
         </div>
@@ -243,10 +243,10 @@ const Hero = () => {
                     <a href="#contact" className="btn btn-secondary">Get In Touch</a>
                 </div>
                 <div className="hero-socials">
-                    <a href="mailto:ayazaftab9@gmail.com" className="social-link"><Icon name="mail" /></a>
-                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
-                    <a href="#" className="social-link"><Icon name="twitter" /></a>
-                    <a href="#" className="social-link"><Icon name="github" /></a>
+                    <a href="mailto:ayazaftab9@gmail.com" className="social-link" aria-label="Email"><Icon name="mail" /></a>
+                    <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+                    <a href="#" className="social-link" aria-label="Twitter"><Icon name="twitter" /></a>
+                    <a href="#" className="social-link" aria-label="Github"><Icon name="github" /></a>
                 </div>
             </AnimatedSection>
         </section>
@@ -324,7 +324,7 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => vo
                 {testimonialsData.map(testimonial => (
                     <div className="testimonial-card" key={testimonial.projectId}>
                         <div className="testimonial-header">
-                            <img src={testimonial.logoUrl} alt="Client Logo" className="testimonial-logo" />
+                            <img src={testimonial.logoUrl} alt={`${testimonial.author} Logo`} className="testimonial-logo" />
                             <div className="stars">
                                 ★★★★★
                             </div>
@@ -484,19 +484,14 @@ const Footer = () => {
                     </form>
 
                     <div className="hero-socials footer-socials">
-                        <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link"><Icon name="linkedin" /></a>
-                        <a href="#" className="social-link"><Icon name="twitter" /></a>
-                        <a href="#" className="social-link"><Icon name="github" /></a>
+                        <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+                        <a href="#" className="social-link" aria-label="Twitter"><Icon name="twitter" /></a>
+                        <a href="#" className="social-link" aria-label="Github"><Icon name="github" /></a>
                     </div>
                 </div>
                 <div className="footer-bottom">
-                     <a href="#" className="logo-container">
-                        <div className="logo-icon">
-                             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                               <path fillRule="evenodd" clipRule="evenodd" d="M50 4 L0 100 H19 L50 40 L81 100 H100 L50 4 Z M50 67 L25 100 H75 L50 67 Z" />
-                               <path d="M50 33 L44 43 L50 53 L56 43 Z" />
-                            </svg>
-                        </div>
+                     <a href="#" className="logo-container" aria-label="Back to top">
+                        <Logo />
                     </a>
                     <p className="copyright">&copy; {new Date().getFullYear()} Ayaz Aftab</p>
                 </div>
@@ -591,8 +586,8 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
                                 />
                                 {project.visuals.length > 1 && (
                                     <>
-                                        <button onClick={prevImage} className="carousel-btn prev"><Icon name="chevron-left" /></button>
-                                        <button onClick={nextImage} className="carousel-btn next"><Icon name="chevron-right" /></button>
+                                        <button onClick={prevImage} className="carousel-btn prev" aria-label="Previous image"><Icon name="chevron-left" /></button>
+                                        <button onClick={nextImage} className="carousel-btn next" aria-label="Next image"><Icon name="chevron-right" /></button>
                                     </>
                                 )}
                             </div>
