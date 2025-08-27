@@ -191,7 +191,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 
 
 const Hero = () => {
-    const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing']).current;
+    const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing', 'Social Media Marketing', 'Content Strategy', 'CRO', 'SEM']).current;
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
