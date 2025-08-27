@@ -173,11 +173,12 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
                     </button>
                 </div>
                 <nav className="menu-links">
+                    <a href="#services" onClick={onClose} className="menu-link"><Icon name="settings" size={20}/> Services</a>
                     <a href="#projects" onClick={onClose} className="menu-link"><Icon name="briefcase" size={20}/> Projects</a>
                     <a href="#skills" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={20}/> Skills</a>
                     <a href="#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={20}/> Contact</a>
                 </nav>
-                 <a href="#" className="btn btn-primary menu-resume-btn">Download Resume</a>
+                 <a href="resume.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-primary menu-resume-btn">Download Resume</a>
 
                 <div className="off-canvas-footer">
                     <a href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn"><Icon name="linkedin" /></a>
@@ -401,6 +402,75 @@ const Skills = () => (
         </AnimatedSection>
     </section>
 );
+
+const servicesData = [
+  {
+    title: 'Full-Time Roles',
+    description: 'Seeking a permanent position as a Digital Marketing Manager or eCommerce Strategist. I integrate seamlessly into teams to drive long-term growth, manage diverse digital marketing channels, and own the entire marketing campaign lifecycle from go-to-market strategy to execution and reporting for your target audience.',
+    items: ['Go-to-Market Strategy', 'eCommerce Management', 'Team Leadership & Collaboration', 'Data-driven Roadmapping'],
+    cta: 'View My Resume',
+    href: 'resume.pdf',
+    icon: 'download',
+    download: true,
+  },
+  {
+    title: 'Freelance Projects',
+    description: 'Available for project-based work, I offer expert management of your marketing campaign across various digital marketing channels. Whether you need an expert to run a Google Ads campaign, a local SEO audit, or a full-funnel e-commerce strategy, I can help. See my detailed services below.',
+    items: ['PPC Campaign Setup & Management', 'Local & Technical SEO Audits', 'Conversion Rate Optimization (CRO)', 'Full-Funnel eCommerce Growth'],
+    cta: 'Discuss a Project',
+    href: '#contact',
+    icon: 'arrow-right'
+  },
+  {
+    title: 'Consulting & Retainers',
+    description: 'Offering strategic guidance to help you navigate the digital landscape. I help businesses refine their marketing strategies and achieve sustainable growth through ongoing collaboration, performance analysis, and targeting the right potential customers.',
+    items: ['Monthly Growth Strategy Sessions', 'Performance Analysis & Reporting', 'Ad Spend Optimization', 'Team Training & Upskilling'],
+    cta: 'Book an Introductory Call',
+    href: '#contact',
+    icon: 'arrow-right'
+  }
+];
+
+const Services = () => (
+    <section id="services">
+        <AnimatedSection className="container">
+            <div className="section-header">
+                <h2 className="section-title">Digital Growth Services</h2>
+                <p className="section-subtitle">
+                    I partner with businesses to drive measurable growth by developing and executing targeted marketing campaigns across a variety of digital marketing channels. Whether you need a dedicated team member for a full-time role or project-specific expertise, here are the ways we can work together.
+                </p>
+            </div>
+            <div className="engagement-header">
+                <h2 className="section-title">Engagement Models</h2>
+            </div>
+            <div className="services-grid">
+                {servicesData.map((service, index) => (
+                    <div className="service-card" key={index}>
+                        <h3 className="service-card-title">{service.title}</h3>
+                        <p className="service-card-description">{service.description}</p>
+                        <ul className="service-list">
+                            {service.items.map((item, i) => (
+                                <li key={i} className="service-list-item">
+                                    <Icon name="check" size={18} />
+                                    <span>{item}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <a 
+                            href={service.href} 
+                            className="btn btn-secondary service-card-btn"
+                            {...(service.download && { download: true, target: '_blank', rel: 'noopener noreferrer' })}
+                        >
+                            <span>{service.cta}</span>
+                            <Icon name={service.icon} size={16} />
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </AnimatedSection>
+    </section>
+);
+
 
 const Footer = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -634,6 +704,7 @@ const App = () => {
             <main>
                 <Hero />
                 <ProvenImpact />
+                <Services />
                 <FeaturedProjects onProjectClick={handleProjectClick} />
                 <Testimonials onProjectClick={handleProjectClick} />
                 <Education />
