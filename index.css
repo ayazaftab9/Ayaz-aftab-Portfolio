@@ -20,6 +20,9 @@ html {
 
 body {
   background-color: var(--bg-color);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(168, 85, 247, 0.05) 0%, transparent 50%);
   color: var(--text-primary);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
@@ -292,6 +295,24 @@ section {
         min-height: 4rem; /* Allow space for two lines */
         white-space: normal;
     }
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headline {
+        font-size: 2rem;
+    }
+    .hero-dynamic-subheading {
+        font-size: 1.25rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
 }
 
 .gradient-text {
@@ -349,6 +370,11 @@ section {
 .btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus-visible {
+    outline: 2px solid rgba(59, 130, 246, 0.8);
+    outline-offset: 3px;
 }
 
 .btn-primary {
@@ -737,6 +763,12 @@ section {
     padding: 0.5rem 1rem;
     border-radius: 999px;
     font-size: 0.9rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.skill-item:hover {
+    background-color: rgba(59, 130, 246, 0.2);
+    transform: translateY(-2px);
 }
 
 .certifications-list {
@@ -882,6 +914,13 @@ section {
     outline: none;
     border-color: #a855f7;
     box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+}
+
+/* Smooth focus ring for all interactive elements */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid rgba(59, 130, 246, 0.8);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .form-textarea {
