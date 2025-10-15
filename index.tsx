@@ -232,7 +232,7 @@ const Hero = () => {
         <section className="hero">
             <AnimatedSection className="container">
                 <h1 className="hero-headline">
-                    Hi, I'm <span className="gradient-text">Ayaz Aftab</span>.
+                    Hi, I'm <span className="gradient-text gradient-text-animated">Ayaz Aftab</span>.
                     <br />
                     <span className="hero-dynamic-subheading">I specialise in <span className="typing-text">{displayText}</span><span className="cursor"></span></span>
                 </h1>
@@ -254,6 +254,56 @@ const Hero = () => {
     );
 };
 
+const CountUpMetric = ({ end, prefix = '', suffix = '', duration = 2000 }: { end: number; prefix?: string; suffix?: string; duration?: number }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef<HTMLParagraphElement>(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                    const startTime = Date.now();
+                    const startValue = 0;
+                    
+                    const animate = () => {
+                        const currentTime = Date.now();
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        
+                        // Easing function for smooth animation
+                        const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+                        const currentCount = Math.floor(startValue + (end - startValue) * easeOutQuart);
+                        
+                        setCount(currentCount);
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(animate);
+                        } else {
+                            setCount(end);
+                        }
+                    };
+                    
+                    requestAnimationFrame(animate);
+                }
+            },
+            { threshold: 0.3 }
+        );
+        
+        if (ref.current) observer.observe(ref.current);
+        return () => {
+            if (ref.current) observer.unobserve(ref.current);
+        };
+    }, [end, duration, hasAnimated]);
+
+    return (
+        <p ref={ref} className="impact-metric">
+            {prefix}{count.toLocaleString()}{suffix}
+        </p>
+    );
+};
+
 const ProvenImpact = () => (
     <section>
         <AnimatedSection className="container">
@@ -263,7 +313,7 @@ const ProvenImpact = () => (
             </div>
             <div className="impact-grid">
                 <div className="info-card">
-                    <p className="impact-metric">15,000+</p>
+                    <CountUpMetric end={15000} suffix="+" />
                     <p className="impact-label">Leads Generated</p>
                 </div>
                 <div className="info-card">
@@ -271,11 +321,11 @@ const ProvenImpact = () => (
                     <p className="impact-label">Amazon Sales</p>
                 </div>
                 <div className="info-card">
-                    <p className="impact-metric">+30%</p>
+                    <CountUpMetric end={30} prefix="+" suffix="%" />
                     <p className="impact-label">Organic Traffic Growth</p>
                 </div>
                 <div className="info-card">
-                    <p className="impact-metric">1,465+</p>
+                    <CountUpMetric end={1465} suffix="+" />
                     <p className="impact-label">Local Customer Interactions</p>
                 </div>
             </div>
@@ -475,6 +525,7 @@ const Services = () => (
 const Footer = () => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [statusMessage, setStatusMessage] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
@@ -484,20 +535,24 @@ const Footer = () => {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         if (!formData.name || !formData.email || !formData.message) {
-            setStatusMessage('Please fill out all fields.');
+            setStatusMessage('⚠️ Please fill out all fields.');
             setTimeout(() => setStatusMessage(''), 3000);
             return;
         }
 
+        setIsSubmitting(true);
+        
         const subject = `New Message from ${formData.name}`;
         const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
         const mailtoLink = `mailto:ayazaftab9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-        window.location.href = mailtoLink;
-
-        setStatusMessage('Your message is ready to send!');
-        setFormData({ name: '', email: '', message: '' });
-        setTimeout(() => setStatusMessage(''), 4000);
+        setTimeout(() => {
+            window.location.href = mailtoLink;
+            setStatusMessage('✅ Your message is ready to send!');
+            setFormData({ name: '', email: '', message: '' });
+            setIsSubmitting(false);
+            setTimeout(() => setStatusMessage(''), 4000);
+        }, 500);
     };
 
     return (
@@ -549,7 +604,9 @@ const Footer = () => {
                                 required>
                             </textarea>
                         </div>
-                        <button type="submit" className="btn btn-primary form-submit-btn">Send Message</button>
+                        <button type="submit" className="btn btn-primary form-submit-btn" disabled={isSubmitting}>
+                            {isSubmitting ? 'Preparing...' : 'Send Message'}
+                        </button>
                         {statusMessage && <p className="form-status-message">{statusMessage}</p>}
                     </form>
 
@@ -670,6 +727,40 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
 };
 
 
+const BackToTop = () => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    useEffect(() => {
+        const toggleVisibility = () => {
+            if (window.pageYOffset > 300) {
+                setIsVisible(true);
+            } else {
+                setIsVisible(false);
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+        return () => window.removeEventListener('scroll', toggleVisibility);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
+    return (
+        <button
+            className={`back-to-top ${isVisible ? 'visible' : ''}`}
+            onClick={scrollToTop}
+            aria-label="Back to top"
+        >
+            <Icon name="arrow-up" size={24} />
+        </button>
+    );
+};
+
 const App = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
@@ -711,6 +802,7 @@ const App = () => {
                 <Skills />
             </main>
             <Footer />
+            <BackToTop />
             {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
         </>
     );
