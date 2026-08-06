@@ -588,11 +588,11 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
 
     return (
         <div className="modal-overlay" onClick={onClose}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title" onClick={(e) => e.stopPropagation()}>
                 <button className="modal-close-btn" onClick={onClose} aria-label="Close project details"><Icon name="x" /></button>
                 <div className="modal-body">
                      <div className="modal-header">
-                        <h2 className="section-title">{project.title}</h2>
+                        <h2 id="modal-title" className="section-title">{project.title}</h2>
                         <p className="project-client">{project.client}</p>
                     </div>
 
