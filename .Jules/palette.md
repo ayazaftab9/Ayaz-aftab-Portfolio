@@ -1,0 +1,2 @@
+## 2024-05-24 - Initial Journal\n**Learning:** Started tracking UX insights.\n**Action:** Will look for more.
+## 2026-08-06 - Modal Accessibility & Focus Styles\n**Learning:** The existing `ProjectModal` lacked essential ARIA attributes for screen readers, and global focus states were missing, making keyboard navigation difficult.\n**Action:** Always ensure modals have `role="dialog"`, `aria-modal="true"`, and `aria-labelledby`, and verify that global `:focus-visible` styles exist in the design system.
