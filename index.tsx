@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
+import { Analytics } from '@vercel/analytics/react';
 
 // Fix: Augment React's HTMLAttributes to include width and height props.
 // This is necessary for the feather-icons library which expects these attributes on the host element.
@@ -712,6 +713,7 @@ const App = () => {
             </main>
             <Footer />
             {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
+            <Analytics />
         </>
     );
 };

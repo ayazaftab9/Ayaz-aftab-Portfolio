@@ -74,6 +74,61 @@ section {
     transform: translateY(0);
 }
 
+.projects-grid > .project-card {
+    animation: scale-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+.projects-grid > .project-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.projects-grid > .project-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.projects-grid > .project-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.services-grid > .service-card {
+    animation: float-up 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+.services-grid > .service-card:nth-child(1) {
+    animation-delay: 0.15s;
+}
+
+.services-grid > .service-card:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.services-grid > .service-card:nth-child(3) {
+    animation-delay: 0.35s;
+}
+
+.impact-grid > .info-card {
+    animation: slide-in-left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    opacity: 0;
+}
+
+.impact-grid > .info-card:nth-child(even) {
+    animation-name: slide-in-right;
+}
+
+.impact-grid > .info-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.impact-grid > .info-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.impact-grid > .info-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
 @keyframes shimmer {
     0% {
         background-position: -1000px 0;
@@ -109,6 +164,50 @@ section {
     }
     50% {
         transform: translateY(-5px);
+    }
+}
+
+@keyframes gradient-shift {
+    0%, 100% {
+        opacity: 0.8;
+        filter: brightness(1);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.05);
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -236,15 +335,35 @@ section {
     display: flex;
     align-items: center;
     gap: 1rem;
-    transition: color 0.3s, background-color 0.3s;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     opacity: 0;
     transform: translateY(10px);
     animation: fade-in-up 0.5s ease forwards;
+    position: relative;
+}
+
+.menu-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(180deg, #000000, transparent);
+    border-radius: 3px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .menu-link:hover {
     color: var(--text-primary);
-    background-color: var(--card-bg-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: translateX(5px);
+}
+
+.menu-link:hover::before {
+    transform: scaleY(1);
 }
 
 /* Staggered animation for menu links */
@@ -576,6 +695,12 @@ section {
 .project-title {
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-card:hover .project-title {
+    transform: translateX(3px);
+    font-weight: 700;
 }
 
 .project-result {
@@ -642,6 +767,12 @@ section {
     font-size: 1.75rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-card:hover .service-card-title {
+    transform: translateX(4px);
+    letter-spacing: 0.5px;
 }
 
 .service-card-description {
@@ -756,13 +887,31 @@ section {
     color: var(--text-primary);
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    display: inline-block;
+}
+
+.view-project-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #000000, transparent);
+    transition: width 0.3s ease;
 }
 
 .view-project-link:hover {
     background: var(--gradient-main);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform: translateX(2px);
+}
+
+.view-project-link:hover::after {
+    width: 100%;
 }
 
 
@@ -843,6 +992,29 @@ section {
     padding: 0.5rem 1rem;
     border-radius: 999px;
     font-size: 0.9rem;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    cursor: default;
+    position: relative;
+}
+
+.skill-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.1), transparent);
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.skill-card:hover .skill-item {
+    background-color: rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.skill-card:hover .skill-item::before {
+    opacity: 1;
 }
 
 .certifications-list {
