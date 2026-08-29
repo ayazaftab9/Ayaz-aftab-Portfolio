@@ -112,7 +112,7 @@ const Logo = () => (
 );
 
 
-const AnimatedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
+const AnimatedSection = React.memo(({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -124,7 +124,7 @@ const AnimatedSection = ({ children, className = '' }: { children: React.ReactNo
                     observer.unobserve(entry.target);
                 }
             },
-            { threshold: 0.1 }
+            { threshold: 0.1, rootMargin: '50px' }
         );
         if (ref.current) observer.observe(ref.current);
         return () => {
@@ -137,7 +137,9 @@ const AnimatedSection = ({ children, className = '' }: { children: React.ReactNo
             {children}
         </div>
     );
-};
+});
+
+AnimatedSection.displayName = 'AnimatedSection';
 
 // --- CORE COMPONENTS ---
 
@@ -191,7 +193,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 };
 
 
-const Hero = () => {
+const Hero = React.memo(() => {
     const specializations = useRef(['SEO', 'PPC', 'eCommerce Growth', 'Performance Marketing', 'Social Media Marketing', 'Content Strategy', 'CRO', 'SEM']).current;
     const [index, setIndex] = useState(0);
     const [subIndex, setSubIndex] = useState(0);
@@ -252,9 +254,11 @@ const Hero = () => {
             </AnimatedSection>
         </section>
     );
-};
+});
 
-const CountUpMetric = ({ end, prefix = '', suffix = '', duration = 2000 }: { end: number; prefix?: string; suffix?: string; duration?: number }) => {
+Hero.displayName = 'Hero';
+
+const CountUpMetric = React.memo(({ end, prefix = '', suffix = '', duration = 2000 }: { end: number; prefix?: string; suffix?: string; duration?: number }) => {
     const [count, setCount] = useState(0);
     const ref = useRef<HTMLParagraphElement>(null);
     const [hasAnimated, setHasAnimated] = useState(false);
@@ -264,6 +268,7 @@ const CountUpMetric = ({ end, prefix = '', suffix = '', duration = 2000 }: { end
             ([entry]) => {
                 if (entry.isIntersecting && !hasAnimated) {
                     setHasAnimated(true);
+                    let animationFrameId: number;
                     const startTime = Date.now();
                     const startValue = 0;
                     
@@ -279,16 +284,20 @@ const CountUpMetric = ({ end, prefix = '', suffix = '', duration = 2000 }: { end
                         setCount(currentCount);
                         
                         if (progress < 1) {
-                            requestAnimationFrame(animate);
+                            animationFrameId = requestAnimationFrame(animate);
                         } else {
                             setCount(end);
                         }
                     };
                     
-                    requestAnimationFrame(animate);
+                    animationFrameId = requestAnimationFrame(animate);
+                    
+                    return () => {
+                        cancelAnimationFrame(animationFrameId);
+                    };
                 }
             },
-            { threshold: 0.3 }
+            { threshold: 0.3, rootMargin: '50px' }
         );
         
         if (ref.current) observer.observe(ref.current);
@@ -302,9 +311,11 @@ const CountUpMetric = ({ end, prefix = '', suffix = '', duration = 2000 }: { end
             {prefix}{count.toLocaleString()}{suffix}
         </p>
     );
-};
+});
 
-const ProvenImpact = () => (
+CountUpMetric.displayName = 'CountUpMetric';
+
+const ProvenImpact = React.memo(() => (
     <section>
         <AnimatedSection className="container">
             <div className="section-header">
@@ -331,9 +342,11 @@ const ProvenImpact = () => (
             </div>
         </AnimatedSection>
     </section>
-);
+));
 
-const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: any) => void }) => (
+ProvenImpact.displayName = 'ProvenImpact';
+
+const FeaturedProjects = React.memo(({ onProjectClick }: { onProjectClick: (project: any) => void }) => (
     <section id="projects">
         <AnimatedSection className="container">
             <div className="section-header">
@@ -363,9 +376,11 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: any) =
             </div>
         </AnimatedSection>
     </section>
-);
+));
 
-const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => void }) => (
+FeaturedProjects.displayName = 'FeaturedProjects';
+
+const Testimonials = React.memo(({ onProjectClick }: { onProjectClick: (project: any) => void }) => (
     <section>
         <AnimatedSection className="container">
             <div className="section-header">
@@ -375,7 +390,7 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => vo
                 {testimonialsData.map(testimonial => (
                     <div className="testimonial-card" key={testimonial.projectId}>
                         <div className="testimonial-header">
-                            <img src={testimonial.logoUrl} alt={`${testimonial.author} Logo`} className="testimonial-logo" />
+                            <img src={testimonial.logoUrl} alt={`${testimonial.author} Logo`} className="testimonial-logo" loading="lazy" />
                             <div className="stars">
                                 ★★★★★
                             </div>
@@ -395,9 +410,11 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: any) => vo
             </div>
         </AnimatedSection>
     </section>
-);
+));
 
-const Education = () => (
+Testimonials.displayName = 'Testimonials';
+
+const Education = React.memo(() => (
     <section id="education">
         <AnimatedSection className="container">
             <div className="section-header">
@@ -410,9 +427,11 @@ const Education = () => (
             </div>
         </AnimatedSection>
     </section>
-);
+));
 
-const Skills = () => (
+Education.displayName = 'Education';
+
+const Skills = React.memo(() => (
     <section id="skills">
         <AnimatedSection className="container">
             <div className="section-header">
@@ -451,7 +470,9 @@ const Skills = () => (
             </div>
         </AnimatedSection>
     </section>
-);
+));
+
+Skills.displayName = 'Skills';
 
 const servicesData = [
   {
@@ -481,7 +502,7 @@ const servicesData = [
   }
 ];
 
-const Services = () => (
+const Services = React.memo(() => (
     <section id="services">
         <AnimatedSection className="container">
             <div className="section-header">
@@ -519,20 +540,22 @@ const Services = () => (
             </div>
         </AnimatedSection>
     </section>
-);
+));
+
+Services.displayName = 'Services';
 
 
-const Footer = () => {
+const Footer = React.memo(() => {
     const [formData, setFormData] = useState({ name: '', email: '', message: '' });
     const [statusMessage, setStatusMessage] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleInputChange = React.useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
-    };
+    }, []);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = React.useCallback((e: React.FormEvent) => {
         e.preventDefault();
         if (!formData.name || !formData.email || !formData.message) {
             setStatusMessage('⚠️ Please fill out all fields.');
@@ -553,7 +576,7 @@ const Footer = () => {
             setIsSubmitting(false);
             setTimeout(() => setStatusMessage(''), 4000);
         }, 500);
-    };
+    }, [formData.name, formData.email, formData.message]);
 
     return (
         <footer id="contact" className="footer">
@@ -627,7 +650,7 @@ const Footer = () => {
     );
 };
 
-const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void }) => {
+const ProjectModal = React.memo(({ project, onClose }: { project: any; onClose: () => void }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const nextImage = () => setCurrentImageIndex((i) => (i + 1) % project.visuals.length);
@@ -727,19 +750,26 @@ const ProjectModal = ({ project, onClose }: { project: any; onClose: () => void 
 };
 
 
-const BackToTop = () => {
+const BackToTop = React.memo(() => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        let ticking = false;
         const toggleVisibility = () => {
-            if (window.pageYOffset > 300) {
-                setIsVisible(true);
-            } else {
-                setIsVisible(false);
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    if (window.pageYOffset > 300) {
+                        setIsVisible(true);
+                    } else {
+                        setIsVisible(false);
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
-        window.addEventListener('scroll', toggleVisibility);
+        window.addEventListener('scroll', toggleVisibility, { passive: true });
         return () => window.removeEventListener('scroll', toggleVisibility);
     }, []);
 
@@ -759,7 +789,9 @@ const BackToTop = () => {
             <Icon name="arrow-up" size={24} />
         </button>
     );
-};
+});
+
+BackToTop.displayName = 'BackToTop';
 
 const App = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
