@@ -1,11 +1,11 @@
 
 :root {
-  --bg-color: #000000;
-  --text-primary: #ffffff;
-  --text-secondary: #888888;
-  --border-color: #333333;
-  --card-bg-color: #111111;
-  --gradient-main: linear-gradient(90deg, #3b82f6, #a855f7);
+  --bg-color: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #666666;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --card-bg-color: rgba(255, 255, 255, 0.7);
+  --gradient-main: linear-gradient(90deg, #000000, #333333);
 }
 
 *, *::before, *::after {
@@ -15,7 +15,7 @@
 }
 
 *:focus-visible {
-  outline: 2px solid #a855f7;
+  outline: 2px solid #000000;
   outline-offset: 2px;
 }
 
@@ -81,10 +81,10 @@ section {
   width: 100%;
   padding: 1.5rem 0;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav {
@@ -125,9 +125,9 @@ section {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 1001;
   opacity: 0;
   visibility: hidden;
@@ -146,14 +146,16 @@ section {
   width: 90%;
   max-width: 320px;
   height: 100%;
-  background-color: var(--bg-color);
+  background-color: rgba(255, 255, 255, 0.85);
   z-index: 1002;
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 .off-canvas-menu.open {
@@ -271,7 +273,7 @@ section {
 }
 
 .typing-text {
-  color: #a855f7; /* Fallback color */
+  color: #000000;
   background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -322,14 +324,15 @@ section {
 }
 
 .btn-primary {
-  background: var(--gradient-main);
+  background: #000000;
   color: var(--text-primary);
+  color: #ffffff;
 }
 
 .btn-secondary {
   background-color: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .hero-socials {
@@ -372,11 +375,13 @@ section {
 }
 
 .info-card {
-    background-color: var(--card-bg-color);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .impact-metric {
@@ -400,12 +405,14 @@ section {
 }
 
 .project-card {
-    background-color: var(--card-bg-color);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .project-card:hover {
@@ -470,12 +477,14 @@ section {
 }
 
 .service-card {
-    background-color: var(--card-bg-color);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 2.5rem 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .service-card-title {
@@ -518,12 +527,12 @@ section {
     justify-content: center;
     gap: 0.5rem;
     align-self: flex-start;
-    background-color: #252525;
-    border-color: var(--border-color);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 .service-card-btn:hover {
-    background-color: var(--border-color);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 
@@ -537,10 +546,12 @@ section {
 }
 
 .testimonial-card {
-    background-color: var(--card-bg-color);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .testimonial-header {
@@ -630,10 +641,12 @@ section {
 
 
 .skill-card {
-    background-color: var(--card-bg-color);
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 2rem;
     border-radius: 12px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .skills-header {
@@ -656,7 +669,7 @@ section {
 }
 
 .skill-item {
-    background-color: var(--border-color);
+    background-color: rgba(0, 0, 0, 0.06);
     padding: 0.5rem 1rem;
     border-radius: 999px;
     font-size: 0.9rem;
@@ -681,10 +694,12 @@ section {
 
 /* --- Footer --- */
 .footer {
-    background-color: var(--card-bg-color);
-    border-top: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
     text-align: center;
     padding-top: 6rem;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
 }
 
 .footer-content {
@@ -757,20 +772,21 @@ section {
 }
 
 .form-input, .form-textarea {
-    background-color: var(--bg-color);
+    background-color: rgba(0, 0, 0, 0.04);
     color: var(--text-primary);
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 0.8rem 1rem;
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .form-input:focus, .form-textarea:focus {
     outline: none;
-    border-color: #a855f7;
-    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2);
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .form-textarea {
@@ -794,9 +810,9 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     z-index: 2000;
     display: flex;
     align-items: center;
@@ -811,8 +827,8 @@ section {
 }
 
 .modal-content {
-    background-color: var(--card-bg-color);
-    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     width: 100%;
     max-width: 1000px;
@@ -821,6 +837,8 @@ section {
     position: relative;
     transform: scale(0.95);
     animation: scaleIn 0.3s forwards;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 @keyframes scaleIn {
@@ -832,8 +850,8 @@ section {
     position: absolute;
     top: 1.5rem;
     right: 1.5rem;
-    background: var(--border-color);
-    border: none;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-primary);
     border-radius: 50%;
     width: 32px;
@@ -875,7 +893,7 @@ section {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .modal-results-list {
@@ -903,15 +921,15 @@ section {
 .carousel-image {
     width: 100%;
     border-radius: 8px;
-    border: 1px solid var(--border-color);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     color: var(--text-primary);
     border-radius: 50%;
     width: 40px;
@@ -920,6 +938,8 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .carousel-btn.prev { left: 1rem; }
