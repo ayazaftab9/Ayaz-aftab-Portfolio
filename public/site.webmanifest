@@ -1,0 +1,17 @@
+{
+  "name": "Ayaz Aftab | Digital Marketing & eCommerce Specialist",
+  "short_name": "Ayaz Aftab",
+  "description": "Portfolio of Ayaz Aftab — Digital Marketing & eCommerce Specialist with 5+ years of experience in SEO, Google Ads, Meta Ads, Amazon Seller Central, and Conversion Rate Optimization.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#09090b",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

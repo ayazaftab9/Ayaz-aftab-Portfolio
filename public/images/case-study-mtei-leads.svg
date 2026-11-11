@@ -1,0 +1,40 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="752" height="402" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <text x="52" y="68" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1">MTEI SERVICES • PERFORMANCE MARKETING &amp; LEAD FUNNELS</text>
+  <text x="52" y="102" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800">High-Volume Student Admissions Lead Engine</text>
+  <rect x="602" y="56" width="146" height="34" rx="17" fill="#EFF6FF"/>
+  <text x="622" y="78" fill="#1D4ED8" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">₹49.86 Avg CPL</text>
+
+  <!-- Metric Cards -->
+  <rect x="52" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="72" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">QUALIFIED LEADS</text>
+  <text x="72" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">9,452</text>
+
+  <rect x="284" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="304" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">COST PER LEAD (CPL)</text>
+  <text x="304" y="194" fill="#1D4ED8" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">₹49.86</text>
+
+  <rect x="516" y="128" width="232" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="536" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">MANAGED AD SPEND (7 MOS)</text>
+  <text x="536" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">₹4.70 Lakhs</text>
+
+  <!-- Funnel Bar Chart -->
+  <rect x="52" y="240" width="696" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="76" y="272" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Meta Ads Conversion Funnel &amp; A/B Creative Optimization</text>
+  
+  <text x="76" y="306" fill="#475569" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Audience Reach</text>
+  <rect x="210" y="292" width="490" height="18" rx="9" fill="#DBEAFE"/>
+  <rect x="210" y="292" width="490" height="18" rx="9" fill="#3B82F6"/>
+
+  <text x="76" y="338" fill="#475569" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">Landing Page Views</text>
+  <rect x="210" y="324" width="490" height="18" rx="9" fill="#DBEAFE"/>
+  <rect x="210" y="324" width="360" height="18" rx="9" fill="#2563EB"/>
+
+  <text x="76" y="370" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">Verified Student Leads</text>
+  <rect x="210" y="356" width="490" height="18" rx="9" fill="#DBEAFE"/>
+  <rect x="210" y="356" width="265" height="18" rx="9" fill="#1D4ED8"/>
+  <text x="488" y="370" fill="#1E40AF" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="700">9,452 Admissions Inquiries</text>
+</svg>

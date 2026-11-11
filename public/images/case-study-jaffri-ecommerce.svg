@@ -1,0 +1,42 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="752" height="402" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <text x="52" y="68" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1">JAFFRI CREATIONS • MULTI-CHANNEL ECOMMERCE &amp; PPC</text>
+  <text x="52" y="102" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800">Amazon Seller Central &amp; Google Ads Performance</text>
+  <rect x="616" y="56" width="132" height="34" rx="17" fill="#ECFDF5"/>
+  <text x="636" y="78" fill="#047857" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">+30% Organic</text>
+
+  <!-- Metric Cards -->
+  <rect x="52" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="72" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">AMAZON REVENUE</text>
+  <text x="72" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">₹7.95 Lakhs</text>
+
+  <rect x="284" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="304" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">GOOGLE ADS CLICKS</text>
+  <text x="304" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">34,900+</text>
+
+  <rect x="516" y="128" width="232" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="536" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">HIGH-TICKET DEAL PIPELINE</text>
+  <text x="536" y="194" fill="#047857" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="800">₹5L – ₹13L</text>
+
+  <!-- Chart Area -->
+  <rect x="52" y="240" width="696" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <line x1="80" y1="275" x2="720" y2="275" stroke="#F1F5F9" stroke-width="1"/>
+  <line x1="80" y1="315" x2="720" y2="315" stroke="#F1F5F9" stroke-width="1"/>
+  <line x1="80" y1="355" x2="720" y2="355" stroke="#F1F5F9" stroke-width="1"/>
+  
+  <!-- Revenue Curve -->
+  <path d="M80 365 C160 358, 220 340, 300 322 C380 304, 450 295, 540 272 C610 254, 670 250, 720 246 L720 375 L80 375 Z" fill="#ECFDF5" opacity="0.7"/>
+  <path d="M80 365 C160 358, 220 340, 300 322 C380 304, 450 295, 540 272 C610 254, 670 250, 720 246" stroke="#059669" stroke-width="3.5" stroke-linecap="round"/>
+  
+  <circle cx="300" cy="322" r="5" fill="#059669"/>
+  <circle cx="540" cy="272" r="5" fill="#059669"/>
+  <circle cx="720" cy="246" r="6" fill="#059669" stroke="#FFFFFF" stroke-width="2"/>
+  
+  <text x="80" y="388" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Q1 Baseline</text>
+  <text x="270" y="388" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">A+ Listing Optimization</text>
+  <text x="495" y="388" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="600">Google Search + Shopping</text>
+  <text x="665" y="388" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="700">Peak ROAS Scale</text>
+</svg>

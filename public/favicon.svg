@@ -1,0 +1,5 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <rect width="100" height="100" rx="22" fill="#09090b"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M50 14 L14 86 H30 L50 44 L70 86 H86 L50 14 Z M50 62 L34 86 H66 L50 62 Z" fill="#ffffff"/>
+  <path d="M50 37 L45 46 L50 55 L55 46 Z" fill="#10b981"/>
+</svg>

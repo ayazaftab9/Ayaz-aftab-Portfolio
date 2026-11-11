@@ -1,0 +1,40 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#F8FAFC"/>
+  <rect x="24" y="24" width="752" height="402" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <text x="52" y="68" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1">JAFFRI CREATIONS • YOUTUBE SEO &amp; VIDEO CONTENT MARKETING</text>
+  <text x="52" y="102" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800">Organic Channel Authority &amp; Top-of-Funnel Discovery</text>
+  <rect x="596" y="56" width="152" height="34" rx="17" fill="#FEF2F2"/>
+  <text x="616" y="78" fill="#B91C1C" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">100% Organic Reach</text>
+
+  <!-- Metric Cards -->
+  <rect x="52" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="72" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">ORGANIC VIDEO VIEWS</text>
+  <text x="72" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">247,000+</text>
+
+  <rect x="284" y="128" width="216" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="304" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">TOTAL WATCH TIME</text>
+  <text x="304" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="800">5,200+ Hrs</text>
+
+  <rect x="516" y="128" width="232" height="92" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="536" y="156" fill="#64748B" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="600">PRIMARY DISCOVERY SOURCE</text>
+  <text x="536" y="194" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="800">YouTube Search</text>
+
+  <!-- Growth Bars -->
+  <rect x="52" y="240" width="696" height="158" rx="12" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="76" y="270" fill="#0F172A" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="700">Cumulative Views &amp; Search-Optimized Video Retention</text>
+  
+  <g fill="#0F172A">
+    <rect x="84" y="346" width="44" height="34" rx="6" fill="#E2E8F0"/>
+    <rect x="150" y="334" width="44" height="46" rx="6" fill="#CBD5E1"/>
+    <rect x="216" y="318" width="44" height="62" rx="6" fill="#94A3B8"/>
+    <rect x="282" y="302" width="44" height="78" rx="6" fill="#64748B"/>
+    <rect x="348" y="294" width="44" height="86" rx="6" fill="#475569"/>
+    <rect x="414" y="286" width="44" height="94" rx="6" fill="#334155"/>
+    <rect x="480" y="278" width="44" height="102" rx="6" fill="#1E293B"/>
+    <rect x="546" y="268" width="44" height="112" rx="6" fill="#0F172A"/>
+    <rect x="612" y="256" width="44" height="124" rx="6" fill="#DC2626"/>
+    <rect x="678" y="246" width="44" height="134" rx="6" fill="#B91C1C"/>
+  </g>
+</svg>

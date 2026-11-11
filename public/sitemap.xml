@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png</image:loc>
+      <image:title>Ayaz Aftab - Digital Marketing &amp; eCommerce Specialist</image:title>
+      <image:caption>Portfolio of Ayaz Aftab, SEO, PPC, Google Ads, Meta Ads, and Amazon eCommerce Growth Specialist</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-jaffri-ecommerce.svg</image:loc>
+      <image:title>Jaffri Creations Multi-Platform eCommerce &amp; Google Ads Case Study</image:title>
+      <image:caption>Drove ₹7.95 Lakhs in Amazon Sales, 34,900+ Google Ads clicks, and +30% organic traffic growth</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-mtei-leads.svg</image:loc>
+      <image:title>MTEI Services High-Volume Meta Ads Lead Generation Case Study</image:title>
+      <image:caption>Generated 9,452 qualified student leads at ₹49.86 CPL across ₹4.7L ad spend</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-youtube-growth.svg</image:loc>
+      <image:title>Jaffri Creations Organic YouTube SEO &amp; Brand Growth Case Study</image:title>
+      <image:caption>Accumulated 247,000+ organic views and 5,200+ hours of watch time via YouTube SEO</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/resume.pdf</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
