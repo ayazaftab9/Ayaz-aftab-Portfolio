@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="55%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="680" cy="80" r="180" fill="#0284c7" opacity="0.12"/>
+  <circle cx="120" cy="390" r="160" fill="#6366f1" opacity="0.1"/>
+
+  <g font-family="Inter, -apple-system, BlinkMacSystemFont, sans-serif">
+    <!-- Top Pill -->
+    <rect x="48" y="42" width="350" height="32" rx="16" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <circle cx="66" cy="58" r="5" fill="#38bdf8"/>
+    <text x="80" y="63" font-size="12" font-weight="600" fill="#e2e8f0" letter-spacing="0.6">FFACE • GM MODULAR &amp; DECOY LUXURY</text>
+
+    <!-- Title -->
+    <text x="48" y="114" font-size="27" font-weight="800" fill="#ffffff">Full-Funnel D2C &amp; Retail Paid Media Scale</text>
+    <text x="48" y="142" font-size="15" fill="#94a3b8">Meta Ads • Google Performance Max • Shopify CRO • GA4 &amp; Meta CAPI Attribution</text>
+
+    <!-- KPI Cards -->
+    <g transform="translate(48, 174)">
+      <rect width="220" height="118" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
+      <text x="22" y="34" font-size="12" font-weight="600" fill="#94a3b8">MONTHLY AD BUDGET</text>
+      <text x="22" y="76" font-size="34" font-weight="800" fill="#38bdf8">₹6.0L+</text>
+      <text x="22" y="100" font-size="12" fill="#a1a1aa">Meta Ads &amp; Google Ads Pacing</text>
+    </g>
+
+    <g transform="translate(290, 174)">
+      <rect width="220" height="118" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
+      <text x="22" y="34" font-size="12" font-weight="600" fill="#94a3b8">SUSTAINED RETURN</text>
+      <text x="22" y="76" font-size="34" font-weight="800" fill="#4ade80">4.0x ROAS</text>
+      <text x="22" y="100" font-size="12" fill="#a1a1aa">Full-Funnel Acquisition &amp; Retargeting</text>
+    </g>
+
+    <g transform="translate(532, 174)">
+      <rect width="220" height="118" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
+      <text x="22" y="34" font-size="12" font-weight="600" fill="#94a3b8">CREATIVE VELOCITY</text>
+      <text x="22" y="76" font-size="34" font-weight="800" fill="#c084fc">3–5 / Wk</text>
+      <text x="22" y="100" font-size="12" fill="#a1a1aa">UGC, Unboxing Hooks &amp; Carousels</text>
+    </g>
+
+    <!-- Bottom Channel Bar -->
+    <rect x="48" y="318" width="704" height="86" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
+    <text x="72" y="350" font-size="13" font-weight="700" fill="#f8fafc">Execution Highlights</text>
+    <text x="72" y="374" font-size="12.5" fill="#94a3b8">• Decoy Luxury Shopify store ops, discovery sets &amp; checkout CRO   • GM Modular dynamic catalog ads</text>
+    <text x="72" y="393" font-size="12.5" fill="#94a3b8">• Server-side Meta Pixel / CAPI &amp; GA4 custom purchase event tracking via Google Tag Manager</text>
+  </g>
+</svg>

@@ -1,38 +1,34 @@
 {
-  "specVersion": "0.91",
-  "host": {
-    "displayName": "Ayaz Aftab — Digital Marketing & eCommerce Growth Specialist",
-    "identifier": "did:web:ayaz-aftab-portfolio.vercel.app",
-    "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt"
-  },
   "entries": [
     {
       "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:agent:portfolio-assistant",
-      "displayName": "Ayaz Aftab Digital Marketing & eCommerce Portfolio Agent Card",
+      "displayName": "Ayaz Aftab — Performance Marketing & E-commerce Growth Lead Portfolio Agent",
       "type": "application/a2a-agent-card+json",
       "url": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json",
-      "description": "Discover verified digital marketing case studies (SEO, Google Ads, Meta Ads, Amazon Seller Central), service offerings, credentials, and contact tools for Ayaz Aftab.",
+      "description": "Discover verified performance marketing & e-commerce case studies (₹6L+ monthly ad spend at 4.0x–4.5x ROAS, ₹7.95L GMV, 9,452 acquisitions, 247K+ YouTube views), experience at FFACE, Jaffri Creations, MTEI Services & HICO Tax Consultant, and contact tools for Ayaz Aftab.",
       "capabilities": [
         "CaseStudyLookup",
+        "ExperienceLookup",
         "ServiceInquiry",
-        "ResumeDownload",
-        "SEOPPCAuditRequest"
+        "ResumeDownload"
       ],
       "tags": [
-        "digital-marketing",
-        "seo",
-        "ppc",
-        "google-ads",
+        "performance-marketing",
         "meta-ads",
+        "google-ads",
         "ecommerce",
-        "amazon-seller-central"
+        "shopify",
+        "woocommerce",
+        "amazon-seller-central",
+        "cro",
+        "seo"
       ],
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-11T00:00:00Z",
       "representativeQueries": [
-        "hire a digital marketing and ecommerce growth specialist for SEO and Google Ads",
-        "view case studies for Amazon Seller Central optimization and Meta Ads lead generation",
-        "request a technical SEO or PPC campaign audit from Ayaz Aftab",
-        "download Ayaz Aftab digital marketing specialist resume and certifications"
+        "hire a performance marketing and ecommerce growth lead for Meta Ads and Google Ads",
+        "view case studies for 4.0x to 4.5x ROAS across Shopify, WooCommerce, and Amazon",
+        "request a full-funnel CRO, GA4/GTM attribution, or paid media audit from Ayaz Aftab",
+        "download Ayaz Aftab performance marketing specialist master resume and certifications"
       ],
       "trustManifest": {
         "identity": "did:web:ayaz-aftab-portfolio.vercel.app"

@@ -1,6 +1,12 @@
 {
   "headers": [
     {
+      "source": "/",
+      "headers": [
+        { "key": "Link", "value": "</.well-known/ard.json>; rel=\"ard\"" }
+      ]
+    },
+    {
       "source": "/.well-known/ard.json",
       "headers": [
         { "key": "Content-Type", "value": "application/json; charset=utf-8" },

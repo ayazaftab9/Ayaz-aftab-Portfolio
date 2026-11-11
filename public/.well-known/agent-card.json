@@ -1,30 +1,32 @@
 {
-  "name": "Ayaz Aftab Portfolio & Growth Consulting Agent Interface",
-  "description": "Structured agent card for querying Ayaz Aftab's digital marketing case studies, SEO/PPC consulting services, credentials, and submitting project inquiries.",
+  "name": "Ayaz Aftab Portfolio Agent",
+  "description": "Official A2A Agent Card for Ayaz Aftab — Performance Marketing & E-commerce Growth Lead (5.5+ years experience, ₹6L+ monthly ad spend at 4.0x–4.5x ROAS, 9,452+ customer acquisitions, ₹7.95L+ GMV).",
   "url": "https://ayaz-aftab-portfolio.vercel.app/",
-  "version": "1.0.0",
+  "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
+  "version": "1.1.0",
   "provider": {
     "organization": "Ayaz Aftab",
-    "url": "https://ayaz-aftab-portfolio.vercel.app/",
-    "contactEmail": "ayazaftab9@gmail.com"
+    "url": "https://ayaz-aftab-portfolio.vercel.app/"
   },
-  "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
   "capabilities": {
     "streaming": false,
     "pushNotifications": false
   },
   "skills": [
     {
-      "id": "send_marketing_inquiry",
-      "name": "Send Digital Marketing or Hiring Inquiry",
-      "description": "Submit a project inquiry, SEO/PPC audit request, or full-time role opportunity to Ayaz Aftab via the declarative WebMCP contact form.",
-      "tags": ["contact", "seo-audit", "ppc", "ecommerce", "hiring"]
+      "id": "get_specialist_summary",
+      "name": "Get Performance Marketing & E-commerce Specialist Summary",
+      "description": "Retrieve Ayaz Aftab's verified performance metrics (₹6L+ monthly ad spend, 4.0x–4.5x ROAS, 9,452 acquisitions, ₹7.95L GMV), experience at FFACE, Jaffri Creations, MTEI Services, and HICO Tax Consultant, and contact information."
     },
     {
-      "id": "filter_case_studies",
-      "name": "Filter Verified Case Studies",
-      "description": "Filter Ayaz Aftab's verified case studies by channel (all, ecommerce, ppc, seo) and inspect ROI metrics.",
-      "tags": ["case-studies", "amazon", "google-ads", "meta-ads", "youtube-seo"]
+      "id": "list_case_studies",
+      "name": "List Performance Marketing & E-commerce Case Studies",
+      "description": "Retrieve detailed case studies covering FFACE (GM Modular & Decoy Luxury Perfumes), Jaffri Creations Fountain Decor, MTEI Services, and HICO Tax Consultant."
+    },
+    {
+      "id": "send_marketing_inquiry",
+      "name": "Send Hiring or Growth Consulting Inquiry",
+      "description": "Submit a direct hiring, freelance, or consulting inquiry via the declarative WebMCP contact form on the portfolio."
     }
   ]
 }

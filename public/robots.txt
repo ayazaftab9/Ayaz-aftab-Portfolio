@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps & Agentic Resource Discovery (ARD v0.91)
 Sitemap: https://ayaz-aftab-portfolio.vercel.app/sitemap.xml
-Agentmap: https://ayaz-aftab-portfolio.vercel.app/.well-known/ard.json
