@@ -1,0 +1,30 @@
+{
+  "name": "Ayaz Aftab Portfolio & Growth Consulting Agent Interface",
+  "description": "Structured agent card for querying Ayaz Aftab's digital marketing case studies, SEO/PPC consulting services, credentials, and submitting project inquiries.",
+  "url": "https://ayaz-aftab-portfolio.vercel.app/",
+  "version": "1.0.0",
+  "provider": {
+    "organization": "Ayaz Aftab",
+    "url": "https://ayaz-aftab-portfolio.vercel.app/",
+    "contactEmail": "ayazaftab9@gmail.com"
+  },
+  "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "skills": [
+    {
+      "id": "send_marketing_inquiry",
+      "name": "Send Digital Marketing or Hiring Inquiry",
+      "description": "Submit a project inquiry, SEO/PPC audit request, or full-time role opportunity to Ayaz Aftab via the declarative WebMCP contact form.",
+      "tags": ["contact", "seo-audit", "ppc", "ecommerce", "hiring"]
+    },
+    {
+      "id": "filter_case_studies",
+      "name": "Filter Verified Case Studies",
+      "description": "Filter Ayaz Aftab's verified case studies by channel (all, ecommerce, ppc, seo) and inspect ROI metrics.",
+      "tags": ["case-studies", "amazon", "google-ads", "meta-ads", "youtube-seo"]
+    }
+  ]
+}

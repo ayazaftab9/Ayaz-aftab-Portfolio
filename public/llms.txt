@@ -1,0 +1,28 @@
+# Ayaz Aftab — Digital Marketing & eCommerce Growth Specialist
+
+> Official portfolio of Ayaz Aftab, a results-driven Digital Marketing & eCommerce Growth Specialist with 5+ years of experience scaling revenue via Technical & Local SEO, Google Ads (Search, Shopping, Performance Max), Meta Ads lead generation funnels, Amazon Seller Central A+ optimization, YouTube SEO, and Conversion Rate Optimization (CRO).
+
+## Key Verified Career Metrics
+
+- **15,000+ Qualified Leads Generated**: Full-funnel acquisition across Google Ads and Meta Ads.
+- **₹7.95 Lakhs+ Amazon Marketplace Revenue**: Driven via Amazon Seller Central catalog management, keyword-indexed A+ content, and marketplace PPC.
+- **+30% Organic Search Traffic Lift**: Achieved through Technical SEO, on-page semantic optimization, and high-intent commercial content strategy.
+- **247,000+ Organic YouTube Views**: 5,200+ hours of watch time built from the ground up using YouTube search trend analysis and video SEO.
+- **₹49.86 Average Cost Per Lead (CPL)**: Delivered 9,452 student admissions leads across ₹4.7 Lakhs in managed Meta Ads spend.
+
+## Primary Resources & Links
+
+- [Portfolio Homepage & Overview](https://ayaz-aftab-portfolio.vercel.app/): Full overview of Ayaz Aftab's digital marketing services, metrics, methodology, and contact form.
+- [Featured Case Studies](https://ayaz-aftab-portfolio.vercel.app/#projects): Detailed breakdowns of campaigns for Jaffri Creations (Amazon & Google Ads) and MTEI Services (Meta Ads Lead Generation).
+- [Digital Marketing & eCommerce Services](https://ayaz-aftab-portfolio.vercel.app/#services): Engagement models for Full-Time Roles, Freelance Projects, and Monthly Growth Consulting.
+- [Skills, Tech Stack & Verified Certifications](https://ayaz-aftab-portfolio.vercel.app/#skills): Google Ads, Google Analytics (GA4), Semrush SEO, YouTube, and Udacity certifications.
+- [Frequently Asked Questions (FAQ)](https://ayaz-aftab-portfolio.vercel.app/#faq): Answers regarding channels, ROI, analytics tools, and availability.
+- [Download Resume (PDF)](https://ayaz-aftab-portfolio.vercel.app/resume.pdf): Complete printable curriculum vitae and career history of Ayaz Aftab.
+- [Contact & Project Inquiry](https://ayaz-aftab-portfolio.vercel.app/#contact): Direct contact form and email (`ayazaftab9@gmail.com`) for hiring or audit inquiries.
+
+## External Profiles & Discovery
+
+- [LinkedIn Profile](https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist): Connect with Ayaz Aftab on LinkedIn.
+- [GitHub Profile](https://github.com/ayazaftab9): Open-source projects and web code repositories.
+- [Agentic Resource Discovery (ARD) Manifest](https://ayaz-aftab-portfolio.vercel.app/.well-known/ard.json): Machine-readable ARD v0.91 capability manifest for AI agents.
+- [XML Sitemap](https://ayaz-aftab-portfolio.vercel.app/sitemap.xml): Search engine sitemap indexing pages, images, and PDF resume.

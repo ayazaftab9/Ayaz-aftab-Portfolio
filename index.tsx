@@ -1,6 +1,24 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Analytics } from '@vercel/analytics/react';
+
+// Augment React's HTMLAttributes to support Declarative WebMCP attributes
+declare module 'react' {
+  interface FormHTMLAttributes<T> {
+    toolname?: string;
+    tooldescription?: string;
+    toolautosubmit?: boolean | string;
+  }
+  interface InputHTMLAttributes<T> {
+    toolparamdescription?: string;
+  }
+  interface SelectHTMLAttributes<T> {
+    toolparamdescription?: string;
+  }
+  interface TextareaHTMLAttributes<T> {
+    toolparamdescription?: string;
+  }
+}
 
 // --- TYPES ---
 interface Project {
@@ -214,6 +232,68 @@ const faqData = [
   }
 ];
 
+// --- WEBMCP IMPERATIVE TOOL REGISTRATION ---
+function registerWebMCPTools() {
+  if (typeof window === 'undefined') return;
+  const mc = (document as any).modelContext || (navigator as any).modelContext;
+  if (!mc || typeof mc.registerTool !== 'function') return;
+
+  try {
+    mc.registerTool({
+      name: 'get_specialist_summary',
+      description: 'Retrieve structured profile, verified metrics, skills, certifications, and contact information for Ayaz Aftab, Digital Marketing & eCommerce Growth Specialist.',
+      inputSchema: {
+        type: 'object',
+        properties: {},
+      },
+      execute: async () => {
+        return JSON.stringify({
+          name: 'Ayaz Aftab',
+          role: 'Digital Marketing & eCommerce Growth Specialist',
+          experienceYears: '5+',
+          email: 'ayazaftab9@gmail.com',
+          resumeUrl: 'https://ayaz-aftab-portfolio.vercel.app/resume.pdf',
+          metrics: {
+            qualifiedLeads: '15,000+',
+            amazonSales: 'INR 7.95 Lakhs+',
+            organicTrafficGrowth: '+30%',
+            youtubeViews: '247,000+',
+            mteiCostPerLead: 'INR 49.86'
+          },
+          coreChannels: ['Technical & Local SEO', 'Google Ads (PPC)', 'Meta Ads', 'Amazon Seller Central', 'YouTube SEO', 'CRO']
+        });
+      }
+    });
+
+    mc.registerTool({
+      name: 'list_case_studies',
+      description: 'List and filter Ayaz Aftab digital marketing and eCommerce case studies by channel category.',
+      inputSchema: {
+        type: 'object',
+        properties: {
+          category: {
+            type: 'string',
+            enum: ['all', 'ecommerce', 'ppc', 'seo'],
+            description: 'Filter case studies by channel (all, ecommerce, ppc, or seo)'
+          }
+        }
+      },
+      execute: async (input: { category?: string }) => {
+        const cat = input?.category || 'all';
+        const matches = cat === 'all'
+          ? projectsData
+          : projectsData.filter((p) => p.category === cat);
+        return JSON.stringify(matches);
+      }
+    });
+  } catch {
+    // Ignore duplicate registration or experimental browser API variations
+  }
+}
+
+// Register immediately at module evaluation time so Lighthouse snapshot captures WebMCP tools
+registerWebMCPTools();
+
 // --- INLINE SVG ICON COMPONENT (Zero External Network Requests) ---
 const Icon = ({ name, size = 20 }: { name: string; size?: number }) => {
   const props = {
@@ -283,33 +363,11 @@ const Logo = () => (
   </div>
 );
 
-const AnimatedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    if (typeof IntersectionObserver === 'undefined') return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.08 }
-    );
-    if (ref.current) observer.observe(ref.current);
-    return () => {
-      if (ref.current) observer.unobserve(ref.current);
-    };
-  }, []);
-
-  return (
-    <div ref={ref} className={`fade-in-section ${isVisible ? 'is-visible' : ''} ${className}`}>
-      {children}
-    </div>
-  );
-};
+const AnimatedSection = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => (
+  <div className={`fade-in-section is-visible ${className}`}>
+    {children}
+  </div>
+);
 
 // --- CORE SECTIONS ---
 
@@ -442,131 +500,89 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
   );
 };
 
-const Hero = () => {
-  const specializations = useRef([
-    'SEO & Organic Search Growth',
-    'Google Ads & High-ROAS PPC',
-    'Amazon Seller Central & eCommerce',
-    'Meta Ads Lead Generation Funnels',
-    'YouTube SEO & Video Discovery',
-    'Conversion Rate Optimization (CRO)'
-  ]).current;
-
-  const [index, setIndex] = useState(0);
-  // Start with the first specialization fully visible for immediate SEO & LCP clarity
-  const [subIndex, setSubIndex] = useState(specializations[0].length);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const typingSpeed = 75;
-  const deletingSpeed = 40;
-  const delay = 2400;
-
-  useEffect(() => {
-    if (subIndex === specializations[index].length && !isDeleting) {
-      const timer = setTimeout(() => setIsDeleting(true), delay);
-      return () => clearTimeout(timer);
-    }
-
-    if (subIndex === 0 && isDeleting) {
-      setIsDeleting(false);
-      setIndex((prevIndex) => (prevIndex + 1) % specializations.length);
-      return;
-    }
-
-    const timeout = setTimeout(() => {
-      setSubIndex((prevSubIndex) => prevSubIndex + (isDeleting ? -1 : 1));
-    }, isDeleting ? deletingSpeed : typingSpeed);
-
-    return () => clearTimeout(timeout);
-  }, [subIndex, index, isDeleting, specializations]);
-
-  const displayText = specializations[index].substring(0, subIndex);
-
-  return (
-    <section id="top" className="hero">
-      <AnimatedSection className="container">
-        <div className="hero-layout">
-          <span className="hero-role-kicker">
-            Digital Marketing &amp; eCommerce Growth Specialist • 5+ Years Experience
+const Hero = () => (
+  <section id="top" className="hero">
+    <AnimatedSection className="container">
+      <div className="hero-layout">
+        <span className="hero-role-kicker">
+          Digital Marketing &amp; eCommerce Growth Specialist • 5+ Years Experience
+        </span>
+        <h1 className="hero-headline">
+          Hi, I&apos;m <span className="hero-name">Ayaz Aftab</span>.
+          <span className="hero-dynamic-subheading">
+            I scale revenue with <span className="typing-text">SEO, Google Ads &amp; eCommerce Growth</span>
           </span>
-          <h1 className="hero-headline">
-            Hi, I&apos;m <span className="hero-name">Ayaz Aftab</span>.
-            <span className="hero-dynamic-subheading">
-              I scale revenue with <span className="typing-text">{displayText}</span>
-              <span className="cursor" aria-hidden="true"></span>
-            </span>
-          </h1>
-          <p className="hero-summary">
-            Results-driven Digital Marketing &amp; eCommerce Specialist helping brands capture high-intent search traffic, lower Cost Per Lead (CPL), and scale marketplace sales across <strong>Google Ads</strong>, <strong>Meta Ads</strong>, <strong>Technical SEO</strong>, and <strong>Amazon Seller Central</strong>.
-          </p>
+        </h1>
+        <p className="hero-summary">
+          Results-driven Digital Marketing &amp; eCommerce Specialist helping brands capture high-intent search traffic, lower Cost Per Lead (CPL), and scale marketplace sales across <strong>Google Ads</strong>, <strong>Meta Ads</strong>, <strong>Technical SEO</strong>, and <strong>Amazon Seller Central</strong>.
+        </p>
 
-          <ul className="hero-highlights" aria-label="Key Credentials">
-            <li className="hero-highlight-item">
-              <Icon name="check-circle" size={16} />
-              <span>Google &amp; Semrush Certified</span>
-            </li>
-            <li className="hero-highlight-item">
-              <Icon name="check-circle" size={16} />
-              <span>15,000+ Verified Leads Generated</span>
-            </li>
-            <li className="hero-highlight-item">
-              <Icon name="check-circle" size={16} />
-              <span>₹7.95L+ Amazon Marketplace Sales</span>
-            </li>
-          </ul>
+        <ul className="hero-highlights" aria-label="Key Credentials">
+          <li className="hero-highlight-item">
+            <Icon name="check-circle" size={16} />
+            <span>Google &amp; Semrush Certified</span>
+          </li>
+          <li className="hero-highlight-item">
+            <Icon name="check-circle" size={16} />
+            <span>15,000+ Verified Leads Generated</span>
+          </li>
+          <li className="hero-highlight-item">
+            <Icon name="check-circle" size={16} />
+            <span>₹7.95L+ Amazon Marketplace Sales</span>
+          </li>
+        </ul>
 
-          <div className="hero-cta">
-            <a href="#projects" id="hero-cta-projects" className="btn btn-primary">
-              <span>Explore Case Studies</span>
-              <Icon name="arrow-right" size={16} />
-            </a>
-            <a href="#contact" id="hero-cta-contact" className="btn btn-secondary">
-              <span>Request a Growth Audit</span>
-            </a>
-            <a
-              href="/resume.pdf"
-              id="hero-cta-resume"
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-ghost"
-            >
-              <Icon name="download" size={16} />
-              <span>Download Resume</span>
-            </a>
-          </div>
-
-          <div className="hero-socials">
-            <a href="mailto:ayazaftab9@gmail.com" id="hero-social-email" className="social-link">
-              <Icon name="mail" size={16} />
-              <span>ayazaftab9@gmail.com</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist"
-              id="hero-social-linkedin"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Icon name="linkedin" size={16} />
-              <span>LinkedIn Profile</span>
-            </a>
-            <a
-              href="https://github.com/ayazaftab9"
-              id="hero-social-github"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-            >
-              <Icon name="github" size={16} />
-              <span>GitHub</span>
-            </a>
-          </div>
+        <div className="hero-cta">
+          <a href="#projects" id="hero-cta-projects" className="btn btn-primary">
+            <span>Explore Case Studies</span>
+            <Icon name="arrow-right" size={16} />
+          </a>
+          <a href="#contact" id="hero-cta-contact" className="btn btn-secondary">
+            <span>Request a Growth Audit</span>
+          </a>
+          <a
+            href="/resume.pdf"
+            id="hero-cta-resume"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-ghost"
+          >
+            <Icon name="download" size={16} />
+            <span>Download Resume</span>
+          </a>
         </div>
-      </AnimatedSection>
-    </section>
-  );
-};
+
+        <div className="hero-socials">
+          <a href="mailto:ayazaftab9@gmail.com" id="hero-social-email" className="social-link">
+            <Icon name="mail" size={16} />
+            <span>ayazaftab9@gmail.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ayaz-aftab-digital-marketing-specialist"
+            id="hero-social-linkedin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <Icon name="linkedin" size={16} />
+            <span>LinkedIn Profile</span>
+          </a>
+          <a
+            href="https://github.com/ayazaftab9"
+            id="hero-social-github"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+          >
+            <Icon name="github" size={16} />
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </AnimatedSection>
+  </section>
+);
 
 const ProvenImpact = () => (
   <section id="impact" className="section-alt" aria-labelledby="impact-heading">
@@ -1005,10 +1021,19 @@ const Footer = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const nativeEvent = e.nativeEvent as SubmitEvent & {
+      agentInvoked?: boolean;
+      respondWith?: (p: Promise<string>) => void;
+    };
+
     if (!formData.name || !formData.email || !formData.message) {
-      setStatusMessage('Please fill out all required fields.');
+      const errorMsg = 'Please fill out all required fields (name, email, and message).';
+      setStatusMessage(errorMsg);
+      if (nativeEvent?.agentInvoked && typeof nativeEvent.respondWith === 'function') {
+        nativeEvent.respondWith(Promise.resolve(`Validation failed: ${errorMsg}`));
+      }
       setTimeout(() => setStatusMessage(''), 3000);
       return;
     }
@@ -1017,7 +1042,15 @@ const Footer = () => {
     const body = `Name: ${formData.name}\nEmail: ${formData.email}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`;
     const mailtoLink = `mailto:ayazaftab9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    window.location.href = mailtoLink;
+    if (nativeEvent?.agentInvoked && typeof nativeEvent.respondWith === 'function') {
+      nativeEvent.respondWith(
+        Promise.resolve(
+          `Inquiry prepared for Ayaz Aftab (ayazaftab9@gmail.com) with subject "${subject}".`
+        )
+      );
+    } else {
+      window.location.href = mailtoLink;
+    }
 
     setStatusMessage('Opening your email client with your pre-filled message!');
     setFormData({ name: '', email: '', inquiryType: 'Freelance SEO / PPC Project', message: '' });
@@ -1056,7 +1089,13 @@ const Footer = () => {
             </a>
           </div>
 
-          <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
+          <form
+            id="contact-form"
+            className="contact-form"
+            toolname="send_marketing_inquiry"
+            tooldescription="Send a digital marketing project inquiry, SEO or PPC audit request, or job opportunity to Ayaz Aftab"
+            onSubmit={handleSubmit}
+          >
             <div className="form-row">
               <div className="form-group">
                 <label htmlFor="name" className="form-label">Your Name *</label>
@@ -1066,6 +1105,7 @@ const Footer = () => {
                   name="name"
                   className="form-input"
                   placeholder="e.g., Rahul Sharma"
+                  toolparamdescription="Full name of the person or recruiter reaching out, e.g., Rahul Sharma"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
@@ -1079,6 +1119,7 @@ const Footer = () => {
                   name="email"
                   className="form-input"
                   placeholder="e.g., rahul@company.com"
+                  toolparamdescription="Contact email address for reply, e.g., rahul@company.com"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
@@ -1092,6 +1133,7 @@ const Footer = () => {
                 id="inquiryType"
                 name="inquiryType"
                 className="form-select"
+                toolparamdescription="Category of engagement requested"
                 value={formData.inquiryType}
                 onChange={handleInputChange}
               >
@@ -1109,6 +1151,7 @@ const Footer = () => {
                 name="message"
                 className="form-textarea"
                 placeholder="Share your website URL, target goals, or role details..."
+                toolparamdescription="Project goals, website URL for audit, budget, or role details"
                 rows={4}
                 value={formData.message}
                 onChange={handleInputChange}
@@ -1289,6 +1332,10 @@ export const App = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   useEffect(() => {
+    registerWebMCPTools();
+  }, []);
+
+  useEffect(() => {
     if (isMenuOpen || selectedProject) {
       document.body.classList.add('no-scroll');
     } else {
@@ -1328,4 +1375,3 @@ if (typeof document !== 'undefined') {
     root.render(<App />);
   }
 }
-

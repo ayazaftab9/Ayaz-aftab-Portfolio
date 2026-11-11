@@ -1,0 +1,42 @@
+{
+  "specVersion": "0.91",
+  "host": {
+    "displayName": "Ayaz Aftab — Digital Marketing & eCommerce Growth Specialist",
+    "identifier": "did:web:ayaz-aftab-portfolio.vercel.app",
+    "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:agent:portfolio-assistant",
+      "displayName": "Ayaz Aftab Digital Marketing & eCommerce Portfolio Agent Card",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json",
+      "description": "Discover verified digital marketing case studies (SEO, Google Ads, Meta Ads, Amazon Seller Central), service offerings, credentials, and contact tools for Ayaz Aftab.",
+      "capabilities": [
+        "CaseStudyLookup",
+        "ServiceInquiry",
+        "ResumeDownload",
+        "SEOPPCAuditRequest"
+      ],
+      "tags": [
+        "digital-marketing",
+        "seo",
+        "ppc",
+        "google-ads",
+        "meta-ads",
+        "ecommerce",
+        "amazon-seller-central"
+      ],
+      "updatedAt": "2026-11-11",
+      "representativeQueries": [
+        "hire a digital marketing and ecommerce growth specialist for SEO and Google Ads",
+        "view case studies for Amazon Seller Central optimization and Meta Ads lead generation",
+        "request a technical SEO or PPC campaign audit from Ayaz Aftab",
+        "download Ayaz Aftab digital marketing specialist resume and certifications"
+      ],
+      "trustManifest": {
+        "identity": "did:web:ayaz-aftab-portfolio.vercel.app"
+      }
+    }
+  ]
+}
