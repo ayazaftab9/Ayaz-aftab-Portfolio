@@ -27,8 +27,8 @@
     <!-- KPI Cards -->
     <g transform="translate(48, 174)">
       <rect width="220" height="118" rx="14" fill="#18181b" stroke="#27272a" stroke-width="1.5"/>
-      <text x="22" y="34" font-size="12" font-weight="600" fill="#94a3b8">MONTHLY AD BUDGET</text>
-      <text x="22" y="76" font-size="34" font-weight="800" fill="#38bdf8">₹6.0L+</text>
+      <text x="22" y="34" font-size="12" font-weight="600" fill="#94a3b8">COMBINED AD BUDGET</text>
+      <text x="22" y="76" font-size="34" font-weight="800" fill="#f8fafc">₹35L+/Mo</text>
       <text x="22" y="100" font-size="12" fill="#a1a1aa">Meta Ads &amp; Google Ads Pacing</text>
     </g>
 

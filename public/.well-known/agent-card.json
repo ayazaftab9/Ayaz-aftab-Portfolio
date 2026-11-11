@@ -1,9 +1,9 @@
 {
   "name": "Ayaz Aftab Portfolio Agent",
-  "description": "Official A2A Agent Card for Ayaz Aftab — Performance Marketing & E-commerce Growth Lead (5.5+ years experience, ₹6L+ monthly ad spend at 4.0x–4.5x ROAS, 9,452+ customer acquisitions, ₹7.95L+ GMV).",
+  "description": "Official A2A Agent Card for Ayaz Aftab — Performance Marketing & E-commerce Growth Lead (5.5+ years experience, ₹35L+ combined monthly ad spend at 4.0x–4.5x ROAS, 9,452+ customer acquisitions, ₹7.95L+ GMV).",
   "url": "https://ayaz-aftab-portfolio.vercel.app/",
   "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "provider": {
     "organization": "Ayaz Aftab",
     "url": "https://ayaz-aftab-portfolio.vercel.app/"
@@ -16,7 +16,7 @@
     {
       "id": "get_specialist_summary",
       "name": "Get Performance Marketing & E-commerce Specialist Summary",
-      "description": "Retrieve Ayaz Aftab's verified performance metrics (₹6L+ monthly ad spend, 4.0x–4.5x ROAS, 9,452 acquisitions, ₹7.95L GMV), experience at FFACE, Jaffri Creations, MTEI Services, and HICO Tax Consultant, and contact information."
+      "description": "Retrieve Ayaz Aftab's verified performance metrics (₹35L+ combined monthly ad spend, 4.0x–4.5x ROAS, 9,452 acquisitions, ₹7.95L GMV), experience at FFACE, Jaffri Creations, MTEI Services, and HICO Tax Consultant, and contact information."
     },
     {
       "id": "list_case_studies",
