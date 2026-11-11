@@ -13,14 +13,47 @@
     </image:image>
   </url>
   <url>
-    <loc>https://ayaz-aftab-portfolio.vercel.app/resume</loc>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads</loc>
     <lastmod>2026-11-11</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
     <image:image>
-      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png</image:loc>
-      <image:title>Master Resume — Ayaz Aftab | Performance Marketing &amp; E-commerce Growth Lead</image:title>
-      <image:caption>5.5+ years experience scaling D2C, B2B, and marketplace brands across Meta Ads, Google Ads, Shopify, WooCommerce, and Amazon</image:caption>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-fface-roas.svg</image:loc>
+      <image:title>Performance Marketing Services: Meta Ads, Google Ads (PMax) &amp; LinkedIn Ads Management</image:title>
+      <image:caption>Paid media management across Meta Ads and Google Ads delivering 4.0x–4.5x ROAS and -35% CPA/CPL</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-jaffri-ecommerce.svg</image:loc>
+      <image:title>E-commerce Growth Services: Shopify, WooCommerce &amp; Amazon Seller Central Optimization</image:title>
+      <image:caption>End-to-end Shopify, WooCommerce, and Amazon Seller Central growth, A+ cataloging, and checkout CRO</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-youtube-growth.svg</image:loc>
+      <image:title>Technical SEO, Local SEO (GBP) &amp; YouTube Video SEO Services</image:title>
+      <image:caption>Organic search and video growth services delivering +30% organic traffic and 247,000+ YouTube views</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-mtei-leads.svg</image:loc>
+      <image:title>GA4, Google Tag Manager (GTM), Meta CAPI Attribution &amp; CRO Services</image:title>
+      <image:caption>Server-side tracking, GA4 custom events, Meta CAPI, and landing page CRO lifting conversion rates by +20%</image:caption>
     </image:image>
   </url>
   <url>
@@ -75,6 +108,17 @@
       <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-youtube-growth.svg</image:loc>
       <image:title>Jaffri Creations YouTube Video SEO &amp; Organic Discovery Case Study</image:title>
       <image:caption>Accumulated 247,000+ organic YouTube views and 5,200+ hours of watch time via YouTube Video SEO</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/resume</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png</image:loc>
+      <image:title>Master Resume — Ayaz Aftab | Performance Marketing &amp; E-commerce Growth Lead</image:title>
+      <image:caption>5.5+ years experience scaling D2C, B2B, and marketplace brands across Meta Ads, Google Ads, Shopify, WooCommerce, and Amazon</image:caption>
     </image:image>
   </url>
   <url>

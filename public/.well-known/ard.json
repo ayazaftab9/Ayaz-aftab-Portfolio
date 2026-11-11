@@ -5,7 +5,7 @@
     "id": "ayaz-aftab-portfolio",
     "displayName": "Ayaz Aftab — Performance Marketing & E-commerce Growth Lead",
     "website": "https://ayaz-aftab-portfolio.vercel.app/",
-    "description": "Official portfolio and case studies of Ayaz Aftab, Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience scaling D2C, B2B, and marketplace brands (₹6L+/mo Meta & Google Ads at 4.0x–4.5x ROAS, 9,452+ acquisitions, +20% store CRO, ₹7.95L+ D2C/Amazon GMV).",
+    "description": "Official portfolio, commercial digital marketing service pages, and verified case studies of Ayaz Aftab, Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience scaling D2C, B2B, and marketplace brands (₹6L+/mo Meta & Google Ads at 4.0x–4.5x ROAS, 9,452+ acquisitions, +20% store CRO, ₹7.95L+ D2C/Amazon GMV).",
     "contact": "ayazaftab9@gmail.com"
   },
   "updatedAt": "2026-11-11T00:00:00Z",
@@ -14,7 +14,7 @@
       "id": "portfolio-web-app",
       "type": "web_page",
       "name": "Ayaz Aftab Portfolio & WebMCP Interface",
-      "description": "Interactive portfolio showcasing verified ROAS & e-commerce case studies (FFACE, Jaffri Creations, MTEI Services), 5.5+ year career timeline, services, and WebMCP-enabled inquiry tools.",
+      "description": "Interactive portfolio showcasing digital marketing services, verified ROAS & e-commerce case studies (FFACE, Jaffri Creations, MTEI Services), 5.5+ year career timeline, and WebMCP-enabled inquiry tools.",
       "url": "https://ayaz-aftab-portfolio.vercel.app/",
       "tags": [
         "performance-marketing",
@@ -30,6 +30,77 @@
       "protocol": {
         "type": "web_page",
         "endpoint": "https://ayaz-aftab-portfolio.vercel.app/"
+      }
+    },
+    {
+      "id": "service-paid-media",
+      "type": "web_page",
+      "name": "Service: Performance Marketing (Meta Ads, Google Ads PMax & LinkedIn Ads)",
+      "description": "Commercial service page for hiring Ayaz Aftab for Meta Ads (Facebook/Instagram), Google Search/Shopping/Performance Max, and LinkedIn Ads management.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads",
+      "tags": [
+        "service",
+        "meta-ads",
+        "google-ads",
+        "ppc",
+        "lead-generation"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads"
+      }
+    },
+    {
+      "id": "service-ecommerce-growth",
+      "type": "web_page",
+      "name": "Service: D2C E-commerce Growth (Shopify, WooCommerce & Amazon Seller Central)",
+      "description": "Commercial service page for Shopify & WooCommerce store operations, AOV bundle optimization, and Amazon Seller Central A+ cataloging.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon",
+      "tags": [
+        "service",
+        "shopify",
+        "woocommerce",
+        "amazon-seller-central",
+        "ecommerce"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon"
+      }
+    },
+    {
+      "id": "service-seo-youtube",
+      "type": "web_page",
+      "name": "Service: Technical SEO, Local SEO (GBP) & YouTube Video SEO",
+      "description": "Commercial service page for Technical SEO audits, On-Page SEO, Google Business Profile optimization, and YouTube Video SEO.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth",
+      "tags": [
+        "service",
+        "technical-seo",
+        "local-seo",
+        "youtube-seo"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth"
+      }
+    },
+    {
+      "id": "service-tracking-cro",
+      "type": "web_page",
+      "name": "Service: GA4, Google Tag Manager (GTM), Meta CAPI & Full-Funnel CRO",
+      "description": "Commercial service page for GA4 custom e-commerce tracking, GTM, Server-Side Meta Conversions API (CAPI), Looker Studio, and Landing Page CRO.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro",
+      "tags": [
+        "service",
+        "ga4",
+        "gtm",
+        "meta-capi",
+        "cro"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro"
       }
     },
     {

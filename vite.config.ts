@@ -23,6 +23,10 @@ export default defineConfig(({ mode }) => {
           jaffriEcommerce: path.resolve(__dirname, 'case-studies/jaffri-creations-ecommerce-ppc-seo/index.html'),
           mteiLeads: path.resolve(__dirname, 'case-studies/mtei-services-meta-ads-lead-generation/index.html'),
           jaffriYoutube: path.resolve(__dirname, 'case-studies/jaffri-creations-youtube-seo-organic-growth/index.html'),
+          servicePaidMedia: path.resolve(__dirname, 'services/performance-marketing-meta-google-ads/index.html'),
+          serviceEcommerce: path.resolve(__dirname, 'services/ecommerce-growth-shopify-woocommerce-amazon/index.html'),
+          serviceSeo: path.resolve(__dirname, 'services/seo-local-seo-youtube-growth/index.html'),
+          serviceTrackingCro: path.resolve(__dirname, 'services/ga4-gtm-capi-tracking-cro/index.html'),
         }
       }
     }

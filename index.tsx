@@ -49,7 +49,187 @@ interface ExperienceItem {
   bullets: string[];
 }
 
+export interface ServicePageData {
+  slug: string;
+  shortName: string;
+  eyebrow: string;
+  title: string;
+  metaTitle: string;
+  metaDescription: string;
+  heroSummary: string;
+  keyMetricBadge: string;
+  targetAudience: string;
+  deliverables: string[];
+  methodology: string;
+  proofPoints: string[];
+  relatedCaseStudyIds: number[];
+  faqs: { q: string; a: string }[];
+}
+
 // --- DATA ---
+export const servicePagesData: ServicePageData[] = [
+  {
+    slug: 'performance-marketing-meta-google-ads',
+    shortName: 'Meta Ads & Google Ads (PPC)',
+    eyebrow: 'Paid Media & Customer Acquisition Services',
+    title: 'Performance Marketing Services: Meta Ads, Google Ads (PMax) & LinkedIn Ads Management',
+    metaTitle: 'Performance Marketing Services: Meta Ads & Google Ads Specialist | Ayaz Aftab',
+    metaDescription: 'Hire a certified Performance Marketing Specialist managing ₹6L+/mo across Meta Ads (Facebook/Instagram) & Google Ads (Search, Shopping, PMax) at 4.0x–4.5x ROAS and -35% CPA.',
+    heroSummary: 'Data-driven paid media management for D2C e-commerce brands, B2B enterprises, and high-growth startups. I architect, test, and scale profitable Meta Ads (Facebook & Instagram CBO/ABO), Google Search, Shopping, Performance Max, and LinkedIn Ads funnels engineered for 4.0x–4.5x ROAS and 35% lower CPA/CPL.',
+    keyMetricBadge: '₹6L+/Mo Managed • 4.0x–4.5x ROAS',
+    targetAudience: 'Ideal for D2C Shopify/WooCommerce brands, luxury & retail businesses, education/admissions teams, and B2B service providers across India (Kolkata, Bengaluru, Mumbai, Delhi NCR) and global markets (UAE, UK, US, Remote) seeking predictable paid acquisition.',
+    deliverables: [
+      'Meta Ads Manager Architecture (CBO/ABO Prospecting, Lookalikes, Dynamic Product Catalog Ads & Retargeting)',
+      'Google Ads Full-Funnel Management (High-Intent Search, Performance Max Asset Groups, Standard Shopping & YouTube)',
+      'Google Merchant Center Feed Optimization, Custom Labels & Product Title Indexing',
+      'Weekly Direct-Response Creative Testing (3–5 Ad Concepts/Week: Unboxing Hooks, UGC Angles, Static Carousels)',
+      'B2B Lead Generation Funnels via Google Search & LinkedIn Ads integrated with HubSpot CRM',
+      'Daily Budget Pacing, Negative Keyword Sculpting, and ROAS / CAC Cohort Reporting'
+    ],
+    methodology: 'Every paid account is structured around clean server-side signal quality (GA4 + GTM + Meta CAPI) and high-velocity creative testing. By isolating winning ad hooks in ABO testing campaigns before graduating them into CBO scaling budgets—and pairing Google PMax with exact-match commercial search protection—we eliminate wasted ad spend and compound profitable revenue.',
+    proofPoints: [
+      'Directing ₹6L+ monthly paid media budgets across Meta & Google Ads for FFACE (GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x ROAS',
+      'Scaled ₹2L/mo Google PMax, Search & Meta retargeting campaigns for Jaffri Creations at 4.5x ROAS (34,900+ commercial clicks)',
+      'Delivered 9,452 qualified customer acquisitions for MTEI Services while reducing CPA/CPL by 35% (₹49.86 CPL)'
+    ],
+    relatedCaseStudyIds: [1, 2, 3],
+    faqs: [
+      {
+        q: 'What monthly ad spend budgets do you manage for Meta Ads and Google Ads?',
+        a: 'I manage monthly paid media budgets ranging from ₹50,000/month for growing D2C/B2B brands up to ₹6,00,000+/month (₹6L+/mo) for established multi-brand portfolios, maintaining disciplined 4.0x–4.5x ROAS targets.'
+      },
+      {
+        q: 'How do you combat ad fatigue on Facebook and Instagram Ads?',
+        a: 'I partner with creative teams to ship 3–5 new direct-response ad concepts every week—testing unboxing hooks, UGC testimonials, problem/solution angles, and catalog carousels to keep thumb-stop ratios high and CPA low.'
+      },
+      {
+        q: 'Do you manage both e-commerce ROAS campaigns and B2B/B2C lead generation?',
+        a: 'Yes. I run full-funnel e-commerce purchase campaigns (Shopify, WooCommerce, Amazon) as well as high-volume lead generation engines (9,452+ leads generated across Meta Instant Forms, custom landing pages, Google Search, and LinkedIn Ads).'
+      }
+    ]
+  },
+  {
+    slug: 'ecommerce-growth-shopify-woocommerce-amazon',
+    shortName: 'Shopify, WooCommerce & Amazon Growth',
+    eyebrow: 'D2C Storefront & Marketplace Scaling Services',
+    title: 'E-commerce Growth Services: Shopify, WooCommerce & Amazon Seller Central Optimization',
+    metaTitle: 'E-commerce Marketing Specialist: Shopify, WooCommerce & Amazon Growth | Ayaz Aftab',
+    metaDescription: 'Scale your D2C store and marketplace GMV with end-to-end Shopify, WooCommerce, and Amazon Seller Central management, A+ cataloging, and checkout CRO (+20% CVR).',
+    heroSummary: 'End-to-end e-commerce growth and store operations for D2C and marketplace brands. From Shopify and WooCommerce merchandising, bundle/discovery set offers, and checkout CRO to Amazon Seller Central A+ Content and Sponsored Ads—I turn store visitors into repeat high-AOV buyers.',
+    keyMetricBadge: '₹7.95L+ Direct GMV • +40% Amazon Discovery',
+    targetAudience: 'Built for D2C founders, luxury consumer brands, home decor & retail manufacturers, and omnichannel sellers looking to scale revenue across Shopify, WooCommerce, and Amazon India/Global marketplaces.',
+    deliverables: [
+      'Shopify & WooCommerce Store Administration, Catalog Merchandising & Collection Architecture',
+      'AOV & Repeat Purchase Optimization (Discovery Sets, Tiered Bundles, Cross-Sells & Post-Purchase Flows)',
+      'Amazon Seller Central End-to-End Management (100+ SKU Indexing, Backend Search Terms, Pricing & Inventory)',
+      'High-Converting Amazon A+ Content, Brand Storefront Design & Sponsored Products/Brands PPC',
+      'Product Detail Page (PDP) & Checkout Funnel CRO to lift add-to-cart and purchase conversion rates by +20%',
+      'Automated WhatsApp & Email Cart Recovery and Customer Retention Workflows'
+    ],
+    methodology: 'Paid traffic only converts when the storefront is merchandised for buyer trust and high Average Order Value (AOV). I combine marketplace keyword indexing and A+ visual storytelling on Amazon with friction-free Shopify/WooCommerce product pages, discovery set offers, and automated retention flows.',
+    proofPoints: [
+      'Leading end-to-end Shopify e-commerce operations, discovery sets, and checkout CRO for Decoy Luxury Perfumes (FFACE)',
+      'Generated ₹7.95 Lakhs in direct GMV across WooCommerce and Amazon Seller Central for Jaffri Creations across 100+ SKUs',
+      'Increased Amazon marketplace listing discoverability by +40% and organic store traffic by +30%'
+    ],
+    relatedCaseStudyIds: [1, 2],
+    faqs: [
+      {
+        q: 'Can you manage both our D2C website (Shopify/WooCommerce) and our Amazon Seller Central account?',
+        a: 'Yes. I specialize in unified omnichannel e-commerce growth—managing your D2C Shopify or WooCommerce storefront alongside your Amazon Seller Central catalog, A+ content, and Sponsored Ads so both channels grow profitably.'
+      },
+      {
+        q: 'How do you increase Average Order Value (AOV) and conversion rates on Shopify?',
+        a: 'We implement discovery sets, tiered product bundles, sticky add-to-cart bars, trust badges, streamlined checkout flows, and post-purchase WhatsApp/email retention sequences—proven to lift store conversion rates by up to 20%.'
+      },
+      {
+        q: 'Do you optimize large product catalogs with 100+ SKUs?',
+        a: 'Yes. I have hands-on experience managing and optimizing 100+ SKU catalogs across WooCommerce, Shopify, Google Merchant Center, and Amazon Seller Central.'
+      }
+    ]
+  },
+  {
+    slug: 'seo-local-seo-youtube-growth',
+    shortName: 'Technical SEO, Local SEO & YouTube SEO',
+    eyebrow: 'Organic Search & Video Discovery Services',
+    title: 'Organic Search & Video Growth: Technical SEO, Local SEO (GBP) & YouTube Video SEO Services',
+    metaTitle: 'Technical SEO, Local SEO & YouTube Video SEO Specialist India | Ayaz Aftab',
+    metaDescription: 'Rank #1 on Google Search, Google Maps (GBP), and YouTube. Proven SEO Specialist delivering +30% organic traffic growth, 247,000+ YouTube views, and 1,465+ GBP buyer actions.',
+    heroSummary: 'Compounding organic search and video discovery engines that capture high-intent buyers 24/7 without ongoing ad spend. I execute Technical SEO, On-Page E-commerce & B2B SEO, Local SEO (Google Business Profile), and YouTube Video SEO backed by Semrush intelligence.',
+    keyMetricBadge: '+30% Organic Traffic • 247K+ YouTube Views',
+    targetAudience: 'Designed for e-commerce stores, B2B financial/professional service firms, local & multi-location businesses, and consumer brands seeking sustainable organic rankings on Google Search, Google Maps, and YouTube.',
+    deliverables: [
+      'Comprehensive Technical SEO Audits (Core Web Vitals, Crawlability, XML Sitemaps, Canonicalization & Indexation)',
+      'Schema.org JSON-LD Rich Result Implementation (Product, Service, FAQPage, LocalBusiness, Article, Person)',
+      'Commercial Keyword Research & Competitor Gap Analysis via Semrush SEO Toolkit',
+      'On-Page SEO for E-commerce Category/Product Pages and B2B Service Landing Pages',
+      'Local SEO & Google Business Profile (GBP) Optimization for High-Intent Local Map Pack Rankings',
+      'YouTube Video SEO (Search Trend Mapping, Title/Metadata Indexing, Thumbnail CTR Testing & Shorts Distribution)'
+    ],
+    methodology: 'Modern search visibility requires dominating Google Web Search, Google Maps, AI Answer Engines (LLMs), and YouTube Search simultaneously. I fix underlying technical crawl/speed bottlenecks first, deploy rich Schema.org structured data, and build keyword-indexed content and video assets around commercial buyer intent.',
+    proofPoints: [
+      'Boosted organic website search traffic by +30% and Amazon organic discoverability by +40% for Jaffri Creations',
+      'Scaled Jaffri Creations YouTube channel from scratch to 247,000+ organic views and 5,200+ watch hours with zero paid video spend',
+      'Delivered +25% YoY organic search traffic growth for HICO Tax Consultant (B2B financial services) and 1,465+ Google Business Profile customer interactions'
+    ],
+    relatedCaseStudyIds: [2, 4],
+    faqs: [
+      {
+        q: 'How long does it take to see measurable organic traffic and ranking improvements from SEO?',
+        a: 'Technical SEO fixes, indexing improvements, Google Business Profile optimizations, and YouTube Video SEO typically show measurable impressions and click lifts within 3–6 weeks, while competitive commercial keywords compound steadily over 3–6 months.'
+      },
+      {
+        q: 'Do you optimize websites for AI search engines (ChatGPT, Perplexity, Google AI Overviews) as well as Google Search?',
+        a: 'Yes. Every site I optimize includes Schema.org JSON-LD graphs, pre-rendered semantic HTML, llms.txt, and Agentic Resource Discovery (ard.json) so both Googlebot and AI answer engines cite and rank your business.'
+      },
+      {
+        q: 'Can YouTube SEO really drive e-commerce and B2B product discovery without paid ads?',
+        a: 'Absolutely. By targeting high-intent product and how-to queries on YouTube and optimizing retention hooks, titles, and chapters, I generated 247,000+ organic views and 5,200+ hours of watch time that directly assisted D2C and marketplace sales.'
+      }
+    ]
+  },
+  {
+    slug: 'ga4-gtm-capi-tracking-cro',
+    shortName: 'GA4, GTM, Meta CAPI & Full-Funnel CRO',
+    eyebrow: 'Attribution, Analytics & Conversion Optimization',
+    title: 'Server-Side Attribution & Conversion Rate Optimization (CRO): GA4, GTM & Meta CAPI',
+    metaTitle: 'GA4, Google Tag Manager (GTM), Meta CAPI & CRO Specialist | Ayaz Aftab',
+    metaDescription: 'Fix broken ad attribution and lift conversion rates by +20%. Expert setup for GA4 custom events, Google Tag Manager (GTM), Meta Pixel & Conversions API (CAPI), and Landing Page CRO.',
+    heroSummary: 'Stop scaling ad spend on blind attribution and leaky landing pages. I implement bulletproof Google Analytics 4 (GA4) custom e-commerce/lead tracking, Google Tag Manager (GTM), Meta Pixel + Conversions API (CAPI), Looker Studio dashboards, and rapid landing page CRO that lifts conversion rates by +20%.',
+    keyMetricBadge: '+20% CVR Lift • 100% Full-Funnel Attribution',
+    targetAudience: 'Essential for D2C brands, performance marketing teams, and lead-generation businesses losing attribution data to iOS privacy updates or suffering from high landing page bounce rates and cart abandonment.',
+    deliverables: [
+      'Google Analytics 4 (GA4) Custom Event Architecture (view_item, add_to_cart, initiate_checkout, purchase, generate_lead)',
+      'Google Tag Manager (GTM) Web & Server-Side Trigger/Variable Configuration',
+      'Meta Pixel & Conversions API (CAPI) Deduplicated Event Tracking to maximize Event Match Quality (EMQ)',
+      'Standardized UTM Taxonomy & Automated Looker Studio Real-Time ROAS/CPA Dashboards',
+      'Landing Page & Checkout Conversion Rate Optimization (CRO) to lift CVR by +20% and cut bounce rates by 15%',
+      'HubSpot CRM Lead Segmentation & Automated Email/WhatsApp Nurture Integration'
+    ],
+    methodology: 'Algorithmic bidding on Meta Ads and Google PMax is only as smart as the conversion signals you feed back into it. I audit and repair every tracking touchpoint across GTM, GA4, and Meta CAPI first, then run structured A/B tests on landing page headlines, social proof, offer framing, and checkout forms.',
+    proofPoints: [
+      'Lifted landing page conversion rates by +20%, reduced bounce rates by 15%, and cut CPA/CPL by 35% across 9,452 acquisitions for MTEI Services',
+      'Configured GTM/GA4 custom purchase events and Meta Pixel/CAPI tracking for FFACE’s ₹6L+/mo luxury e-commerce ad accounts',
+      'Built automated HubSpot CRM lead segmentation and nurture workflows for HICO Tax Consultant'
+    ],
+    relatedCaseStudyIds: [1, 3],
+    faqs: [
+      {
+        q: 'Why is Meta Conversions API (CAPI) and GA4 custom event tracking critical for paid ads?',
+        a: 'Browser ad blockers and iOS privacy restrictions block up to 25–35% of standard pixel events. Implementing Meta CAPI alongside GTM and GA4 custom purchase/lead events restores lost conversion signals so Meta and Google algorithms optimize for real buyers.'
+      },
+      {
+        q: 'What is included in a Landing Page & Checkout CRO engagement?',
+        a: 'I audit user drop-off points in GA4, redesign above-the-fold value propositions, speed up mobile load times (targeting 100/100 Core Web Vitals), simplify lead/checkout forms, and run A/B tests on offers and bundles.'
+      },
+      {
+        q: 'Do you build custom Looker Studio dashboards for founders and marketing teams?',
+        a: 'Yes. I build unified Looker Studio dashboards blending Google Ads, Meta Ads, GA4, and Search Console data so you can track spend, ROAS, CPA, and organic growth in real time.'
+      }
+    ]
+  }
+];
+
 export const projectsData: Project[] = [
   {
     id: 1,
@@ -939,13 +1119,46 @@ const Services = () => (
   <section id="services" className="section-alt" aria-labelledby="services-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Services &amp; Engagement Models</span>
-        <h2 id="services-heading" className="section-title">Performance Marketing &amp; E-commerce Services</h2>
+        <span className="section-eyebrow">Digital Marketing Services &amp; Solutions</span>
+        <h2 id="services-heading" className="section-title">Performance Marketing, E-commerce &amp; SEO Services</h2>
         <p className="section-subtitle">
-          Whether you are hiring a full-time Performance Marketing &amp; E-commerce Growth Lead or need a high-converting Meta/Google Ads &amp; Shopify CRO partner, here is how we can work together.
+          Specialized digital marketing services for D2C e-commerce brands, marketplace sellers, and B2B companies across India and global markets—available for full-time leadership, freelance projects, or monthly retainers.
         </p>
       </div>
-      <div className="services-grid">
+
+      <div className="service-pillars-grid" aria-label="Core Digital Marketing Service Pillars">
+        {servicePagesData.map((sp) => (
+          <article key={sp.slug} className="service-card">
+            <div style={{ marginBottom: '0.65rem' }}>
+              <span className="project-badge">{sp.keyMetricBadge}</span>
+            </div>
+            <h3 className="service-card-title" style={{ fontSize: '1.25rem' }}>
+              <a href={`/services/${sp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                {sp.shortName}
+              </a>
+            </h3>
+            <p className="service-card-description">{sp.heroSummary}</p>
+            <ul className="service-list">
+              {sp.deliverables.slice(0, 3).map((del, idx) => (
+                <li key={idx} className="service-list-item">
+                  <Icon name="check" size={18} />
+                  <span>{del}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              id={`service-pillar-${sp.slug}`}
+              href={`/services/${sp.slug}`}
+              className="btn btn-primary service-card-btn"
+            >
+              <span>Explore {sp.shortName}</span>
+              <Icon name="arrow-right" size={16} />
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div className="services-grid" aria-label="Engagement Models">
         {servicesData.map((service) => (
           <div className="service-card" key={service.id}>
             <h3 className="service-card-title">{service.title}</h3>
@@ -1344,8 +1557,53 @@ const Footer = () => {
           </form>
         </div>
 
+        <nav className="footer-seo-directory" aria-label="Digital Marketing Services & Case Studies Directory">
+          <div>
+            <p className="footer-seo-title">Digital Marketing Services</p>
+            <ul className="footer-seo-list">
+              {servicePagesData.map((sp) => (
+                <li key={sp.slug}>
+                  <a href={`/services/${sp.slug}`} className="footer-seo-link">
+                    {sp.shortName} Services
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="footer-seo-title">Verified Case Studies</p>
+            <ul className="footer-seo-list">
+              {projectsData.map((proj) => (
+                <li key={proj.id}>
+                  <a href={`/case-studies/${proj.slug}`} className="footer-seo-link">
+                    {proj.client} ({proj.keyResult})
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <p className="footer-seo-title">Credentials &amp; Resources</p>
+            <ul className="footer-seo-list">
+              <li><a href="/" className="footer-seo-link">Portfolio Overview</a></li>
+              <li><a href="/resume" className="footer-seo-link">Online Master Resume</a></li>
+              <li><a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="footer-seo-link">Download Master Resume (PDF)</a></li>
+              <li><a href="https://www.linkedin.com/in/ayazaftab" target="_blank" rel="noopener noreferrer" className="footer-seo-link">LinkedIn Profile (/in/ayazaftab)</a></li>
+            </ul>
+          </div>
+          <div>
+            <p className="footer-seo-title">Markets &amp; Availability</p>
+            <ul className="footer-seo-list">
+              <li className="footer-seo-link">Kolkata, Bengaluru, Mumbai &amp; Delhi NCR</li>
+              <li className="footer-seo-link">Pan-India &amp; Global Remote (UAE, UK, US)</li>
+              <li className="footer-seo-link">Full-Time Roles, Freelance &amp; Retainers</li>
+              <li><a href="tel:+919263588321" className="footer-seo-link">Direct: +91 9263588321</a></li>
+            </ul>
+          </div>
+        </nav>
+
         <div className="footer-bottom">
-          <a href="#top" className="logo-container" aria-label="Back to top">
+          <a href="/" className="logo-container" aria-label="Back to home">
             <Logo />
             <span className="logo-text">Ayaz Aftab</span>
           </a>
@@ -1705,6 +1963,184 @@ const ResumePage = () => (
   </>
 );
 
+const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
+  const relatedStudies = projectsData.filter((p) => service.relatedCaseStudyIds.includes(p.id));
+  const otherServices = servicePagesData.filter((s) => s.slug !== service.slug);
+
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="service-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="/#services" className="breadcrumb-link">Digital Marketing Services</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">{service.shortName}</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">{service.eyebrow} • Kolkata, India &amp; Global Remote</span>
+          <h1 id="service-page-title" className="section-title" style={{ marginBottom: '0.85rem' }}>
+            {service.title}
+          </h1>
+          <p className="section-subtitle" style={{ marginBottom: '1.35rem', maxWidth: '800px' }}>
+            {service.heroSummary}
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+            <span className="project-badge" style={{ fontSize: '0.88rem', padding: '0.35rem 0.9rem' }}>
+              Proven Track Record: {service.keyMetricBadge}
+            </span>
+            <a href="#contact" className="btn btn-primary">
+              <span>Request a Free Audit &amp; Proposal</span>
+              <Icon name="arrow-right" size={16} />
+            </a>
+            <a href="tel:+919263588321" className="btn btn-secondary">
+              <Icon name="phone" size={16} />
+              <span>Call +91 9263588321</span>
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="case-study-page-section">
+        <AnimatedSection className="container">
+          <div className="modal-grid">
+            <div className="modal-main-content">
+              <div className="modal-section">
+                <h2 className="modal-section-title">1. Complete Scope of Deliverables</h2>
+                <ul className="service-list" style={{ marginTop: '0.85rem' }}>
+                  {service.deliverables.map((item, idx) => (
+                    <li key={idx} className="service-list-item">
+                      <Icon name="check" size={18} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">2. How I Execute &amp; Scale Results</h2>
+                <p>{service.methodology}</p>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">3. Who This Service Is Built For</h2>
+                <p>{service.targetAudience}</p>
+              </div>
+
+              <div className="modal-section" style={{ marginBottom: 0 }}>
+                <h2 className="modal-section-title">4. Service-Specific FAQs</h2>
+                <div className="faq-list" style={{ marginTop: '1rem' }}>
+                  {service.faqs.map((f, i) => (
+                    <details key={i} className="faq-item" open={i === 0}>
+                      <summary className="faq-question">
+                        <span>{f.q}</span>
+                        <span className="faq-icon">
+                          <Icon name="chevron-down" size={18} />
+                        </span>
+                      </summary>
+                      <div className="faq-answer">
+                        <p>{f.a}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <aside className="modal-sidebar" aria-label="Verified Client Proof Points">
+              <div className="modal-sidebar-box">
+                <h2 className="modal-section-title">Verified Proof &amp; ROI</h2>
+                <ul className="modal-results-list">
+                  {service.proofPoints.map((pt, index) => (
+                    <li key={index} className="modal-result-item">
+                      <Icon name="check-circle" size={16} />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <a href="#contact" className="btn btn-primary" style={{ width: '100%' }}>
+                    <span>Start a Project or Audit</span>
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                  <a href="/resume" className="btn btn-secondary" style={{ width: '100%' }}>
+                    <span>View Online Master Resume</span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-alt" aria-labelledby="service-related-studies-heading">
+        <AnimatedSection className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">Proven Execution</span>
+            <h2 id="service-related-studies-heading" className="section-title">Related Case Studies &amp; Other Services</h2>
+          </div>
+          <div className="projects-grid">
+            {relatedStudies.map((rel) => (
+              <article key={rel.id} className="project-card">
+                <a href={`/case-studies/${rel.slug}`} className="project-image-container">
+                  <img
+                    src={rel.imageUrl}
+                    alt={`${rel.title} — ${rel.client}`}
+                    className="project-image"
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
+                </a>
+                <div className="project-content">
+                  <div className="project-meta-row">
+                    <span className="project-client">{rel.client}</span>
+                    <span className="project-badge">{rel.keyResult}</span>
+                  </div>
+                  <h3 className="project-title">
+                    <a href={`/case-studies/${rel.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                      {rel.title}
+                    </a>
+                  </h3>
+                  <p className="project-summary">{rel.summary}</p>
+                  <a href={`/case-studies/${rel.slug}`} className="btn btn-secondary project-card-btn">
+                    <span>Read Full Case Study</span>
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="service-pillars-grid" style={{ marginTop: '2.5rem', marginBottom: 0 }}>
+            {otherServices.map((os) => (
+              <article key={os.slug} className="service-card">
+                <div style={{ marginBottom: '0.5rem' }}>
+                  <span className="project-badge">{os.keyMetricBadge}</span>
+                </div>
+                <h3 className="service-card-title" style={{ fontSize: '1.15rem' }}>
+                  <a href={`/services/${os.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {os.shortName}
+                  </a>
+                </h3>
+                <p className="service-card-description">{os.heroSummary}</p>
+                <a href={`/services/${os.slug}`} className="btn btn-secondary service-card-btn">
+                  <span>Explore {os.shortName}</span>
+                  <Icon name="arrow-right" size={16} />
+                </a>
+              </article>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
 export const App = ({ initialPath }: { initialPath?: string } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -1732,6 +2168,10 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
     ? projectsData.find((p) => `/case-studies/${p.slug}` === currentPath)
     : undefined;
 
+  const matchedService = currentPath.startsWith('/services/')
+    ? servicePagesData.find((s) => `/services/${s.slug}` === currentPath)
+    : undefined;
+
   return (
     <>
       <Header onMenuClick={() => setIsMenuOpen(true)} />
@@ -1741,6 +2181,8 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
           <ResumePage />
         ) : matchedCaseStudy ? (
           <CaseStudyPage project={matchedCaseStudy} />
+        ) : matchedService ? (
+          <ServiceLandingPage service={matchedService} />
         ) : (
           <>
             <Hero />
@@ -1769,4 +2211,5 @@ if (typeof document !== 'undefined') {
     root.render(<App />);
   }
 }
+
 

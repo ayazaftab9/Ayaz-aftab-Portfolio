@@ -1612,3 +1612,49 @@ section:last-of-type {
   margin-top: 1rem;
 }
 
+.service-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.footer-seo-directory {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border-subtle);
+  text-align: left;
+}
+
+.footer-seo-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-primary);
+  margin-bottom: 0.85rem;
+}
+
+.footer-seo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-seo-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  transition: color 0.2s ease;
+}
+
+.footer-seo-link:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+
