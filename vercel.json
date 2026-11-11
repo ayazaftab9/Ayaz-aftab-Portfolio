@@ -1,7 +1,9 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
-      "source": "/",
+      "source": "/(.*)",
       "headers": [
         { "key": "Link", "value": "</.well-known/ard.json>; rel=\"ard\"" }
       ]

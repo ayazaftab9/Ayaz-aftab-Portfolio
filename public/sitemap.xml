@@ -8,23 +8,73 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png</image:loc>
-      <image:title>Ayaz Aftab - Digital Marketing &amp; eCommerce Specialist</image:title>
-      <image:caption>Portfolio of Ayaz Aftab, SEO, PPC, Google Ads, Meta Ads, and Amazon eCommerce Growth Specialist</image:caption>
+      <image:title>Ayaz Aftab - Performance Marketing &amp; E-commerce Growth Lead</image:title>
+      <image:caption>Portfolio of Ayaz Aftab, Performance Marketing &amp; E-commerce Specialist (Meta Ads, Google Ads, Shopify/WooCommerce CRO &amp; Amazon Seller Central)</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/resume</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png</image:loc>
+      <image:title>Master Resume — Ayaz Aftab | Performance Marketing &amp; E-commerce Growth Lead</image:title>
+      <image:caption>5.5+ years experience scaling D2C, B2B, and marketplace brands across Meta Ads, Google Ads, Shopify, WooCommerce, and Amazon</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-fface-roas.svg</image:loc>
+      <image:title>FFACE (GM Modular &amp; Decoy Luxury Perfumes) Paid Media &amp; Shopify CRO Case Study</image:title>
+      <image:caption>Directed ₹6L+ monthly ad spend across Meta Ads &amp; Google Ads at a sustained 4.0x ROAS with full-funnel Shopify CRO and GTM/GA4/CAPI tracking</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-jaffri-ecommerce.svg</image:loc>
-      <image:title>Jaffri Creations Multi-Platform eCommerce &amp; Google Ads Case Study</image:title>
-      <image:caption>Drove ₹7.95 Lakhs in Amazon Sales, 34,900+ Google Ads clicks, and +30% organic traffic growth</image:caption>
+      <image:title>Jaffri Creations D2C WooCommerce &amp; Amazon Growth Case Study</image:title>
+      <image:caption>Drove ₹7.95 Lakhs in direct GMV, ₹2L/mo Google PMax &amp; Meta campaigns at 4.5x ROAS, +30% organic traffic, and +40% Amazon discoverability</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-jaffri-ads.svg</image:loc>
+      <image:title>Jaffri Creations Google Ads Performance Max &amp; Search Breakdown</image:title>
+      <image:caption>Generated 34,900+ high-intent commercial clicks at 4.5x ROAS</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-jaffri-seo.svg</image:loc>
+      <image:title>Jaffri Creations Technical &amp; Local SEO Breakdown</image:title>
+      <image:caption>+30% organic website traffic and 1,465+ verified Google Business Profile buyer actions</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-mtei-leads.svg</image:loc>
-      <image:title>MTEI Services High-Volume Meta Ads Lead Generation Case Study</image:title>
-      <image:caption>Generated 9,452 qualified student leads at ₹49.86 CPL across ₹4.7L ad spend</image:caption>
+      <image:title>MTEI Services High-Velocity Acquisition &amp; Landing Page CRO Case Study</image:title>
+      <image:caption>Delivered 9,452 qualified customer acquisitions, reduced CPA/CPL by 35% (₹49.86 CPL), and lifted landing page CVR by 20%</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth</loc>
+    <lastmod>2026-11-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
     <image:image>
       <image:loc>https://ayaz-aftab-portfolio.vercel.app/images/case-study-youtube-growth.svg</image:loc>
-      <image:title>Jaffri Creations Organic YouTube SEO &amp; Brand Growth Case Study</image:title>
-      <image:caption>Accumulated 247,000+ organic views and 5,200+ hours of watch time via YouTube SEO</image:caption>
+      <image:title>Jaffri Creations YouTube Video SEO &amp; Organic Discovery Case Study</image:title>
+      <image:caption>Accumulated 247,000+ organic YouTube views and 5,200+ hours of watch time via YouTube Video SEO</image:caption>
     </image:image>
   </url>
   <url>

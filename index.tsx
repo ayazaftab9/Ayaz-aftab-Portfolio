@@ -50,7 +50,7 @@ interface ExperienceItem {
 }
 
 // --- DATA ---
-const projectsData: Project[] = [
+export const projectsData: Project[] = [
   {
     id: 1,
     slug: 'fface-gm-modular-decoy-luxury-paid-media-ecommerce',
@@ -476,7 +476,7 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => (
     <a href="#main-content" className="skip-link">Skip to main content</a>
     <div className="container">
       <nav className="nav" aria-label="Primary Navigation">
-        <a href="#top" id="nav-logo-link" className="logo-container">
+        <a href="/" id="nav-logo-link" className="logo-container">
           <Logo />
           <div className="logo-text-group">
             <span className="logo-text">Ayaz Aftab</span>
@@ -485,14 +485,13 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => (
         </a>
 
         <div className="desktop-nav">
-          <a href="#impact" id="nav-link-impact" className="desktop-nav-link">Impact</a>
-          <a href="#experience" id="nav-link-experience" className="desktop-nav-link">Experience</a>
-          <a href="#projects" id="nav-link-projects" className="desktop-nav-link">Case Studies</a>
-          <a href="#process" id="nav-link-process" className="desktop-nav-link">Process</a>
-          <a href="#services" id="nav-link-services" className="desktop-nav-link">Services</a>
-          <a href="#skills" id="nav-link-skills" className="desktop-nav-link">Skills</a>
-          <a href="#faq" id="nav-link-faq" className="desktop-nav-link">FAQ</a>
-          <a href="#contact" id="nav-link-contact" className="desktop-nav-link">Contact</a>
+          <a href="/#impact" id="nav-link-impact" className="desktop-nav-link">Impact</a>
+          <a href="/#experience" id="nav-link-experience" className="desktop-nav-link">Experience</a>
+          <a href="/#projects" id="nav-link-projects" className="desktop-nav-link">Case Studies</a>
+          <a href="/#services" id="nav-link-services" className="desktop-nav-link">Services</a>
+          <a href="/#skills" id="nav-link-skills" className="desktop-nav-link">Skills</a>
+          <a href="/resume" id="nav-link-resume" className="desktop-nav-link">Resume</a>
+          <a href="/#contact" id="nav-link-contact" className="desktop-nav-link">Contact</a>
         </div>
 
         <div className="header-actions">
@@ -544,7 +543,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
         onClick={(e) => e.stopPropagation()}
       >
         <div className="off-canvas-header">
-          <a href="#top" className="logo-container" onClick={onClose}>
+          <a href="/" className="logo-container" onClick={onClose}>
             <Logo />
             <span className="logo-text">Ayaz Aftab</span>
           </a>
@@ -553,14 +552,15 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           </button>
         </div>
         <nav className="menu-links" aria-label="Mobile Navigation Links">
-          <a href="#impact" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={18} /> Proven Impact</a>
-          <a href="#experience" onClick={onClose} className="menu-link"><Icon name="briefcase" size={18} /> Experience</a>
-          <a href="#projects" onClick={onClose} className="menu-link"><Icon name="star" size={18} /> Case Studies</a>
-          <a href="#process" onClick={onClose} className="menu-link"><Icon name="tool" size={18} /> Growth Process</a>
-          <a href="#services" onClick={onClose} className="menu-link"><Icon name="settings" size={18} /> Services</a>
-          <a href="#skills" onClick={onClose} className="menu-link"><Icon name="award" size={18} /> Skills &amp; Certifications</a>
-          <a href="#faq" onClick={onClose} className="menu-link"><Icon name="help-circle" size={18} /> FAQ</a>
-          <a href="#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={18} /> Contact</a>
+          <a href="/#impact" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={18} /> Proven Impact</a>
+          <a href="/#experience" onClick={onClose} className="menu-link"><Icon name="briefcase" size={18} /> Experience</a>
+          <a href="/#projects" onClick={onClose} className="menu-link"><Icon name="star" size={18} /> Case Studies</a>
+          <a href="/#process" onClick={onClose} className="menu-link"><Icon name="tool" size={18} /> Growth Process</a>
+          <a href="/#services" onClick={onClose} className="menu-link"><Icon name="settings" size={18} /> Services</a>
+          <a href="/#skills" onClick={onClose} className="menu-link"><Icon name="award" size={18} /> Skills &amp; Certifications</a>
+          <a href="/resume" onClick={onClose} className="menu-link"><Icon name="check-circle" size={18} /> Online Master Resume</a>
+          <a href="/#faq" onClick={onClose} className="menu-link"><Icon name="help-circle" size={18} /> FAQ</a>
+          <a href="/#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={18} /> Contact</a>
         </nav>
         <a
           href="/resume.pdf"
@@ -642,8 +642,8 @@ const Hero = () => (
             <span>Explore Case Studies</span>
             <Icon name="arrow-right" size={16} />
           </a>
-          <a href="#experience" id="hero-cta-experience" className="btn btn-secondary">
-            <span>View Work History</span>
+          <a href="/resume" id="hero-cta-online-resume" className="btn btn-secondary">
+            <span>View Full Resume</span>
           </a>
           <a
             href="/resume.pdf"
@@ -654,7 +654,7 @@ const Hero = () => (
             className="btn btn-ghost"
           >
             <Icon name="download" size={16} />
-            <span>Master Resume (PDF)</span>
+            <span>Download PDF</span>
           </a>
         </div>
 
@@ -848,7 +848,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
               className="project-card"
               key={project.id}
             >
-              <div className="project-image-container">
+              <a href={`/case-studies/${project.slug}`} className="project-image-container" aria-label={`View ${project.title} case study`}>
                 <img
                   src={project.imageUrl}
                   alt={`${project.title} — ${project.client} (${project.keyResult})`}
@@ -857,13 +857,17 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
                   width="800"
                   height="450"
                 />
-              </div>
+              </a>
               <div className="project-content">
                 <div className="project-meta-row">
                   <span className="project-client">{project.client}</span>
                   <span className="project-badge">{project.keyResult}</span>
                 </div>
-                <h3 className="project-title">{project.title}</h3>
+                <h3 className="project-title">
+                  <a href={`/case-studies/${project.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {project.title}
+                  </a>
+                </h3>
                 <p className="project-summary">{project.summary}</p>
 
                 <ul className="project-highlights" aria-label={`Key results for ${project.title}`}>
@@ -881,15 +885,24 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
                   ))}
                 </div>
 
-                <button
-                  id={`open-case-study-${project.id}`}
-                  type="button"
-                  onClick={() => onProjectClick(project)}
-                  className="btn btn-secondary project-card-btn"
-                >
-                  <span>Read Full Case Study</span>
-                  <Icon name="arrow-right" size={16} />
-                </button>
+                <div className="project-card-actions">
+                  <a
+                    id={`link-case-study-${project.id}`}
+                    href={`/case-studies/${project.slug}`}
+                    className="btn btn-primary project-card-btn"
+                  >
+                    <span>Full Case Study</span>
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                  <button
+                    id={`open-case-study-${project.id}`}
+                    type="button"
+                    onClick={() => onProjectClick(project)}
+                    className="btn btn-secondary project-card-btn"
+                  >
+                    <span>Quick Preview</span>
+                  </button>
+                </div>
               </div>
             </article>
           ))}
@@ -1492,9 +1505,212 @@ const ProjectModal = ({ project, onClose }: { project: Project | null; onClose: 
   );
 };
 
-export const App = () => {
+const CaseStudyPage = ({ project }: { project: Project }) => {
+  const relatedProjects = projectsData.filter((p) => p.id !== project.id);
+
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="case-study-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="/#projects" className="breadcrumb-link">Case Studies</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">{project.client}</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">{project.client} • Performance &amp; E-commerce Case Study</span>
+          <h1 id="case-study-page-title" className="section-title" style={{ marginBottom: '0.85rem' }}>
+            {project.title}
+          </h1>
+          <p className="section-subtitle" style={{ marginBottom: '1.35rem', maxWidth: '760px' }}>
+            {project.summary}
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', alignItems: 'center' }}>
+            <span className="project-badge" style={{ fontSize: '0.88rem', padding: '0.35rem 0.9rem' }}>
+              Verified Impact: {project.keyResult}
+            </span>
+            {project.tags.map((tag) => (
+              <span key={tag} className="project-tag">{tag}</span>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="case-study-page-section">
+        <AnimatedSection className="container">
+          <div className="modal-grid">
+            <div className="modal-main-content">
+              <div className="modal-section">
+                <h2 className="modal-section-title">1. The Business Challenge</h2>
+                <p>{project.challenge}</p>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">2. My Role &amp; Ownership</h2>
+                <p>{project.role}</p>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">3. Full-Funnel Strategy &amp; Architecture</h2>
+                <p>{project.strategy}</p>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">4. Campaign Execution &amp; CRO</h2>
+                <p>{project.execution}</p>
+              </div>
+
+              {project.testimonial && (
+                <div className="modal-section">
+                  <h2 className="modal-section-title">5. Client Endorsement</h2>
+                  <blockquote className="testimonial-quote" style={{ marginBottom: 0 }}>
+                    &ldquo;{project.testimonial}&rdquo;
+                  </blockquote>
+                </div>
+              )}
+
+              <div className="modal-section" style={{ marginTop: '2rem', marginBottom: 0 }}>
+                <h2 className="modal-section-title">6. Campaign Performance Visuals</h2>
+                <div className="visuals-stack">
+                  {project.visuals.map((vis, idx) => (
+                    <img
+                      key={vis}
+                      src={vis}
+                      alt={`${project.title} — Performance Breakdown ${idx + 1}`}
+                      className="carousel-image"
+                      width="800"
+                      height="450"
+                      loading={idx === 0 ? 'eager' : 'lazy'}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <aside className="modal-sidebar" aria-label="Verified Key Results">
+              <div className="modal-sidebar-box">
+                <h2 className="modal-section-title">Verified Key Results</h2>
+                <ul className="modal-results-list">
+                  {project.results.map((result, index) => (
+                    <li key={index} className="modal-result-item">
+                      <Icon name="check-circle" size={16} />
+                      <span>{result}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <a href="#contact" className="btn btn-primary" style={{ width: '100%' }}>
+                    <span>Discuss a Similar Campaign</span>
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                  <a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: '100%' }}>
+                    <Icon name="download" size={16} />
+                    <span>Download Master Resume</span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-alt" aria-labelledby="related-studies-heading">
+        <AnimatedSection className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">Explore More Proven Results</span>
+            <h2 id="related-studies-heading" className="section-title">Other Performance &amp; E-commerce Case Studies</h2>
+          </div>
+          <div className="projects-grid">
+            {relatedProjects.map((rel) => (
+              <article key={rel.id} className="project-card">
+                <a href={`/case-studies/${rel.slug}`} className="project-image-container">
+                  <img
+                    src={rel.imageUrl}
+                    alt={`${rel.title} — ${rel.client}`}
+                    className="project-image"
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
+                </a>
+                <div className="project-content">
+                  <div className="project-meta-row">
+                    <span className="project-client">{rel.client}</span>
+                    <span className="project-badge">{rel.keyResult}</span>
+                  </div>
+                  <h3 className="project-title">
+                    <a href={`/case-studies/${rel.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                      {rel.title}
+                    </a>
+                  </h3>
+                  <p className="project-summary">{rel.summary}</p>
+                  <a href={`/case-studies/${rel.slug}`} className="btn btn-secondary project-card-btn">
+                    <span>Read Case Study</span>
+                    <Icon name="arrow-right" size={16} />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
+const ResumePage = () => (
+  <>
+    <section className="subpage-hero" aria-labelledby="resume-page-title">
+      <AnimatedSection className="container">
+        <nav aria-label="Breadcrumb">
+          <ol className="breadcrumb-nav">
+            <li><a href="/" className="breadcrumb-link">Home</a></li>
+            <li aria-hidden="true">/</li>
+            <li className="breadcrumb-current" aria-current="page">Master Resume</li>
+          </ol>
+        </nav>
+
+        <span className="hero-role-kicker">Kolkata, West Bengal, India • +91 9263588321 • ayazaftab9@gmail.com</span>
+        <h1 id="resume-page-title" className="section-title" style={{ marginBottom: '0.65rem' }}>
+          Ayaz Aftab — Performance Marketing &amp; E-commerce Growth Lead
+        </h1>
+        <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
+          Performance Marketing &amp; E-commerce Specialist with 5.5+ years of experience scaling D2C, B2B, and marketplace brands. Proven track record of managing monthly paid ad spend exceeding ₹6L+ across Meta and Google at a sustained 4.0x–4.5x ROAS, driving 9,452+ qualified acquisitions, and lifting store conversions by 20%. Deep proficiency in Shopify/WooCommerce operations, Google Merchant Center feeds, GA4 custom event tracking, and direct-response creative testing.
+        </p>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+          <a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <Icon name="download" size={16} />
+            <span>Download Master Resume (PDF)</span>
+          </a>
+          <a href="https://www.linkedin.com/in/ayazaftab" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
+            <Icon name="linkedin" size={16} />
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="/" className="btn btn-ghost">
+            <span>Back to Portfolio Overview</span>
+          </a>
+        </div>
+      </AnimatedSection>
+    </section>
+
+    <ProvenImpact />
+    <ExperienceSection />
+    <Skills />
+  </>
+);
+
+export const App = ({ initialPath }: { initialPath?: string } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const rawPath = initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/');
+  const currentPath = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
 
   useEffect(() => {
     registerWebMCPTools();
@@ -1512,20 +1728,32 @@ export const App = () => {
   const handleProjectClick = (project: Project) => setSelectedProject(project);
   const handleCloseModal = () => setSelectedProject(null);
 
+  const matchedCaseStudy = currentPath.startsWith('/case-studies/')
+    ? projectsData.find((p) => `/case-studies/${p.slug}` === currentPath)
+    : undefined;
+
   return (
     <>
       <Header onMenuClick={() => setIsMenuOpen(true)} />
       <OffCanvasMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
       <main id="main-content">
-        <Hero />
-        <ProvenImpact />
-        <ExperienceSection />
-        <FeaturedProjects onProjectClick={handleProjectClick} />
-        <GrowthProcess />
-        <Services />
-        <Testimonials onProjectClick={handleProjectClick} />
-        <Skills />
-        <FAQSection />
+        {currentPath === '/resume' ? (
+          <ResumePage />
+        ) : matchedCaseStudy ? (
+          <CaseStudyPage project={matchedCaseStudy} />
+        ) : (
+          <>
+            <Hero />
+            <ProvenImpact />
+            <ExperienceSection />
+            <FeaturedProjects onProjectClick={handleProjectClick} />
+            <GrowthProcess />
+            <Services />
+            <Testimonials onProjectClick={handleProjectClick} />
+            <Skills />
+            <FAQSection />
+          </>
+        )}
       </main>
       <Footer />
       {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
@@ -1541,3 +1769,4 @@ if (typeof document !== 'undefined') {
     root.render(<App />);
   }
 }
+

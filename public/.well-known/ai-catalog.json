@@ -1,37 +1,156 @@
 {
-  "entries": [
+  "$schema": "https://ard-spec.org/schemas/v0.1.0/ard.json",
+  "specVersion": "0.1.0",
+  "publisher": {
+    "id": "ayaz-aftab-portfolio",
+    "displayName": "Ayaz Aftab — Performance Marketing & E-commerce Growth Lead",
+    "website": "https://ayaz-aftab-portfolio.vercel.app/",
+    "description": "Official portfolio and case studies of Ayaz Aftab, Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience scaling D2C, B2B, and marketplace brands (₹6L+/mo Meta & Google Ads at 4.0x–4.5x ROAS, 9,452+ acquisitions, +20% store CRO, ₹7.95L+ D2C/Amazon GMV).",
+    "contact": "ayazaftab9@gmail.com"
+  },
+  "updatedAt": "2026-11-11T00:00:00Z",
+  "resources": [
     {
-      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:agent:portfolio-assistant",
-      "displayName": "Ayaz Aftab — Performance Marketing & E-commerce Growth Lead Portfolio Agent",
-      "type": "application/a2a-agent-card+json",
-      "url": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json",
-      "description": "Discover verified performance marketing & e-commerce case studies (₹6L+ monthly ad spend at 4.0x–4.5x ROAS, ₹7.95L GMV, 9,452 acquisitions, 247K+ YouTube views), experience at FFACE, Jaffri Creations, MTEI Services & HICO Tax Consultant, and contact tools for Ayaz Aftab.",
-      "capabilities": [
-        "CaseStudyLookup",
-        "ExperienceLookup",
-        "ServiceInquiry",
-        "ResumeDownload"
-      ],
+      "id": "portfolio-web-app",
+      "type": "web_page",
+      "name": "Ayaz Aftab Portfolio & WebMCP Interface",
+      "description": "Interactive portfolio showcasing verified ROAS & e-commerce case studies (FFACE, Jaffri Creations, MTEI Services), 5.5+ year career timeline, services, and WebMCP-enabled inquiry tools.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/",
       "tags": [
         "performance-marketing",
+        "ecommerce",
         "meta-ads",
         "google-ads",
-        "ecommerce",
         "shopify",
-        "woocommerce",
-        "amazon-seller-central",
+        "amazon",
         "cro",
+        "seo",
+        "webmcp"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/"
+      }
+    },
+    {
+      "id": "online-master-resume",
+      "type": "web_page",
+      "name": "Ayaz Aftab Online Master Resume",
+      "description": "HTML Master Resume page detailing Ayaz Aftab's 5.5+ years of work experience, core competencies, education, and verified certifications.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/resume",
+      "tags": [
+        "resume",
+        "cv",
+        "work-experience",
+        "certifications"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/resume"
+      }
+    },
+    {
+      "id": "case-study-fface",
+      "type": "web_page",
+      "name": "Case Study: FFACE (GM Modular & Decoy Luxury Perfumes) — ₹6L+/Mo Spend at 4.0x ROAS",
+      "description": "Full case study on scaling ₹6L+ monthly Meta & Google Ads budgets at 4.0x ROAS alongside Shopify CRO and GTM/GA4/CAPI tracking.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce",
+      "tags": [
+        "case-study",
+        "meta-ads",
+        "google-ads",
+        "shopify",
+        "cro"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce"
+      }
+    },
+    {
+      "id": "case-study-jaffri-ecommerce",
+      "type": "web_page",
+      "name": "Case Study: Jaffri Creations — ₹7.95L GMV at 4.5x ROAS across WooCommerce & Amazon",
+      "description": "Full case study on scaling D2C WooCommerce and Amazon Seller Central storefronts to ₹7.95L GMV with ₹2L/mo Google PMax & Meta Ads at 4.5x ROAS.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo",
+      "tags": [
+        "case-study",
+        "amazon",
+        "woocommerce",
+        "google-pmax",
         "seo"
       ],
-      "updatedAt": "2026-11-11T00:00:00Z",
-      "representativeQueries": [
-        "hire a performance marketing and ecommerce growth lead for Meta Ads and Google Ads",
-        "view case studies for 4.0x to 4.5x ROAS across Shopify, WooCommerce, and Amazon",
-        "request a full-funnel CRO, GA4/GTM attribution, or paid media audit from Ayaz Aftab",
-        "download Ayaz Aftab performance marketing specialist master resume and certifications"
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo"
+      }
+    },
+    {
+      "id": "case-study-mtei-leads",
+      "type": "web_page",
+      "name": "Case Study: MTEI Services — 9,452 Qualified Acquisitions & -35% CPA",
+      "description": "Full case study on engineering Meta & Google acquisition funnels delivering 9,452 conversions, -35% CPA/CPL, and +20% landing page CVR.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation",
+      "tags": [
+        "case-study",
+        "lead-generation",
+        "meta-ads",
+        "cro"
       ],
-      "trustManifest": {
-        "identity": "did:web:ayaz-aftab-portfolio.vercel.app"
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation"
+      }
+    },
+    {
+      "id": "case-study-jaffri-youtube",
+      "type": "web_page",
+      "name": "Case Study: Jaffri Creations — 247,000+ Organic YouTube Views via Video SEO",
+      "description": "Full case study on scaling YouTube Video SEO from scratch to 247,000+ organic views and 5,200+ hours of watch time.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth",
+      "tags": [
+        "case-study",
+        "youtube-seo",
+        "video-marketing",
+        "organic-growth"
+      ],
+      "protocol": {
+        "type": "web_page",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth"
+      }
+    },
+    {
+      "id": "llms-context",
+      "type": "llms_txt",
+      "name": "LLMs Context Document (llms.txt)",
+      "description": "Structured Markdown summary of Ayaz Aftab's master resume, verified ROAS and revenue metrics, work history, skills, certifications, and contact information for AI agents.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
+      "tags": [
+        "llms-txt",
+        "profile",
+        "case-studies",
+        "resume"
+      ],
+      "protocol": {
+        "type": "llms_txt",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/llms.txt"
+      }
+    },
+    {
+      "id": "specialist-agent-card",
+      "type": "a2a_agent",
+      "name": "Ayaz Aftab Portfolio A2A Agent Card",
+      "description": "Agent-to-Agent (A2A) discovery metadata describing capabilities, skills, and inquiry channels.",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/",
+      "tags": [
+        "a2a",
+        "agent-card",
+        "marketing-consultant"
+      ],
+      "protocol": {
+        "type": "a2a",
+        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/",
+        "agentCardUrl": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json"
       }
     }
   ]
