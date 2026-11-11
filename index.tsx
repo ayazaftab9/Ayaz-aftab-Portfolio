@@ -881,94 +881,100 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 const Hero = () => (
   <section id="top" className="hero">
     <AnimatedSection className="container">
-      <div className="hero-layout">
-        <span className="hero-role-kicker">
-          ₹35L+ Monthly Ad Budget Managed Combined • 5.5+ Years Experience • All India &amp; Global
-        </span>
-        <h1 className="hero-headline">
-          <span className="hero-name">Ayaz Aftab</span> — Scaling Brands with Precision Paid Media &amp; SEO.
-          <span className="hero-dynamic-subheading">
-            Get Predictable Daily Leads, 4x Sales &amp; #1 Google Rankings via <span className="typing-text">Google Ads, Meta Ads &amp; Store CRO</span>
-          </span>
-        </h1>
-        <p className="hero-summary">
-          Digital Marketing Freelancer &amp; Performance Marketing Growth Lead helping D2C brands, enterprises, and growing businesses across India turn ad spend and search intent into measurable profit. Currently directing <strong>₹35L+ in combined monthly ad budgets</strong> across <strong>Google Ads</strong> and <strong>Meta Ads (Facebook &amp; Instagram)</strong> at a sustained <strong>4.0x–4.5x ROAS</strong>, <strong>9,452+ customer leads at ₹49.86/lead</strong>, and <strong>+20% higher website conversions</strong> on <strong>Shopify, WooCommerce &amp; Amazon</strong>.
-        </p>
+      <div className="hero-split">
+        <div className="hero-layout">
+          <div className="hero-role-kicker">
+            <span className="status-dot"></span>
+            <span>Available for Q2/Q3 Scaling • ₹35L+/Mo Combined Ad Spend</span>
+          </div>
+          <h1 className="hero-headline">
+            Ayaz Aftab — Growth Lead &amp; Digital Marketer.
+            <span className="hero-dynamic-subheading">
+              Scaling D2C brands, e-commerce stores &amp; enterprises with precision Google Ads, Meta Ads &amp; #1 SEO rankings.
+            </span>
+          </h1>
+          <p className="hero-summary">
+            Directing <strong>₹35L+ in combined monthly ad spend</strong> across <strong>Meta Ads</strong> and <strong>Google Ads</strong> at <strong>4.0x–4.5x ROAS</strong>, <strong>9,452+ leads at ₹49.86 CPL</strong> (-35% CPA), and <strong>+20% checkout conversion rate lift</strong> across <strong>Shopify, WooCommerce &amp; Amazon</strong>.
+          </p>
 
-        <ul className="hero-highlights" aria-label="Verified Credentials">
-          <li className="hero-highlight-item">
-            <Icon name="check-circle" size={15} />
-            <span>₹35L+/Mo Combined Ad Spend</span>
-          </li>
-          <li className="hero-highlight-item">
-            <Icon name="check-circle" size={15} />
-            <span>4.0x–4.5x Sustained ROAS</span>
-          </li>
-          <li className="hero-highlight-item">
-            <Icon name="check-circle" size={15} />
-            <span>9,452+ Verified Leads (-35% CPA)</span>
-          </li>
-          <li className="hero-highlight-item">
-            <Icon name="check-circle" size={15} />
-            <span>Google, Meta, HubSpot &amp; Amazon Certified</span>
-          </li>
-        </ul>
+          <div className="hero-cta">
+            <a href="#contact" id="hero-cta-audit" className="btn btn-primary">
+              <span>Request Free Audit</span>
+              <Icon name="arrow-right" size={15} />
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              id="hero-cta-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <Icon name="whatsapp" size={15} />
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
 
-        <div className="hero-cta">
-          <a href="#contact" id="hero-cta-audit" className="btn btn-primary">
-            <span>Request a Free Growth Audit</span>
-            <Icon name="arrow-right" size={16} />
-          </a>
-          <a
-            href={WHATSAPP_URL}
-            id="hero-cta-whatsapp"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-whatsapp"
-          >
-            <Icon name="whatsapp" size={16} />
-            <span>Book a Consultation (WhatsApp)</span>
-          </a>
-          <a href="#projects" id="hero-cta-projects" className="btn btn-secondary">
-            <span>View Case Studies</span>
-          </a>
-          <a
-            href="/resume.pdf"
-            id="hero-cta-resume"
-            download
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-ghost"
-          >
-            <Icon name="download" size={15} />
-            <span>Resume PDF</span>
-          </a>
+          <div className="hero-meta-strip">
+            <a href="tel:+919263588321" className="hero-meta-link">
+              <Icon name="phone" size={13} />
+              <span>+91 9263588321</span>
+            </a>
+            <span>•</span>
+            <a href="mailto:ayazaftab9@gmail.com" className="hero-meta-link">
+              <Icon name="mail" size={13} />
+              <span>ayazaftab9@gmail.com</span>
+            </a>
+            <span>•</span>
+            <a href="/resume" className="hero-meta-link">
+              <Icon name="award" size={13} />
+              <span>5.5+ Yrs Track Record</span>
+            </a>
+          </div>
         </div>
 
-        <div className="hero-socials">
-          <a href="tel:+919263588321" id="hero-social-phone" className="social-link">
-            <Icon name="phone" size={15} />
-            <span>+91 9263588321</span>
-          </a>
-          <a href="mailto:ayazaftab9@gmail.com" id="hero-social-email" className="social-link">
-            <Icon name="mail" size={15} />
-            <span>ayazaftab9@gmail.com</span>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/ayazaftab"
-            id="hero-social-linkedin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
-            <Icon name="linkedin" size={15} />
-            <span>linkedin.com/in/ayazaftab</span>
-          </a>
-          <a href="/resume" id="hero-social-resume" className="social-link">
-            <Icon name="award" size={15} />
-            <span>Online Master Resume</span>
-          </a>
-        </div>
+        <aside id="impact" className="hero-bento-panel" aria-label="Audited Performance Metrics">
+          <div className="hero-bento-header">
+            <span>Executive Performance</span>
+            <span>Audited Portfolio</span>
+          </div>
+          <div className="impact-grid">
+            <div className="info-card">
+              <div>
+                <p className="impact-metric">₹35L+/Mo</p>
+                <p className="impact-label">Combined Ad Spend</p>
+              </div>
+              <p className="impact-context">Meta CBO/ABO + Google PMax/Search</p>
+            </div>
+            <div className="info-card">
+              <div>
+                <p className="impact-metric">4.0x–4.5x</p>
+                <p className="impact-label">Sustained ROAS</p>
+              </div>
+              <p className="impact-context">Multi-brand D2C &amp; retail scaling</p>
+            </div>
+            <div className="info-card">
+              <div>
+                <p className="impact-metric">9,452+</p>
+                <p className="impact-label">Customer Leads</p>
+              </div>
+              <p className="impact-context">₹49.86 CPL (-35% lower CPA)</p>
+            </div>
+            <div className="info-card">
+              <div>
+                <p className="impact-metric">+20%</p>
+                <p className="impact-label">CVR Lift &amp; CRO</p>
+              </div>
+              <p className="impact-context">Shopify, WooCommerce &amp; Amazon</p>
+            </div>
+          </div>
+          <div className="hero-bento-footer">
+            <span>Google, Meta &amp; HubSpot Certified</span>
+            <a href="#projects" className="hero-meta-link">
+              <span>View Case Studies</span>
+              <Icon name="arrow-right" size={13} />
+            </a>
+          </div>
+        </aside>
       </div>
     </AnimatedSection>
   </section>
@@ -1030,29 +1036,30 @@ const Services = () => (
   <section id="services" aria-labelledby="services-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Digital Marketing Services India</span>
-        <h2 id="services-heading" className="section-title">Precision Growth Services for Ambitious Brands</h2>
+        <span className="section-eyebrow">02 — CAPABILITIES &amp; DELIVERABLES</span>
+        <h2 id="services-heading" className="section-title">Growth Services Built for ROI &amp; Revenue</h2>
         <p className="section-subtitle">
-          Clear, ROI-focused digital marketing services built to generate daily qualified leads, #1 Google rankings, and profitable online store revenue.
+          Execution-first digital marketing services delivering daily qualified leads, #1 Google rankings, and profitable store revenue.
         </p>
       </div>
 
       <div className="service-pillars-grid" aria-label="Core Digital Marketing Service Pillars">
-        {servicePagesData.map((sp) => (
+        {servicePagesData.map((sp, idx) => (
           <article key={sp.slug} className="service-card">
-            <div style={{ marginBottom: '0.65rem' }}>
+            <div className="service-card-top">
+              <span className="service-index">0{idx + 1} / 04</span>
               <span className="project-badge">{sp.keyMetricBadge}</span>
             </div>
-            <h3 className="service-card-title" style={{ fontSize: '1.22rem' }}>
+            <h3 className="service-card-title">
               <a href={`/services/${sp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
                 {sp.shortName}
               </a>
             </h3>
             <p className="service-card-description">{sp.heroSummary}</p>
             <ul className="service-list">
-              {sp.deliverables.slice(0, 3).map((del, idx) => (
-                <li key={idx} className="service-list-item">
-                  <Icon name="check" size={17} />
+              {sp.deliverables.slice(0, 3).map((del, dIdx) => (
+                <li key={dIdx} className="service-list-item">
+                  <Icon name="check" size={16} />
                   <span>{del}</span>
                 </li>
               ))}
@@ -1077,7 +1084,7 @@ const Services = () => (
             <ul className="service-list">
               {service.items.map((item, i) => (
                 <li key={i} className="service-list-item">
-                  <Icon name="check" size={17} />
+                  <Icon name="check" size={16} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -1106,41 +1113,30 @@ const IndiaFreelancerSection = () => (
   <section id="india-freelancer" className="section-alt" aria-labelledby="india-freelancer-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Pan-India &amp; Global Remote Partner</span>
+        <span className="section-eyebrow">03 — PAN-INDIA &amp; GLOBAL INDUSTRIES</span>
         <h2 id="india-freelancer-heading" className="section-title">
-          Digital Marketing Freelancer &amp; Growth Partner Across India
+          Tailored Acquisition Systems by Vertical
         </h2>
         <p className="section-subtitle">
-          Skip agency layers and work directly with a senior specialist managing ₹35L+/mo in paid media. Tailored acquisition systems for India&apos;s fastest-growing industries.
+          Skip agency overhead and partner directly with a senior growth lead managing ₹35L+/mo in paid media across India&apos;s key markets.
         </p>
       </div>
 
-      <div className="services-grid" aria-label="Industries Served Across India">
+      <div className="industry-matrix" aria-label="Industries Served Across India">
         {indiaIndustriesData.map((ind) => (
-          <article key={ind.title} className="service-card">
-            <div style={{ marginBottom: '0.6rem' }}>
-              <span className="project-badge">{ind.badge}</span>
-            </div>
-            <h3 className="service-card-title" style={{ fontSize: '1.12rem' }}>{ind.title}</h3>
-            <p className="service-card-description" style={{ marginBottom: '1.1rem' }}>{ind.description}</p>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-secondary service-card-btn"
-            >
-              <Icon name="whatsapp" size={15} />
-              <span>Discuss Your Industry</span>
-            </a>
-          </article>
+          <div key={ind.title} className="industry-cell">
+            <span className="project-badge">{ind.badge}</span>
+            <h3 className="industry-cell-title">{ind.title}</h3>
+            <p className="industry-cell-desc">{ind.description}</p>
+          </div>
         ))}
       </div>
 
-      <div style={{ marginTop: '2.25rem', textAlign: 'center' }}>
-        <p style={{ fontSize: '0.84rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
-          Serving Founders, D2C Brands &amp; Enterprises Across All Major Indian Hubs &amp; Global Markets:
+      <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-lg)' }}>
+        <p style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
+          Serving Founders, D2C Brands &amp; Growing Businesses Across All Major Hubs:
         </p>
-        <div className="india-seo-pills" style={{ justifyContent: 'center' }} aria-label="Cities Served in India">
+        <div className="india-seo-pills" aria-label="Cities Served in India">
           {indiaCitiesList.map((city) => (
             <span key={city} className="india-seo-pill">{city}</span>
           ))}
@@ -1161,7 +1157,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
     <section id="projects" aria-labelledby="projects-heading">
       <AnimatedSection className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Verified Case Studies</span>
+          <span className="section-eyebrow">01 — SELECTED WORK</span>
           <h2 id="projects-heading" className="section-title">Featured Performance &amp; E-commerce Case Studies</h2>
           <p className="section-subtitle">
             Detailed breakdowns of how I scale Meta Ads, Google PMax, Shopify/WooCommerce CRO, Amazon Seller Central, and YouTube SEO.
@@ -1286,7 +1282,7 @@ const GrowthProcess = () => (
   <section id="process" className="section-alt" aria-labelledby="process-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Operating System</span>
+        <span className="section-eyebrow">04 — METHODOLOGY</span>
         <h2 id="process-heading" className="section-title">How I Scale Leads &amp; Revenue Step-by-Step</h2>
         <p className="section-subtitle">
           A clear, 4-stage methodology combining server-side tracking, buyer-intent targeting, weekly creative testing, and conversion optimization.
@@ -1309,7 +1305,7 @@ const ExperienceSection = () => (
   <section id="experience" aria-labelledby="experience-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">5.5+ Years Career Track Record</span>
+        <span className="section-eyebrow">05 — CAREER &amp; TRACK RECORD</span>
         <h2 id="experience-heading" className="section-title">Professional Experience &amp; Leadership</h2>
         <p className="section-subtitle">
           A proven history of owning ₹35L+/mo combined paid acquisition P&amp;Ls, Shopify and WooCommerce store operations, and B2B demand generation.
@@ -1344,7 +1340,7 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: Project) =
   <section id="testimonials" className="section-alt" aria-labelledby="testimonials-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Client Endorsements</span>
+        <span className="section-eyebrow">06 — CLIENT ENDORSEMENTS</span>
         <h2 id="testimonials-heading" className="section-title">Trusted by Founders &amp; Growth Directors</h2>
         <p className="section-subtitle">
           Direct feedback from business leaders on ROAS consistency, lead quality, and e-commerce growth.
@@ -1400,7 +1396,7 @@ const Skills = () => (
   <section id="skills" aria-labelledby="skills-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Core Competencies &amp; Credentials</span>
+        <span className="section-eyebrow">07 — ATTRIBUTION &amp; STACK</span>
         <h2 id="skills-heading" className="section-title">Skills, Attribution Stack &amp; Certifications</h2>
         <p className="section-subtitle">
           Full-stack performance marketing, Shopify/WooCommerce store operations, and server-side analytics backed by Google, Meta, HubSpot, Amazon, and Semrush certifications.
@@ -1503,7 +1499,7 @@ const FAQSection = () => (
   <section id="faq" className="section-alt" aria-labelledby="faq-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Common Questions</span>
+        <span className="section-eyebrow">08 — FREQUENT QUESTIONS</span>
         <h2 id="faq-heading" className="section-title">Frequently Asked Questions</h2>
         <p className="section-subtitle">
           Clear answers about my ₹35L+/mo paid media experience, digital marketing services across India, and how to get started.
@@ -1604,152 +1600,156 @@ const Footer = () => {
   return (
     <footer id="contact" className="footer">
       <AnimatedSection className="container">
-        <div className="footer-content">
-          <span className="section-eyebrow">Book a Consultation • All India &amp; Global</span>
-          <h2 className="footer-title">Let&apos;s Scale Your Leads, ROAS &amp; Store Revenue.</h2>
-          <p className="footer-subtitle">
-            Looking to scale your Google &amp; Meta Ads, rank #1 on Google, or hire a Growth Lead managing ₹35L+/mo? Reach out on WhatsApp or request a 24-hour audit below.
-          </p>
+        <div className="footer-split">
+          <div className="footer-left">
+            <span className="section-eyebrow">09 — GET IN TOUCH</span>
+            <h2 className="footer-title">Let&apos;s Build a High-ROI Acquisition Engine.</h2>
+            <p className="footer-subtitle">
+              Looking to scale your Google &amp; Meta Ads, rank #1 on Google, or hire an Executive Growth Lead managing ₹35L+/mo? Reach out directly on WhatsApp or submit your website for a free 24-hour audit.
+            </p>
 
-          <div className="contact-direct-bar">
-            <a
-              href={WHATSAPP_URL}
-              id="footer-whatsapp-direct"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp"
-              style={{ padding: '0.5rem 1.1rem', fontSize: '0.84rem' }}
-            >
-              <Icon name="whatsapp" size={15} />
-              <span>WhatsApp: +91 9263588321</span>
-            </a>
-            <a
-              href="tel:+919263588321"
-              id="footer-phone-direct"
-              className="social-link"
-            >
-              <Icon name="phone" size={15} />
-              <span>Call: +91 9263588321</span>
-            </a>
-            <button
-              id="copy-email-btn"
-              type="button"
-              onClick={handleCopyEmail}
-              className="social-link"
-            >
-              <Icon name={copiedEmail ? 'check' : 'copy'} size={15} />
-              <span>{copiedEmail ? 'Copied: ayazaftab9@gmail.com' : 'ayazaftab9@gmail.com'}</span>
-            </button>
-          </div>
-
-          <form
-            id="contact-form"
-            className="contact-form"
-            toolname="send_marketing_inquiry"
-            tooldescription="Request a digital marketing consultation, free Google/Meta Ads & SEO audit, Shopify/Amazon growth proposal, or full-time growth lead inquiry from Ayaz Aftab"
-            onSubmit={handleSubmit}
-          >
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="name" className="form-label">Your Name *</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  title="Full name of the business owner, founder, or recruiter"
-                  className="form-input"
-                  placeholder="e.g., Rahul Sharma"
-                  toolparamdescription="Full name of the person or business owner reaching out, e.g., Rahul Sharma"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="phone" className="form-label">WhatsApp / Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  title="Phone or WhatsApp number for consultation or audit callback"
-                  className="form-input"
-                  placeholder="e.g., +91 98765 43210"
-                  toolparamdescription="Phone or WhatsApp number of the sender in India or internationally"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
-
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="email" className="form-label">Work Email *</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  title="Reply email address of the sender"
-                  className="form-input"
-                  placeholder="e.g., rahul@company.com"
-                  toolparamdescription="Contact email address for sending the audit or proposal"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <label htmlFor="inquiryType" className="form-label">How Can We Work Together?</label>
-                <select
-                  id="inquiryType"
-                  name="inquiryType"
-                  title="Type of digital marketing service or role opportunity"
-                  className="form-select"
-                  toolparamdescription="Digital marketing service needed (Google/Meta Ads, SEO, Shopify/Amazon, Website CRO, or Full-Time Role)"
-                  value={formData.inquiryType}
-                  onChange={handleInputChange}
-                >
-                  <option value="Google Ads & Meta Ads Scaling (Leads & Sales)">Google Ads &amp; Meta Ads Scaling (Leads &amp; Sales)</option>
-                  <option value="SEO, Local Google Maps & YouTube Ranking">SEO, Local Google Maps &amp; YouTube Ranking</option>
-                  <option value="Shopify, WooCommerce & Amazon Revenue Growth">Shopify, WooCommerce &amp; Amazon Revenue Growth</option>
-                  <option value="Website CRO & GA4 / GTM / Meta CAPI Setup">Website CRO &amp; GA4 / GTM / Meta CAPI Setup</option>
-                  <option value="Executive Growth Lead / Full-Time Opportunity">Executive Growth Lead / Full-Time Opportunity</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message" className="form-label">Website URL, Monthly Budget &amp; Goals *</label>
-              <textarea
-                id="message"
-                name="message"
-                title="Detailed message describing your business, website URL, monthly ad budget, or growth goals"
-                className="form-textarea"
-                placeholder="Share your website URL, current monthly ad spend, target ROAS/CPL, or role details..."
-                toolparamdescription="Business details, website URL for free audit, monthly ad budget, or role details"
-                rows={4}
-                value={formData.message}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
-              <button id="contact-submit-btn" type="submit" className="btn btn-primary form-submit-btn">
-                <span>Request Growth Audit</span>
-                <Icon name="arrow-right" size={15} />
-              </button>
-              <button
-                id="contact-whatsapp-submit-btn"
-                type="button"
-                onClick={handleWhatsAppSend}
-                className="btn btn-whatsapp form-submit-btn"
+            <div className="contact-direct-bar">
+              <a
+                href={WHATSAPP_URL}
+                id="footer-whatsapp-direct"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{ padding: '0.55rem 1.15rem', fontSize: '0.84rem' }}
               >
                 <Icon name="whatsapp" size={16} />
-                <span>Send via WhatsApp</span>
+                <span>WhatsApp: +91 9263588321</span>
+              </a>
+              <a
+                href="tel:+919263588321"
+                id="footer-phone-direct"
+                className="social-link"
+              >
+                <Icon name="phone" size={15} />
+                <span>Call: +91 9263588321</span>
+              </a>
+              <button
+                id="copy-email-btn"
+                type="button"
+                onClick={handleCopyEmail}
+                className="social-link"
+              >
+                <Icon name={copiedEmail ? 'check' : 'copy'} size={15} />
+                <span>{copiedEmail ? 'Copied: ayazaftab9@gmail.com' : 'ayazaftab9@gmail.com'}</span>
               </button>
             </div>
-            {statusMessage && <p className="form-status-message" role="status">{statusMessage}</p>}
-          </form>
+          </div>
+
+          <div className="footer-right">
+            <form
+              id="contact-form"
+              className="contact-form"
+              toolname="send_marketing_inquiry"
+              tooldescription="Request a digital marketing consultation, free Google/Meta Ads & SEO audit, Shopify/Amazon growth proposal, or full-time growth lead inquiry from Ayaz Aftab"
+              onSubmit={handleSubmit}
+            >
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="name" className="form-label">Your Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    title="Full name of the business owner, founder, or recruiter"
+                    className="form-input"
+                    placeholder="e.g., Rahul Sharma"
+                    toolparamdescription="Full name of the person or business owner reaching out, e.g., Rahul Sharma"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="phone" className="form-label">WhatsApp / Phone Number</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    title="Phone or WhatsApp number for consultation or audit callback"
+                    className="form-input"
+                    placeholder="e.g., +91 98765 43210"
+                    toolparamdescription="Phone or WhatsApp number of the sender in India or internationally"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <div className="form-row">
+                <div className="form-group">
+                  <label htmlFor="email" className="form-label">Work Email *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    title="Reply email address of the sender"
+                    className="form-input"
+                    placeholder="e.g., rahul@company.com"
+                    toolparamdescription="Contact email address for sending the audit or proposal"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="form-group">
+                  <label htmlFor="inquiryType" className="form-label">How Can We Work Together?</label>
+                  <select
+                    id="inquiryType"
+                    name="inquiryType"
+                    title="Type of digital marketing service or role opportunity"
+                    className="form-select"
+                    toolparamdescription="Digital marketing service needed (Google/Meta Ads, SEO, Shopify/Amazon, Website CRO, or Full-Time Role)"
+                    value={formData.inquiryType}
+                    onChange={handleInputChange}
+                  >
+                    <option value="Google Ads & Meta Ads Scaling (Leads & Sales)">Google Ads &amp; Meta Ads Scaling (Leads &amp; Sales)</option>
+                    <option value="SEO, Local Google Maps & YouTube Ranking">SEO, Local Google Maps &amp; YouTube Ranking</option>
+                    <option value="Shopify, WooCommerce & Amazon Revenue Growth">Shopify, WooCommerce &amp; Amazon Revenue Growth</option>
+                    <option value="Website CRO & GA4 / GTM / Meta CAPI Setup">Website CRO &amp; GA4 / GTM / Meta CAPI Setup</option>
+                    <option value="Executive Growth Lead / Full-Time Opportunity">Executive Growth Lead / Full-Time Opportunity</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="message" className="form-label">Website URL, Monthly Budget &amp; Goals *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  title="Detailed message describing your business, website URL, monthly ad budget, or growth goals"
+                  className="form-textarea"
+                  placeholder="Share your website URL, current monthly ad spend, target ROAS/CPL, or role details..."
+                  toolparamdescription="Business details, website URL for free audit, monthly ad budget, or role details"
+                  rows={4}
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+                <button id="contact-submit-btn" type="submit" className="btn btn-primary form-submit-btn">
+                  <span>Request Growth Audit</span>
+                  <Icon name="arrow-right" size={15} />
+                </button>
+                <button
+                  id="contact-whatsapp-submit-btn"
+                  type="button"
+                  onClick={handleWhatsAppSend}
+                  className="btn btn-whatsapp form-submit-btn"
+                >
+                  <Icon name="whatsapp" size={16} />
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+              {statusMessage && <p className="form-status-message" role="status">{statusMessage}</p>}
+            </form>
+          </div>
         </div>
 
         <nav className="footer-seo-directory" aria-label="Digital Marketing Services & Case Studies Directory">
@@ -1810,6 +1810,25 @@ const Footer = () => {
     </footer>
   );
 };
+
+const MobileBottomDock = () => (
+  <aside className="mobile-bottom-dock" aria-label="Quick contact actions">
+    <a href="tel:+919263588321" className="mobile-dock-btn mobile-dock-call" id="mobile-dock-call">
+      <Icon name="phone" size={15} />
+      <span>Call +91 9263588321</span>
+    </a>
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="mobile-dock-btn mobile-dock-whatsapp"
+      id="mobile-dock-whatsapp"
+    >
+      <Icon name="whatsapp" size={16} />
+      <span>WhatsApp Consultation</span>
+    </a>
+  </aside>
+);
 
 const ProjectModal = ({ project, onClose }: { project: Project | null; onClose: () => void }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -2434,10 +2453,9 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
         ) : (
           <>
             <Hero />
-            <ProvenImpact />
+            <FeaturedProjects onProjectClick={handleProjectClick} />
             <Services />
             <IndiaFreelancerSection />
-            <FeaturedProjects onProjectClick={handleProjectClick} />
             <GrowthProcess />
             <ExperienceSection />
             <Testimonials onProjectClick={handleProjectClick} />
@@ -2447,6 +2465,7 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
         )}
       </main>
       <Footer />
+      <MobileBottomDock />
       {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
       <Analytics />
     </>
