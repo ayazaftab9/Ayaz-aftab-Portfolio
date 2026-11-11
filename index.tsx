@@ -66,165 +66,168 @@ export interface ServicePageData {
   faqs: { q: string; a: string }[];
 }
 
+const WHATSAPP_URL =
+  'https://wa.me/919263588321?text=Hi%20Ayaz%2C%20I%20visited%20your%20website%20and%20want%20digital%20marketing%20services%20to%20get%20more%20leads%20and%20sales.';
+
 // --- DATA ---
 export const servicePagesData: ServicePageData[] = [
   {
     slug: 'performance-marketing-meta-google-ads',
-    shortName: 'Meta Ads & Google Ads (PPC)',
-    eyebrow: 'Paid Media & Customer Acquisition Services',
-    title: 'Performance Marketing Services: Meta Ads, Google Ads (PMax) & LinkedIn Ads Management',
-    metaTitle: 'Performance Marketing Services: Meta Ads & Google Ads Specialist | Ayaz Aftab',
-    metaDescription: 'Hire a certified Performance Marketing Specialist managing ₹6L+/mo across Meta Ads (Facebook/Instagram) & Google Ads (Search, Shopping, PMax) at 4.0x–4.5x ROAS and -35% CPA.',
-    heroSummary: 'Data-driven paid media management for D2C e-commerce brands, B2B enterprises, and high-growth startups. I architect, test, and scale profitable Meta Ads (Facebook & Instagram CBO/ABO), Google Search, Shopping, Performance Max, and LinkedIn Ads funnels engineered for 4.0x–4.5x ROAS and 35% lower CPA/CPL.',
-    keyMetricBadge: '₹6L+/Mo Managed • 4.0x–4.5x ROAS',
-    targetAudience: 'Ideal for D2C Shopify/WooCommerce brands, luxury & retail businesses, education/admissions teams, and B2B service providers across India (Kolkata, Bengaluru, Mumbai, Delhi NCR) and global markets (UAE, UK, US, Remote) seeking predictable paid acquisition.',
+    shortName: 'Google Ads & Facebook/Instagram Ads',
+    eyebrow: 'Paid Ads & Daily Lead Generation Services in India',
+    title: 'Google Ads & Facebook/Instagram Ads Freelancer in India: Get Daily Leads & 4x Sales',
+    metaTitle: 'Google Ads & Facebook Ads Freelancer India | Performance Marketing Services — Ayaz Aftab',
+    metaDescription: 'Hire India’s trusted Google Ads & Facebook/Instagram Ads freelancer. Managing ₹6L+/mo ad budgets with 4.0x–4.5x ROAS and 9,452+ customer leads at 35% lower cost.',
+    heroSummary: 'Stop wasting money on ads that only bring likes or empty clicks. I set up and manage high-converting Google Ads and Facebook/Instagram (Meta) Ads that bring you daily phone calls, WhatsApp inquiries, and direct online orders—proven across ₹6L+/month ad budgets at 4.0x–4.5x return.',
+    keyMetricBadge: '₹6L+/Mo Managed • 4.0x–4.5x Return',
+    targetAudience: 'Built for business owners, D2C online stores, real estate builders, clinics, coaching institutes, and B2B companies across India (Kolkata, Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai) and worldwide who want profitable leads and sales every day.',
     deliverables: [
-      'Meta Ads Manager Architecture (CBO/ABO Prospecting, Lookalikes, Dynamic Product Catalog Ads & Retargeting)',
-      'Google Ads Full-Funnel Management (High-Intent Search, Performance Max Asset Groups, Standard Shopping & YouTube)',
-      'Google Merchant Center Feed Optimization, Custom Labels & Product Title Indexing',
-      'Weekly Direct-Response Creative Testing (3–5 Ad Concepts/Week: Unboxing Hooks, UGC Angles, Static Carousels)',
-      'B2B Lead Generation Funnels via Google Search & LinkedIn Ads integrated with HubSpot CRM',
-      'Daily Budget Pacing, Negative Keyword Sculpting, and ROAS / CAC Cohort Reporting'
+      'Facebook & Instagram Ads (Meta Ads) Setup for Daily WhatsApp Leads, Website Leads & Online Orders',
+      'Google Search Ads, Performance Max (PMax) & Google Shopping Ads to Capture Ready-to-Buy Customers',
+      'Google Merchant Center Setup & Product Feed Optimization for Online Stores',
+      'Weekly New Ad Creatives (3–5 Ad Videos/Images Every Week to Keep Ad Costs Low)',
+      'B2B Lead Generation via Google Search & LinkedIn Ads Connected to Your CRM / WhatsApp',
+      'Clear Daily & Weekly Reports Showing Exact Ad Spend, Leads Generated, and Sales Profit'
     ],
-    methodology: 'Every paid account is structured around clean server-side signal quality (GA4 + GTM + Meta CAPI) and high-velocity creative testing. By isolating winning ad hooks in ABO testing campaigns before graduating them into CBO scaling budgets—and pairing Google PMax with exact-match commercial search protection—we eliminate wasted ad spend and compound profitable revenue.',
+    methodology: 'I use a simple 3-step formula that works: (1) Target people who are actively searching for or interested in your product, (2) Show them clear, thumb-stopping video and image ads that build instant trust, and (3) Track every single call, WhatsApp chat, and purchase using GA4 and Meta CAPI so your ad budget only goes toward ads that make you money.',
     proofPoints: [
-      'Directing ₹6L+ monthly paid media budgets across Meta & Google Ads for FFACE (GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x ROAS',
-      'Scaled ₹2L/mo Google PMax, Search & Meta retargeting campaigns for Jaffri Creations at 4.5x ROAS (34,900+ commercial clicks)',
-      'Delivered 9,452 qualified customer acquisitions for MTEI Services while reducing CPA/CPL by 35% (₹49.86 CPL)'
+      'Managing ₹6L+ monthly Google & Facebook/Instagram ad budgets for FFACE (GM Modular & Decoy Luxury Perfumes) with a steady 4.0x Return on Ad Spend (ROAS)',
+      'Scaled ₹2L/mo Google Ads & Meta retargeting campaigns for Jaffri Creations at 4.5x return (34,900+ buyer clicks)',
+      'Generated 9,452 verified customer leads for MTEI Services while cutting cost-per-lead by 35% (just ₹49.86 per lead)'
     ],
     relatedCaseStudyIds: [1, 2, 3],
     faqs: [
       {
-        q: 'What monthly ad spend budgets do you manage for Meta Ads and Google Ads?',
-        a: 'I manage monthly paid media budgets ranging from ₹50,000/month for growing D2C/B2B brands up to ₹6,00,000+/month (₹6L+/mo) for established multi-brand portfolios, maintaining disciplined 4.0x–4.5x ROAS targets.'
+        q: 'What monthly ad budget do I need to start Google Ads or Facebook Ads?',
+        a: 'You can start with a small test budget of ₹15,000–₹30,000/month for local lead generation, or scale up to ₹1L–₹6L+/month for pan-India e-commerce and multi-city campaigns. Every rupee is tracked for return on investment.'
       },
       {
-        q: 'How do you combat ad fatigue on Facebook and Instagram Ads?',
-        a: 'I partner with creative teams to ship 3–5 new direct-response ad concepts every week—testing unboxing hooks, UGC testimonials, problem/solution angles, and catalog carousels to keep thumb-stop ratios high and CPA low.'
+        q: 'How fast will I start getting leads or orders from paid ads?',
+        a: 'Once your tracking and ads go live (usually within 48–72 hours), qualified leads, phone calls, WhatsApp messages, and orders begin coming in from day one, and costs improve each week as we test 3–5 new ad creatives.'
       },
       {
-        q: 'Do you manage both e-commerce ROAS campaigns and B2B/B2C lead generation?',
-        a: 'Yes. I run full-funnel e-commerce purchase campaigns (Shopify, WooCommerce, Amazon) as well as high-volume lead generation engines (9,452+ leads generated across Meta Instant Forms, custom landing pages, Google Search, and LinkedIn Ads).'
+        q: 'Why hire you as a digital marketing freelancer instead of a traditional agency?',
+        a: 'At most agencies, a senior salesperson pitches you and a junior intern runs your ads. When you work with me, your account is personally managed by a Google & Meta Certified specialist with 5.5+ years of experience—with direct WhatsApp access and no heavy agency markups.'
       }
     ]
   },
   {
     slug: 'ecommerce-growth-shopify-woocommerce-amazon',
-    shortName: 'Shopify, WooCommerce & Amazon Growth',
-    eyebrow: 'D2C Storefront & Marketplace Scaling Services',
-    title: 'E-commerce Growth Services: Shopify, WooCommerce & Amazon Seller Central Optimization',
-    metaTitle: 'E-commerce Marketing Specialist: Shopify, WooCommerce & Amazon Growth | Ayaz Aftab',
-    metaDescription: 'Scale your D2C store and marketplace GMV with end-to-end Shopify, WooCommerce, and Amazon Seller Central management, A+ cataloging, and checkout CRO (+20% CVR).',
-    heroSummary: 'End-to-end e-commerce growth and store operations for D2C and marketplace brands. From Shopify and WooCommerce merchandising, bundle/discovery set offers, and checkout CRO to Amazon Seller Central A+ Content and Sponsored Ads—I turn store visitors into repeat high-AOV buyers.',
-    keyMetricBadge: '₹7.95L+ Direct GMV • +40% Amazon Discovery',
-    targetAudience: 'Built for D2C founders, luxury consumer brands, home decor & retail manufacturers, and omnichannel sellers looking to scale revenue across Shopify, WooCommerce, and Amazon India/Global marketplaces.',
+    shortName: 'Shopify, WooCommerce & Amazon Sales Growth',
+    eyebrow: 'Online Store & Marketplace Growth Services India',
+    title: 'Shopify, WooCommerce & Amazon Growth Specialist in India: Scale Your Online Store Sales',
+    metaTitle: 'Shopify, WooCommerce & Amazon Marketing Expert India | E-commerce Growth — Ayaz Aftab',
+    metaDescription: 'Grow your Shopify, WooCommerce, and Amazon India sales. Proven e-commerce freelancer delivering ₹7.95L+ direct store GMV, +40% Amazon visibility, and +20% checkout sales.',
+    heroSummary: 'Want more people to buy from your website or Amazon store? I help D2C brands and manufacturers across India set up, optimize, and scale their Shopify, WooCommerce, and Amazon Seller Central stores—turning casual website visitors into repeat paying customers.',
+    keyMetricBadge: '₹7.95L+ Store Sales • +40% Amazon Reach',
+    targetAudience: 'Ideal for D2C brand founders, clothing/fashion labels, perfume & beauty brands, home decor manufacturers, and retail sellers looking to grow online orders on Shopify, WooCommerce, and Amazon.',
     deliverables: [
-      'Shopify & WooCommerce Store Administration, Catalog Merchandising & Collection Architecture',
-      'AOV & Repeat Purchase Optimization (Discovery Sets, Tiered Bundles, Cross-Sells & Post-Purchase Flows)',
-      'Amazon Seller Central End-to-End Management (100+ SKU Indexing, Backend Search Terms, Pricing & Inventory)',
-      'High-Converting Amazon A+ Content, Brand Storefront Design & Sponsored Products/Brands PPC',
-      'Product Detail Page (PDP) & Checkout Funnel CRO to lift add-to-cart and purchase conversion rates by +20%',
-      'Automated WhatsApp & Email Cart Recovery and Customer Retention Workflows'
+      'Complete Shopify & WooCommerce Store Management, Product Page Design & Speed Optimization',
+      'Smart Combo Offers, Discovery Sets & Bundles to Increase Average Order Value (AOV)',
+      'Amazon Seller Central Management (100+ Product Listings, Keywords, Pricing & Inventory)',
+      'High-Converting Amazon A+ Content, Brand Store Design & Amazon Sponsored Ads (PPC)',
+      'Checkout & Cart Page Improvements to Boost Sales Conversion Rate by +20%',
+      'Automated WhatsApp & Email Abandoned Cart Recovery to Win Back Lost Buyers'
     ],
-    methodology: 'Paid traffic only converts when the storefront is merchandised for buyer trust and high Average Order Value (AOV). I combine marketplace keyword indexing and A+ visual storytelling on Amazon with friction-free Shopify/WooCommerce product pages, discovery set offers, and automated retention flows.',
+    methodology: 'Getting traffic is only half the battle—your store must look trustworthy and make buying effortless on mobile phones. I combine fast, clean Shopify/WooCommerce product pages and irresistible bundle offers with keyword-rich Amazon A+ listings so customers buy more and return often.',
     proofPoints: [
-      'Leading end-to-end Shopify e-commerce operations, discovery sets, and checkout CRO for Decoy Luxury Perfumes (FFACE)',
-      'Generated ₹7.95 Lakhs in direct GMV across WooCommerce and Amazon Seller Central for Jaffri Creations across 100+ SKUs',
-      'Increased Amazon marketplace listing discoverability by +40% and organic store traffic by +30%'
+      'Leading complete Shopify store operations, discovery sets, and checkout optimization for Decoy Luxury Perfumes (FFACE)',
+      'Generated ₹7.95 Lakhs in direct sales across WooCommerce and Amazon Seller Central for Jaffri Creations across 100+ products',
+      'Increased Amazon product visibility by +40% and free organic website traffic by +30%'
     ],
     relatedCaseStudyIds: [1, 2],
     faqs: [
       {
-        q: 'Can you manage both our D2C website (Shopify/WooCommerce) and our Amazon Seller Central account?',
-        a: 'Yes. I specialize in unified omnichannel e-commerce growth—managing your D2C Shopify or WooCommerce storefront alongside your Amazon Seller Central catalog, A+ content, and Sponsored Ads so both channels grow profitably.'
+        q: 'Can you manage both our Shopify/WooCommerce website and our Amazon Seller account?',
+        a: 'Yes! I manage your own website (Shopify or WooCommerce) and your Amazon Seller Central account together so you get maximum sales from both channels.'
       },
       {
-        q: 'How do you increase Average Order Value (AOV) and conversion rates on Shopify?',
-        a: 'We implement discovery sets, tiered product bundles, sticky add-to-cart bars, trust badges, streamlined checkout flows, and post-purchase WhatsApp/email retention sequences—proven to lift store conversion rates by up to 20%.'
+        q: 'How do you increase sales without increasing our ad budget?',
+        a: 'By improving your product pages, adding customer reviews, creating value bundles/discovery sets, simplifying mobile checkout, and setting up WhatsApp cart recovery—which lifts store conversion rates by up to 20%.'
       },
       {
-        q: 'Do you optimize large product catalogs with 100+ SKUs?',
-        a: 'Yes. I have hands-on experience managing and optimizing 100+ SKU catalogs across WooCommerce, Shopify, Google Merchant Center, and Amazon Seller Central.'
+        q: 'Can you handle large product catalogs with 100+ items?',
+        a: 'Yes. I have hands-on experience managing and optimizing 100+ product SKUs across Shopify, WooCommerce, Google Merchant Center, and Amazon Seller Central.'
       }
     ]
   },
   {
     slug: 'seo-local-seo-youtube-growth',
-    shortName: 'Technical SEO, Local SEO & YouTube SEO',
-    eyebrow: 'Organic Search & Video Discovery Services',
-    title: 'Organic Search & Video Growth: Technical SEO, Local SEO (GBP) & YouTube Video SEO Services',
-    metaTitle: 'Technical SEO, Local SEO & YouTube Video SEO Specialist India | Ayaz Aftab',
-    metaDescription: 'Rank #1 on Google Search, Google Maps (GBP), and YouTube. Proven SEO Specialist delivering +30% organic traffic growth, 247,000+ YouTube views, and 1,465+ GBP buyer actions.',
-    heroSummary: 'Compounding organic search and video discovery engines that capture high-intent buyers 24/7 without ongoing ad spend. I execute Technical SEO, On-Page E-commerce & B2B SEO, Local SEO (Google Business Profile), and YouTube Video SEO backed by Semrush intelligence.',
-    keyMetricBadge: '+30% Organic Traffic • 247K+ YouTube Views',
-    targetAudience: 'Designed for e-commerce stores, B2B financial/professional service firms, local & multi-location businesses, and consumer brands seeking sustainable organic rankings on Google Search, Google Maps, and YouTube.',
+    shortName: 'SEO, Google Maps & YouTube Ranking',
+    eyebrow: 'Rank #1 on Google Search, Google Maps & YouTube',
+    title: 'SEO Services in India: Rank #1 on Google Search, Google Maps (Local SEO) & YouTube',
+    metaTitle: 'Best SEO Freelancer & Services in India | Google Ranking, Local SEO & YouTube — Ayaz Aftab',
+    metaDescription: 'Rank your website #1 on Google Search, Google Maps, and YouTube. Proven SEO expert in India delivering +30% free organic traffic, 247,000+ YouTube views, and 1,465+ local customer calls.',
+    heroSummary: 'Get free, high-intent customers every day from Google Search, Google Maps, and YouTube—without paying for every click. I use simple, proven SEO strategies to rank your business at the top when customers across India search for your services or products.',
+    keyMetricBadge: '+30% Free Google Traffic • 247K+ YouTube Views',
+    targetAudience: 'Perfect for service businesses, doctors/clinics, real estate, lawyers/CA firms, local shops, e-commerce stores, and startups across India that want long-term free leads from Google and YouTube.',
     deliverables: [
-      'Comprehensive Technical SEO Audits (Core Web Vitals, Crawlability, XML Sitemaps, Canonicalization & Indexation)',
-      'Schema.org JSON-LD Rich Result Implementation (Product, Service, FAQPage, LocalBusiness, Article, Person)',
-      'Commercial Keyword Research & Competitor Gap Analysis via Semrush SEO Toolkit',
-      'On-Page SEO for E-commerce Category/Product Pages and B2B Service Landing Pages',
-      'Local SEO & Google Business Profile (GBP) Optimization for High-Intent Local Map Pack Rankings',
-      'YouTube Video SEO (Search Trend Mapping, Title/Metadata Indexing, Thumbnail CTR Testing & Shorts Distribution)'
+      'Complete Website SEO Audit & Fast Mobile Speed Optimization (100/100 Google Core Web Vitals)',
+      'Buyer Keyword Research (Finding the Exact Words Customers Type Into Google Before Buying)',
+      'On-Page SEO for Service Pages, City Landing Pages, Product Pages & Blog Content',
+      'Google Business Profile (Google Maps / Local SEO) Ranking to Get Direct Local Customer Calls',
+      'Rich Google Schema Markup & AI Search Optimization (Rank on Google AI, ChatGPT & Perplexity)',
+      'YouTube Video SEO (Titles, Tags, Thumbnails & Shorts Strategy to Get Free Organic Views)'
     ],
-    methodology: 'Modern search visibility requires dominating Google Web Search, Google Maps, AI Answer Engines (LLMs), and YouTube Search simultaneously. I fix underlying technical crawl/speed bottlenecks first, deploy rich Schema.org structured data, and build keyword-indexed content and video assets around commercial buyer intent.',
+    methodology: 'Ranking #1 on Google is not about stuffing random keywords. First, I make your website ultra-fast and easy for Google to index. Next, I create clear, helpful service and product pages targeting the exact phrases Indian buyers search for—paired with Google Business Profile optimization and YouTube video SEO.',
     proofPoints: [
-      'Boosted organic website search traffic by +30% and Amazon organic discoverability by +40% for Jaffri Creations',
-      'Scaled Jaffri Creations YouTube channel from scratch to 247,000+ organic views and 5,200+ watch hours with zero paid video spend',
-      'Delivered +25% YoY organic search traffic growth for HICO Tax Consultant (B2B financial services) and 1,465+ Google Business Profile customer interactions'
+      'Increased free Google organic website traffic by +30% and Amazon search visibility by +40% for Jaffri Creations',
+      'Grew Jaffri Creations YouTube channel from zero to 247,000+ free organic views and 5,200+ watch hours with ₹0 ad spend',
+      'Delivered +25% yearly organic Google traffic growth for HICO Tax Consultant and 1,465+ direct customer actions on Google Business Profile'
     ],
     relatedCaseStudyIds: [2, 4],
     faqs: [
       {
-        q: 'How long does it take to see measurable organic traffic and ranking improvements from SEO?',
-        a: 'Technical SEO fixes, indexing improvements, Google Business Profile optimizations, and YouTube Video SEO typically show measurable impressions and click lifts within 3–6 weeks, while competitive commercial keywords compound steadily over 3–6 months.'
+        q: 'How long does SEO take to rank my website on Google?',
+        a: 'Technical SEO fixes, Google indexing, Google Maps (Local SEO), and YouTube SEO usually show noticeable traffic and call growth within 3 to 6 weeks, while competitive national keywords build strong top-page rankings over 3 to 6 months.'
       },
       {
-        q: 'Do you optimize websites for AI search engines (ChatGPT, Perplexity, Google AI Overviews) as well as Google Search?',
-        a: 'Yes. Every site I optimize includes Schema.org JSON-LD graphs, pre-rendered semantic HTML, llms.txt, and Agentic Resource Discovery (ard.json) so both Googlebot and AI answer engines cite and rank your business.'
+        q: 'Will my business also show up on AI search tools like ChatGPT and Google AI Overviews?',
+        a: 'Yes! I set up structured Schema.org data, fast pre-rendered pages, and AI discovery files (llms.txt and ard.json) so both Google Search and AI assistants recommend your business first.'
       },
       {
-        q: 'Can YouTube SEO really drive e-commerce and B2B product discovery without paid ads?',
-        a: 'Absolutely. By targeting high-intent product and how-to queries on YouTube and optimizing retention hooks, titles, and chapters, I generated 247,000+ organic views and 5,200+ hours of watch time that directly assisted D2C and marketplace sales.'
+        q: 'Can you help my local business rank on Google Maps in my city?',
+        a: 'Absolutely. I optimize your Google Business Profile (GBP) with local keywords, categories, photos, and review strategies—proven to drive 1,465+ direct local customer calls, direction requests, and website clicks.'
       }
     ]
   },
   {
     slug: 'ga4-gtm-capi-tracking-cro',
-    shortName: 'GA4, GTM, Meta CAPI & Full-Funnel CRO',
-    eyebrow: 'Attribution, Analytics & Conversion Optimization',
-    title: 'Server-Side Attribution & Conversion Rate Optimization (CRO): GA4, GTM & Meta CAPI',
-    metaTitle: 'GA4, Google Tag Manager (GTM), Meta CAPI & CRO Specialist | Ayaz Aftab',
-    metaDescription: 'Fix broken ad attribution and lift conversion rates by +20%. Expert setup for GA4 custom events, Google Tag Manager (GTM), Meta Pixel & Conversions API (CAPI), and Landing Page CRO.',
-    heroSummary: 'Stop scaling ad spend on blind attribution and leaky landing pages. I implement bulletproof Google Analytics 4 (GA4) custom e-commerce/lead tracking, Google Tag Manager (GTM), Meta Pixel + Conversions API (CAPI), Looker Studio dashboards, and rapid landing page CRO that lifts conversion rates by +20%.',
-    keyMetricBadge: '+20% CVR Lift • 100% Full-Funnel Attribution',
-    targetAudience: 'Essential for D2C brands, performance marketing teams, and lead-generation businesses losing attribution data to iOS privacy updates or suffering from high landing page bounce rates and cart abandonment.',
+    shortName: 'Website Conversion (CRO) & Ad Tracking Setup',
+    eyebrow: 'Turn More Website Visitors Into Leads & Buyers',
+    title: 'Website Conversion Optimization (CRO) & Accurate Ad Tracking (GA4, GTM, Meta CAPI)',
+    metaTitle: 'Website CRO, GA4, Google Tag Manager & Meta CAPI Expert India | Ayaz Aftab',
+    metaDescription: 'Turn 20% more website visitors into leads and sales. Expert setup for Landing Page CRO, Google Analytics 4 (GA4), Google Tag Manager (GTM), and Meta Pixel/CAPI in India.',
+    heroSummary: 'Are people visiting your website but leaving without calling or buying? I fix leaky landing pages so 20% more visitors turn into real leads, and set up 100% accurate tracking (GA4, Google Tag Manager, and Meta Conversions API) so you know exactly which ad brings you profit.',
+    keyMetricBadge: '+20% More Conversions • 100% Accurate Tracking',
+    targetAudience: 'Essential for any business running Google or Facebook ads, e-commerce brands losing sales at checkout, and companies that want clear, honest dashboards showing where their leads come from.',
     deliverables: [
-      'Google Analytics 4 (GA4) Custom Event Architecture (view_item, add_to_cart, initiate_checkout, purchase, generate_lead)',
-      'Google Tag Manager (GTM) Web & Server-Side Trigger/Variable Configuration',
-      'Meta Pixel & Conversions API (CAPI) Deduplicated Event Tracking to maximize Event Match Quality (EMQ)',
-      'Standardized UTM Taxonomy & Automated Looker Studio Real-Time ROAS/CPA Dashboards',
-      'Landing Page & Checkout Conversion Rate Optimization (CRO) to lift CVR by +20% and cut bounce rates by 15%',
-      'HubSpot CRM Lead Segmentation & Automated Email/WhatsApp Nurture Integration'
+      'High-Converting Landing Page Redesign (Clear Headlines, WhatsApp Buttons & Fast Mobile Forms)',
+      'Google Analytics 4 (GA4) Custom Tracking for Leads, Phone Calls, WhatsApp Clicks & Purchases',
+      'Google Tag Manager (GTM) & Server-Side Meta Pixel + Conversions API (CAPI) Setup',
+      'Live Looker Studio Dashboards Showing Daily Ad Spend, Leads & Return on Investment',
+      'A/B Testing of Offers, Headlines & Checkout Steps to Cut Cost-Per-Lead by 35%',
+      'HubSpot CRM, WhatsApp & Email Automation to Follow Up With Every Lead Instantly'
     ],
-    methodology: 'Algorithmic bidding on Meta Ads and Google PMax is only as smart as the conversion signals you feed back into it. I audit and repair every tracking touchpoint across GTM, GA4, and Meta CAPI first, then run structured A/B tests on landing page headlines, social proof, offer framing, and checkout forms.',
+    methodology: 'Most businesses lose 30% of their ad results because of broken tracking and confusing mobile pages. I repair your tracking signals first so Google and Facebook algorithms find better buyers, then simplify your landing pages with clear trust badges, fast load speeds, and one-click WhatsApp/lead forms.',
     proofPoints: [
-      'Lifted landing page conversion rates by +20%, reduced bounce rates by 15%, and cut CPA/CPL by 35% across 9,452 acquisitions for MTEI Services',
-      'Configured GTM/GA4 custom purchase events and Meta Pixel/CAPI tracking for FFACE’s ₹6L+/mo luxury e-commerce ad accounts',
-      'Built automated HubSpot CRM lead segmentation and nurture workflows for HICO Tax Consultant'
+      'Increased landing page conversion rates by +20%, lowered bounce rates by 15%, and cut cost-per-lead by 35% across 9,452 leads for MTEI Services',
+      'Set up complete GTM, GA4 custom purchase events, and Meta CAPI tracking for FFACE’s ₹6L+/mo ad accounts',
+      'Built automated HubSpot CRM lead follow-up systems for HICO Tax Consultant to close B2B clients faster'
     ],
     relatedCaseStudyIds: [1, 3],
     faqs: [
       {
-        q: 'Why is Meta Conversions API (CAPI) and GA4 custom event tracking critical for paid ads?',
-        a: 'Browser ad blockers and iOS privacy restrictions block up to 25–35% of standard pixel events. Implementing Meta CAPI alongside GTM and GA4 custom purchase/lead events restores lost conversion signals so Meta and Google algorithms optimize for real buyers.'
+        q: 'Why do I need Meta Conversions API (CAPI) and GA4 tracking?',
+        a: 'Because iPhones, ad blockers, and browser privacy settings hide up to 30% of your sales and leads. Setting up Meta CAPI and GA4 custom tracking recovers that data so your ads perform better and cost less.'
       },
       {
-        q: 'What is included in a Landing Page & Checkout CRO engagement?',
-        a: 'I audit user drop-off points in GA4, redesign above-the-fold value propositions, speed up mobile load times (targeting 100/100 Core Web Vitals), simplify lead/checkout forms, and run A/B tests on offers and bundles.'
+        q: 'How do you make a website convert more visitors into leads?',
+        a: 'I use simple, clear headlines that speak to your customer’s problem, showcase real proof and reviews, make the page load in under 1 second on mobile, and add friction-free WhatsApp and callback forms.'
       },
       {
-        q: 'Do you build custom Looker Studio dashboards for founders and marketing teams?',
-        a: 'Yes. I build unified Looker Studio dashboards blending Google Ads, Meta Ads, GA4, and Search Console data so you can track spend, ROAS, CPA, and organic growth in real time.'
+        q: 'Will I get a simple dashboard to see my daily results?',
+        a: 'Yes! I create a clean, easy-to-read Looker Studio report where you can check your daily ad spend, leads, calls, and sales anytime from your phone.'
       }
     ]
   }
@@ -238,18 +241,18 @@ export const projectsData: Project[] = [
     client: 'FFACE (GM Modular & Decoy Luxury Perfumes)',
     title: '₹6L+/Mo Meta & Google Ads Scaling at 4.0x ROAS + Shopify CRO',
     imageUrl: '/images/case-study-fface-roas.svg',
-    keyResult: '₹6L+/Mo Spend • 4.0x ROAS',
-    summary: 'Directed ₹6L+ monthly paid media budgets across Meta Ads and Google Ads at a sustained 4.0x ROAS while leading full-funnel Shopify e-commerce operations and GTM/GA4 server-side CAPI attribution.',
-    tags: ['Meta Ads (CBO/ABO)', 'Google Ads (PMax)', 'Shopify CRO', 'Meta Pixel & CAPI', 'GA4 & GTM'],
-    challenge: 'Scale profitable customer acquisition and repeat purchase velocity for Decoy Luxury Perfumes (D2C luxury fragrance) and GM Modular (high-intent retail/catalog products) while maintaining strict ROAS and CAC guardrails.',
-    role: 'As Performance Marketing & E-commerce Specialist at FFACE (Kolkata), I own the ₹6L+ monthly paid media P&L, Shopify storefront merchandising & checkout CRO, creative hook testing, and GTM/GA4/CAPI tracking.',
-    strategy: 'Paired full-funnel Meta Ads (CBO/ABO prospect testing + dynamic catalog retargeting) and Google Search/PMax with Shopify AOV boosters (discovery sets, tiered bundle offers) and server-side Conversions API (CAPI) signal recovery.',
-    execution: 'Produced and iterated 3–5 weekly direct-response creative concepts (unboxing hooks, UGC angles, static carousels) to combat ad fatigue. Configured GTM custom purchase events, GA4 funnel attribution, and Meta CAPI to maximize algorithmic bidding accuracy.',
+    keyResult: '₹6L+/Mo Spend • 4.0x Return',
+    summary: 'Managed ₹6L+ monthly Google Ads and Facebook/Instagram Ads with a steady 4.0x return on ad spend while growing Shopify online orders and setting up GTM/GA4/CAPI tracking.',
+    tags: ['Meta Ads (FB/IG)', 'Google Ads (PMax)', 'Shopify Sales Growth', 'Meta Pixel & CAPI', 'GA4 & GTM'],
+    challenge: 'Scale daily online perfume orders for Decoy Luxury Perfumes and grow dealer/retail demand for GM Modular while keeping ad return consistently at 4.0x or higher.',
+    role: 'As Performance Marketing & E-commerce Specialist at FFACE (Kolkata), I manage the ₹6L+ monthly ad budget, Shopify store sales optimization, weekly video/image ad testing, and GA4/CAPI tracking.',
+    strategy: 'Combined targeted Facebook/Instagram Ads and Google Search/Shopping (PMax) campaigns with irresistible Shopify combo/discovery set offers and server-side conversion tracking.',
+    execution: 'Tested 3–5 new video and image ad concepts every week (unboxing videos, customer reviews, catalog carousels) so ads stayed fresh and profitable. Set up GTM, GA4, and Meta CAPI for 100% accurate sales tracking.',
     results: [
-      'Directed ₹6L+ monthly ad spend across Meta & Google Ads at a sustained 4.0x ROAS',
-      'Led Decoy Luxury Shopify store ops, discovery sets & checkout CRO to lift AOV and conversion rate',
-      'Executed GM Modular dynamic product catalog ads & localized dealer/retail demand capture',
-      'Tested 3–5 weekly creative concepts (UGC hooks, unboxing videos, static carousels)',
+      'Directed ₹6L+ monthly ad spend across Meta & Google Ads at a sustained 4.0x ROAS (Return on Ad Spend)',
+      'Led Decoy Luxury Shopify store operations, discovery sets & checkout improvements to boost order value',
+      'Ran GM Modular dynamic product catalog ads & localized dealer/retail lead campaigns',
+      'Tested 3–5 weekly ad concepts (UGC videos, unboxing hooks, static carousels) to keep ad costs low',
       'Implemented GTM/GA4 custom purchase tracking and Meta Pixel + Conversions API (CAPI)'
     ],
     testimonial: 'Ayaz brought immediate structure to our paid media and Shopify funnel—scaling monthly spend past ₹6 Lakhs while holding a consistent 4.0x ROAS.',
@@ -260,21 +263,21 @@ export const projectsData: Project[] = [
     slug: 'jaffri-creations-ecommerce-ppc-seo',
     category: 'ecommerce',
     client: 'Jaffri Creations Fountain Decor Pvt. Ltd.',
-    title: 'D2C WooCommerce & Amazon Growth (₹7.95L GMV at 4.5x ROAS)',
+    title: 'D2C WooCommerce & Amazon Growth (₹7.95L Sales at 4.5x ROAS)',
     imageUrl: '/images/case-study-jaffri-ecommerce.svg',
-    keyResult: '₹7.95L GMV • 4.5x ROAS',
-    summary: 'Scaled D2C WooCommerce and Amazon Seller Central storefronts to ₹7.95L in direct GMV while managing ₹2L/mo Google PMax & Meta campaigns at 4.5x ROAS.',
-    tags: ['Amazon Seller Central', 'Google PMax & Shopping', 'WooCommerce', 'Technical SEO', 'A+ Content'],
-    challenge: 'To establish a profitable multi-channel e-commerce presence across D2C WooCommerce and Amazon Seller Central while capturing high-intent commercial buyers via paid and organic search.',
-    role: 'As Digital Marketing Executive (Growth & Operations), I owned end-to-end e-commerce operations, ₹2L/mo Google PMax & Meta Ads management, Amazon A+ catalog optimization, and technical SEO.',
-    strategy: 'Built a three-pillar growth engine: (1) optimizing 100+ SKUs across WooCommerce and Amazon Seller Central, (2) running ₹2L/mo Google Performance Max, Search & Meta retargeting campaigns at 4.5x ROAS, and (3) scaling organic search visibility.',
-    execution: 'Restructured Google PMax and Search campaigns with high-intent keyword segmentation and Merchant Center feed optimization. Overhauled Amazon product detail pages with enhanced A+ content and backend search terms. Executed on-page and technical SEO across product and category templates.',
+    keyResult: '₹7.95L Sales • 4.5x Return',
+    summary: 'Grew WooCommerce website and Amazon India stores to ₹7.95L in direct sales while managing ₹2L/mo Google & Meta ads at 4.5x return and +30% free Google SEO traffic.',
+    tags: ['Amazon Seller Central', 'Google PMax & Shopping', 'WooCommerce Store', 'Google SEO', 'Amazon A+ Content'],
+    challenge: 'Build a profitable online sales engine across the company’s own WooCommerce website and Amazon Seller Central while ranking #1 on Google for high-value fountain and decor buyers.',
+    role: 'As Digital Marketing Executive (Growth & Operations), I managed all website and Amazon store operations, ₹2L/mo Google & Meta ads, Amazon A+ listings, and Google SEO.',
+    strategy: 'Focused on three simple growth pillars: (1) optimizing 100+ products on WooCommerce and Amazon, (2) running ₹2L/mo Google Shopping/PMax and Meta retargeting ads at 4.5x return, and (3) ranking product pages on Google Search & Maps.',
+    execution: 'Structured Google Performance Max and Search campaigns around ready-to-buy keywords. Upgraded 100+ Amazon listings with rich A+ visuals and backend search keywords. Improved website speed and on-page SEO.',
     results: [
-      'Drove ₹7.95 Lakhs in direct GMV across D2C WooCommerce & Amazon storefronts',
-      'Managed ₹2L/mo in Google PMax & Meta retargeting campaigns at a 4.5x ROAS (34,900+ clicks)',
-      'Boosted organic website traffic by +30% and Amazon listing discoverability by +40%',
-      'Generated high-ticket B2B & D2C commercial orders valued between ₹5 Lakhs and ₹13 Lakhs',
-      'Drove 1,465+ verified local buyer interactions via Google Business Profile'
+      'Generated ₹7.95 Lakhs in direct sales across WooCommerce website & Amazon India storefronts',
+      'Managed ₹2L/mo in Google PMax & Meta retargeting ads at a 4.5x return (34,900+ buyer clicks)',
+      'Increased free Google organic website traffic by +30% and Amazon product visibility by +40%',
+      'Generated high-value B2B & commercial orders worth ₹5 Lakhs to ₹13 Lakhs',
+      'Drove 1,465+ direct local customer calls and inquiries via Google Business Profile (Google Maps)'
     ],
     testimonial: 'Ayaz’s strategies were instrumental in our online growth. His expertise in both paid and organic channels delivered exceptional results.',
     visuals: [
@@ -288,20 +291,20 @@ export const projectsData: Project[] = [
     slug: 'mtei-services-meta-ads-lead-generation',
     category: 'ppc',
     client: 'MTEI Services Pvt. Ltd.',
-    title: 'High-Velocity Acquisition Funnel (9,452 Conversions & -35% CPA)',
+    title: 'High-Volume Lead Generation Funnel (9,452 Leads & -35% Cost)',
     imageUrl: '/images/case-study-mtei-leads.svg',
-    keyResult: '9,452 Acquisitions • -35% CPA',
-    summary: 'Engineered full-funnel Meta & Google acquisition campaigns generating 9,452 qualified customer acquisitions, reducing CPA/CPL by 35% and lifting landing page CVR by 20%.',
-    tags: ['Meta Ads', 'Google Ads', 'Landing Page CRO', 'A/B Testing', 'Lead Acquisition'],
-    challenge: 'To generate a high volume of qualified customer/student acquisitions within strict cost-per-acquisition targets while eliminating landing page drop-offs.',
-    role: 'Served as Performance Marketing & CRO Specialist (Contract) responsible for Meta & Google campaign architecture, multivariate creative testing, and landing page conversion rate optimization (CRO).',
-    strategy: 'Built segmented full-funnel paid campaigns combining custom lookalike audiences, high-intent search capture, and streamlined mobile-first lead capture landing pages.',
-    execution: 'Conducted rapid A/B testing across ad creatives, headlines, audience segments, and bidding strategies. Redesigned landing page layouts, trust signals, and form friction points to maximize submission velocity.',
+    keyResult: '9,452 Leads • ₹49.86/Lead',
+    summary: 'Built Facebook/Instagram and Google lead generation campaigns that delivered 9,452 verified customer leads, cutting cost-per-lead by 35% and boosting page conversions by 20%.',
+    tags: ['Facebook & Instagram Ads', 'Google Lead Ads', 'Landing Page CRO', 'A/B Testing', 'Lead Generation'],
+    challenge: 'Generate a high daily volume of genuine student and customer leads across India while keeping cost per lead as low as possible.',
+    role: 'Served as Performance Marketing & CRO Specialist (Contract) managing Facebook/Instagram & Google Ads, creative testing, and mobile landing page conversion optimization.',
+    strategy: 'Combined targeted Facebook/Instagram lookalike audiences and high-intent Google Search ads with fast, easy-to-fill mobile landing pages.',
+    execution: 'Tested multiple ad headlines, regional hooks, and audience segments every week. Redesigned the landing page with clear trust badges and a simple lead form to stop visitor drop-offs.',
     results: [
-      'Generated 9,452 qualified customer acquisitions across paid social and search funnels',
-      'Reduced Cost Per Acquisition / Cost Per Lead (CPA/CPL) by 35% (averaging ₹49.86 CPL)',
-      'Lifted landing page conversion rates (CVR) by +20% and reduced bounce rates by 15%',
-      'Managed ₹4.7 Lakhs in paid media spend with sustained positive ROI'
+      'Generated 9,452 verified customer leads across Facebook, Instagram, and Google Search ads',
+      'Cut Cost Per Lead (CPL) by 35% — averaging just ₹49.86 per qualified lead',
+      'Increased landing page conversion rate by +20% and reduced visitor bounce rate by 15%',
+      'Managed ₹4.7 Lakhs in ad spend with strong, profitable client ROI'
     ],
     testimonial: 'The acquisition campaigns and landing page CRO executed by Ayaz were a game-changer—delivering 9,452 qualified conversions while slashing our CPA by 35%.',
     visuals: ['/images/case-study-mtei-leads.svg'],
@@ -311,20 +314,20 @@ export const projectsData: Project[] = [
     slug: 'jaffri-creations-youtube-seo-organic-growth',
     category: 'seo',
     client: 'Jaffri Creations Fountain Decor Pvt. Ltd.',
-    title: 'YouTube Video SEO & Organic Discovery Engine (247K+ Views)',
+    title: 'YouTube Video SEO & Free Organic Growth (247,000+ Views)',
     imageUrl: '/images/case-study-youtube-growth.svg',
-    keyResult: '247,000+ Organic Views',
-    summary: 'Scaled organic video discovery from scratch using YouTube Video SEO, keyword trend mapping, and high-retention short/long-form content structuring.',
-    tags: ['YouTube Video SEO', 'Short-Form Hooks', 'Keyword Research', 'Organic Discovery', 'Brand Authority'],
-    challenge: 'To build sustainable top-of-funnel product discovery and brand authority without relying on paid video advertising.',
-    role: 'Managed end-to-end YouTube channel SEO, search trend analysis, metadata optimization, thumbnail CTR testing, and audience retention analytics.',
-    strategy: 'Targeted high-search-volume, low-competition commercial product topics using Semrush and YouTube Search Trends, optimizing titles, descriptions, chapters, and tags for long-tail discovery.',
-    execution: 'Published a consistent cadence of search-optimized product showcase and short-form videos, improving click-through rates (CTR) and average view duration to trigger algorithmic recommendations.',
+    keyResult: '247,000+ Free Views',
+    summary: 'Grew a brand YouTube channel from zero to 247,000+ free organic views and 5,200+ watch hours using YouTube SEO and high-retention product videos—with ₹0 ad spend.',
+    tags: ['YouTube Video SEO', 'YouTube Shorts', 'Keyword Research', 'Free Organic Traffic', 'Brand Trust'],
+    challenge: 'Bring thousands of new buyers to discover the brand’s products every month without spending extra money on video ads.',
+    role: 'Managed complete YouTube channel SEO, keyword research, video titles/descriptions, thumbnail testing, and YouTube Shorts strategy.',
+    strategy: 'Researched high-demand product questions using Semrush and YouTube Search Trends, then optimized every video title, description, tag, and thumbnail to rank #1 on YouTube Search.',
+    execution: 'Published helpful product showcase videos and engaging YouTube Shorts with strong 3-second opening hooks, boosting watch time so YouTube recommended the videos across India.',
     results: [
-      'Accumulated 247,000+ organic YouTube views with zero paid video promotion',
+      'Achieved 247,000+ free organic YouTube views with zero paid promotion',
       'Generated 5,200+ hours of high-retention organic watch time',
-      'Established YouTube Search as a primary top-of-funnel D2C product discovery channel',
-      'Assisted direct WooCommerce and Amazon store conversions'
+      'Turned YouTube Search into a 24/7 free customer discovery channel',
+      'Directly assisted website and Amazon store product orders'
     ],
     testimonial: "Ayaz's work on our YouTube channel has been phenomenal. He built it from the ground up into a significant source of organic discovery and assisted sales.",
     visuals: ['/images/case-study-youtube-growth.svg'],
@@ -404,32 +407,62 @@ const testimonialsData = [
 
 const processStepsData = [
   {
-    step: '01 / Tracking & Audit',
-    title: 'GA4, GTM & Meta CAPI Diagnostics',
-    description: 'Auditing GA4 custom purchase events, Google Tag Manager triggers, Meta Pixel & Conversions API (CAPI) signal quality, Merchant Center feeds, and checkout funnel drop-offs.'
+    step: 'Step 01 / Free Audit & Tracking',
+    title: 'Check Your Website, Ads & Tracking',
+    description: 'I review your website speed, landing pages, Google/Facebook ad accounts, and set up 100% accurate tracking (GA4, GTM & Meta CAPI) so no lead or sale is ever missed.'
   },
   {
-    step: '02 / Full-Funnel Architecture',
-    title: 'Meta CBO/ABO & Google PMax Roadmapping',
-    description: 'Structuring high-ROAS Meta Ads testing/scaling campaigns, Google Search, Shopping & Performance Max asset groups, and Shopify/WooCommerce/Amazon catalog merchandising.'
+    step: 'Step 02 / Buyer Targeting & SEO',
+    title: 'Target Ready-to-Buy Customers',
+    description: 'I build high-converting Google Ads, Facebook/Instagram Ads, and SEO pages targeting the exact keywords and cities in India where your customers are searching right now.'
   },
   {
-    step: '03 / Creative & Store CRO',
-    title: 'Weekly Hook Testing & Checkout Optimization',
-    description: 'Shipping 3–5 weekly direct-response creative concepts (unboxing hooks, UGC angles, static carousels) paired with discovery sets, bundle offers, and landing page A/B tests.'
+    step: 'Step 03 / Creative & Website Boost',
+    title: 'Better Ads + Higher Website Sales',
+    description: 'We test 3–5 fresh video/image ads every week and improve your website or Shopify/Amazon pages with clear offers and WhatsApp buttons (+20% more conversions).'
   },
   {
-    step: '04 / Attribution & Scale',
-    title: '4.0x–4.5x ROAS Budget Pacing',
-    description: 'Scaling monthly paid media budgets (₹6L+/mo) via disciplined CBO/ABO bidding, negative keyword sculpting, Looker Studio cohort reporting, and WhatsApp/email retention flows.'
+    step: 'Step 04 / Profitable Scaling',
+    title: 'Scale Leads & Sales at 4.0x–4.5x Return',
+    description: 'We put more budget into the winning ads and keywords that bring you the lowest cost per lead and highest return—with clear weekly reports on your phone.'
   }
 ];
 
 const servicesData = [
   {
+    id: 'service-freelance',
+    title: 'Hire Me as Your Digital Marketing Freelancer',
+    description: 'Perfect for business owners, startups, and D2C brands across India who want daily leads, WhatsApp inquiries, and online sales without paying expensive agency markups.',
+    items: [
+      'Google Ads & Facebook/Instagram Ads Management (4.0x–4.5x Return)',
+      'Complete Website SEO, Local Google Maps SEO & YouTube Ranking',
+      'Shopify, WooCommerce & Amazon Store Sales Growth',
+      'Direct WhatsApp Communication & Weekly Transparent Reports'
+    ],
+    cta: 'Chat on WhatsApp for Free Audit',
+    href: WHATSAPP_URL,
+    icon: 'whatsapp',
+    isWhatsapp: true
+  },
+  {
+    id: 'service-consulting',
+    title: 'Monthly Growth Retainer & Website CRO',
+    description: 'Complete end-to-end digital marketing partner for growing businesses looking to cut lead costs by 35%, rank #1 on Google, and scale online revenue every month.',
+    items: [
+      'Full-Funnel Lead Generation & E-commerce Sales Scaling',
+      'Landing Page Redesign & Checkout Optimization (+20% Conversions)',
+      'GA4, Google Tag Manager, Meta CAPI & Looker Studio Dashboards',
+      'WhatsApp, Email & HubSpot CRM Automated Lead Follow-Ups'
+    ],
+    cta: 'Request Custom Growth Plan',
+    href: '#contact',
+    icon: 'arrow-right',
+    isWhatsapp: false
+  },
+  {
     id: 'service-full-time',
-    title: 'Full-Time Growth Lead Roles',
-    description: 'Available for Performance Marketing Manager, E-commerce Growth Lead, or Paid Media Specialist roles. 5.5+ years scaling D2C Shopify/WooCommerce and marketplace brands with ₹6L+/mo ad budgets.',
+    title: 'Full-Time Growth Lead / Manager Roles',
+    description: 'Available for Senior Performance Marketing Manager, E-commerce Growth Lead, or Digital Marketing Head roles (5.5+ years experience managing ₹6L+/mo ad budgets).',
     items: [
       '₹6L+/Mo Meta Ads & Google Ads (PMax/Shopping) P&L Ownership',
       'Shopify, WooCommerce & Amazon Seller Central Operations',
@@ -440,62 +473,87 @@ const servicesData = [
     href: '/resume.pdf',
     icon: 'download',
     download: true,
-  },
-  {
-    id: 'service-freelance',
-    title: 'Paid Media & CRO Projects',
-    description: 'High-impact project engagements for D2C and B2B brands looking to scale Meta & Google Ads at 4.0x–4.5x ROAS, overhaul Shopify/WooCommerce conversion rates, or fix broken GA4/CAPI tracking.',
-    items: [
-      'Meta Ads (CBO/ABO) & Google PMax / Shopping Architecture',
-      'Shopify & WooCommerce Landing Page / Checkout CRO (+20% CVR)',
-      'GA4, GTM, Meta CAPI & Looker Studio Attribution Setup',
-      'Amazon Seller Central A+ Cataloging & Technical SEO'
-    ],
-    cta: 'Discuss a Growth Project',
-    href: '#contact',
-    icon: 'arrow-right'
-  },
-  {
-    id: 'service-consulting',
-    title: 'Growth Advisory & Audits',
-    description: 'Ongoing strategic retainers for founders and marketing teams looking to compress CPA/CPL by up to 35%, scale ROAS, and build compounding YouTube & Google organic search engines.',
-    items: [
-      'Full-Funnel Paid Media & Creative Hook Audits',
-      'Merchant Center Feed & Dynamic Catalog Ads Optimization',
-      'WhatsApp, Email & HubSpot CRM Retention Workflows',
-      'YouTube Video SEO (247K+ Views Framework) & Organic Search'
-    ],
-    cta: 'Book a Strategy Audit',
-    href: '#contact',
-    icon: 'arrow-right'
+    isWhatsapp: false
   }
+];
+
+const indiaIndustriesData = [
+  {
+    title: 'D2C Brands, Shopify & Amazon Sellers',
+    badge: '4.0x–4.5x ROAS • ₹7.95L+ Sales',
+    description: 'Scale daily online orders for fashion, perfumes, beauty, electronics, home decor, and D2C products using Meta Ads, Google Shopping/PMax, Shopify CRO, and Amazon A+ listings.'
+  },
+  {
+    title: 'Real Estate, Interior Designers & Builders',
+    badge: 'High-Intent Buyer Inquiries',
+    description: 'Get verified site-visit bookings and high-budget property/interior leads via hyper-targeted Google Search Ads, Facebook/Instagram Lead Forms, and dedicated landing pages.'
+  },
+  {
+    title: 'Doctors, Clinics, Hospitals & Healthcare',
+    badge: '#1 Google Maps & Daily Calls',
+    description: 'Rank #1 on Google Search and Google Maps when patients search near you, paired with local call-only ads and WhatsApp appointment booking funnels.'
+  },
+  {
+    title: 'Coaching Institutes, EdTech & Colleges',
+    badge: '9,452+ Student Leads at ₹49.86',
+    description: 'Fill admissions batches fast with proven student acquisition funnels on Instagram, Facebook, YouTube, and Google Search at 35% lower cost per inquiry.'
+  },
+  {
+    title: 'CA Firms, Legal, Finance & B2B Companies',
+    badge: '+25% YoY Google SEO Traffic',
+    description: 'Capture commercial decision-makers across India and abroad through Google Search Ads, LinkedIn B2B Ads, Technical SEO, and automated HubSpot CRM follow-ups.'
+  },
+  {
+    title: 'Local Businesses, Retail & Hospitality',
+    badge: '1,465+ Google Maps Actions',
+    description: 'Turn local searches into daily walk-ins, phone calls, and WhatsApp orders with Google Business Profile optimization, local Instagram/Facebook ads, and YouTube Shorts.'
+  }
+];
+
+const indiaCitiesList = [
+  'Kolkata',
+  'Mumbai',
+  'Delhi NCR (Noida & Gurugram)',
+  'Bengaluru',
+  'Hyderabad',
+  'Pune',
+  'Chennai',
+  'Ahmedabad',
+  'Jaipur',
+  'Surat',
+  'Lucknow',
+  'Chandigarh',
+  'Indore',
+  'Kochi',
+  'Patna & Ranchi',
+  'UAE, UK, US & Global Remote'
 ];
 
 const faqData = [
   {
-    id: 'faq-channels',
-    question: 'What paid media and e-commerce channels does Ayaz Aftab specialize in?',
-    answer: 'Ayaz is a Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience specializing in Meta Ads Manager (Facebook & Instagram CBO/ABO, Dynamic Catalog Ads), Google Ads (Search, Shopping, Performance Max), LinkedIn Ads, Shopify & WooCommerce store operations, Amazon Seller Central (A+ Content), Full-Funnel CRO, GA4/GTM/Meta CAPI attribution, and YouTube Video SEO.'
+    id: 'faq-why-hire',
+    question: 'Why should I hire Ayaz Aftab for digital marketing services in India?',
+    answer: 'Unlike ordinary agencies that hand your account to juniors, I personally manage your growth with 5.5+ years of proven results: ₹6L+ monthly ad budgets managed at 4.0x–4.5x return, 9,452+ verified customer leads generated at ₹49.86/lead (-35% cost), ₹7.95L+ in direct e-commerce/Amazon sales, and 247,000+ free organic YouTube views. You get simple communication, direct WhatsApp access (+91 9263588321), and real business ROI.'
   },
   {
-    id: 'faq-results',
-    question: 'What verified ROAS, revenue, and acquisition results has Ayaz delivered?',
-    answer: 'Ayaz currently directs ₹6L+ in monthly paid media budgets across Meta and Google Ads for FFACE (GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x ROAS. Previously, he scaled Jaffri Creations across WooCommerce & Amazon to ₹7.95L GMV at a 4.5x ROAS (plus +30% organic traffic and 247K+ organic YouTube views), and engineered acquisition funnels for MTEI Services that delivered 9,452 qualified conversions while reducing CPA/CPL by 35% and lifting landing page CVR by 20%.'
+    id: 'faq-services-offered',
+    question: 'What digital marketing services do you provide for businesses across India?',
+    answer: 'I provide complete, result-driven digital marketing services across all of India: (1) Google Ads & Facebook/Instagram Ads (Meta Ads) for daily leads and sales, (2) Website SEO, Local SEO (Google Maps), and YouTube Video SEO to rank #1 organically, (3) Shopify, WooCommerce, and Amazon Seller Central store management, and (4) Website Conversion Optimization (CRO) with GA4, Google Tag Manager, and Meta CAPI tracking.'
   },
   {
-    id: 'faq-availability',
-    question: 'Where is Ayaz Aftab based and is he available for full-time or consulting roles?',
-    answer: 'Ayaz is based in Kolkata, West Bengal, India (+91 9263588321 • ayazaftab9@gmail.com) and is open to Senior Performance Marketing, E-commerce Growth Lead, and Paid Media Manager opportunities (on-site, hybrid, or remote), as well as high-impact D2C/B2B growth consulting.'
+    id: 'faq-cities',
+    question: 'Do you work with businesses all over India or only in Kolkata?',
+    answer: 'I work with businesses all over India—including Kolkata, Mumbai, Delhi NCR (Gurugram/Noida), Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, and every state in India—as well as global clients in the UAE, UK, and US. All campaigns, reporting dashboards, and strategy calls are seamlessly managed online via WhatsApp, Google Meet, and Phone.'
   },
   {
-    id: 'faq-tools',
-    question: 'What tracking, attribution, and e-commerce tech stack does Ayaz use?',
-    answer: 'Ayaz works daily with Meta Ads Manager, Google Ads & Merchant Center, Shopify, WooCommerce, Amazon Seller Central, Google Analytics 4 (GA4 Custom Events), Google Tag Manager (GTM), Meta Pixel & Conversions API (CAPI), Looker Studio, HubSpot CRM, and Semrush.'
+    id: 'faq-how-to-start',
+    question: 'How can I start working with you and get a free website or ads audit?',
+    answer: 'Starting is simple: click the green "Chat on WhatsApp" button (+91 9263588321) or fill out the quick audit form below with your website/business details. I will personally review your current website, SEO rankings, or ad campaigns and share a clear action plan within 24 hours.'
   },
   {
     id: 'faq-education',
-    question: 'What are Ayaz Aftab’s academic qualifications and industry certifications?',
-    answer: 'Ayaz holds a Bachelor of Business Administration (BBA) from Manipal University Jaipur and a Diploma in Computer Science & Engineering from Arka Jain University. He is certified across Google (GA4, AI-Powered Performance Ads & Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound Marketing & CRM Automation), and Amazon & Semrush (Sponsored Ads & SEO Toolkit).'
+    question: 'What are Ayaz Aftab’s qualifications and official certifications?',
+    answer: 'Ayaz holds a Bachelor of Business Administration (BBA) from Manipal University Jaipur and a Diploma in Computer Science & Engineering from Arka Jain University. He is officially certified by Google (GA4, AI-Powered Performance Ads & Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound Marketing & CRM Automation), and Amazon & Semrush (Sponsored Ads & SEO Toolkit).'
   }
 ];
 
@@ -508,7 +566,7 @@ function registerWebMCPTools() {
   try {
     mc.registerTool({
       name: 'get_specialist_summary',
-      description: 'Retrieve structured profile, verified ROAS and revenue metrics, work history, skills, certifications, and contact information for Ayaz Aftab, Performance Marketing & E-commerce Growth Lead.',
+      description: 'Retrieve structured profile, digital marketing services in India, verified ROAS and lead generation metrics, work history, skills, certifications, and WhatsApp/contact information for Ayaz Aftab.',
       inputSchema: {
         type: 'object',
         properties: {},
@@ -516,28 +574,29 @@ function registerWebMCPTools() {
       execute: async () => {
         return JSON.stringify({
           name: 'Ayaz Aftab',
-          role: 'Performance Marketing & E-commerce Growth Lead | Meta Ads, Google Ads & Full-Funnel CRO',
+          role: 'Digital Marketing Freelancer & Performance Marketing Growth Lead India | Google Ads, Meta Ads, SEO & E-commerce',
           experienceYears: '5.5+',
-          location: 'Kolkata, West Bengal, India',
+          location: 'Kolkata, West Bengal, India (Serving All Over India & Global Remote)',
           phone: '+91 9263588321',
+          whatsapp: 'https://wa.me/919263588321',
           email: 'ayazaftab9@gmail.com',
           linkedin: 'https://www.linkedin.com/in/ayazaftab',
           resumeUrl: 'https://ayaz-aftab-portfolio.vercel.app/resume.pdf',
           metrics: {
             monthlyAdSpendManaged: 'INR 6,00,000+ (₹6L+/mo)',
             sustainedROAS: '4.0x - 4.5x ROAS',
-            qualifiedAcquisitions: '9,452+ (-35% CPA/CPL)',
+            qualifiedAcquisitions: '9,452+ Leads (-35% CPA/CPL at ₹49.86/lead)',
             conversionRateLift: '+20% Landing Page & Store CVR',
             ecommerceGMV: 'INR 7.95 Lakhs+ (WooCommerce & Amazon)',
             youtubeViews: '247,000+ Organic Views'
           },
           coreCompetencies: [
-            'Meta Ads Manager (Facebook & Instagram CBO/ABO)',
             'Google Ads (Search, Shopping & Performance Max)',
+            'Facebook & Instagram Ads (Meta Ads CBO/ABO)',
+            'SEO, Local Google Maps SEO & YouTube Video SEO',
             'Shopify, WooCommerce & Amazon Seller Central',
             'GA4 Custom Events, GTM & Meta Pixel/CAPI',
-            'Full-Funnel Landing Page & Checkout CRO',
-            'YouTube Video SEO & HubSpot CRM Automation'
+            'High-Converting Landing Page & Checkout CRO'
           ]
         });
       }
@@ -545,7 +604,7 @@ function registerWebMCPTools() {
 
     mc.registerTool({
       name: 'list_case_studies',
-      description: 'List and filter Ayaz Aftab performance marketing and e-commerce case studies by channel category.',
+      description: 'List and filter Ayaz Aftab digital marketing, performance marketing, SEO, and e-commerce case studies by channel category.',
       inputSchema: {
         type: 'object',
         properties: {
@@ -603,6 +662,8 @@ const Icon = ({ name, size = 20 }: { name: string; size?: number }) => {
       return <svg {...props}><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>;
     case 'phone':
       return <svg {...props}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>;
+    case 'whatsapp':
+      return <svg {...props}><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>;
     case 'linkedin':
       return <svg {...props}><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>;
     case 'github':
@@ -660,31 +721,30 @@ const Header = ({ onMenuClick }: { onMenuClick: () => void }) => (
           <Logo />
           <div className="logo-text-group">
             <span className="logo-text">Ayaz Aftab</span>
-            <span className="logo-subtext">Performance Marketing &amp; E-commerce</span>
+            <span className="logo-subtext">Digital Marketing &amp; Ads Expert India</span>
           </div>
         </a>
 
         <div className="desktop-nav">
-          <a href="/#impact" id="nav-link-impact" className="desktop-nav-link">Impact</a>
-          <a href="/#experience" id="nav-link-experience" className="desktop-nav-link">Experience</a>
-          <a href="/#projects" id="nav-link-projects" className="desktop-nav-link">Case Studies</a>
           <a href="/#services" id="nav-link-services" className="desktop-nav-link">Services</a>
-          <a href="/#skills" id="nav-link-skills" className="desktop-nav-link">Skills</a>
+          <a href="/#impact" id="nav-link-impact" className="desktop-nav-link">Results</a>
+          <a href="/#projects" id="nav-link-projects" className="desktop-nav-link">Case Studies</a>
+          <a href="/#india-freelancer" id="nav-link-india" className="desktop-nav-link">All India</a>
+          <a href="/#experience" id="nav-link-experience" className="desktop-nav-link">Experience</a>
           <a href="/resume" id="nav-link-resume" className="desktop-nav-link">Resume</a>
-          <a href="/#contact" id="nav-link-contact" className="desktop-nav-link">Contact</a>
+          <a href="/#contact" id="nav-link-contact" className="desktop-nav-link">Free Audit</a>
         </div>
 
         <div className="header-actions">
           <a
-            href="/resume.pdf"
-            id="header-resume-btn"
-            download
+            href={WHATSAPP_URL}
+            id="header-whatsapp-btn"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-primary header-cta"
+            className="btn btn-whatsapp header-cta"
           >
-            <Icon name="download" size={16} />
-            <span>Resume PDF</span>
+            <Icon name="whatsapp" size={16} />
+            <span>WhatsApp Now</span>
           </a>
           <button
             id="open-mobile-menu-btn"
@@ -732,23 +792,35 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           </button>
         </div>
         <nav className="menu-links" aria-label="Mobile Navigation Links">
-          <a href="/#impact" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={18} /> Proven Impact</a>
-          <a href="/#experience" onClick={onClose} className="menu-link"><Icon name="briefcase" size={18} /> Experience</a>
+          <a href="/#services" onClick={onClose} className="menu-link"><Icon name="settings" size={18} /> Digital Marketing Services</a>
+          <a href="/#impact" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={18} /> Proven Client Results</a>
           <a href="/#projects" onClick={onClose} className="menu-link"><Icon name="star" size={18} /> Case Studies</a>
-          <a href="/#process" onClick={onClose} className="menu-link"><Icon name="tool" size={18} /> Growth Process</a>
-          <a href="/#services" onClick={onClose} className="menu-link"><Icon name="settings" size={18} /> Services</a>
+          <a href="/#india-freelancer" onClick={onClose} className="menu-link"><Icon name="check-circle" size={18} /> Pan-India Industries Served</a>
+          <a href="/#process" onClick={onClose} className="menu-link"><Icon name="tool" size={18} /> How I Grow Your Business</a>
+          <a href="/#experience" onClick={onClose} className="menu-link"><Icon name="briefcase" size={18} /> 5.5+ Years Experience</a>
           <a href="/#skills" onClick={onClose} className="menu-link"><Icon name="award" size={18} /> Skills &amp; Certifications</a>
-          <a href="/resume" onClick={onClose} className="menu-link"><Icon name="check-circle" size={18} /> Online Master Resume</a>
-          <a href="/#faq" onClick={onClose} className="menu-link"><Icon name="help-circle" size={18} /> FAQ</a>
-          <a href="/#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={18} /> Contact</a>
+          <a href="/resume" onClick={onClose} className="menu-link"><Icon name="download" size={18} /> Online Master Resume</a>
+          <a href="/#faq" onClick={onClose} className="menu-link"><Icon name="help-circle" size={18} /> Common Questions (FAQ)</a>
+          <a href="/#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={18} /> Get Free Website &amp; Ads Audit</a>
         </nav>
+        <a
+          href={WHATSAPP_URL}
+          id="mobile-whatsapp-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-whatsapp menu-resume-btn"
+          style={{ marginBottom: '0.65rem' }}
+        >
+          <Icon name="whatsapp" size={16} />
+          <span>Chat on WhatsApp (+91 9263588321)</span>
+        </a>
         <a
           href="/resume.pdf"
           id="mobile-resume-btn"
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary menu-resume-btn"
+          className="btn btn-secondary menu-resume-btn"
         >
           <Icon name="download" size={16} />
           <span>Download Master Resume (PDF)</span>
@@ -790,40 +862,50 @@ const Hero = () => (
     <AnimatedSection className="container">
       <div className="hero-layout">
         <span className="hero-role-kicker">
-          Performance Marketing &amp; E-commerce Growth Lead • 5.5+ Years Experience • Kolkata, India
+          #1 Result-Driven Digital Marketing Freelancer &amp; Services in India • 5.5+ Years Experience
         </span>
         <h1 className="hero-headline">
-          Hi, I&apos;m <span className="hero-name">Ayaz Aftab</span>.
+          Grow Your Business With <span className="hero-name">Ayaz Aftab</span>.
           <span className="hero-dynamic-subheading">
-            I scale D2C &amp; marketplace brands via <span className="typing-text">Meta Ads, Google Ads &amp; Full-Funnel CRO</span>
+            Get More Daily Leads, Online Sales &amp; #1 Google Rankings via <span className="typing-text">Google Ads, Meta Ads, SEO &amp; Shopify CRO</span>
           </span>
         </h1>
         <p className="hero-summary">
-          Performance Marketing &amp; E-commerce Specialist with 5.5+ years of experience scaling D2C, B2B, and marketplace brands. Proven track record of managing <strong>₹6L+ monthly paid ad spend</strong> across <strong>Meta Ads</strong> and <strong>Google Ads</strong> at a sustained <strong>4.0x–4.5x ROAS</strong>, driving <strong>9,452+ qualified acquisitions</strong>, and lifting store conversions by <strong>20%</strong> across <strong>Shopify</strong>, <strong>WooCommerce</strong>, and <strong>Amazon Seller Central</strong>.
+          Looking for a trusted <strong>Digital Marketing Freelancer &amp; Performance Marketing Expert in India</strong> who delivers real customers instead of excuses? I help businesses, startups, and online stores across India get daily phone calls, WhatsApp leads, and 4x sales—managing <strong>₹6L+ monthly ad budgets</strong> across <strong>Google Ads</strong> &amp; <strong>Facebook/Instagram Ads</strong> at a proven <strong>4.0x–4.5x return</strong>, <strong>9,452+ customer leads at ₹49.86/lead</strong>, and <strong>₹7.95L+ direct sales</strong> on <strong>Shopify, WooCommerce &amp; Amazon</strong>.
         </p>
 
-        <ul className="hero-highlights" aria-label="Key Credentials">
+        <ul className="hero-highlights" aria-label="Verified Results & Credentials">
           <li className="hero-highlight-item">
             <Icon name="check-circle" size={16} />
-            <span>₹6L+/Mo Ad Spend at 4.0x–4.5x ROAS</span>
+            <span>₹6L+/Mo Ads Managed at 4.0x–4.5x Return</span>
           </li>
           <li className="hero-highlight-item">
             <Icon name="check-circle" size={16} />
-            <span>9,452+ Acquisitions (-35% CPA/CPL)</span>
+            <span>9,452+ Verified Leads (₹49.86/Lead • -35% Cost)</span>
           </li>
           <li className="hero-highlight-item">
             <Icon name="check-circle" size={16} />
-            <span>Google, Meta, HubSpot &amp; Semrush Certified</span>
+            <span>Google, Meta, HubSpot &amp; Amazon Certified</span>
           </li>
         </ul>
 
         <div className="hero-cta">
-          <a href="#projects" id="hero-cta-projects" className="btn btn-primary">
-            <span>Explore Case Studies</span>
+          <a
+            href={WHATSAPP_URL}
+            id="hero-cta-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp"
+          >
+            <Icon name="whatsapp" size={17} />
+            <span>Chat on WhatsApp (Free Audit)</span>
+          </a>
+          <a href="#contact" id="hero-cta-audit" className="btn btn-primary">
+            <span>Get More Leads &amp; Sales</span>
             <Icon name="arrow-right" size={16} />
           </a>
-          <a href="/resume" id="hero-cta-online-resume" className="btn btn-secondary">
-            <span>View Full Resume</span>
+          <a href="#projects" id="hero-cta-projects" className="btn btn-secondary">
+            <span>See Client Proof</span>
           </a>
           <a
             href="/resume.pdf"
@@ -834,18 +916,18 @@ const Hero = () => (
             className="btn btn-ghost"
           >
             <Icon name="download" size={16} />
-            <span>Download PDF</span>
+            <span>Resume PDF</span>
           </a>
         </div>
 
         <div className="hero-socials">
+          <a href="tel:+919263588321" id="hero-social-phone" className="social-link">
+            <Icon name="phone" size={16} />
+            <span>Call Now: +91 9263588321</span>
+          </a>
           <a href="mailto:ayazaftab9@gmail.com" id="hero-social-email" className="social-link">
             <Icon name="mail" size={16} />
             <span>ayazaftab9@gmail.com</span>
-          </a>
-          <a href="tel:+919263588321" id="hero-social-phone" className="social-link">
-            <Icon name="phone" size={16} />
-            <span>+91 9263588321</span>
           </a>
           <a
             href="https://www.linkedin.com/in/ayazaftab"
@@ -855,17 +937,11 @@ const Hero = () => (
             className="social-link"
           >
             <Icon name="linkedin" size={16} />
-            <span>linkedin.com/in/ayazaftab</span>
+            <span>LinkedIn (/in/ayazaftab)</span>
           </a>
-          <a
-            href="https://github.com/ayazaftab9"
-            id="hero-social-github"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-link"
-          >
-            <Icon name="github" size={16} />
-            <span>GitHub</span>
+          <a href="/resume" id="hero-social-resume" className="social-link">
+            <Icon name="award" size={16} />
+            <span>Online Master Resume</span>
           </a>
         </div>
       </div>
@@ -877,47 +953,47 @@ const ProvenImpact = () => (
   <section id="impact" className="section-alt" aria-labelledby="impact-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Verified Performance Metrics</span>
-        <h2 id="impact-heading" className="section-title">Proven Paid Media &amp; E-commerce Impact</h2>
+        <span className="section-eyebrow">Real Numbers • Real Business Growth</span>
+        <h2 id="impact-heading" className="section-title">Why Businesses Across India Trust My Marketing</h2>
         <p className="section-subtitle">
-          Audited revenue, ROAS, and acquisition outcomes delivered across D2C Shopify/WooCommerce stores, Amazon Seller Central, and full-funnel paid media.
+          Simple, transparent results delivered for real Indian businesses across Google Ads, Facebook/Instagram Ads, Google SEO, Shopify, WooCommerce, and Amazon.
         </p>
       </div>
       <div className="impact-grid">
         <div className="info-card">
           <div>
             <p className="impact-metric">₹6L+ / Mo</p>
-            <p className="impact-label">Paid Media Spend at 4.0x–4.5x ROAS</p>
+            <p className="impact-label">Ad Budget Managed at 4.0x–4.5x Return</p>
           </div>
           <p className="impact-context">
-            Managing high-velocity Meta Ads (CBO/ABO) &amp; Google PMax/Search budgets for luxury D2C &amp; retail brands.
+            Turning every ₹1 spent on Google Ads &amp; Facebook/Instagram Ads into ₹4 to ₹4.50 in real revenue for D2C &amp; retail brands.
           </p>
         </div>
         <div className="info-card">
           <div>
             <p className="impact-metric">9,452+</p>
-            <p className="impact-label">Qualified Customer Acquisitions</p>
+            <p className="impact-label">Customer Leads at ₹49.86 / Lead</p>
           </div>
           <p className="impact-context">
-            Reduced CPA/CPL by 35% (₹49.86 CPL) and lifted landing page conversion rates by +20% via iterative CRO.
+            Cut cost-per-lead by 35% and increased website inquiry conversion rates by +20% with fast mobile landing pages.
           </p>
         </div>
         <div className="info-card">
           <div>
             <p className="impact-metric">₹7.95 L+</p>
-            <p className="impact-label">WooCommerce &amp; Amazon Direct GMV</p>
+            <p className="impact-label">Direct Online Store &amp; Amazon Sales</p>
           </div>
           <p className="impact-context">
-            Scaled 100+ SKUs with +30% organic search growth, +40% Amazon discoverability &amp; 34,900+ paid clicks.
+            Grew 100+ products with +30% free Google SEO traffic, +40% Amazon visibility &amp; 34,900+ ready-to-buy clicks.
           </p>
         </div>
         <div className="info-card">
           <div>
             <p className="impact-metric">247,000+</p>
-            <p className="impact-label">Organic YouTube Views</p>
+            <p className="impact-label">Free Organic YouTube Views</p>
           </div>
           <p className="impact-context">
-            5,200+ watch hours generated through YouTube Video SEO and short-form hook distribution.
+            5,200+ hours of watch time generated with ₹0 ad spend using YouTube Video SEO and engaging Shorts.
           </p>
         </div>
       </div>
@@ -925,36 +1001,125 @@ const ProvenImpact = () => (
   </section>
 );
 
-const ExperienceSection = () => (
-  <section id="experience" aria-labelledby="experience-heading">
+const Services = () => (
+  <section id="services" aria-labelledby="services-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">5.5+ Years Career Progression</span>
-        <h2 id="experience-heading" className="section-title">Professional Experience</h2>
+        <span className="section-eyebrow">Digital Marketing Services in India</span>
+        <h2 id="services-heading" className="section-title">How I Help Your Business Get More Customers</h2>
         <p className="section-subtitle">
-          A track record of owning paid acquisition P&amp;Ls, Shopify and WooCommerce store operations, and full-funnel attribution across D2C, marketplace, and B2B brands.
+          Whether you need daily business leads, #1 Google rankings, or more online store orders—choose a service below or message me on WhatsApp for a free custom plan.
         </p>
       </div>
-      <div className="experience-list">
-        {experienceData.map((exp) => (
-          <article key={exp.id} id={exp.id} className="experience-card">
-            <div className="experience-header">
-              <div>
-                <h3 className="experience-role">{exp.role}</h3>
-                <p className="experience-company">{exp.company}</p>
-              </div>
-              <span className="experience-period">{exp.period} | {exp.location}</span>
+
+      <div className="service-pillars-grid" aria-label="Core Digital Marketing Service Pillars">
+        {servicePagesData.map((sp) => (
+          <article key={sp.slug} className="service-card">
+            <div style={{ marginBottom: '0.65rem' }}>
+              <span className="project-badge">{sp.keyMetricBadge}</span>
             </div>
-            <ul className="experience-bullets">
-              {exp.bullets.map((bullet, idx) => (
-                <li key={idx} className="experience-bullet">
-                  <Icon name="check-circle" size={16} />
-                  <span>{bullet}</span>
+            <h3 className="service-card-title" style={{ fontSize: '1.25rem' }}>
+              <a href={`/services/${sp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                {sp.shortName}
+              </a>
+            </h3>
+            <p className="service-card-description">{sp.heroSummary}</p>
+            <ul className="service-list">
+              {sp.deliverables.slice(0, 3).map((del, idx) => (
+                <li key={idx} className="service-list-item">
+                  <Icon name="check" size={18} />
+                  <span>{del}</span>
                 </li>
               ))}
             </ul>
+            <a
+              id={`service-pillar-${sp.slug}`}
+              href={`/services/${sp.slug}`}
+              className="btn btn-primary service-card-btn"
+            >
+              <span>View {sp.shortName} Details</span>
+              <Icon name="arrow-right" size={16} />
+            </a>
           </article>
         ))}
+      </div>
+
+      <div className="services-grid" aria-label="Ways to Work Together">
+        {servicesData.map((service) => (
+          <div className="service-card" key={service.id}>
+            <h3 className="service-card-title">{service.title}</h3>
+            <p className="service-card-description">{service.description}</p>
+            <ul className="service-list">
+              {service.items.map((item, i) => (
+                <li key={i} className="service-list-item">
+                  <Icon name="check" size={18} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <a
+              id={`${service.id}-cta`}
+              href={service.href}
+              className={`btn ${service.isWhatsapp ? 'btn-whatsapp' : 'btn-secondary'} service-card-btn`}
+              {...((service.download || service.isWhatsapp) && {
+                ...(service.download ? { download: true } : {}),
+                target: '_blank',
+                rel: 'noopener noreferrer'
+              })}
+            >
+              <Icon name={service.icon} size={16} />
+              <span>{service.cta}</span>
+            </a>
+          </div>
+        ))}
+      </div>
+    </AnimatedSection>
+  </section>
+);
+
+const IndiaFreelancerSection = () => (
+  <section id="india-freelancer" className="section-alt" aria-labelledby="india-freelancer-heading">
+    <AnimatedSection className="container">
+      <div className="section-header">
+        <span className="section-eyebrow">Serving Businesses All Over India &amp; Worldwide</span>
+        <h2 id="india-freelancer-heading" className="section-title">
+          Digital Marketing Freelancer in India for Every Industry
+        </h2>
+        <p className="section-subtitle">
+          Work directly with a senior digital marketing expert (no agency middlemen, no hidden fees). I help businesses in every Indian city generate organic traffic and profitable paid leads.
+        </p>
+      </div>
+
+      <div className="services-grid" aria-label="Industries Served Across India">
+        {indiaIndustriesData.map((ind) => (
+          <article key={ind.title} className="service-card">
+            <div style={{ marginBottom: '0.6rem' }}>
+              <span className="project-badge">{ind.badge}</span>
+            </div>
+            <h3 className="service-card-title" style={{ fontSize: '1.15rem' }}>{ind.title}</h3>
+            <p className="service-card-description" style={{ marginBottom: '1rem' }}>{ind.description}</p>
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-secondary service-card-btn"
+            >
+              <Icon name="whatsapp" size={15} />
+              <span>Discuss Your Business on WhatsApp</span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div style={{ marginTop: '2.25rem', textAlign: 'center' }}>
+        <p style={{ fontSize: '0.88rem', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>
+          Available for Businesses &amp; Brands Across All Major Indian Cities &amp; Global Markets:
+        </p>
+        <div className="india-seo-pills" style={{ justifyContent: 'center' }} aria-label="Cities Served in India">
+          {indiaCitiesList.map((city) => (
+            <span key={city} className="india-seo-pill">{city}</span>
+          ))}
+        </div>
       </div>
     </AnimatedSection>
   </section>
@@ -968,13 +1133,13 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
     : projectsData.filter((p) => p.category === activeFilter);
 
   return (
-    <section id="projects" className="section-alt" aria-labelledby="projects-heading">
+    <section id="projects" aria-labelledby="projects-heading">
       <AnimatedSection className="container">
         <div className="section-header">
-          <span className="section-eyebrow">Portfolio &amp; Case Studies</span>
-          <h2 id="projects-heading" className="section-title">Featured Performance &amp; E-commerce Case Studies</h2>
+          <span className="section-eyebrow">Verified Client Case Studies</span>
+          <h2 id="projects-heading" className="section-title">See How I Grew Sales &amp; Leads for Real Businesses</h2>
           <p className="section-subtitle">
-            Explore how I architect and scale Meta Ads, Google PMax, Shopify/WooCommerce CRO, and Amazon Seller Central funnels that turn ad spend and search intent into profitable GMV.
+            Real proof from Indian brands where I managed Google Ads, Facebook/Instagram Ads, Shopify/WooCommerce stores, Amazon listings, and YouTube SEO.
           </p>
         </div>
 
@@ -997,7 +1162,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
             className={`filter-tab ${activeFilter === 'ppc' ? 'active' : ''}`}
             onClick={() => setActiveFilter('ppc')}
           >
-            Paid Media &amp; CRO (Meta / Google)
+            Google &amp; Facebook Ads (Leads &amp; ROAS)
           </button>
           <button
             id="filter-ecommerce"
@@ -1007,7 +1172,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
             className={`filter-tab ${activeFilter === 'ecommerce' ? 'active' : ''}`}
             onClick={() => setActiveFilter('ecommerce')}
           >
-            E-commerce &amp; Amazon
+            Online Store &amp; Amazon Sales
           </button>
           <button
             id="filter-seo"
@@ -1017,7 +1182,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
             className={`filter-tab ${activeFilter === 'seo' ? 'active' : ''}`}
             onClick={() => setActiveFilter('seo')}
           >
-            Organic &amp; YouTube SEO
+            Free Google &amp; YouTube SEO
           </button>
         </div>
 
@@ -1093,13 +1258,13 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
 };
 
 const GrowthProcess = () => (
-  <section id="process" aria-labelledby="process-heading">
+  <section id="process" className="section-alt" aria-labelledby="process-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Methodology &amp; Execution</span>
-        <h2 id="process-heading" className="section-title">How I Scale Paid ROAS &amp; Store Conversions</h2>
+        <span className="section-eyebrow">Simple 4-Step Growth System</span>
+        <h2 id="process-heading" className="section-title">How We Grow Your Leads &amp; Sales Step-by-Step</h2>
         <p className="section-subtitle">
-          A disciplined, full-funnel operating system combining server-side attribution, high-velocity creative testing, and storefront CRO.
+          No confusing jargon—just a clear, honest process designed to bring you more customers and higher profit every month.
         </p>
       </div>
       <div className="process-grid">
@@ -1115,72 +1280,35 @@ const GrowthProcess = () => (
   </section>
 );
 
-const Services = () => (
-  <section id="services" className="section-alt" aria-labelledby="services-heading">
+const ExperienceSection = () => (
+  <section id="experience" aria-labelledby="experience-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Digital Marketing Services &amp; Solutions</span>
-        <h2 id="services-heading" className="section-title">Performance Marketing, E-commerce &amp; SEO Services</h2>
+        <span className="section-eyebrow">5.5+ Years Career Track Record</span>
+        <h2 id="experience-heading" className="section-title">Professional Experience &amp; Leadership</h2>
         <p className="section-subtitle">
-          Specialized digital marketing services for D2C e-commerce brands, marketplace sellers, and B2B companies across India and global markets—available for full-time leadership, freelance projects, or monthly retainers.
+          A proven history of managing ₹6L+/mo ad budgets, Shopify/WooCommerce stores, Amazon accounts, and B2B lead generation for leading Indian brands.
         </p>
       </div>
-
-      <div className="service-pillars-grid" aria-label="Core Digital Marketing Service Pillars">
-        {servicePagesData.map((sp) => (
-          <article key={sp.slug} className="service-card">
-            <div style={{ marginBottom: '0.65rem' }}>
-              <span className="project-badge">{sp.keyMetricBadge}</span>
+      <div className="experience-list">
+        {experienceData.map((exp) => (
+          <article key={exp.id} id={exp.id} className="experience-card">
+            <div className="experience-header">
+              <div>
+                <h3 className="experience-role">{exp.role}</h3>
+                <p className="experience-company">{exp.company}</p>
+              </div>
+              <span className="experience-period">{exp.period} | {exp.location}</span>
             </div>
-            <h3 className="service-card-title" style={{ fontSize: '1.25rem' }}>
-              <a href={`/services/${sp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
-                {sp.shortName}
-              </a>
-            </h3>
-            <p className="service-card-description">{sp.heroSummary}</p>
-            <ul className="service-list">
-              {sp.deliverables.slice(0, 3).map((del, idx) => (
-                <li key={idx} className="service-list-item">
-                  <Icon name="check" size={18} />
-                  <span>{del}</span>
+            <ul className="experience-bullets">
+              {exp.bullets.map((bullet, idx) => (
+                <li key={idx} className="experience-bullet">
+                  <Icon name="check-circle" size={16} />
+                  <span>{bullet}</span>
                 </li>
               ))}
             </ul>
-            <a
-              id={`service-pillar-${sp.slug}`}
-              href={`/services/${sp.slug}`}
-              className="btn btn-primary service-card-btn"
-            >
-              <span>Explore {sp.shortName}</span>
-              <Icon name="arrow-right" size={16} />
-            </a>
           </article>
-        ))}
-      </div>
-
-      <div className="services-grid" aria-label="Engagement Models">
-        {servicesData.map((service) => (
-          <div className="service-card" key={service.id}>
-            <h3 className="service-card-title">{service.title}</h3>
-            <p className="service-card-description">{service.description}</p>
-            <ul className="service-list">
-              {service.items.map((item, i) => (
-                <li key={i} className="service-list-item">
-                  <Icon name="check" size={18} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-            <a
-              id={`${service.id}-cta`}
-              href={service.href}
-              className="btn btn-secondary service-card-btn"
-              {...(service.download && { download: true, target: '_blank', rel: 'noopener noreferrer' })}
-            >
-              <span>{service.cta}</span>
-              <Icon name={service.icon} size={16} />
-            </a>
-          </div>
         ))}
       </div>
     </AnimatedSection>
@@ -1188,13 +1316,13 @@ const Services = () => (
 );
 
 const Testimonials = ({ onProjectClick }: { onProjectClick: (project: Project) => void }) => (
-  <section id="testimonials" aria-labelledby="testimonials-heading">
+  <section id="testimonials" className="section-alt" aria-labelledby="testimonials-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Client Endorsements</span>
-        <h2 id="testimonials-heading" className="section-title">What Founders &amp; Leaders Say</h2>
+        <span className="section-eyebrow">Client Reviews &amp; Trust</span>
+        <h2 id="testimonials-heading" className="section-title">What Business Owners &amp; Directors Say</h2>
         <p className="section-subtitle">
-          Feedback from brand founders and growth leaders on ROAS consistency, acquisition volume, and store operations.
+          Direct feedback from founders and business leaders on sales growth, lead quality, and return on ad spend.
         </p>
       </div>
       <div className="testimonials-list">
@@ -1244,35 +1372,35 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: Project) =
 );
 
 const Skills = () => (
-  <section id="skills" className="section-alt" aria-labelledby="skills-heading">
+  <section id="skills" aria-labelledby="skills-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Core Competencies &amp; Credentials</span>
-        <h2 id="skills-heading" className="section-title">Skills, Attribution Stack &amp; Certifications</h2>
+        <span className="section-eyebrow">Certified Digital Marketing Stack</span>
+        <h2 id="skills-heading" className="section-title">Skills, Tools &amp; Official Certifications</h2>
         <p className="section-subtitle">
-          Full-stack performance marketing, Shopify/WooCommerce store operations, and server-side analytics backed by industry certifications.
+          Complete mastery of Google Ads, Meta Ads, SEO, Shopify, WooCommerce, Amazon, and GA4 tracking—certified by Google, Meta, HubSpot, Amazon, and Semrush.
         </p>
       </div>
       <div className="skills-grid">
         <div className="skill-card">
           <div className="skills-header">
             <Icon name="star" size={20} />
-            <h3 className="skills-title">Paid Media &amp; E-commerce Ops</h3>
+            <h3 className="skills-title">Paid Ads &amp; E-commerce Growth</h3>
           </div>
           <ul className="skills-list">
             {[
-              'Meta Ads Manager (FB & IG)',
-              'Google Ads (Search & PMax)',
+              'Facebook & Instagram Ads (Meta Ads)',
+              'Google Search & Performance Max Ads',
               'Google Shopping & Merchant Center',
-              'LinkedIn Ads (B2B)',
-              'CBO / ABO Bidding & Budget Pacing',
-              'Shopify Administration',
-              'WooCommerce Operations',
+              'LinkedIn B2B Lead Generation Ads',
+              'High-ROAS Budget Scaling (₹6L+/Mo)',
+              'Shopify Store Setup & Sales Growth',
+              'WooCommerce Store Management',
               'Amazon Seller Central & A+ Content',
-              'Product Catalog Merchandising',
-              'Landing Page & Checkout CRO',
-              'Offer & Bundle Testing',
-              'Technical & On-Page SEO'
+              'Product Bundles & AOV Optimization',
+              'High-Converting Landing Page CRO',
+              'Google SEO & Local Maps Ranking',
+              'Semrush Competitor & Keyword SEO'
             ].map((s) => (
               <li key={s} className="skill-item">{s}</li>
             ))}
@@ -1282,22 +1410,22 @@ const Skills = () => (
         <div className="skill-card">
           <div className="skills-header">
             <Icon name="tool" size={20} />
-            <h3 className="skills-title">Tracking, Creative &amp; Retention</h3>
+            <h3 className="skills-title">Tracking, Video SEO &amp; Automation</h3>
           </div>
           <ul className="skills-list">
             {[
               'Google Analytics 4 (GA4 Custom Events)',
-              'Google Tag Manager (GTM)',
+              'Google Tag Manager (GTM Setup)',
               'Meta Pixel & Conversions API (CAPI)',
-              'UTM Taxonomy & Attribution',
-              'Looker Studio Dashboards',
-              'Short-Form Video & Hook Testing',
-              'UGC & Static Carousel Direction',
-              'YouTube Video SEO (247K+ Views)',
-              'WhatsApp & Email Retention Flows',
-              'HubSpot CRM Automation',
-              'Semrush SEO & Keyword Research',
-              'A/B Testing & Funnel Diagnostics'
+              'Full-Funnel Lead & Sales Attribution',
+              'Live Looker Studio Client Reports',
+              'Video Ad Hooks & Creative Testing',
+              'UGC & Carousel Ad Direction',
+              'YouTube Video SEO (247K+ Free Views)',
+              'WhatsApp & Email Cart Recovery',
+              'HubSpot CRM Lead Automation',
+              'Google Business Profile (Local SEO)',
+              'A/B Testing & Speed Optimization'
             ].map((s) => (
               <li key={s} className="skill-item">{s}</li>
             ))}
@@ -1307,7 +1435,7 @@ const Skills = () => (
         <div className="skill-card certifications-card">
           <div className="skills-header">
             <Icon name="award" size={20} />
-            <h3 className="skills-title">Verified Certifications</h3>
+            <h3 className="skills-title">Official Certifications</h3>
           </div>
           <div className="certifications-list">
             <p className="certification-group">
@@ -1347,13 +1475,13 @@ const Skills = () => (
 );
 
 const FAQSection = () => (
-  <section id="faq" aria-labelledby="faq-heading">
+  <section id="faq" className="section-alt" aria-labelledby="faq-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">Common Questions</span>
+        <span className="section-eyebrow">Quick Answers</span>
         <h2 id="faq-heading" className="section-title">Frequently Asked Questions</h2>
         <p className="section-subtitle">
-          Answers to common questions about my paid media experience, ROAS benchmarks, e-commerce stack, and availability.
+          Simple answers about my digital marketing services in India, pricing, timelines, and proven results.
         </p>
       </div>
       <div className="faq-list">
@@ -1378,8 +1506,9 @@ const FAQSection = () => (
 const Footer = () => {
   const [formData, setFormData] = useState({
     name: '',
+    phone: '',
     email: '',
-    inquiryType: 'Full-Time Role Opportunity',
+    inquiryType: 'Google Ads & Facebook/Instagram Ads (Leads & Sales)',
     message: ''
   });
   const [statusMessage, setStatusMessage] = useState('');
@@ -1400,6 +1529,11 @@ const Footer = () => {
     }
   };
 
+  const handleWhatsAppSend = () => {
+    const text = `Hi Ayaz, I want a Free Digital Marketing Audit.\nName: ${formData.name || 'Business Owner'}\nPhone: ${formData.phone || 'Not provided'}\nService: ${formData.inquiryType}\nDetails: ${formData.message || 'Please review my business and suggest how to get more leads/sales.'}`;
+    window.open(`https://wa.me/919263588321?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+  };
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const nativeEvent = e.nativeEvent as SubmitEvent & {
@@ -1408,7 +1542,7 @@ const Footer = () => {
     };
 
     if (!formData.name || !formData.email || !formData.message) {
-      const errorMsg = 'Please fill out all required fields (name, email, and message).';
+      const errorMsg = 'Please fill out your name, email, and business details.';
       setStatusMessage(errorMsg);
       if (nativeEvent?.agentInvoked && typeof nativeEvent.respondWith === 'function') {
         nativeEvent.respondWith(Promise.resolve(`Validation failed: ${errorMsg}`));
@@ -1417,22 +1551,28 @@ const Footer = () => {
       return;
     }
 
-    const subject = `[${formData.inquiryType}] New Inquiry from ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\nInquiry Type: ${formData.inquiryType}\n\nMessage:\n${formData.message}`;
+    const subject = `[${formData.inquiryType}] Lead / Audit Request from ${formData.name}`;
+    const body = `Name: ${formData.name}\nPhone / WhatsApp: ${formData.phone || 'Not provided'}\nEmail: ${formData.email}\nService Needed: ${formData.inquiryType}\n\nBusiness / Project Details:\n${formData.message}`;
     const mailtoLink = `mailto:ayazaftab9@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
     if (nativeEvent?.agentInvoked && typeof nativeEvent.respondWith === 'function') {
       nativeEvent.respondWith(
         Promise.resolve(
-          `Inquiry prepared for Ayaz Aftab (ayazaftab9@gmail.com) with subject "${subject}".`
+          `Inquiry prepared for Ayaz Aftab (ayazaftab9@gmail.com / +91 9263588321) with subject "${subject}".`
         )
       );
     } else {
       window.location.href = mailtoLink;
     }
 
-    setStatusMessage('Opening your email client with your pre-filled message!');
-    setFormData({ name: '', email: '', inquiryType: 'Full-Time Role Opportunity', message: '' });
+    setStatusMessage('Opening your email app! You can also click WhatsApp above for an instant reply.');
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      inquiryType: 'Google Ads & Facebook/Instagram Ads (Leads & Sales)',
+      message: ''
+    });
     setTimeout(() => setStatusMessage(''), 4000);
   };
 
@@ -1440,22 +1580,24 @@ const Footer = () => {
     <footer id="contact" className="footer">
       <AnimatedSection className="container">
         <div className="footer-content">
-          <span className="section-eyebrow">Get In Touch • Kolkata, India</span>
-          <h2 className="footer-title">Let&apos;s Scale Your Paid ROAS &amp; Store Revenue.</h2>
+          <span className="section-eyebrow">Free Website &amp; Ads Audit • Pan-India &amp; Global</span>
+          <h2 className="footer-title">Want More Leads &amp; Sales? Let&apos;s Talk Today.</h2>
           <p className="footer-subtitle">
-            Hiring a Performance Marketing &amp; E-commerce Growth Lead or need a Meta/Google Ads &amp; CRO audit? Send a message below or reach out directly.
+            Message me directly on WhatsApp, call +91 9263588321, or fill out the simple form below for a free 24-hour audit of your website, SEO, or Google/Facebook ads.
           </p>
 
           <div className="contact-direct-bar">
-            <button
-              id="copy-email-btn"
-              type="button"
-              onClick={handleCopyEmail}
-              className="social-link"
+            <a
+              href={WHATSAPP_URL}
+              id="footer-whatsapp-direct"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+              style={{ padding: '0.55rem 1.15rem', fontSize: '0.86rem' }}
             >
-              <Icon name={copiedEmail ? 'check' : 'copy'} size={15} />
-              <span>{copiedEmail ? 'Copied: ayazaftab9@gmail.com' : 'Copy Email: ayazaftab9@gmail.com'}</span>
-            </button>
+              <Icon name="whatsapp" size={16} />
+              <span>Chat on WhatsApp: +91 9263588321</span>
+            </a>
             <a
               href="tel:+919263588321"
               id="footer-phone-direct"
@@ -1464,23 +1606,22 @@ const Footer = () => {
               <Icon name="phone" size={15} />
               <span>Call: +91 9263588321</span>
             </a>
-            <a
-              href="https://www.linkedin.com/in/ayazaftab"
-              id="footer-linkedin-direct"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              id="copy-email-btn"
+              type="button"
+              onClick={handleCopyEmail}
               className="social-link"
             >
-              <Icon name="linkedin" size={15} />
-              <span>LinkedIn: /in/ayazaftab</span>
-            </a>
+              <Icon name={copiedEmail ? 'check' : 'copy'} size={15} />
+              <span>{copiedEmail ? 'Copied: ayazaftab9@gmail.com' : 'Email: ayazaftab9@gmail.com'}</span>
+            </button>
           </div>
 
           <form
             id="contact-form"
             className="contact-form"
             toolname="send_marketing_inquiry"
-            tooldescription="Send a performance marketing role opportunity, Meta/Google Ads project inquiry, or e-commerce CRO audit request to Ayaz Aftab"
+            tooldescription="Request a free digital marketing audit, Google/Meta Ads proposal, SEO ranking plan, Shopify/Amazon growth service, or full-time role inquiry from Ayaz Aftab"
             onSubmit={handleSubmit}
           >
             <div className="form-row">
@@ -1490,15 +1631,32 @@ const Footer = () => {
                   type="text"
                   id="name"
                   name="name"
-                  title="Full name of the sender or recruiter"
+                  title="Full name of the business owner, client, or recruiter"
                   className="form-input"
                   placeholder="e.g., Rahul Sharma"
-                  toolparamdescription="Full name of the person or recruiter reaching out, e.g., Rahul Sharma"
+                  toolparamdescription="Full name of the person or business owner reaching out, e.g., Rahul Sharma"
                   value={formData.name}
                   onChange={handleInputChange}
                   required
                 />
               </div>
+              <div className="form-group">
+                <label htmlFor="phone" className="form-label">WhatsApp / Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  title="Phone or WhatsApp number for callback or audit report"
+                  className="form-input"
+                  placeholder="e.g., +91 98765 43210"
+                  toolparamdescription="Phone or WhatsApp number of the sender in India or internationally"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+              </div>
+            </div>
+
+            <div className="form-row">
               <div className="form-group">
                 <label htmlFor="email" className="form-label">Your Email *</label>
                 <input
@@ -1508,70 +1666,82 @@ const Footer = () => {
                   title="Reply email address of the sender"
                   className="form-input"
                   placeholder="e.g., rahul@company.com"
-                  toolparamdescription="Contact email address for reply, e.g., rahul@company.com"
+                  toolparamdescription="Contact email address for sending the free audit or proposal"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
                 />
               </div>
+              <div className="form-group">
+                <label htmlFor="inquiryType" className="form-label">What Service Do You Need?</label>
+                <select
+                  id="inquiryType"
+                  name="inquiryType"
+                  title="Type of digital marketing service or role opportunity"
+                  className="form-select"
+                  toolparamdescription="Digital marketing service needed (Google/Meta Ads, SEO, Shopify/Amazon, Website CRO, or Full-Time Role)"
+                  value={formData.inquiryType}
+                  onChange={handleInputChange}
+                >
+                  <option value="Google Ads & Facebook/Instagram Ads (Leads & Sales)">Google Ads &amp; Facebook/Instagram Ads (Leads &amp; Sales)</option>
+                  <option value="SEO, Google Maps & YouTube Ranking (#1 on Google)">SEO, Google Maps &amp; YouTube Ranking (#1 on Google)</option>
+                  <option value="Shopify, WooCommerce & Amazon Sales Growth">Shopify, WooCommerce &amp; Amazon Sales Growth</option>
+                  <option value="Website Conversion (CRO) & GA4/CAPI Tracking">Website Conversion (CRO) &amp; GA4/CAPI Tracking</option>
+                  <option value="Full-Time Growth Lead / Manager Opportunity">Full-Time Growth Lead / Manager Opportunity</option>
+                </select>
+              </div>
             </div>
 
             <div className="form-group">
-              <label htmlFor="inquiryType" className="form-label">How Can We Work Together?</label>
-              <select
-                id="inquiryType"
-                name="inquiryType"
-                title="Category of marketing engagement or role opportunity"
-                className="form-select"
-                toolparamdescription="Category of engagement requested"
-                value={formData.inquiryType}
-                onChange={handleInputChange}
-              >
-                <option value="Full-Time Role Opportunity">Full-Time Role Opportunity</option>
-                <option value="Freelance Meta / Google Ads Project">Freelance Meta / Google Ads Project</option>
-                <option value="Shopify / WooCommerce / Amazon Scaling">Shopify / WooCommerce / Amazon Scaling</option>
-                <option value="Monthly Growth Consulting / CRO Audit">Monthly Growth Consulting / CRO Audit</option>
-              </select>
-            </div>
-
-            <div className="form-group">
-              <label htmlFor="message" className="form-label">Project or Role Details *</label>
+              <label htmlFor="message" className="form-label">Tell Me About Your Business or Website *</label>
               <textarea
                 id="message"
                 name="message"
-                title="Detailed message describing the role, website URL, monthly ad budget, or growth goals"
+                title="Detailed message describing your business, website URL, city, monthly budget, or goals"
                 className="form-textarea"
-                placeholder="Share your store URL, monthly ad spend, target ROAS, or role details..."
-                toolparamdescription="Project goals, website URL for audit, monthly ad budget, or role details"
+                placeholder="Share your website link, business type, city, and how many leads/sales you want..."
+                toolparamdescription="Business details, website URL for free audit, target city/market, or role details"
                 rows={4}
                 value={formData.message}
                 onChange={handleInputChange}
                 required
               />
             </div>
-            <button id="contact-submit-btn" type="submit" className="btn btn-primary form-submit-btn">
-              <span>Send Message</span>
-              <Icon name="arrow-right" size={16} />
-            </button>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '0.75rem' }}>
+              <button id="contact-submit-btn" type="submit" className="btn btn-primary form-submit-btn">
+                <Icon name="mail" size={16} />
+                <span>Send Free Audit Request</span>
+              </button>
+              <button
+                id="contact-whatsapp-submit-btn"
+                type="button"
+                onClick={handleWhatsAppSend}
+                className="btn btn-whatsapp form-submit-btn"
+              >
+                <Icon name="whatsapp" size={17} />
+                <span>Send Instantly on WhatsApp</span>
+              </button>
+            </div>
             {statusMessage && <p className="form-status-message" role="status">{statusMessage}</p>}
           </form>
         </div>
 
         <nav className="footer-seo-directory" aria-label="Digital Marketing Services & Case Studies Directory">
           <div>
-            <p className="footer-seo-title">Digital Marketing Services</p>
+            <p className="footer-seo-title">Digital Marketing Services India</p>
             <ul className="footer-seo-list">
               {servicePagesData.map((sp) => (
                 <li key={sp.slug}>
                   <a href={`/services/${sp.slug}`} className="footer-seo-link">
-                    {sp.shortName} Services
+                    {sp.shortName}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <p className="footer-seo-title">Verified Case Studies</p>
+            <p className="footer-seo-title">Verified Client Case Studies</p>
             <ul className="footer-seo-list">
               {projectsData.map((proj) => (
                 <li key={proj.id}>
@@ -1583,21 +1753,21 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className="footer-seo-title">Credentials &amp; Resources</p>
+            <p className="footer-seo-title">Credentials &amp; Resume</p>
             <ul className="footer-seo-list">
-              <li><a href="/" className="footer-seo-link">Portfolio Overview</a></li>
+              <li><a href="/" className="footer-seo-link">Home — Digital Marketing Freelancer India</a></li>
               <li><a href="/resume" className="footer-seo-link">Online Master Resume</a></li>
               <li><a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="footer-seo-link">Download Master Resume (PDF)</a></li>
               <li><a href="https://www.linkedin.com/in/ayazaftab" target="_blank" rel="noopener noreferrer" className="footer-seo-link">LinkedIn Profile (/in/ayazaftab)</a></li>
             </ul>
           </div>
           <div>
-            <p className="footer-seo-title">Markets &amp; Availability</p>
+            <p className="footer-seo-title">Pan-India &amp; Global Service Areas</p>
             <ul className="footer-seo-list">
-              <li className="footer-seo-link">Kolkata, Bengaluru, Mumbai &amp; Delhi NCR</li>
-              <li className="footer-seo-link">Pan-India &amp; Global Remote (UAE, UK, US)</li>
-              <li className="footer-seo-link">Full-Time Roles, Freelance &amp; Retainers</li>
-              <li><a href="tel:+919263588321" className="footer-seo-link">Direct: +91 9263588321</a></li>
+              <li className="footer-seo-link">Kolkata, Mumbai, Delhi NCR &amp; Bengaluru</li>
+              <li className="footer-seo-link">Hyderabad, Pune, Chennai, Ahmedabad &amp; Jaipur</li>
+              <li className="footer-seo-link">All India &amp; Global Remote (UAE, UK, US)</li>
+              <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="footer-seo-link">WhatsApp / Call: +91 9263588321</a></li>
             </ul>
           </div>
         </nav>
@@ -1608,7 +1778,7 @@ const Footer = () => {
             <span className="logo-text">Ayaz Aftab</span>
           </a>
           <p className="copyright">
-            &copy; {new Date().getFullYear()} Ayaz Aftab — Performance Marketing &amp; E-commerce Growth Lead (Kolkata, India). All rights reserved.
+            &copy; {new Date().getFullYear()} Ayaz Aftab — Digital Marketing Freelancer &amp; Performance Marketing Specialist in India. All rights reserved.
           </p>
         </div>
       </AnimatedSection>
@@ -1706,14 +1876,24 @@ const ProjectModal = ({ project, onClose }: { project: Project | null; onClose: 
                   ))}
                 </ul>
 
-                <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)' }}>
+                <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-whatsapp"
+                    style={{ width: '100%' }}
+                  >
+                    <Icon name="whatsapp" size={16} />
+                    <span>Chat on WhatsApp</span>
+                  </a>
                   <a
                     href="#contact"
                     onClick={onClose}
                     className="btn btn-primary"
                     style={{ width: '100%' }}
                   >
-                    <span>Discuss a Similar Campaign</span>
+                    <span>Get Similar Results</span>
                     <Icon name="arrow-right" size={16} />
                   </a>
                 </div>
@@ -1780,7 +1960,7 @@ const CaseStudyPage = ({ project }: { project: Project }) => {
             </ol>
           </nav>
 
-          <span className="hero-role-kicker">{project.client} • Performance &amp; E-commerce Case Study</span>
+          <span className="hero-role-kicker">{project.client} • Verified Marketing Case Study</span>
           <h1 id="case-study-page-title" className="section-title" style={{ marginBottom: '0.85rem' }}>
             {project.title}
           </h1>
@@ -1813,18 +1993,18 @@ const CaseStudyPage = ({ project }: { project: Project }) => {
               </div>
 
               <div className="modal-section">
-                <h2 className="modal-section-title">3. Full-Funnel Strategy &amp; Architecture</h2>
+                <h2 className="modal-section-title">3. Simple Strategy &amp; Funnel Plan</h2>
                 <p>{project.strategy}</p>
               </div>
 
               <div className="modal-section">
-                <h2 className="modal-section-title">4. Campaign Execution &amp; CRO</h2>
+                <h2 className="modal-section-title">4. Campaign Execution &amp; Optimization</h2>
                 <p>{project.execution}</p>
               </div>
 
               {project.testimonial && (
                 <div className="modal-section">
-                  <h2 className="modal-section-title">5. Client Endorsement</h2>
+                  <h2 className="modal-section-title">5. Client Feedback</h2>
                   <blockquote className="testimonial-quote" style={{ marginBottom: 0 }}>
                     &ldquo;{project.testimonial}&rdquo;
                   </blockquote>
@@ -1862,8 +2042,12 @@ const CaseStudyPage = ({ project }: { project: Project }) => {
                 </ul>
 
                 <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%' }}>
+                    <Icon name="whatsapp" size={16} />
+                    <span>Chat on WhatsApp Now</span>
+                  </a>
                   <a href="#contact" className="btn btn-primary" style={{ width: '100%' }}>
-                    <span>Discuss a Similar Campaign</span>
+                    <span>Get Similar Results</span>
                     <Icon name="arrow-right" size={16} />
                   </a>
                   <a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{ width: '100%' }}>
@@ -1881,7 +2065,7 @@ const CaseStudyPage = ({ project }: { project: Project }) => {
         <AnimatedSection className="container">
           <div className="section-header">
             <span className="section-eyebrow">Explore More Proven Results</span>
-            <h2 id="related-studies-heading" className="section-title">Other Performance &amp; E-commerce Case Studies</h2>
+            <h2 id="related-studies-heading" className="section-title">Other Client Case Studies</h2>
           </div>
           <div className="projects-grid">
             {relatedProjects.map((rel) => (
@@ -1938,7 +2122,7 @@ const ResumePage = () => (
           Ayaz Aftab — Performance Marketing &amp; E-commerce Growth Lead
         </h1>
         <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
-          Performance Marketing &amp; E-commerce Specialist with 5.5+ years of experience scaling D2C, B2B, and marketplace brands. Proven track record of managing monthly paid ad spend exceeding ₹6L+ across Meta and Google at a sustained 4.0x–4.5x ROAS, driving 9,452+ qualified acquisitions, and lifting store conversions by 20%. Deep proficiency in Shopify/WooCommerce operations, Google Merchant Center feeds, GA4 custom event tracking, and direct-response creative testing.
+          Performance Marketing &amp; E-commerce Specialist with 5.5+ years of experience scaling D2C, B2B, and marketplace brands across India. Proven track record of managing monthly paid ad spend exceeding ₹6L+ across Meta and Google at a sustained 4.0x–4.5x ROAS, driving 9,452+ qualified acquisitions, and lifting store conversions by 20%. Deep proficiency in Shopify/WooCommerce operations, Google Merchant Center feeds, GA4 custom event tracking, and direct-response creative testing.
         </p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
@@ -1946,12 +2130,16 @@ const ResumePage = () => (
             <Icon name="download" size={16} />
             <span>Download Master Resume (PDF)</span>
           </a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+            <Icon name="whatsapp" size={16} />
+            <span>Chat on WhatsApp</span>
+          </a>
           <a href="https://www.linkedin.com/in/ayazaftab" target="_blank" rel="noopener noreferrer" className="btn btn-secondary">
             <Icon name="linkedin" size={16} />
             <span>LinkedIn Profile</span>
           </a>
           <a href="/" className="btn btn-ghost">
-            <span>Back to Portfolio Overview</span>
+            <span>Back to Home</span>
           </a>
         </div>
       </AnimatedSection>
@@ -1975,13 +2163,13 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
             <ol className="breadcrumb-nav">
               <li><a href="/" className="breadcrumb-link">Home</a></li>
               <li aria-hidden="true">/</li>
-              <li><a href="/#services" className="breadcrumb-link">Digital Marketing Services</a></li>
+              <li><a href="/#services" className="breadcrumb-link">Digital Marketing Services India</a></li>
               <li aria-hidden="true">/</li>
               <li className="breadcrumb-current" aria-current="page">{service.shortName}</li>
             </ol>
           </nav>
 
-          <span className="hero-role-kicker">{service.eyebrow} • Kolkata, India &amp; Global Remote</span>
+          <span className="hero-role-kicker">{service.eyebrow} • All India &amp; Global Remote</span>
           <h1 id="service-page-title" className="section-title" style={{ marginBottom: '0.85rem' }}>
             {service.title}
           </h1>
@@ -1992,8 +2180,12 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
             <span className="project-badge" style={{ fontSize: '0.88rem', padding: '0.35rem 0.9rem' }}>
               Proven Track Record: {service.keyMetricBadge}
             </span>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+              <Icon name="whatsapp" size={16} />
+              <span>Chat on WhatsApp (Free Audit)</span>
+            </a>
             <a href="#contact" className="btn btn-primary">
-              <span>Request a Free Audit &amp; Proposal</span>
+              <span>Request Custom Plan</span>
               <Icon name="arrow-right" size={16} />
             </a>
             <a href="tel:+919263588321" className="btn btn-secondary">
@@ -2009,7 +2201,7 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
           <div className="modal-grid">
             <div className="modal-main-content">
               <div className="modal-section">
-                <h2 className="modal-section-title">1. Complete Scope of Deliverables</h2>
+                <h2 className="modal-section-title">1. What Is Included in This Service</h2>
                 <ul className="service-list" style={{ marginTop: '0.85rem' }}>
                   {service.deliverables.map((item, idx) => (
                     <li key={idx} className="service-list-item">
@@ -2021,17 +2213,17 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
               </div>
 
               <div className="modal-section">
-                <h2 className="modal-section-title">2. How I Execute &amp; Scale Results</h2>
+                <h2 className="modal-section-title">2. How I Generate Leads &amp; Sales for You</h2>
                 <p>{service.methodology}</p>
               </div>
 
               <div className="modal-section">
-                <h2 className="modal-section-title">3. Who This Service Is Built For</h2>
+                <h2 className="modal-section-title">3. Who This Service Is Best For</h2>
                 <p>{service.targetAudience}</p>
               </div>
 
               <div className="modal-section" style={{ marginBottom: 0 }}>
-                <h2 className="modal-section-title">4. Service-Specific FAQs</h2>
+                <h2 className="modal-section-title">4. Common Questions (FAQ)</h2>
                 <div className="faq-list" style={{ marginTop: '1rem' }}>
                   {service.faqs.map((f, i) => (
                     <details key={i} className="faq-item" open={i === 0}>
@@ -2052,7 +2244,7 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
 
             <aside className="modal-sidebar" aria-label="Verified Client Proof Points">
               <div className="modal-sidebar-box">
-                <h2 className="modal-section-title">Verified Proof &amp; ROI</h2>
+                <h2 className="modal-section-title">Verified Results &amp; Proof</h2>
                 <ul className="modal-results-list">
                   {service.proofPoints.map((pt, index) => (
                     <li key={index} className="modal-result-item">
@@ -2063,8 +2255,12 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
                 </ul>
 
                 <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%' }}>
+                    <Icon name="whatsapp" size={16} />
+                    <span>WhatsApp for Free Audit</span>
+                  </a>
                   <a href="#contact" className="btn btn-primary" style={{ width: '100%' }}>
-                    <span>Start a Project or Audit</span>
+                    <span>Start Growing Your Business</span>
                     <Icon name="arrow-right" size={16} />
                   </a>
                   <a href="/resume" className="btn btn-secondary" style={{ width: '100%' }}>
@@ -2187,10 +2383,11 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
           <>
             <Hero />
             <ProvenImpact />
-            <ExperienceSection />
+            <Services />
+            <IndiaFreelancerSection />
             <FeaturedProjects onProjectClick={handleProjectClick} />
             <GrowthProcess />
-            <Services />
+            <ExperienceSection />
             <Testimonials onProjectClick={handleProjectClick} />
             <Skills />
             <FAQSection />
@@ -2211,5 +2408,3 @@ if (typeof document !== 'undefined') {
     root.render(<App />);
   }
 }
-
-

@@ -1,45 +1,34 @@
-# Ayaz Aftab — Performance Marketing & E-commerce Growth Lead
+# Ayaz Aftab — Digital Marketing Freelancer & Performance Marketing Growth Lead in India
 
-> Performance Marketing & E-commerce Specialist with 5.5+ years of hands-on experience scaling D2C, B2B, and marketplace brands. Track record managing monthly paid ad spend exceeding ₹6L+ across Meta and Google at sustained 4.0x–4.5x ROAS, driving 9,400+ qualified acquisitions, generating ₹7.95L+ GMV across WooCommerce & Amazon, and lifting store conversions by 20%.
+> Result-driven Digital Marketing Freelancer & Performance Marketing Specialist in India with 5.5+ years of hands-on experience helping businesses, startups, and D2C brands get daily leads, online sales, and #1 Google rankings. Track record of managing ₹6L+ monthly paid ad budgets across Google Ads and Facebook/Instagram (Meta) Ads at a sustained 4.0x–4.5x ROAS, generating 9,452+ customer leads at ₹49.86/lead (-35% cost), driving ₹7.95L+ direct sales across WooCommerce & Amazon, and lifting website conversions by +20%.
 
-Based in Kolkata, West Bengal, India (`+91 9263588321`, `ayazaftab9@gmail.com`). Open to full-time Performance Marketing & E-commerce Growth Lead roles, freelance campaigns, and monthly growth retainers worldwide.
+Based in Kolkata, West Bengal, India (`+91 9263588321`, `ayazaftab9@gmail.com`) and serving businesses all over India (Kolkata, Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur) and global markets (UAE, UK, US, Remote).
 
-## Verified Performance Metrics
+## Digital Marketing Services in India (Dedicated Landing Pages)
 
-- **₹6.0L+ Monthly Ad Spend Managed**: Sustained **4.0x–4.5x ROAS** across Meta Ads and Google Ads (Search, Shopping, Performance Max).
-- **₹7.95 Lakhs+ GMV**: Generated across D2C WooCommerce and Amazon Seller Central storefronts with **+40% Amazon discoverability** and **+30% organic search traffic**.
-- **9,452+ Qualified Acquisitions**: Delivered via direct-response Meta Ads funnels while reducing CPA/CPL by **35%** and lifting landing page conversion rates by **20%**.
-- **247,000+ Organic YouTube Views**: Built and scaled an organic video channel from scratch through search-intent hooks and YouTube Video SEO.
+- [Google Ads & Facebook/Instagram Ads (Meta Ads) Services](https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads): Daily lead generation & e-commerce ROAS scaling (₹6L+/mo managed at 4.0x–4.5x return).
+- [Shopify, WooCommerce & Amazon Sales Growth Services](https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon): End-to-end online store management, product bundles, checkout CRO (+20% CVR), and Amazon Seller Central A+ listings (₹7.95L+ direct sales).
+- [SEO, Google Maps (Local SEO) & YouTube Ranking Services](https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth): Rank #1 on Google Search, Google Maps (1,465+ buyer actions), and YouTube (247,000+ free views & +30% organic traffic).
+- [Website Conversion Optimization (CRO) & GA4/GTM/Meta CAPI Tracking](https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro): High-converting mobile landing pages (+20% conversion lift) and server-side GA4, Google Tag Manager, and Meta Conversions API attribution.
 
-## Professional Experience
+## Verified Client Case Studies (Dedicated Pages)
 
-- [FFACE (GM Modular & Decoy Luxury Perfumes) — Performance Marketing & E-commerce Specialist (Nov 2025 – Present, Kolkata)](https://ayaz-aftab-portfolio.vercel.app/#experience): Managing ₹6L+ monthly budgets on Meta & Google Ads at 4.0x ROAS, running full-funnel Shopify e-commerce operations for Decoy Luxury, scaling GM Modular dynamic product catalog ads, testing 3–5 weekly creative concepts, and configuring GTM/GA4 custom purchase events & Meta Pixel/CAPI.
-- [Jaffri Creations Fountain Decor Pvt. Ltd. — Digital Marketing Executive, Growth & Operations (Oct 2023 – Sep 2025)](https://ayaz-aftab-portfolio.vercel.app/#experience): Generated ₹7.95L GMV across WooCommerce & Amazon, managed ₹2L/mo Google PMax & Meta campaigns at 4.5x ROAS, increased organic traffic by 30% & Amazon discoverability by 40%, and scaled YouTube channel to 247K+ views.
-- [MTEI Services Pvt. Ltd. — Performance Marketing & CRO Specialist, Contract (Jun 2023 – Oct 2023)](https://ayaz-aftab-portfolio.vercel.app/#experience): Delivered 9,452 qualified customer acquisitions, reduced CPA/CPL by 35% via rapid A/B testing, and lifted landing page conversion rates by 20%.
-- [HICO Tax Consultant — Digital Marketing Specialist (Jul 2021 – Jun 2023)](https://ayaz-aftab-portfolio.vercel.app/#experience): Managed B2B Google Search & LinkedIn Ads, automated HubSpot CRM email nurture workflows, and delivered 25% YoY organic traffic growth.
+- [FFACE (GM Modular & Decoy Luxury Perfumes) — ₹6L+/Mo Meta & Google Ads at 4.0x ROAS + Shopify CRO](https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce)
+- [Jaffri Creations Fountain Decor Pvt. Ltd. — ₹7.95L WooCommerce & Amazon Sales at 4.5x ROAS + 30% SEO Growth](https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo)
+- [MTEI Services Pvt. Ltd. — 9,452 Customer Leads Generated at ₹49.86/Lead (-35% Cost & +20% CVR)](https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation)
+- [Jaffri Creations Fountain Decor Pvt. Ltd. — 247,000+ Free Organic YouTube Views via Video SEO](https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth)
 
-## Featured Case Studies & Sections
+## Resume & Machine-Readable Discovery Resources
 
-- [Portfolio Home & Overview](https://ayaz-aftab-portfolio.vercel.app/#top): Executive summary, core competencies, and direct contact links.
-- [Verified Marketing & Revenue Impact](https://ayaz-aftab-portfolio.vercel.app/#impact): Key KPIs across ROAS, paid ad spend, D2C/Amazon GMV, and CRO.
-- [Case Study 1 — FFACE (GM Modular & Decoy Luxury Perfumes)](https://ayaz-aftab-portfolio.vercel.app/#case-study-1): ₹6L+ monthly paid media acquisition at sustained 4.0x ROAS, Shopify CRO, and Meta CAPI + GA4 attribution.
-- [Case Study 2 — Jaffri Creations Fountain Decor Pvt. Ltd.](https://ayaz-aftab-portfolio.vercel.app/#case-study-2): ₹7.95L GMV across WooCommerce & Amazon, 4.5x ROAS on Google PMax & Meta Ads, +40% Amazon discoverability, and 247K+ YouTube views.
-- [Case Study 3 — MTEI Services Pvt. Ltd.](https://ayaz-aftab-portfolio.vercel.app/#case-study-3): 9,452 qualified customer acquisitions, -35% CPA/CPL reduction, and +20% landing page conversion lift.
-- [Full-Funnel Growth Methodology](https://ayaz-aftab-portfolio.vercel.app/#process): 4-step process covering GTM/GA4/CAPI tracking, paid media scaling, Shopify/WooCommerce CRO, and creative testing.
-- [Services & Engagement Models](https://ayaz-aftab-portfolio.vercel.app/#services): Full-time Growth Lead roles, freelance paid media & CRO projects, and consulting retainers.
-- [Core Competencies, Education & Certifications](https://ayaz-aftab-portfolio.vercel.app/#skills): BBA (Manipal University Jaipur), Diploma in CS & Engineering (Arka Jain University), and Google, Meta, HubSpot, Amazon & Semrush certifications.
-- [Frequently Asked Questions (FAQ)](https://ayaz-aftab-portfolio.vercel.app/#faq): Answers on paid media budgets, ROAS benchmarks, Shopify/WooCommerce/Amazon ops, and availability.
-
-## Machine-Readable Agent & Discovery Resources
-
-- [Download Master Resume (PDF)](https://ayaz-aftab-portfolio.vercel.app/resume.pdf): Complete 1-page curriculum vitae of Ayaz Aftab.
+- [Online Master Resume](https://ayaz-aftab-portfolio.vercel.app/resume): Interactive HTML resume with full work history, skills, and certifications.
+- [Download Master Resume (PDF)](https://ayaz-aftab-portfolio.vercel.app/resume.pdf): Vector-searchable 1-page Master Resume PDF.
 - [Agentic Resource Discovery Manifest (ARD v0.91)](https://ayaz-aftab-portfolio.vercel.app/.well-known/ard.json): ARD v0.91 catalog of agent capabilities.
 - [A2A Agent Card](https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json): Agent-to-Agent capability descriptor.
-- [XML Sitemap](https://ayaz-aftab-portfolio.vercel.app/sitemap.xml): Canonical URL index for search engines.
+- [XML Sitemap](https://ayaz-aftab-portfolio.vercel.app/sitemap.xml): Canonical URL index for all 11 indexable pages.
 
-## Direct Contact
+## Direct Lead & Contact Channels
 
+- [Instant WhatsApp Chat (+91 9263588321)](https://wa.me/919263588321): Click to chat directly on WhatsApp for a free website & ads audit.
+- [Direct Phone Call](tel:+919263588321): `+91 9263588321`
 - [Email Ayaz Aftab](mailto:ayazaftab9@gmail.com): `ayazaftab9@gmail.com`
-- [Call / WhatsApp](tel:+919263588321): `+91 9263588321`
-- [LinkedIn Profile](https://www.linkedin.com/in/ayazaftab): Connect professionally on LinkedIn (`linkedin.com/in/ayazaftab`).
-- [GitHub Profile](https://github.com/ayazaftab9): Technical web and marketing repositories.
+- [LinkedIn Profile](https://www.linkedin.com/in/ayazaftab): `linkedin.com/in/ayazaftab`
