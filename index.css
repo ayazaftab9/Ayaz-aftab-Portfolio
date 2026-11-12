@@ -552,12 +552,18 @@ section {
   -webkit-backdrop-filter: blur(6px);
   z-index: 200;
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--transition-base);
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+}
+
+.off-canvas-menu-overlay[hidden] {
+  display: none !important;
 }
 
 .off-canvas-menu-overlay.open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 

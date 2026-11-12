@@ -793,6 +793,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
       className={`off-canvas-menu-overlay ${isOpen ? 'open' : ''}`}
       onClick={onClose}
       aria-hidden={!isOpen}
+      hidden={!isOpen}
     >
       <div
         className={`off-canvas-menu ${isOpen ? 'open' : ''}`}
@@ -800,27 +801,34 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
         aria-modal="true"
         aria-label="Mobile Navigation"
         onClick={(e) => e.stopPropagation()}
+        tabIndex={-1}
       >
         <div className="off-canvas-header">
-          <a href="/" className="logo-container" onClick={onClose}>
+          <a href="/" className="logo-container" onClick={onClose} tabIndex={isOpen ? 0 : -1}>
             <Logo />
             <span className="logo-text">Ayaz Aftab</span>
           </a>
-          <button id="close-mobile-menu-btn" onClick={onClose} className="close-menu-btn" aria-label="Close menu">
+          <button
+            id="close-mobile-menu-btn"
+            onClick={onClose}
+            className="close-menu-btn"
+            aria-label="Close menu"
+            tabIndex={isOpen ? 0 : -1}
+          >
             <Icon name="x" size={20} />
           </button>
         </div>
         <nav className="menu-links" aria-label="Mobile Navigation Links">
-          <a href="/#impact" onClick={onClose} className="menu-link"><Icon name="bar-chart-2" size={18} /> ₹35L+/Mo Proven Impact</a>
-          <a href="/#services" onClick={onClose} className="menu-link"><Icon name="settings" size={18} /> Digital Marketing Services</a>
-          <a href="/#projects" onClick={onClose} className="menu-link"><Icon name="star" size={18} /> Case Studies</a>
-          <a href="/#india-freelancer" onClick={onClose} className="menu-link"><Icon name="check-circle" size={18} /> Pan-India Industries</a>
-          <a href="/#process" onClick={onClose} className="menu-link"><Icon name="tool" size={18} /> 4-Step Growth System</a>
-          <a href="/#experience" onClick={onClose} className="menu-link"><Icon name="briefcase" size={18} /> 5.5+ Years Experience</a>
-          <a href="/#skills" onClick={onClose} className="menu-link"><Icon name="award" size={18} /> Skills &amp; Certifications</a>
-          <a href="/resume" onClick={onClose} className="menu-link"><Icon name="download" size={18} /> Online Master Resume</a>
-          <a href="/#faq" onClick={onClose} className="menu-link"><Icon name="help-circle" size={18} /> FAQ</a>
-          <a href="/#contact" onClick={onClose} className="menu-link"><Icon name="mail" size={18} /> Book a Consultation</a>
+          <a href="/#impact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="bar-chart-2" size={18} /> ₹35L+/Mo Proven Impact</a>
+          <a href="/#services" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="settings" size={18} /> Digital Marketing Services</a>
+          <a href="/#projects" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="star" size={18} /> Case Studies</a>
+          <a href="/#india-freelancer" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="check-circle" size={18} /> Pan-India Industries</a>
+          <a href="/#process" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="tool" size={18} /> 4-Step Growth System</a>
+          <a href="/#experience" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="briefcase" size={18} /> 5.5+ Years Experience</a>
+          <a href="/#skills" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="award" size={18} /> Skills &amp; Certifications</a>
+          <a href="/resume" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="download" size={18} /> Online Master Resume</a>
+          <a href="/#faq" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="help-circle" size={18} /> FAQ</a>
+          <a href="/#contact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="mail" size={18} /> Book a Consultation</a>
         </nav>
         <a
           href={WHATSAPP_URL}
@@ -829,6 +837,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           rel="noopener noreferrer"
           className="btn btn-whatsapp menu-resume-btn"
           style={{ marginBottom: '0.65rem' }}
+          tabIndex={isOpen ? 0 : -1}
         >
           <Icon name="whatsapp" size={16} />
           <span>Book a Consultation (WhatsApp)</span>
@@ -840,16 +849,17 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-primary menu-resume-btn"
+          tabIndex={isOpen ? 0 : -1}
         >
           <Icon name="download" size={16} />
           <span>Download Master Resume (PDF)</span>
         </a>
 
         <div className="off-canvas-footer">
-          <a href="mailto:ayazaftab9@gmail.com" className="social-link" aria-label="Email Ayaz Aftab">
+          <a href="mailto:ayazaftab9@gmail.com" className="social-link" aria-label="Email Ayaz Aftab" tabIndex={isOpen ? 0 : -1}>
             <Icon name="mail" size={16} />
           </a>
-          <a href="tel:+919263588321" className="social-link" aria-label="Call Ayaz Aftab">
+          <a href="tel:+919263588321" className="social-link" aria-label="Call Ayaz Aftab" tabIndex={isOpen ? 0 : -1}>
             <Icon name="phone" size={16} />
           </a>
           <a
@@ -858,6 +868,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             rel="noopener noreferrer"
             className="social-link"
             aria-label="Ayaz Aftab on LinkedIn"
+            tabIndex={isOpen ? 0 : -1}
           >
             <Icon name="linkedin" size={16} />
           </a>
@@ -867,6 +878,7 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             rel="noopener noreferrer"
             className="social-link"
             aria-label="Ayaz Aftab on GitHub"
+            tabIndex={isOpen ? 0 : -1}
           >
             <Icon name="github" size={16} />
           </a>

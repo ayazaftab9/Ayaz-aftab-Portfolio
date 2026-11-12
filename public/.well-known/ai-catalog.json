@@ -1,43 +1,44 @@
 {
-  "$schema": "https://ard-spec.org/schemas/v0.1.0/ard.json",
-  "specVersion": "0.1.0",
-  "publisher": {
-    "id": "ayaz-aftab-portfolio",
+  "$schema": "https://raw.githubusercontent.com/ards-project/ard-spec/main/spec/schemas/ai-catalog.schema.json",
+  "specVersion": "1.0",
+  "host": {
     "displayName": "Ayaz Aftab — Performance Marketing & E-commerce Growth Lead",
-    "website": "https://ayaz-aftab-portfolio.vercel.app/",
-    "description": "Official portfolio, commercial digital marketing service pages, and verified case studies of Ayaz Aftab, Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience scaling D2C, B2B, and marketplace brands (₹6L+/mo Meta & Google Ads at 4.0x–4.5x ROAS, 9,452+ acquisitions, +20% store CRO, ₹7.95L+ D2C/Amazon GMV).",
-    "contact": "ayazaftab9@gmail.com"
+    "documentationUrl": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
+    "logoUrl": "https://ayaz-aftab-portfolio.vercel.app/images/og-preview.png"
   },
-  "updatedAt": "2026-11-11T00:00:00Z",
-  "resources": [
+  "entries": [
     {
-      "id": "portfolio-web-app",
-      "type": "web_page",
-      "name": "Ayaz Aftab Portfolio & WebMCP Interface",
-      "description": "Interactive portfolio showcasing digital marketing services, verified ROAS & e-commerce case studies (FFACE, Jaffri Creations, MTEI Services), 5.5+ year career timeline, and WebMCP-enabled inquiry tools.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:home",
+      "displayName": "Ayaz Aftab — #1 Digital Marketing & Performance Marketing Freelancer India",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/",
+      "description": "Interactive portfolio of Ayaz Aftab, directing ₹35L+ combined monthly ad spend across Google & Meta Ads at 4.0x–4.5x ROAS, 9,452+ leads, and #1 Google SEO rankings.",
       "tags": [
         "performance-marketing",
-        "ecommerce",
+        "digital-marketing-freelancer",
+        "india",
         "meta-ads",
-        "google-ads",
-        "shopify",
-        "amazon",
-        "cro",
-        "seo",
-        "webmcp"
+        "google-ads"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/"
-      }
+      "capabilities": [
+        "GoogleAdsManagement",
+        "MetaAdsManagement",
+        "ECommerceCRO",
+        "ServerSideTracking"
+      ],
+      "representativeQueries": [
+        "hire digital marketing freelancer in india",
+        "best performance marketing freelancer india",
+        "google ads and meta ads specialist india",
+        "freelance performance marketing lead portfolio"
+      ]
     },
     {
-      "id": "service-paid-media",
-      "type": "web_page",
-      "name": "Service: Performance Marketing (Meta Ads, Google Ads PMax & LinkedIn Ads)",
-      "description": "Commercial service page for hiring Ayaz Aftab for Meta Ads (Facebook/Instagram), Google Search/Shopping/Performance Max, and LinkedIn Ads management.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:service:paid-media",
+      "displayName": "Google Ads & Meta Ads Management Services in India",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads",
+      "description": "Commercial service page for hiring Ayaz Aftab for Google Ads (Search, Shopping, Performance Max) and Meta Ads (Facebook & Instagram CBO/ABO) management at 4.0x–4.5x ROAS.",
       "tags": [
         "service",
         "meta-ads",
@@ -45,17 +46,25 @@
         "ppc",
         "lead-generation"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/performance-marketing-meta-google-ads"
-      }
+      "capabilities": [
+        "GoogleSearchAds",
+        "PerformanceMax",
+        "MetaAdsManager",
+        "ROASScaling"
+      ],
+      "representativeQueries": [
+        "hire google ads freelancer india",
+        "facebook and instagram ads expert india",
+        "performance marketing consultant for ecommerce",
+        "scale meta ads roas"
+      ]
     },
     {
-      "id": "service-ecommerce-growth",
-      "type": "web_page",
-      "name": "Service: D2C E-commerce Growth (Shopify, WooCommerce & Amazon Seller Central)",
-      "description": "Commercial service page for Shopify & WooCommerce store operations, AOV bundle optimization, and Amazon Seller Central A+ cataloging.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:service:ecommerce-growth",
+      "displayName": "Shopify, WooCommerce & Amazon Growth Services in India",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon",
+      "description": "Commercial service page for Shopify and WooCommerce store administration, checkout CRO (+20% lift), and Amazon Seller Central A+ cataloging.",
       "tags": [
         "service",
         "shopify",
@@ -63,34 +72,50 @@
         "amazon-seller-central",
         "ecommerce"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/ecommerce-growth-shopify-woocommerce-amazon"
-      }
+      "capabilities": [
+        "ShopifyStoreOptimization",
+        "WooCommerceOps",
+        "AmazonSellerCentral",
+        "CatalogCRO"
+      ],
+      "representativeQueries": [
+        "shopify marketing freelancer india",
+        "woocommerce sales growth consultant",
+        "amazon seller central specialist india",
+        "ecommerce conversion rate optimization"
+      ]
     },
     {
-      "id": "service-seo-youtube",
-      "type": "web_page",
-      "name": "Service: Technical SEO, Local SEO (GBP) & YouTube Video SEO",
-      "description": "Commercial service page for Technical SEO audits, On-Page SEO, Google Business Profile optimization, and YouTube Video SEO.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:service:seo-youtube",
+      "displayName": "Technical SEO, Local Google Maps & YouTube Ranking Services",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth",
+      "description": "Commercial service page for Technical SEO audits, Google Business Profile local SEO ranking, and YouTube Video SEO.",
       "tags": [
         "service",
         "technical-seo",
         "local-seo",
         "youtube-seo"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/seo-local-seo-youtube-growth"
-      }
+      "capabilities": [
+        "TechnicalSEOAudit",
+        "LocalSEOGoogleMaps",
+        "YouTubeVideoSEO",
+        "KeywordMapping"
+      ],
+      "representativeQueries": [
+        "seo freelancer in india",
+        "local seo expert for google maps ranking",
+        "youtube video seo specialist india",
+        "technical seo audit consultant"
+      ]
     },
     {
-      "id": "service-tracking-cro",
-      "type": "web_page",
-      "name": "Service: GA4, Google Tag Manager (GTM), Meta CAPI & Full-Funnel CRO",
-      "description": "Commercial service page for GA4 custom e-commerce tracking, GTM, Server-Side Meta Conversions API (CAPI), Looker Studio, and Landing Page CRO.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:service:tracking-cro",
+      "displayName": "Website CRO, GA4 Custom Events, GTM & Meta CAPI Setup",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro",
+      "description": "Commercial service page for GA4 custom e-commerce tracking, Google Tag Manager, Server-Side Meta Conversions API (CAPI), and Landing Page CRO.",
       "tags": [
         "service",
         "ga4",
@@ -98,34 +123,48 @@
         "meta-capi",
         "cro"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/services/ga4-gtm-capi-tracking-cro"
-      }
+      "capabilities": [
+        "GA4CustomEvents",
+        "GoogleTagManager",
+        "MetaConversionsAPI",
+        "AttributionModeling"
+      ],
+      "representativeQueries": [
+        "setup meta conversions api capi",
+        "google tag manager tracking expert",
+        "ga4 ecommerce event setup freelancer",
+        "landing page cro audit"
+      ]
     },
     {
-      "id": "online-master-resume",
-      "type": "web_page",
-      "name": "Ayaz Aftab Online Master Resume",
-      "description": "HTML Master Resume page detailing Ayaz Aftab's 5.5+ years of work experience, core competencies, education, and verified certifications.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:resume",
+      "displayName": "Ayaz Aftab Online Master Resume",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/resume",
+      "description": "HTML Master Resume page detailing Ayaz Aftab's 5.5+ years of performance marketing, verified credentials, and client track records.",
       "tags": [
         "resume",
         "cv",
         "work-experience",
         "certifications"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/resume"
-      }
+      "capabilities": [
+        "WorkExperience",
+        "OfficialCertifications",
+        "Leadership"
+      ],
+      "representativeQueries": [
+        "ayaz aftab resume",
+        "performance marketing manager resume",
+        "ecommerce growth lead cv india"
+      ]
     },
     {
-      "id": "case-study-fface",
-      "type": "web_page",
-      "name": "Case Study: FFACE (GM Modular & Decoy Luxury Perfumes) — ₹6L+/Mo Spend at 4.0x ROAS",
-      "description": "Full case study on scaling ₹6L+ monthly Meta & Google Ads budgets at 4.0x ROAS alongside Shopify CRO and GTM/GA4/CAPI tracking.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:case-study:fface",
+      "displayName": "Case Study: FFACE & Decoy Luxury Perfumes (₹35L+/Mo Spend at 4.0x ROAS)",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce",
+      "description": "Full case study on scaling ₹35L+ combined monthly Meta & Google Ads budgets at 4.0x ROAS alongside Shopify CRO and GTM/GA4/CAPI attribution.",
       "tags": [
         "case-study",
         "meta-ads",
@@ -133,17 +172,23 @@
         "shopify",
         "cro"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/fface-gm-modular-decoy-luxury-paid-media-ecommerce"
-      }
+      "capabilities": [
+        "LuxuryBrandScaling",
+        "DiscoverySetsCRO",
+        "PMaxAttribution"
+      ],
+      "representativeQueries": [
+        "perfume brand paid media case study",
+        "luxury ecommerce meta ads roas",
+        "gm modular retail ads case study"
+      ]
     },
     {
-      "id": "case-study-jaffri-ecommerce",
-      "type": "web_page",
-      "name": "Case Study: Jaffri Creations — ₹7.95L GMV at 4.5x ROAS across WooCommerce & Amazon",
-      "description": "Full case study on scaling D2C WooCommerce and Amazon Seller Central storefronts to ₹7.95L GMV with ₹2L/mo Google PMax & Meta Ads at 4.5x ROAS.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:case-study:jaffri",
+      "displayName": "Case Study: Jaffri Creations (₹7.95L GMV at 4.5x ROAS across WooCommerce & Amazon)",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo",
+      "description": "Full case study on scaling D2C WooCommerce and Amazon Seller Central storefronts to ₹7.95L GMV with ₹2L/mo Google PMax & Meta Ads at 4.5x ROAS.",
       "tags": [
         "case-study",
         "amazon",
@@ -151,78 +196,101 @@
         "google-pmax",
         "seo"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-ecommerce-ppc-seo"
-      }
+      "capabilities": [
+        "WooCommercePPC",
+        "AmazonAContent",
+        "PMaxScaling"
+      ],
+      "representativeQueries": [
+        "woocommerce amazon ppc case study",
+        "d2c home decor paid search case study"
+      ]
     },
     {
-      "id": "case-study-mtei-leads",
-      "type": "web_page",
-      "name": "Case Study: MTEI Services — 9,452 Qualified Acquisitions & -35% CPA",
-      "description": "Full case study on engineering Meta & Google acquisition funnels delivering 9,452 conversions, -35% CPA/CPL, and +20% landing page CVR.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:case-study:mtei",
+      "displayName": "Case Study: MTEI Services (9,452 Qualified Acquisitions & -35% CPA)",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation",
+      "description": "Full case study on engineering Meta & Google acquisition funnels delivering 9,452 conversions, -35% CPA/CPL (₹49.86/lead), and +20% landing page CVR.",
       "tags": [
         "case-study",
         "lead-generation",
         "meta-ads",
         "cro"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/mtei-services-meta-ads-lead-generation"
-      }
+      "capabilities": [
+        "HighVolumeLeadGen",
+        "CPLReduction",
+        "LandingPageCVR"
+      ],
+      "representativeQueries": [
+        "lead generation funnel meta ads case study",
+        "reduce cost per lead cpa case study"
+      ]
     },
     {
-      "id": "case-study-jaffri-youtube",
-      "type": "web_page",
-      "name": "Case Study: Jaffri Creations — 247,000+ Organic YouTube Views via Video SEO",
-      "description": "Full case study on scaling YouTube Video SEO from scratch to 247,000+ organic views and 5,200+ hours of watch time.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:case-study:jaffri-youtube",
+      "displayName": "Case Study: Jaffri Creations YouTube SEO (247,000+ Organic Views)",
+      "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth",
+      "description": "Full case study on scaling YouTube Video SEO from scratch to 247,000+ organic views and 5,200+ hours of watch time.",
       "tags": [
         "case-study",
         "youtube-seo",
         "video-marketing",
         "organic-growth"
       ],
-      "protocol": {
-        "type": "web_page",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/case-studies/jaffri-creations-youtube-seo-organic-growth"
-      }
+      "capabilities": [
+        "YouTubeVideoSEO",
+        "VideoRetentionHooks",
+        "OrganicDiscovery"
+      ],
+      "representativeQueries": [
+        "youtube video seo case study",
+        "organic video discovery ecommerce"
+      ]
     },
     {
-      "id": "llms-context",
-      "type": "llms_txt",
-      "name": "LLMs Context Document (llms.txt)",
-      "description": "Structured Markdown summary of Ayaz Aftab's master resume, verified ROAS and revenue metrics, work history, skills, certifications, and contact information for AI agents.",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:doc:llms-context",
+      "displayName": "Ayaz Aftab LLMs Context (llms.txt)",
+      "type": "text/markdown",
       "url": "https://ayaz-aftab-portfolio.vercel.app/llms.txt",
+      "description": "Structured Markdown summary of Ayaz Aftab's master resume, verified ROAS and revenue metrics, work history, skills, certifications, and contact information for AI agents.",
       "tags": [
         "llms-txt",
         "profile",
         "case-studies",
         "resume"
       ],
-      "protocol": {
-        "type": "llms_txt",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/llms.txt"
-      }
+      "capabilities": [
+        "StructuredContext",
+        "VerifiedMetrics"
+      ],
+      "representativeQueries": [
+        "ayaz aftab llms txt",
+        "performance marketing specialist markdown profile"
+      ]
     },
     {
-      "id": "specialist-agent-card",
-      "type": "a2a_agent",
-      "name": "Ayaz Aftab Portfolio A2A Agent Card",
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:agent:specialist-card",
+      "displayName": "Ayaz Aftab Portfolio A2A Agent Card",
+      "type": "application/a2a-agent-card+json",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json",
       "description": "Agent-to-Agent (A2A) discovery metadata describing capabilities, skills, and inquiry channels.",
-      "url": "https://ayaz-aftab-portfolio.vercel.app/",
       "tags": [
         "a2a",
         "agent-card",
         "marketing-consultant"
       ],
-      "protocol": {
-        "type": "a2a",
-        "endpoint": "https://ayaz-aftab-portfolio.vercel.app/",
-        "agentCardUrl": "https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json"
-      }
+      "capabilities": [
+        "GetSpecialistSummary",
+        "ListCaseStudies",
+        "SendMarketingInquiry"
+      ],
+      "representativeQueries": [
+        "ayaz aftab agent card",
+        "webmcp marketing consultant agent"
+      ]
     }
   ]
 }
