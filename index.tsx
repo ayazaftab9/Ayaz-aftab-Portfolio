@@ -529,43 +529,144 @@ const indiaCitiesList = [
   'UK, US & Global Remote'
 ];
 
-const faqData = [
+export interface FAQItem {
+  id: string;
+  category: 'hiring' | 'meta-google' | 'seo-organic' | 'ecommerce' | 'analytics' | 'process';
+  categoryLabel: string;
+  question: string;
+  answer: string;
+}
+
+const allFaqsData: FAQItem[] = [
   {
     id: 'faq-why-hire-freelancer',
+    category: 'hiring',
+    categoryLabel: 'Hiring & Retainers',
     question: 'Why hire Ayaz Aftab as a dedicated performance marketing freelancer in India instead of an agency?',
-    answer: 'When you hire a traditional agency in India, your account is often passed to junior interns while you pay heavy account management markups. As a senior performance marketing freelancer managing ₹35L+ in combined monthly ad spend at a sustained 4.0x–4.5x ROAS, I personally architect every Google & Meta campaign, write the ad angles, analyze GA4/CAPI attribution, and communicate directly with founders via WhatsApp (+91 9263588321). You get executive senior talent, zero agency bloat, and complete ownership of your ad accounts.'
+    answer: 'When you hire a traditional digital marketing agency in India, your ad account is almost invariably handed off to junior trainees or account managers juggling 15+ clients, while you pay hefty management overheads. As an independent senior performance marketing freelancer managing ₹35L+ in combined monthly ad spend at a sustained 4.0x–4.5x ROAS, I personally architect every Google & Meta campaign, test ad angles, configure server-side GA4/CAPI attribution, and communicate directly with founders via WhatsApp (+91 9263588321). You get senior-executive execution, zero agency bloat, and total transparency.'
   },
   {
     id: 'faq-pricing-retainer',
-    question: 'How much does a performance marketing freelancer in India charge for ad management & SEO?',
+    category: 'hiring',
+    categoryLabel: 'Hiring & Retainers',
+    question: 'How much does a freelance performance marketer in India charge for ad management & SEO?',
     answer: 'Freelance retainers depend on your monthly ad spend, store scale, and scope of work. Monthly retainers for dedicated performance marketing typically range from ₹35,000 to ₹75,000/month, or a performance-hybrid model for qualifying D2C brands spending ₹2L+/month. Ad spend is paid directly to Google and Meta with zero percentage markups. Every engagement includes weekly strategy sprints, live Looker Studio reporting, and landing page CRO.'
   },
   {
+    id: 'faq-zero-ad-markup',
+    category: 'hiring',
+    categoryLabel: 'Hiring & Retainers',
+    question: 'Do you charge a percentage of ad spend or markup media fees?',
+    answer: 'No. I maintain a strict Zero Media Markup Guarantee. All ad budgets on Google Ads, Meta Ads Manager, and Amazon Advertising are billed directly to your corporate payment card with zero intermediary fees. You pay a predictable, transparent monthly retainer for strategy and hands-on execution. This eliminates the conflict of interest where agencies push you to spend more just to inflate their cut.'
+  },
+  {
+    id: 'faq-minimum-budget',
+    category: 'hiring',
+    categoryLabel: 'Hiring & Retainers',
+    question: 'What is the minimum monthly ad budget required to work together?',
+    answer: 'To achieve statistical significance for ad algorithm learning phases (Meta Advantage+ and Google Smart Bidding), I recommend a minimum monthly media budget of ₹50,000/month for high-intent B2B or local lead generation, and ₹1,00,000 to ₹1,50,000/month for D2C e-commerce brands. For brands currently spending ₹3L to ₹15L+/month, I implement advanced multi-campaign CBO/PMax architectures to maintain high ROAS while scaling volume.'
+  },
+  {
     id: 'faq-budget-roas',
+    category: 'meta-google',
+    categoryLabel: 'Meta & Google Ads',
     question: 'What scale of monthly ad budgets and ROAS results does Ayaz Aftab manage?',
     answer: 'I currently manage ₹35L+ in combined monthly paid media budgets across D2C e-commerce, retail, and high-velocity lead-generation portfolios in India (including FFACE — GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x–4.5x ROAS. My verified track record includes 9,452+ customer leads at ₹49.86 CPL (-35% lower CPA), +20% store conversion lift, ₹7.95L+ direct WooCommerce/Amazon GMV, and 247,000+ organic YouTube views.'
   },
   {
+    id: 'faq-creative-fatigue',
+    category: 'meta-google',
+    categoryLabel: 'Meta & Google Ads',
+    question: 'How do you combat ad fatigue and rising CPAs on Meta and Google Ads?',
+    answer: 'Ad fatigue occurs when target audiences repeatedly see identical creatives, dropping click-through rates (CTR) and driving up CPMs. I run weekly 3–5 creative testing sprints pairing high-contrast visual hooks, unboxing reels, founder direct-to-camera angles, customer review carousels, and problem-solution product comparisons. By constantly injecting validated hook concepts into CBO scaling campaigns, we sustain sub-₹50 CPLs and high 4.0x+ ROAS.'
+  },
+  {
+    id: 'faq-pmax-search',
+    category: 'meta-google',
+    categoryLabel: 'Meta & Google Ads',
+    question: 'How do you structure Google Performance Max (PMax) without cannibalizing branded Search?',
+    answer: 'Unoptimized Google PMax campaigns frequently waste spend bidding on your own brand keywords rather than discovering incremental customers. I isolate brand terms into a dedicated high-intent Search campaign with exact matching, add negative brand keyword lists to PMax asset groups, and configure customer acquisition value rules so Google algorithms prioritize net-new buyers instead of existing customers.'
+  },
+  {
     id: 'faq-services-offered',
-    question: 'What digital marketing services do you provide for businesses across India?',
+    category: 'seo-organic',
+    categoryLabel: 'SEO & Organic Growth',
+    question: 'What digital marketing and SEO services do you provide across India?',
     answer: 'I deliver full-stack, execution-first freelance growth services across all of India: (1) Google Ads & Meta Ads (Facebook/Instagram) management for daily leads and sales, (2) Technical SEO, Local SEO (Google Maps), and YouTube Video SEO to rank #1 organically on Google, (3) Shopify, WooCommerce, and Amazon Seller Central store scaling with catalog CRO, and (4) Website Conversion Rate Optimization (CRO) with server-side GA4, GTM, and Meta CAPI tracking.'
   },
   {
+    id: 'faq-seo-timeline',
+    category: 'seo-organic',
+    categoryLabel: 'SEO & Organic Growth',
+    question: 'How long does it take to rank on the first page of Google with SEO in India?',
+    answer: 'SEO is a compounding organic investment. Initial technical fixes, Schema markup, and Google Search Console indexation take 2 to 4 weeks. Low-to-medium competition commercial keywords typically achieve page-one positions within 60 to 90 days. Competitive high-volume head terms (such as pan-India performance marketing or competitive e-commerce categories) require 4 to 6 months of authoritative content clustering, internal linking, and technical speed optimization.'
+  },
+  {
+    id: 'faq-youtube-seo',
+    category: 'seo-organic',
+    categoryLabel: 'SEO & Organic Growth',
+    question: 'How do you optimize YouTube channels for organic video discovery?',
+    answer: 'YouTube operates as the world\'s second largest search engine. In my verified case study for Jaffri Creations, I generated 247,000+ organic views by optimizing video title search intent, designing high-CTR thumbnail hooks, crafting timestamped chapter metadata, structuring keyword tag clusters, and adding transcript closed captions that feed YouTube\'s recommendation algorithm.'
+  },
+  {
+    id: 'faq-ecommerce-cvr',
+    category: 'ecommerce',
+    categoryLabel: 'E-commerce & Amazon',
+    question: 'How do you lift conversion rates on Shopify and WooCommerce stores?',
+    answer: 'Paid traffic can only perform if the destination converts. I audit and optimize every friction point: implementing sticky mobile Add-to-Cart buttons, single-page checkouts, trust badges near CTA buttons, bundle/discovery set pricing that lifts Average Order Value (AOV), and sub-2-second mobile load times. This methodology generated a documented +20% store conversion lift for client brands.'
+  },
+  {
+    id: 'faq-amazon-growth',
+    category: 'ecommerce',
+    categoryLabel: 'E-commerce & Amazon',
+    question: 'How do you optimize Amazon Seller Central listings and Sponsored Ads?',
+    answer: 'Amazon scaling requires combining catalog search visibility with profitable PPC. I optimize backend search terms (250 bytes), write benefit-led bullet points, design visual A+ Content modules, and structure Sponsored Products/Brands campaigns segmented by exact brand, competitor conquesting, and category keywords while maintaining a Total Advertising Cost of Sale (TACoS) below 15%.'
+  },
+  {
+    id: 'faq-signal-loss-capi',
+    category: 'analytics',
+    categoryLabel: 'Tracking & Analytics',
+    question: 'How do you resolve iOS 14.5+ privacy updates, ad blockers, and lost conversion tracking?',
+    answer: 'Standard browser-based pixels lose 25% to 35% of conversion events due to Safari ITP, Firefox tracking protection, and ad blockers. I deploy server-side Meta Conversions API (CAPI) alongside Google Tag Manager (GTM) server containers and GA4 custom events. Sending hashed first-party customer signals directly from the server bypasses browser blockers, restores attribution accuracy, and trains ad algorithms with verified purchasers.'
+  },
+  {
+    id: 'faq-client-reporting',
+    category: 'analytics',
+    categoryLabel: 'Tracking & Analytics',
+    question: 'What reporting dashboards and performance visibility do you provide?',
+    answer: 'No monthly PDF surprises. Every client receives access to a live 24/7 Looker Studio executive dashboard syncing Google Ads, Meta Ads, and GA4 revenue data in real time. We track blended Marketing Efficiency Ratio (MER), platform ROAS, Customer Acquisition Cost (CAC), and daily spend pacing. Additionally, I send weekly WhatsApp audio/text summaries detailing what was tested, what won, and what is planned for the next sprint.'
+  },
+  {
     id: 'faq-cities-india',
-    question: 'Which cities across India do you provide freelance digital marketing services to?',
+    category: 'process',
+    categoryLabel: 'Process & Onboarding',
+    question: 'Which cities across India and global markets do you serve?',
     answer: 'I provide remote freelance performance marketing and SEO services to founders and enterprises across all major Indian commercial hubs: Kolkata, Mumbai, Delhi NCR (Gurugram/Noida), Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, Surat, Lucknow, and Chandigarh, as well as international brands in the UAE, UK, and US. Daily communication is handled seamlessly via WhatsApp, Phone, and Google Meet.'
   },
   {
     id: 'faq-how-to-start',
+    category: 'process',
+    categoryLabel: 'Process & Onboarding',
     question: 'How can I hire you as our digital marketing freelancer or request a free growth audit in India?',
     answer: 'Getting started is straightforward: click "Chat on WhatsApp" (+91 9263588321) or submit your website and goals in the audit form below. I will personally review your existing Google Ads, Meta Ads accounts, or SEO rankings and provide an actionable growth roadmap within 24 hours.'
   },
   {
-    id: 'faq-education',
-    question: 'What are Ayaz Aftab’s academic qualifications and official marketing certifications?',
-    answer: 'Ayaz holds a Bachelor of Business Administration (BBA) from Manipal University Jaipur and a Diploma in Computer Science & Engineering from Arka Jain University. He is officially certified by Google (GA4, AI-Powered Performance Ads & Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound Marketing & CRM Automation), and Amazon & Semrush (Sponsored Ads & SEO Toolkit).'
+    id: 'faq-onboarding-timeline',
+    category: 'process',
+    categoryLabel: 'Process & Onboarding',
+    question: 'What does the onboarding process look like in the first 7 to 14 days?',
+    answer: 'Onboarding is structured into four rapid phases: Days 1–3: Account access via Meta Business Manager and Google Ads MCC, pixel & CAPI health audit, and historical data analysis. Days 4–7: Growth roadmap presentation, audience persona mapping, and creative brief delivery. Days 8–10: New campaign build, ad copy staging, and tracking verification. Days 11+: Campaign launch, daily budget pacing, and sprint reviews.'
+  },
+  {
+    id: 'faq-contract-handover',
+    category: 'process',
+    categoryLabel: 'Process & Onboarding',
+    question: 'How do contracts, notice periods, and account handover work?',
+    answer: 'All engagements are structured with professional transparency. Retainers operate on month-to-month or quarterly sprints with a standard 14-to-30 day mutual written notice. There are zero restrictive lock-ins. You retain 100% legal ownership of your ad accounts, pixel history, Looker Studio dashboards, and creative assets at all times.'
   }
 ];
+
+const faqData = allFaqsData.slice(0, 7);
 
 // --- WEBMCP IMPERATIVE TOOL REGISTRATION ---
 function registerWebMCPTools() {
@@ -704,6 +805,10 @@ const Icon = ({ name, size = 20 }: { name: string; size?: number }) => {
       return <svg {...props}><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>;
     case 'copy':
       return <svg {...props}><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>;
+    case 'file-text':
+      return <svg {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>;
+    case 'shield':
+      return <svg {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>;
     default:
       return null;
   }
@@ -827,7 +932,9 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           <a href="/#experience" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="briefcase" size={18} /> 5.5+ Years Experience</a>
           <a href="/#skills" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="award" size={18} /> Skills &amp; Certifications</a>
           <a href="/resume" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="download" size={18} /> Online Master Resume</a>
-          <a href="/#faq" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="help-circle" size={18} /> FAQ</a>
+          <a href="/faq" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="help-circle" size={18} /> FAQ Directory (18+ Answers)</a>
+          <a href="/terms" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="file-text" size={18} /> Terms &amp; Conditions</a>
+          <a href="/privacy" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="shield" size={18} /> Privacy Policy</a>
           <a href="/#contact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="mail" size={18} /> Book a Consultation</a>
         </nav>
         <a
@@ -1502,6 +1609,12 @@ const FAQSection = () => (
           </details>
         ))}
       </div>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <a href="/faq" className="btn btn-secondary">
+          <span>Explore All 18+ FAQs &amp; Agency Comparisons</span>
+          <Icon name="arrow-right" size={15} />
+        </a>
+      </div>
     </AnimatedSection>
   </section>
 );
@@ -1764,6 +1877,9 @@ const Footer = () => {
             <ul className="footer-seo-list">
               <li><a href="/" className="footer-seo-link">Portfolio Overview (₹35L+/Mo Managed)</a></li>
               <li><a href="/resume" className="footer-seo-link">Online Master Resume</a></li>
+              <li><a href="/faq" className="footer-seo-link">FAQ Directory (18+ Answers)</a></li>
+              <li><a href="/terms" className="footer-seo-link">Terms &amp; Conditions</a></li>
+              <li><a href="/privacy" className="footer-seo-link">Privacy Policy</a></li>
               <li><a href="/resume.pdf" download target="_blank" rel="noopener noreferrer" className="footer-seo-link">Download Master Resume (PDF)</a></li>
               <li><a href="https://www.linkedin.com/in/ayazaftab" target="_blank" rel="noopener noreferrer" className="footer-seo-link">LinkedIn Profile (/in/ayazaftab)</a></li>
             </ul>
@@ -1786,6 +1902,13 @@ const Footer = () => {
             <Logo />
             <span className="logo-text">Ayaz Aftab</span>
           </a>
+          <nav className="footer-legal-links" aria-label="Legal &amp; Transparency Links">
+            <a href="/privacy" className="footer-sublink">Privacy Policy</a>
+            <span aria-hidden="true" className="footer-separator">•</span>
+            <a href="/terms" className="footer-sublink">Terms &amp; Conditions</a>
+            <span aria-hidden="true" className="footer-separator">•</span>
+            <a href="/faq" className="footer-sublink">FAQ Directory</a>
+          </nav>
           <p className="copyright">
             &copy; {new Date().getFullYear()} Ayaz Aftab — Performance Marketing &amp; E-commerce Growth Lead (₹35L+/Mo Combined Ad Spend). All rights reserved.
           </p>
@@ -2161,6 +2284,496 @@ const ResumePage = () => (
   </>
 );
 
+const FAQPage = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState<string>('');
+
+  const categories = [
+    { key: 'all', label: 'All Questions (18)' },
+    { key: 'hiring', label: 'Hiring & Retainers (4)' },
+    { key: 'meta-google', label: 'Meta & Google Ads (3)' },
+    { key: 'seo-organic', label: 'SEO & Organic Growth (3)' },
+    { key: 'ecommerce', label: 'E-commerce & Amazon (2)' },
+    { key: 'analytics', label: 'Tracking & Analytics (2)' },
+    { key: 'process', label: 'Process & Onboarding (4)' }
+  ];
+
+  const filteredFaqs = allFaqsData.filter((item) => {
+    const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
+    const matchesSearch = searchQuery.trim() === '' ||
+      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.answer.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="faq-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">Frequently Asked Questions</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">08 — TRANSPARENCY &amp; DUE DILIGENCE • PAN-INDIA &amp; REMOTE</span>
+          <h1 id="faq-page-title" className="section-title" style={{ marginBottom: '0.65rem' }}>
+            Frequently Asked Questions: Hiring India&apos;s Dedicated Performance Marketing Freelancer
+          </h1>
+          <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
+            Direct, candid answers regarding monthly retainers, ad budget scale (₹35L+/mo managed), sustained 4.0x–4.5x ROAS realities, 100% ad account ownership, tracking signal recovery (Meta CAPI / GA4), and pan-India remote collaboration.
+          </p>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+              <Icon name="whatsapp" size={16} />
+              <span>Ask Ayaz on WhatsApp (+91 9263588321)</span>
+            </a>
+            <a href="/#contact" className="btn btn-primary">
+              <Icon name="mail" size={15} />
+              <span>Request Free 24h Growth Audit</span>
+            </a>
+            <a href="/" className="btn btn-ghost">
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section" aria-labelledby="faq-directory-heading">
+        <AnimatedSection className="container">
+          <div className="faq-controls">
+            <div className="faq-search-wrapper">
+              <input
+                type="search"
+                className="form-input faq-search-input"
+                placeholder="Search questions (e.g. pricing, ROAS, Meta CAPI, PMax, Amazon)..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                aria-label="Search frequently asked questions"
+              />
+            </div>
+            <div className="faq-filter-pills" role="tablist" aria-label="FAQ Categories">
+              {categories.map((cat) => (
+                <button
+                  key={cat.key}
+                  type="button"
+                  role="tab"
+                  aria-selected={selectedCategory === cat.key}
+                  className={`faq-pill ${selectedCategory === cat.key ? 'active' : ''}`}
+                  onClick={() => setSelectedCategory(cat.key)}
+                >
+                  {cat.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="faq-list" style={{ marginTop: '2rem' }}>
+            {filteredFaqs.length > 0 ? (
+              filteredFaqs.map((item, idx) => (
+                <details key={item.id} id={item.id} className="faq-item" open={idx === 0}>
+                  <summary className="faq-question">
+                    <span style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem', textAlign: 'left' }}>
+                      <span className="faq-category-badge">{item.categoryLabel}</span>
+                      <span style={{ fontWeight: 600 }}>{item.question}</span>
+                    </span>
+                    <span className="faq-icon">
+                      <Icon name="chevron-down" size={18} />
+                    </span>
+                  </summary>
+                  <div className="faq-answer">
+                    <p>{item.answer}</p>
+                  </div>
+                </details>
+              ))
+            ) : (
+              <div className="empty-state-card" style={{ padding: '2.5rem', textAlign: 'center', background: 'var(--glass-card-bg)', border: 'var(--glass-card-border)', borderRadius: '12px' }}>
+                <p style={{ fontWeight: 600, color: 'var(--text-primary)', marginBottom: '0.5rem' }}>No questions matched your search query &quot;{searchQuery}&quot;.</p>
+                <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.25rem' }}>
+                  Have a specific question about your brand&apos;s ad accounts, store CRO, or SEO?
+                </p>
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                  <Icon name="whatsapp" size={16} />
+                  <span>Chat Directly on WhatsApp (+91 9263588321)</span>
+                </a>
+              </div>
+            )}
+          </div>
+
+          <div className="legal-callout-card" style={{ marginTop: '3rem' }}>
+            <div className="callout-header">
+              <Icon name="help-circle" size={20} />
+              <h3 style={{ fontSize: '1.05rem', margin: 0 }}>Need Contractual or Legal Details?</h3>
+            </div>
+            <p style={{ margin: '0.5rem 0 1rem', fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
+              Review our transparent client Master Services Agreement and privacy compliance standards before getting started.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <a href="/terms" className="btn btn-secondary" style={{ fontSize: '0.84rem' }}>
+                <Icon name="file-text" size={15} />
+                <span>Terms &amp; Conditions (Client Agreement)</span>
+              </a>
+              <a href="/privacy" className="btn btn-ghost" style={{ fontSize: '0.84rem' }}>
+                <Icon name="shield" size={15} />
+                <span>Privacy Policy (DPDP Act Aligned)</span>
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
+const TermsPage = () => {
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="terms-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">Terms &amp; Conditions</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">Legal Agreement • Professional Growth Services • Last Updated: November 2026</span>
+          <h1 id="terms-page-title" className="section-title" style={{ marginBottom: '0.65rem' }}>
+            Terms &amp; Conditions — Freelance Marketing &amp; Growth Consulting
+          </h1>
+          <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
+            These terms govern freelance performance marketing, paid media architecture (Meta &amp; Google Ads), SEO, e-commerce optimization, and marketing advisory services provided by Ayaz Aftab to commercial clients in India and globally.
+          </p>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+              <Icon name="whatsapp" size={16} />
+              <span>Discuss Terms on WhatsApp (+91 9263588321)</span>
+            </a>
+            <a href="mailto:ayazaftab9@gmail.com" className="btn btn-secondary">
+              <Icon name="mail" size={15} />
+              <span>Request Custom NDA / MSA</span>
+            </a>
+            <a href="/" className="btn btn-ghost">
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section" aria-labelledby="terms-content-heading">
+        <AnimatedSection className="container">
+          <div className="legal-summary-box">
+            <div className="legal-summary-badge">
+              <Icon name="check-circle" size={18} />
+              <span>Executive Plain-Language Summary</span>
+            </div>
+            <ul className="legal-summary-list">
+              <li><strong>100% Client Ownership:</strong> You retain complete legal and administrative ownership of all your ad accounts, pixel data, catalogs, and analytics.</li>
+              <li><strong>Zero Ad Markup Guarantee:</strong> Media spend is paid directly by your organization to Google, Meta, or Amazon. Zero hidden percentage surcharges.</li>
+              <li><strong>Full Deliverable IP Transfer:</strong> All custom ad copy, creative briefs, tracking scripts, and dashboards created belong exclusively to you upon payment.</li>
+              <li><strong>Zero Restrictive Lock-ins:</strong> Retainers operate on month-to-month or quarterly sprints with a standard 14-to-30 day mutual written notice period.</li>
+            </ul>
+          </div>
+
+          <div className="legal-clauses-grid" style={{ marginTop: '2.5rem' }}>
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">01</span>
+              <h2 className="legal-clause-title">Scope of Services &amp; Advisory Capacity</h2>
+              <p className="legal-clause-text">
+                Ayaz Aftab operates as an independent senior performance marketing freelancer, growth consultant, and paid media architect. Services include, but are not limited to: Meta Ads (Facebook &amp; Instagram CBO/ABO), Google Ads (Search, Performance Max, Display, YouTube), Technical &amp; Local SEO, Shopify/WooCommerce store operations, Amazon Seller Central optimization, and server-side conversion tracking (GA4, GTM, Meta CAPI). Specific deliverables, targets, and milestones are outlined in individual project proposals or statements of work (SOW).
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">02</span>
+              <h2 className="legal-clause-title">Ad Account Ownership &amp; Direct Billing</h2>
+              <p className="legal-clause-text">
+                All advertising accounts (Meta Ads Manager, Google Ads, Amazon Advertising, LinkedIn Campaign Manager) must be owned directly by the Client or created under the Client&apos;s Business Manager. Media spend is charged directly by the respective advertising platform to the Client&apos;s billing method (credit card, corporate bank card, or direct line of credit). Ayaz Aftab does not broker, handle, or apply percentage markups to third-party ad spend.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">03</span>
+              <h2 className="legal-clause-title">Professional Retainers, Invoicing &amp; Taxes</h2>
+              <p className="legal-clause-text">
+                Professional fees are structured as fixed monthly retainers or approved performance-hybrid models billed in advance of each 30-day work cycle. Invoices are issued in Indian Rupees (INR) for Indian domestic entities (inclusive of applicable GST) and in USD/EUR/AED for international remote clients via wire transfer or PayPal. Invoices are payable within 7 business days of issuance. Work sprints commence upon receipt of the agreed retainer or milestone deposit.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">04</span>
+              <h2 className="legal-clause-title">Intellectual Property &amp; Deliverables Transfer</h2>
+              <p className="legal-clause-text">
+                Upon full settlement of applicable professional fees, the Client acquires all rights, title, and interest in and to the custom deliverables created during the engagement, including ad copy, audience architectures, creative direction briefs, custom Looker Studio dashboards, and server-side tracking configurations. Pre-existing proprietary frameworks, audit templates, and internal scripts remain the intellectual property of Ayaz Aftab with a perpetual, non-exclusive license granted to the Client for internal operational use.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">05</span>
+              <h2 className="legal-clause-title">Confidentiality &amp; Non-Disclosure (NDA)</h2>
+              <p className="legal-clause-text">
+                Both parties agree to treat all commercial, financial, technical, customer, and marketing information shared during the engagement as strictly confidential. Ayaz Aftab will not disclose the Client&apos;s trade secrets, customer databases, profit margins, product manufacturing costs, or proprietary campaign metrics to third parties without prior written consent. Mutual NDAs are readily executed upon request prior to audit kickoffs.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">06</span>
+              <h2 className="legal-clause-title">Performance Realities, ROAS &amp; Advertising Disclaimers</h2>
+              <p className="legal-clause-text">
+                While Ayaz Aftab applies proven, data-backed frameworks managing ₹35L+ monthly spend at historical 4.0x–4.5x ROAS and -35% CPA reductions, digital advertising is inherently subject to external market dynamics, competitor bidding fluctuations, consumer demand cycles, website uptime, inventory availability, and third-party platform algorithm updates (Google, Meta, Amazon). Consequently, specific return on ad spend (ROAS), cost per lead (CPL), or search ranking guarantees cannot be legally warranted. Optimization is conducted with highest industry care, real-time testing, and data-driven discipline.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">07</span>
+              <h2 className="legal-clause-title">Communication Cadence &amp; Response Times</h2>
+              <p className="legal-clause-text">
+                Day-to-day coordination is maintained through a dedicated WhatsApp channel, email (`ayazaftab9@gmail.com`), and scheduled Google Meet review sessions. Strategic sprint calls are held weekly or bi-weekly. Standard business hours are Monday through Saturday, 10:00 AM to 7:00 PM IST. Critical account escalations (e.g. ad account policy warnings or payment glitches) receive priority response within 2 to 4 business hours.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">08</span>
+              <h2 className="legal-clause-title">Engagement Term, Pause &amp; Termination Notice</h2>
+              <p className="legal-clause-text">
+                Engagements operate on flexible monthly cycles. Either party may terminate or pause the engagement by providing fourteen (14) to thirty (30) days prior written notice via email or WhatsApp. In the event of termination, Ayaz Aftab provides an orderly, comprehensive handover of all active campaigns, Looker Studio dashboards, pixel configurations, and ad creative files. Fees paid for work already rendered during active cycles are non-refundable.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">09</span>
+              <h2 className="legal-clause-title">Limitation of Liability</h2>
+              <p className="legal-clause-text">
+                To the maximum extent permitted by applicable law, neither party shall be liable for indirect, incidental, punitive, or consequential damages (including lost profits, lost revenues, or loss of business data) arising out of or related to this engagement. The aggregate cumulative liability of Ayaz Aftab for any claims arising under these terms shall not exceed the total professional fees actually paid by the Client in the thirty (30) days immediately preceding the event giving rise to liability.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">10</span>
+              <h2 className="legal-clause-title">Governing Law &amp; Dispute Resolution</h2>
+              <p className="legal-clause-text">
+                These Terms and Conditions and any dispute or claim arising out of or in connection with them shall be governed by and construed in accordance with the laws of the Republic of India. In the event of any disagreement, the parties shall first endeavor in good faith to resolve the matter amicably through executive consultation. Failing such resolution, the dispute shall be subject to the exclusive jurisdiction of the competent courts located in Kolkata, West Bengal, India.
+              </p>
+            </article>
+          </div>
+
+          <div className="legal-footer-cta" style={{ marginTop: '3rem', padding: '2rem', background: 'var(--glass-card-bg)', border: 'var(--glass-card-border)', borderRadius: '12px' }}>
+            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.45rem' }}>Have Questions Regarding These Terms or Need a Custom Agreement?</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', marginBottom: '1.25rem' }}>
+              We regularly execute corporate Master Services Agreements (MSAs), custom SOWs, and mutual Non-Disclosure Agreements (NDAs) for enterprise brands and fast-scaling D2C companies.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                <Icon name="whatsapp" size={16} />
+                <span>Message on WhatsApp (+91 9263588321)</span>
+              </a>
+              <a href="mailto:ayazaftab9@gmail.com?subject=Contractual%20or%20Terms%20Inquiry" className="btn btn-secondary">
+                <Icon name="mail" size={15} />
+                <span>Email ayazaftab9@gmail.com</span>
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
+const PrivacyPolicyPage = () => {
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="privacy-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">Privacy Policy</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">Data Protection • DPDP Act 2023 &amp; GDPR Compliance • Last Updated: November 2026</span>
+          <h1 id="privacy-page-title" className="section-title" style={{ marginBottom: '0.65rem' }}>
+            Privacy Policy — Digital Personal Data Protection &amp; Practices
+          </h1>
+          <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
+            Ayaz Aftab is committed to protecting the privacy, confidentiality, and security of visitors to this portfolio website and business clients engaging our freelance performance marketing and e-commerce growth services.
+          </p>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+            <a href="mailto:ayazaftab9@gmail.com?subject=Privacy%20Inquiry" className="btn btn-secondary">
+              <Icon name="mail" size={15} />
+              <span>Contact Privacy Officer</span>
+            </a>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+              <Icon name="whatsapp" size={16} />
+              <span>WhatsApp Inquiries (+91 9263588321)</span>
+            </a>
+            <a href="/" className="btn btn-ghost">
+              <span>Back to Home</span>
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section" aria-labelledby="privacy-content-heading">
+        <AnimatedSection className="container">
+          <div className="legal-summary-box">
+            <div className="legal-summary-badge">
+              <Icon name="shield" size={18} />
+              <span>Core Privacy Commitments</span>
+            </div>
+            <ul className="legal-summary-list">
+              <li><strong>Zero Sale of Personal Data:</strong> We never sell, rent, monetize, or trade your contact details or business information with any third party.</li>
+              <li><strong>Cookieless Site Analytics:</strong> This portfolio uses privacy-first Vercel Web Analytics without setting persistent tracking cookies or harvesting cross-site browsing history.</li>
+              <li><strong>Client Data Isolation:</strong> In client consulting mandates, ad account and server-side tracking data (GA4/Meta CAPI) remains 100% siloed within client-owned infrastructure.</li>
+              <li><strong>Full User Rights:</strong> You may request access to, correction of, or permanent deletion of your personal inquiry records at any time.</li>
+            </ul>
+          </div>
+
+          <div className="legal-clauses-grid" style={{ marginTop: '2.5rem' }}>
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">01</span>
+              <h2 className="legal-clause-title">Data Fiduciary Identity &amp; Contact</h2>
+              <p className="legal-clause-text">
+                For the purposes of India&apos;s Digital Personal Data Protection Act, 2023 (DPDP Act) and international data protection laws (such as GDPR), the Data Fiduciary / Controller responsible for personal data collected through this website is:
+              </p>
+              <div style={{ marginTop: '0.75rem', padding: '0.85rem 1rem', background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', borderRadius: '8px', fontSize: '0.88rem' }}>
+                <p><strong>Name:</strong> Ayaz Aftab</p>
+                <p><strong>Role:</strong> Performance Marketing &amp; E-commerce Growth Lead</p>
+                <p><strong>Location:</strong> Kolkata, West Bengal, India (PIN 700001)</p>
+                <p><strong>Official Email:</strong> ayazaftab9@gmail.com</p>
+                <p><strong>Direct Telephone / WhatsApp:</strong> +91 9263588321</p>
+              </div>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">02</span>
+              <h2 className="legal-clause-title">Personal Information We Collect</h2>
+              <p className="legal-clause-text">
+                We collect personal information solely when you voluntarily provide it through direct business communications or website forms:
+              </p>
+              <ul className="legal-bullet-list">
+                <li><strong>Inquiry &amp; Audit Form:</strong> Full Name, Work Email Address, Telephone / WhatsApp Number, Website URL, Monthly Ad Spend Estimate, and Project Description.</li>
+                <li><strong>Direct Communications:</strong> Information shared when messaging via WhatsApp, calling via phone, emailing, or connecting via LinkedIn.</li>
+                <li><strong>Client Mandates:</strong> Administrative access credentials (e.g. Meta Business Manager Partner access, Google Ads MCC links, read-only analytics access) granted under formal client agreement.</li>
+              </ul>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">03</span>
+              <h2 className="legal-clause-title">Purpose &amp; Lawful Basis for Processing</h2>
+              <p className="legal-clause-text">
+                We process your personal information strictly for legitimate commercial and professional purposes based on your explicit consent and pre-contractual requests:
+              </p>
+              <ul className="legal-bullet-list">
+                <li>Evaluating your business goals and delivering a bespoke 24-hour growth audit.</li>
+                <li>Communicating strategy roadmaps, campaign proposals, and retainer terms.</li>
+                <li>Executing agreed freelance marketing services (ad management, SEO, CRO).</li>
+                <li>Complying with statutory accounting, GST invoicing, and tax obligations under Indian law.</li>
+              </ul>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">04</span>
+              <h2 className="legal-clause-title">Cookieless &amp; Privacy-First Website Analytics</h2>
+              <p className="legal-clause-text">
+                We believe in web privacy. This portfolio website uses privacy-preserving Vercel Web Analytics. Unlike legacy tracking suites, Vercel Web Analytics does not store persistent cookies on your device, does not collect personal identifiers, does not track you across disparate websites, and anonymizes client IP addresses before aggregation. We collect only aggregated pageview counts, referral origins, and device form factors to ensure rapid site performance.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">05</span>
+              <h2 className="legal-clause-title">Client Ad Accounts, GA4 &amp; Meta CAPI Data Safeguards</h2>
+              <p className="legal-clause-text">
+                In our professional client engagements, we implement Google Analytics 4 (GA4), Google Tag Manager (GTM), and Meta Conversions API (CAPI). We enforce strict data hygiene:
+              </p>
+              <ul className="legal-bullet-list">
+                <li>All server containers and ad accounts reside within the Client&apos;s own Google Cloud Platform or cloud hosting infrastructure.</li>
+                <li>Customer purchase signals (SHA-256 hashed emails/phones) are transmitted strictly between the Client&apos;s server and authorized ad APIs (Meta/Google).</li>
+                <li>Client customer data is strictly isolated; we never aggregate, share, or cross-pollinate customer lists between different client portfolios.</li>
+              </ul>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">06</span>
+              <h2 className="legal-clause-title">Data Security, Access Controls &amp; Storage</h2>
+              <p className="legal-clause-text">
+                We implement robust administrative, organizational, and technical security safeguards to prevent unauthorized access, alteration, disclosure, or destruction of personal data. All web traffic is encrypted via HTTPS (TLS 1.3). Digital communications are maintained via end-to-end encrypted WhatsApp messaging or enterprise Google Workspace with multi-factor authentication (MFA) enabled.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">07</span>
+              <h2 className="legal-clause-title">Data Retention Timeline</h2>
+              <p className="legal-clause-text">
+                Inquiry and audit request data is retained only for as long as necessary to facilitate ongoing communication or proposal evaluation (typically 12 months for inactive inquiries). Client engagement records and commercial invoices are retained for seven (7) years to comply with Indian Goods and Services Tax (GST) and Income Tax statutory archiving mandates.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">08</span>
+              <h2 className="legal-clause-title">Your Rights as a Data Principal</h2>
+              <p className="legal-clause-text">
+                Under the DPDP Act 2023, GDPR, and relevant privacy regulations, you possess the following rights regarding your personal information:
+              </p>
+              <ul className="legal-bullet-list">
+                <li><strong>Right to Access:</strong> Request a summary of the personal data we hold about you.</li>
+                <li><strong>Right to Correction &amp; Erasure:</strong> Request the rectification of inaccurate data or the permanent deletion of your contact records.</li>
+                <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent for marketing inquiries at any time.</li>
+                <li><strong>Right to Grievance Redressal:</strong> Submit a grievance regarding our data handling practices.</li>
+              </ul>
+              <p className="legal-clause-text" style={{ marginTop: '0.5rem' }}>
+                To exercise any of these rights, simply email `ayazaftab9@gmail.com` with the subject &quot;Data Rights Request&quot;. We verify and respond to all verified requests within seven (7) business days.
+              </p>
+            </article>
+
+            <article className="legal-clause-card">
+              <span className="legal-clause-num">09</span>
+              <h2 className="legal-clause-title">Grievance Redressal Officer &amp; Policy Revisions</h2>
+              <p className="legal-clause-text">
+                In compliance with Rule 3 of the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021, and the DPDP Act 2023, the designated Grievance Officer is:
+              </p>
+              <div style={{ marginTop: '0.75rem', padding: '0.85rem 1rem', background: 'var(--bg-surface)', border: '1px solid var(--border-subtle)', borderRadius: '8px', fontSize: '0.88rem' }}>
+                <p><strong>Grievance Officer:</strong> Ayaz Aftab</p>
+                <p><strong>Designation:</strong> Founder &amp; Lead Consultant</p>
+                <p><strong>Address:</strong> Kolkata, West Bengal, India</p>
+                <p><strong>Email:</strong> ayazaftab9@gmail.com</p>
+                <p><strong>Response Turnaround:</strong> Within 7 business days</p>
+              </div>
+              <p className="legal-clause-text" style={{ marginTop: '0.75rem' }}>
+                We may periodically update this Privacy Policy to reflect evolving regulatory frameworks or operational enhancements. Updates will be published on this page with a revised &quot;Last Updated&quot; date.
+              </p>
+            </article>
+          </div>
+
+          <div className="legal-footer-cta" style={{ marginTop: '3rem', padding: '2rem', background: 'var(--glass-card-bg)', border: 'var(--glass-card-border)', borderRadius: '12px' }}>
+            <h3 style={{ fontSize: '1.15rem', marginBottom: '0.45rem' }}>Questions About How We Protect Your Data?</h3>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem', marginBottom: '1.25rem' }}>
+              We are fully transparent about our data handling, cookieless analytics, and client infrastructure boundaries. Reach out anytime.
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
+              <a href="mailto:ayazaftab9@gmail.com?subject=Data%20Privacy%20Question" className="btn btn-primary">
+                <Icon name="mail" size={15} />
+                <span>Email Privacy Officer (ayazaftab9@gmail.com)</span>
+              </a>
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp">
+                <Icon name="whatsapp" size={16} />
+                <span>Message on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
 const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
   const relatedStudies = projectsData.filter((p) => service.relatedCaseStudyIds.includes(p.id));
   const otherServices = servicePagesData.filter((s) => s.slug !== service.slug);
@@ -2434,6 +3047,12 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
       <main id="main-content">
         {currentPath === '/resume' ? (
           <ResumePage />
+        ) : currentPath === '/faq' ? (
+          <FAQPage />
+        ) : currentPath === '/terms' ? (
+          <TermsPage />
+        ) : currentPath === '/privacy' ? (
+          <PrivacyPolicyPage />
         ) : matchedCaseStudy ? (
           <CaseStudyPage project={matchedCaseStudy} />
         ) : matchedService ? (

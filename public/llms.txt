@@ -24,7 +24,11 @@ Based in Kolkata, West Bengal, India (`+91 9263588321`, `ayazaftab9@gmail.com`) 
 - [Download Master Resume (PDF)](https://ayaz-aftab-portfolio.vercel.app/resume.pdf): Vector-searchable 1-page Master Resume PDF.
 - [Agentic Resource Discovery Manifest (ARD v0.91)](https://ayaz-aftab-portfolio.vercel.app/.well-known/ard.json): ARD v0.91 catalog of agent capabilities.
 - [A2A Agent Card](https://ayaz-aftab-portfolio.vercel.app/.well-known/agent-card.json): Agent-to-Agent capability descriptor.
-- [XML Sitemap](https://ayaz-aftab-portfolio.vercel.app/sitemap.xml): Canonical URL index for all 11 indexable pages.
+## Transparency, Terms & Governance
+
+- [Frequently Asked Questions (FAQ Directory)](https://ayaz-aftab-portfolio.vercel.app/faq): 18 comprehensive answers on retainer models, ₹35L+/mo ad budget realities, 4.0x–4.5x ROAS expectations, 100% ad account ownership, and onboarding.
+- [Terms & Conditions (Client Master Agreement)](https://ayaz-aftab-portfolio.vercel.app/terms): 10 structured clauses governing freelance engagements, zero media spend markups, client IP ownership, confidentiality, and Kolkata jurisdiction.
+- [Privacy Policy (DPDP Act 2023 & GDPR)](https://ayaz-aftab-portfolio.vercel.app/privacy): Official data protection policy detailing cookieless analytics, server-side tracking isolation (GA4/Meta CAPI), and user rights.
 
 ## Direct Lead & Contact Channels
 

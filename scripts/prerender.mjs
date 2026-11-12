@@ -20,6 +20,9 @@ const routes = [
   { path: '/services/ecommerce-growth-shopify-woocommerce-amazon', file: 'services/ecommerce-growth-shopify-woocommerce-amazon/index.html' },
   { path: '/services/seo-local-seo-youtube-growth', file: 'services/seo-local-seo-youtube-growth/index.html' },
   { path: '/services/ga4-gtm-capi-tracking-cro', file: 'services/ga4-gtm-capi-tracking-cro/index.html' },
+  { path: '/faq', file: 'faq/index.html' },
+  { path: '/terms', file: 'terms/index.html' },
+  { path: '/privacy', file: 'privacy/index.html' },
 ];
 
 async function prerender() {
@@ -58,7 +61,7 @@ async function prerender() {
       console.log(`✓ Successfully injected SSR content (${renderedHtml.length} chars) into ${route.file}`);
     }
 
-    console.log('🎉 All 10 routes pre-rendered successfully!');
+    console.log(`🎉 All ${routes.length} routes pre-rendered successfully!`);
   } finally {
     await vite.close();
   }

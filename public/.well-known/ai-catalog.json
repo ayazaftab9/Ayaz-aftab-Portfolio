@@ -291,6 +291,70 @@
         "ayaz aftab agent card",
         "webmcp marketing consultant agent"
       ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:faq",
+      "displayName": "Ayaz Aftab — Frequently Asked Questions Directory",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/faq",
+      "description": "Comprehensive FAQ directory on hiring Ayaz Aftab as a freelance performance marketer in India: retainer pricing, ad account ownership, ROAS, and process.",
+      "tags": [
+        "faq",
+        "freelance-marketing-pricing",
+        "retainers",
+        "due-diligence"
+      ],
+      "capabilities": [
+        "ReadFAQ",
+        "PricingTransparency",
+        "HiringInformation"
+      ],
+      "representativeQueries": [
+        "how much does a performance marketing freelancer charge in india",
+        "freelance performance marketer faq retainers"
+      ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:terms",
+      "displayName": "Ayaz Aftab — Terms & Conditions (Client Agreement)",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/terms",
+      "description": "Terms and conditions governing freelance digital marketing, paid ads management, intellectual property transfer, zero ad markups, and consulting services.",
+      "tags": [
+        "terms",
+        "client-agreement",
+        "legal",
+        "msa"
+      ],
+      "capabilities": [
+        "ReadTerms",
+        "ContractualStandards"
+      ],
+      "representativeQueries": [
+        "ayaz aftab terms and conditions",
+        "freelance performance marketing client agreement terms"
+      ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:privacy",
+      "displayName": "Ayaz Aftab — Privacy Policy (DPDP Act 2023 & GDPR)",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/privacy",
+      "description": "Privacy policy compliant with India's DPDP Act 2023 and GDPR detailing cookieless analytics, server-side tracking boundaries, and user rights.",
+      "tags": [
+        "privacy-policy",
+        "data-protection",
+        "dpdp-act",
+        "gdpr"
+      ],
+      "capabilities": [
+        "ReadPrivacyPolicy",
+        "DataRights"
+      ],
+      "representativeQueries": [
+        "ayaz aftab privacy policy",
+        "digital personal data protection policy performance marketing"
+      ]
     }
   ]
 }
