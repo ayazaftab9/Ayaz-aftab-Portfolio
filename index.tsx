@@ -737,14 +737,11 @@ const Header = ({
           </div>
         </a>
 
-        <div className="desktop-nav">
-          <a href="/#impact" id="nav-link-impact" className="desktop-nav-link">Impact</a>
-          <a href="/#services" id="nav-link-services" className="desktop-nav-link">Services</a>
-          <a href="/#projects" id="nav-link-projects" className="desktop-nav-link">Case Studies</a>
-          <a href="/#india-freelancer" id="nav-link-india" className="desktop-nav-link">All India</a>
-          <a href="/#experience" id="nav-link-experience" className="desktop-nav-link">Experience</a>
-          <a href="/resume" id="nav-link-resume" className="desktop-nav-link">Resume</a>
-          <a href="/#contact" id="nav-link-contact" className="desktop-nav-link">Contact</a>
+        <div className="nav-links-row">
+          <a href="/#experience" id="nav-link-about" className="pill-nav-link">About</a>
+          <a href="/#services" id="nav-link-services" className="pill-nav-link">Services</a>
+          <a href="/#projects" id="nav-link-projects" className="pill-nav-link">Case Studies</a>
+          <a href="/#contact" id="nav-link-contact" className="pill-nav-link">Contact</a>
         </div>
 
         <div className="header-actions">
@@ -755,18 +752,9 @@ const Header = ({
             className="theme-toggle-btn"
             aria-label={theme === 'dark' ? 'Switch to Pearl Light Glass theme' : 'Switch to Obsidian Dark Glass theme'}
           >
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={15} />
+            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
             <span>{theme === 'dark' ? 'Pearl' : 'Obsidian'}</span>
           </button>
-          <a
-            href={WHATSAPP_URL}
-            id="header-whatsapp-btn"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-whatsapp header-cta"
-          >
-            <span>Book a Consultation</span>
-          </a>
           <button
             id="open-mobile-menu-btn"
             onClick={onMenuClick}
@@ -881,100 +869,72 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
 const Hero = () => (
   <section id="top" className="hero">
     <AnimatedSection className="container">
-      <div className="hero-split">
-        <div className="hero-layout">
-          <div className="hero-role-kicker">
-            <span className="status-dot"></span>
-            <span>Available for Q2/Q3 Scaling • ₹35L+/Mo Combined Ad Spend</span>
-          </div>
-          <h1 className="hero-headline">
-            Ayaz Aftab — Growth Lead &amp; Digital Marketer.
-            <span className="hero-dynamic-subheading">
-              Scaling D2C brands, e-commerce stores &amp; enterprises with precision Google Ads, Meta Ads &amp; #1 SEO rankings.
-            </span>
-          </h1>
-          <p className="hero-summary">
-            Directing <strong>₹35L+ in combined monthly ad spend</strong> across <strong>Meta Ads</strong> and <strong>Google Ads</strong> at <strong>4.0x–4.5x ROAS</strong>, <strong>9,452+ leads at ₹49.86 CPL</strong> (-35% CPA), and <strong>+20% checkout conversion rate lift</strong> across <strong>Shopify, WooCommerce &amp; Amazon</strong>.
-          </p>
+      <div className="hero-centered-layout">
+        <h1 className="hero-headline-centered">
+          Ayaz Aftab — Scaling Brands<br />
+          with Precision Paid Media &amp; SEO
+        </h1>
 
-          <div className="hero-cta">
-            <a href="#contact" id="hero-cta-audit" className="btn btn-primary">
-              <span>Request Free Audit</span>
-              <Icon name="arrow-right" size={15} />
-            </a>
-            <a
-              href={WHATSAPP_URL}
-              id="hero-cta-whatsapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-whatsapp"
-            >
-              <Icon name="whatsapp" size={15} />
-              <span>WhatsApp Direct</span>
-            </a>
-          </div>
+        <p className="hero-summary-centered">
+          Performance Marketer &amp; Technical Growth Strategist directing <strong>₹35L+ combined monthly ad budgets</strong> across <strong>Meta Ads</strong> and <strong>Google Ads</strong> at <strong>4.0x–4.5x ROAS</strong>, <strong>9,452+ verified customer leads</strong> (-35% CPA), and <strong>+20% checkout conversion rate lift</strong> across <strong>Shopify &amp; Amazon</strong>.
+        </p>
 
-          <div className="hero-meta-strip">
-            <a href="tel:+919263588321" className="hero-meta-link">
-              <Icon name="phone" size={13} />
-              <span>+91 9263588321</span>
-            </a>
-            <span>•</span>
-            <a href="mailto:ayazaftab9@gmail.com" className="hero-meta-link">
-              <Icon name="mail" size={13} />
-              <span>ayazaftab9@gmail.com</span>
-            </a>
-            <span>•</span>
-            <a href="/resume" className="hero-meta-link">
-              <Icon name="award" size={13} />
-              <span>5.5+ Yrs Track Record</span>
-            </a>
+        <div id="impact" className="glass-metrics-grid" aria-label="Audited Performance Metrics">
+          <div className="glass-metric-card">
+            <div className="glass-metric-value">₹35L+/Mo</div>
+            <div className="glass-metric-label">Combined Ad Spend</div>
+          </div>
+          <div className="glass-metric-card">
+            <div className="glass-metric-value">4.0x–4.5x</div>
+            <div className="glass-metric-label">Sustained ROAS</div>
+          </div>
+          <div className="glass-metric-card">
+            <div className="glass-metric-value">9,452+</div>
+            <div className="glass-metric-label">Qualified Leads</div>
+          </div>
+          <div className="glass-metric-card">
+            <div className="glass-metric-value">+20%</div>
+            <div className="glass-metric-label">Store Conversion Lift</div>
           </div>
         </div>
 
-        <aside id="impact" className="hero-bento-panel" aria-label="Audited Performance Metrics">
-          <div className="hero-bento-header">
-            <span>Executive Performance</span>
-            <span>Audited Portfolio</span>
-          </div>
-          <div className="impact-grid">
-            <div className="info-card">
-              <div>
-                <p className="impact-metric">₹35L+/Mo</p>
-                <p className="impact-label">Combined Ad Spend</p>
-              </div>
-              <p className="impact-context">Meta CBO/ABO + Google PMax/Search</p>
-            </div>
-            <div className="info-card">
-              <div>
-                <p className="impact-metric">4.0x–4.5x</p>
-                <p className="impact-label">Sustained ROAS</p>
-              </div>
-              <p className="impact-context">Multi-brand D2C &amp; retail scaling</p>
-            </div>
-            <div className="info-card">
-              <div>
-                <p className="impact-metric">9,452+</p>
-                <p className="impact-label">Customer Leads</p>
-              </div>
-              <p className="impact-context">₹49.86 CPL (-35% lower CPA)</p>
-            </div>
-            <div className="info-card">
-              <div>
-                <p className="impact-metric">+20%</p>
-                <p className="impact-label">CVR Lift &amp; CRO</p>
-              </div>
-              <p className="impact-context">Shopify, WooCommerce &amp; Amazon</p>
-            </div>
-          </div>
-          <div className="hero-bento-footer">
-            <span>Google, Meta &amp; HubSpot Certified</span>
-            <a href="#projects" className="hero-meta-link">
-              <span>View Case Studies</span>
-              <Icon name="arrow-right" size={13} />
-            </a>
-          </div>
-        </aside>
+        <div className="hero-centered-actions">
+          <a href="#contact" id="hero-cta-audit" className="btn btn-primary">
+            <span>Request Free Growth Audit</span>
+            <Icon name="arrow-right" size={15} />
+          </a>
+          <a
+            href={WHATSAPP_URL}
+            id="hero-cta-whatsapp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-whatsapp"
+          >
+            <Icon name="whatsapp" size={15} />
+            <span>Chat on WhatsApp</span>
+          </a>
+          <a
+            href="/resume.pdf"
+            id="hero-cta-resume"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-secondary"
+          >
+            <Icon name="download" size={15} />
+            <span>Master Resume (PDF)</span>
+          </a>
+        </div>
+
+        <div className="hero-meta-strip">
+          <span>Direct Founder Collaboration</span>
+          <span>•</span>
+          <span>Verified Ad Accounts</span>
+          <span>•</span>
+          <span>New Delhi, India</span>
+          <span>•</span>
+          <span>Response &lt; 2 Hours</span>
+        </div>
       </div>
     </AnimatedSection>
   </section>
@@ -1811,24 +1771,6 @@ const Footer = () => {
   );
 };
 
-const MobileBottomDock = () => (
-  <aside className="mobile-bottom-dock" aria-label="Quick contact actions">
-    <a href="tel:+919263588321" className="mobile-dock-btn mobile-dock-call" id="mobile-dock-call">
-      <Icon name="phone" size={15} />
-      <span>Call +91 9263588321</span>
-    </a>
-    <a
-      href={WHATSAPP_URL}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="mobile-dock-btn mobile-dock-whatsapp"
-      id="mobile-dock-whatsapp"
-    >
-      <Icon name="whatsapp" size={16} />
-      <span>WhatsApp Consultation</span>
-    </a>
-  </aside>
-);
 
 const ProjectModal = ({ project, onClose }: { project: Project | null; onClose: () => void }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -2384,7 +2326,29 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
 export const App = ({ initialPath }: { initialPath?: string } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof document !== 'undefined') {
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const urlTheme = urlParams.get('theme');
+        if (urlTheme === 'dark' || urlTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', urlTheme);
+          return urlTheme;
+        }
+      } catch {
+        // ignore
+      }
+      const attr = document.documentElement.getAttribute('data-theme');
+      if (attr === 'dark' || attr === 'light') return attr;
+      try {
+        const saved = window.localStorage.getItem('ayaz-glass-theme');
+        if (saved === 'dark' || saved === 'light') return saved;
+      } catch {
+        // ignore
+      }
+    }
+    return 'light';
+  });
 
   const rawPath = initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/');
   const currentPath = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
@@ -2465,7 +2429,6 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
         )}
       </main>
       <Footer />
-      <MobileBottomDock />
       {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
       <Analytics />
     </>

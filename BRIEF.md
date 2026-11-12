@@ -1,0 +1,40 @@
+# Project Brief — Ayaz Aftab Portfolio
+
+- **Business name:** Ayaz Aftab — Performance Marketing & E-commerce Growth Lead | Senior Digital Marketing Freelancer
+- **Industry and what it does:** Paid Media Architecture (Meta Ads CBO/ABO, Google Ads Search & PMax), Technical, Local (GBP) & YouTube Video SEO, Shopify & WooCommerce Store Operations & Merchandising, Amazon Seller Central (A+ Content & Sponsored Ads), and Conversion Rate Optimization (CRO) with Server-Side GA4/GTM/Meta CAPI tracking.
+- **Location and service area:** Based in Kolkata, West Bengal, India. Serving clients pan-India (Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, Kolkata) and international remote markets (UAE, UK, US).
+- **Target audience:** D2C brand founders, e-commerce operators, real estate developers, healthcare practices, edtech institutes, and B2B enterprises scaling paid budgets from ₹50K to ₹15L+/mo who need predictable daily leads, 4.0x–4.5x ROAS, and transparent execution without agency markups.
+- **Main goal of the site:** High-intent lead generation (direct WhatsApp consultations and 24-hour audit requests), executive hiring inquiries for Senior Growth Lead roles, and ranking #1 organically on Google across India for digital marketing and performance marketing services.
+- **Pages needed:**
+  - Home (`/`)
+  - Master Resume (`/resume` & `/resume.pdf`)
+  - 4 Dedicated Service Pillar Landing Pages (`/services/*`)
+  - 4 Case Study Deep Dives (`/case-studies/*`)
+  - Custom 404 Error Page (`/404.html`)
+- **Brand personality:** 2026 Quiet-Luxury Fluid Glassmorphism. Bespoke editorial studio aesthetic (Pearl Alabaster Light Glass default + Obsidian Smoked Platinum Dark Glass toggle), monospace architectural numbering, human warmth, zero generic AI filler.
+- **Brand assets:** Inter sans typography, JetBrains Mono indices, custom geometric A logo, monochrome palette with emerald ROI accents (`#047857`), frosted glass backdrop blur.
+- **Sites I admire and why:** Bespoke design studios, Linear/Vercel/Stripe editorial layouts, asymmetric grid pacing, thumb-zone mobile navigation.
+- **Competitors:** Bloated agencies charging high retainers and delegating campaigns to junior interns.
+- **Preferred tech stack:** React + Vite, static SSR pre-rendered semantic HTML (100/100 Core Web Vitals, zero CLS), modular CSS design tokens, Vercel edge CDN.
+- **Must-have features:**
+  - 2x2 Bento impact grid above the fold on mobile
+  - Sticky mobile thumb-zone bottom dock (1-tap Call `+91 9263588321` + WhatsApp consultation)
+  - Swipeable single-row filter tabs and Pan-India city pills on mobile (< 768px)
+  - 16px form inputs to prevent iOS Safari auto-zoom
+  - Declarative WebMCP tools (`toolname="send_marketing_inquiry"`)
+  - Rich Schema.org JSON-LD graphs (Person, ProfessionalService, OfferCatalog, FAQPage, BreadcrumbList)
+  - Agentic Resource Discovery (`ard.json`) and `llms.txt`
+  - High-contrast `:focus-visible` keyboard accessibility and `@media (prefers-reduced-motion: reduce)`
+- **Who will update the site after launch, and how technical are they:** Ayaz Aftab (technical, Git/Vite workflow).
+- **Hosting and domain:** Vercel Production (`https://ayaz-aftab-portfolio.vercel.app/`).
+- **Real content I can supply:**
+  - ₹35L+ monthly ad budget managed combined across portfolios
+  - 4.0x–4.5x sustained ROAS
+  - 9,452+ customer leads at ₹49.86 CPL (-35% lower CPA)
+  - +20% store & landing page conversion rate lift
+  - ₹7.95L+ direct WooCommerce/Amazon GMV across 100+ SKUs
+  - 247,000+ organic YouTube views
+  - Client mandates: FFACE (GM Modular & Decoy Luxury Perfumes), Jaffri Creations, MTEI Services, HICO Tax Consultant
+  - Official certifications: Google (GA4, AI-Powered Ads, Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound & CRM Automation), Amazon & Semrush
+- **Deadline and budget level:** Active live production site.
+- **Anything the site must not do or say:** Must not look or read like an AI or bot created it. No buzzwords ("unlock your potential", "cutting-edge", "seamless", "elevate"). No unverified statistics or fake reviews. No mobile horizontal overflow or layout shift.
