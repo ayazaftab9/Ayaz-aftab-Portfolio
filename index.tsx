@@ -727,44 +727,44 @@ const Header = ({
 }) => (
   <header className="header">
     <a href="#main-content" className="skip-link">Skip to main content</a>
-    <div className="container">
-      <nav className="nav" aria-label="Primary Navigation">
-        <a href="/" id="nav-logo-link" className="logo-container">
-          <Logo />
-          <div className="logo-text-group">
-            <span className="logo-text">Ayaz Aftab</span>
-            <span className="logo-subtext">₹35L+/Mo Paid Media &amp; SEO</span>
-          </div>
-        </a>
+    <div className="container header-container">
+      <a href="/" id="nav-logo-link" className="logo-container">
+        <Logo />
+        <div className="logo-text-group">
+          <span className="logo-text">Ayaz Aftab</span>
+          <span className="logo-subtext">₹35L+/Mo Paid Media &amp; SEO</span>
+        </div>
+      </a>
 
+      <nav className="nav" aria-label="Primary Navigation">
         <div className="nav-links-row">
           <a href="/#experience" id="nav-link-about" className="pill-nav-link">About</a>
           <a href="/#services" id="nav-link-services" className="pill-nav-link">Services</a>
           <a href="/#projects" id="nav-link-projects" className="pill-nav-link">Case Studies</a>
           <a href="/#contact" id="nav-link-contact" className="pill-nav-link">Contact</a>
         </div>
-
-        <div className="header-actions">
-          <button
-            id="theme-toggle-btn"
-            type="button"
-            onClick={onToggleTheme}
-            className="theme-toggle-btn"
-            aria-label={theme === 'dark' ? 'Switch to Pearl Light Glass theme' : 'Switch to Obsidian Dark Glass theme'}
-          >
-            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
-            <span>{theme === 'dark' ? 'Pearl' : 'Obsidian'}</span>
-          </button>
-          <button
-            id="open-mobile-menu-btn"
-            onClick={onMenuClick}
-            className="menu-icon"
-            aria-label="Open navigation menu"
-          >
-            <Icon name="menu" size={20} />
-          </button>
-        </div>
       </nav>
+
+      <div className="header-actions">
+        <button
+          id="theme-toggle-btn"
+          type="button"
+          onClick={onToggleTheme}
+          className="theme-toggle-btn"
+          aria-label={theme === 'dark' ? 'Switch to Pearl Light Glass theme' : 'Switch to Obsidian Dark Glass theme'}
+        >
+          <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
+          <span>{theme === 'dark' ? 'Pearl' : 'Obsidian'}</span>
+        </button>
+        <button
+          id="open-mobile-menu-btn"
+          onClick={onMenuClick}
+          className="menu-icon"
+          aria-label="Open navigation menu"
+        >
+          <Icon name="menu" size={20} />
+        </button>
+      </div>
     </div>
   </header>
 );
@@ -870,14 +870,14 @@ const Hero = () => (
   <section id="top" className="hero">
     <AnimatedSection className="container">
       <div className="hero-centered-layout">
+        <div className="hero-kicker-glass">
+          <span>₹35L+ Monthly Ad Budget Managed Combined</span>
+        </div>
+
         <h1 className="hero-headline-centered">
           Ayaz Aftab — Scaling Brands<br />
           with Precision Paid Media &amp; SEO
         </h1>
-
-        <p className="hero-summary-centered">
-          Performance Marketer &amp; Technical Growth Strategist directing <strong>₹35L+ combined monthly ad budgets</strong> across <strong>Meta Ads</strong> and <strong>Google Ads</strong> at <strong>4.0x–4.5x ROAS</strong>, <strong>9,452+ verified customer leads</strong> (-35% CPA), and <strong>+20% checkout conversion rate lift</strong> across <strong>Shopify &amp; Amazon</strong>.
-        </p>
 
         <div id="impact" className="glass-metrics-grid" aria-label="Audited Performance Metrics">
           <div className="glass-metric-card">
