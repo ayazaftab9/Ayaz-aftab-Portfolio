@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => {
           serviceEcommerce: path.resolve(__dirname, 'services/ecommerce-growth-shopify-woocommerce-amazon/index.html'),
           serviceSeo: path.resolve(__dirname, 'services/seo-local-seo-youtube-growth/index.html'),
           serviceTrackingCro: path.resolve(__dirname, 'services/ga4-gtm-capi-tracking-cro/index.html'),
+          notFound: path.resolve(__dirname, '404.html'),
         }
       }
     }
