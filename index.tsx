@@ -531,29 +531,39 @@ const indiaCitiesList = [
 
 const faqData = [
   {
-    id: 'faq-why-hire',
-    question: 'What scale of monthly ad budgets and results does Ayaz Aftab manage?',
-    answer: 'Ayaz Aftab is a Performance Marketing & E-commerce Growth Lead with 5.5+ years of experience currently managing ₹35L+ in combined monthly paid media budgets across D2C, retail, and lead-generation portfolios (including FFACE — GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x–4.5x ROAS. His verified track record includes 9,452+ customer acquisitions at ₹49.86 CPL (-35% CPA), +20% store conversion lift, ₹7.95L+ direct WooCommerce/Amazon GMV, and 247,000+ organic YouTube views.'
+    id: 'faq-why-hire-freelancer',
+    question: 'Why hire Ayaz Aftab as a dedicated performance marketing freelancer in India instead of an agency?',
+    answer: 'When you hire a traditional agency in India, your account is often passed to junior interns while you pay heavy account management markups. As a senior performance marketing freelancer managing ₹35L+ in combined monthly ad spend at a sustained 4.0x–4.5x ROAS, I personally architect every Google & Meta campaign, write the ad angles, analyze GA4/CAPI attribution, and communicate directly with founders via WhatsApp (+91 9263588321). You get executive senior talent, zero agency bloat, and complete ownership of your ad accounts.'
+  },
+  {
+    id: 'faq-pricing-retainer',
+    question: 'How much does a performance marketing freelancer in India charge for ad management & SEO?',
+    answer: 'Freelance retainers depend on your monthly ad spend, store scale, and scope of work. Monthly retainers for dedicated performance marketing typically range from ₹35,000 to ₹75,000/month, or a performance-hybrid model for qualifying D2C brands spending ₹2L+/month. Ad spend is paid directly to Google and Meta with zero percentage markups. Every engagement includes weekly strategy sprints, live Looker Studio reporting, and landing page CRO.'
+  },
+  {
+    id: 'faq-budget-roas',
+    question: 'What scale of monthly ad budgets and ROAS results does Ayaz Aftab manage?',
+    answer: 'I currently manage ₹35L+ in combined monthly paid media budgets across D2C e-commerce, retail, and high-velocity lead-generation portfolios in India (including FFACE — GM Modular & Decoy Luxury Perfumes) at a sustained 4.0x–4.5x ROAS. My verified track record includes 9,452+ customer leads at ₹49.86 CPL (-35% lower CPA), +20% store conversion lift, ₹7.95L+ direct WooCommerce/Amazon GMV, and 247,000+ organic YouTube views.'
   },
   {
     id: 'faq-services-offered',
-    question: 'What digital marketing services do you offer for businesses across India?',
-    answer: 'I provide four core growth services across India and global remote markets: (1) Google Ads & Meta Ads (Facebook/Instagram) management for daily leads and 4x e-commerce sales, (2) Technical SEO, Local SEO (Google Maps), and YouTube Video SEO to rank #1 organically, (3) Shopify, WooCommerce, and Amazon Seller Central store scaling, and (4) Website Conversion Rate Optimization (CRO) with server-side GA4, GTM, and Meta CAPI tracking.'
+    question: 'What digital marketing services do you provide for businesses across India?',
+    answer: 'I deliver full-stack, execution-first freelance growth services across all of India: (1) Google Ads & Meta Ads (Facebook/Instagram) management for daily leads and sales, (2) Technical SEO, Local SEO (Google Maps), and YouTube Video SEO to rank #1 organically on Google, (3) Shopify, WooCommerce, and Amazon Seller Central store scaling with catalog CRO, and (4) Website Conversion Rate Optimization (CRO) with server-side GA4, GTM, and Meta CAPI tracking.'
   },
   {
-    id: 'faq-cities',
-    question: 'Do you work with clients all over India and internationally?',
-    answer: 'Yes. While based in Kolkata, I partner with founders, D2C brands, and enterprises across Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, and all over India, as well as international clients in the UAE, UK, and US—with direct WhatsApp communication (+91 9263588321) and live Looker Studio reporting.'
+    id: 'faq-cities-india',
+    question: 'Which cities across India do you provide freelance digital marketing services to?',
+    answer: 'I provide remote freelance performance marketing and SEO services to founders and enterprises across all major Indian commercial hubs: Kolkata, Mumbai, Delhi NCR (Gurugram/Noida), Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, Surat, Lucknow, and Chandigarh, as well as international brands in the UAE, UK, and US. Daily communication is handled seamlessly via WhatsApp, Phone, and Google Meet.'
   },
   {
     id: 'faq-how-to-start',
-    question: 'How can we book a consultation or request a free website and ads audit?',
-    answer: 'Click "Book a Consultation" (WhatsApp +91 9263588321) or submit your website and goals in the audit form below. I will personally audit your ad accounts, tracking setup, and website conversion funnel and share a clear growth roadmap within 24 hours.'
+    question: 'How can I hire you as our digital marketing freelancer or request a free growth audit in India?',
+    answer: 'Getting started is straightforward: click "Chat on WhatsApp" (+91 9263588321) or submit your website and goals in the audit form below. I will personally review your existing Google Ads, Meta Ads accounts, or SEO rankings and provide an actionable growth roadmap within 24 hours.'
   },
   {
     id: 'faq-education',
-    question: 'What are Ayaz Aftab’s academic qualifications and industry certifications?',
-    answer: 'Ayaz holds a Bachelor of Business Administration (BBA) from Manipal University Jaipur and a Diploma in Computer Science & Engineering from Arka Jain University. He is certified across Google (GA4, AI-Powered Performance Ads & Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound Marketing & CRM Automation), and Amazon & Semrush (Sponsored Ads & SEO Toolkit).'
+    question: 'What are Ayaz Aftab’s academic qualifications and official marketing certifications?',
+    answer: 'Ayaz holds a Bachelor of Business Administration (BBA) from Manipal University Jaipur and a Diploma in Computer Science & Engineering from Arka Jain University. He is officially certified by Google (GA4, AI-Powered Performance Ads & Shopping), Meta (Certified Digital Marketing Associate), HubSpot (Inbound Marketing & CRM Automation), and Amazon & Semrush (Sponsored Ads & SEO Toolkit).'
   }
 ];
 
@@ -996,10 +1006,10 @@ const Services = () => (
   <section id="services" aria-labelledby="services-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">02 — CAPABILITIES &amp; DELIVERABLES</span>
-        <h2 id="services-heading" className="section-title">Growth Services Built for ROI &amp; Revenue</h2>
+        <span className="section-eyebrow">02 — SERVICES • DIGITAL MARKETING FREELANCER IN INDIA</span>
+        <h2 id="services-heading" className="section-title">Performance Marketing &amp; Digital Growth Services India</h2>
         <p className="section-subtitle">
-          Execution-first digital marketing services delivering daily qualified leads, #1 Google rankings, and profitable store revenue.
+          Direct founder collaboration with India&apos;s dedicated performance marketing freelancer — delivering daily qualified leads, 4.0x–4.5x ROAS, and profitable store revenue without agency bloat.
         </p>
       </div>
 
@@ -1073,12 +1083,12 @@ const IndiaFreelancerSection = () => (
   <section id="india-freelancer" className="section-alt" aria-labelledby="india-freelancer-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">03 — PAN-INDIA &amp; GLOBAL INDUSTRIES</span>
+        <span className="section-eyebrow">03 — PAN-INDIA COVERAGE &amp; INDUSTRY EXPERTISE</span>
         <h2 id="india-freelancer-heading" className="section-title">
-          Tailored Acquisition Systems by Vertical
+          Digital Marketing Freelancer Serving Founders Across All Major Indian Metros
         </h2>
         <p className="section-subtitle">
-          Skip agency overhead and partner directly with a senior growth lead managing ₹35L+/mo in paid media across India&apos;s key markets.
+          Skip agency overhead and partner directly with a senior performance marketing freelancer managing ₹35L+/mo in paid media across Delhi NCR, Mumbai, Bengaluru, Kolkata, Hyderabad, Pune, Chennai, and Jaipur.
         </p>
       </div>
 
@@ -1092,7 +1102,7 @@ const IndiaFreelancerSection = () => (
         ))}
       </div>
 
-      <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--bg-surface)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-lg)' }}>
+      <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--glass-card-bg)', backdropFilter: 'blur(24px) saturate(180%)', WebkitBackdropFilter: 'blur(24px) saturate(180%)', border: 'var(--glass-card-border)', borderRadius: '14px', boxShadow: 'var(--glass-card-shadow)' }}>
         <p style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
           Serving Founders, D2C Brands &amp; Growing Businesses Across All Major Hubs:
         </p>
@@ -1117,10 +1127,10 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
     <section id="projects" aria-labelledby="projects-heading">
       <AnimatedSection className="container">
         <div className="section-header">
-          <span className="section-eyebrow">01 — SELECTED WORK</span>
-          <h2 id="projects-heading" className="section-title">Featured Performance &amp; E-commerce Case Studies</h2>
+          <span className="section-eyebrow">01 — CASE STUDIES • PERFORMANCE MARKETING FREELANCER INDIA</span>
+          <h2 id="projects-heading" className="section-title">Featured Performance Marketing &amp; E-commerce Case Studies</h2>
           <p className="section-subtitle">
-            Detailed breakdowns of how I scale Meta Ads, Google PMax, Shopify/WooCommerce CRO, Amazon Seller Central, and YouTube SEO.
+            Detailed breakdowns of how India&apos;s top performance marketing freelancer scales Meta Ads, Google PMax, Shopify/WooCommerce CRO, Amazon, and YouTube SEO to ₹35L+/mo.
           </p>
         </div>
 
@@ -1242,10 +1252,10 @@ const GrowthProcess = () => (
   <section id="process" className="section-alt" aria-labelledby="process-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">04 — METHODOLOGY</span>
-        <h2 id="process-heading" className="section-title">How I Scale Leads &amp; Revenue Step-by-Step</h2>
+        <span className="section-eyebrow">04 — PERFORMANCE MARKETING FRAMEWORK</span>
+        <h2 id="process-heading" className="section-title">How I Scale Leads &amp; ROAS as Your Dedicated Growth Partner</h2>
         <p className="section-subtitle">
-          A clear, 4-stage methodology combining server-side tracking, buyer-intent targeting, weekly creative testing, and conversion optimization.
+          A transparent 4-stage operating system combining server-side tracking, buyer-intent targeting, weekly creative testing, and checkout conversion optimization.
         </p>
       </div>
       <div className="process-grid">
@@ -1265,10 +1275,10 @@ const ExperienceSection = () => (
   <section id="experience" aria-labelledby="experience-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">05 — CAREER &amp; TRACK RECORD</span>
-        <h2 id="experience-heading" className="section-title">Professional Experience &amp; Leadership</h2>
+        <span className="section-eyebrow">05 — 5.5+ YEARS DEDICATED FREELANCE EXPERIENCE</span>
+        <h2 id="experience-heading" className="section-title">Career Track Record: Senior Performance Marketer in India</h2>
         <p className="section-subtitle">
-          A proven history of owning ₹35L+/mo combined paid acquisition P&amp;Ls, Shopify and WooCommerce store operations, and B2B demand generation.
+          Over 5.5 years of hands-on execution managing ₹35L+ combined monthly ad budgets across active brand portfolios like FFACE (GM Modular &amp; Decoy Luxury Perfumes), Jaffri Creations, and MTEI Services.
         </p>
       </div>
       <div className="experience-list">
@@ -1300,10 +1310,10 @@ const Testimonials = ({ onProjectClick }: { onProjectClick: (project: Project) =
   <section id="testimonials" className="section-alt" aria-labelledby="testimonials-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">06 — CLIENT ENDORSEMENTS</span>
-        <h2 id="testimonials-heading" className="section-title">Trusted by Founders &amp; Growth Directors</h2>
+        <span className="section-eyebrow">06 — CLIENT ENDORSEMENTS • INDIA &amp; GLOBAL</span>
+        <h2 id="testimonials-heading" className="section-title">Trusted by Founders, Directors &amp; Growth Leaders Across India</h2>
         <p className="section-subtitle">
-          Direct feedback from business leaders on ROAS consistency, lead quality, and e-commerce growth.
+          Direct feedback on ROAS stability, lead quality, and transparent execution from leaders who hired Ayaz Aftab as their freelance growth partner.
         </p>
       </div>
       <div className="testimonials-list">
@@ -1356,10 +1366,10 @@ const Skills = () => (
   <section id="skills" aria-labelledby="skills-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">07 — ATTRIBUTION &amp; STACK</span>
-        <h2 id="skills-heading" className="section-title">Skills, Attribution Stack &amp; Certifications</h2>
+        <span className="section-eyebrow">07 — CERTIFICATIONS &amp; TECHNICAL STACK</span>
+        <h2 id="skills-heading" className="section-title">Official Google, Meta, HubSpot &amp; Amazon Certified Freelancer</h2>
         <p className="section-subtitle">
-          Full-stack performance marketing, Shopify/WooCommerce store operations, and server-side analytics backed by Google, Meta, HubSpot, Amazon, and Semrush certifications.
+          Full-stack performance marketing, Shopify/WooCommerce store operations, and server-side analytics backed by Google, Meta, HubSpot, Amazon, and Semrush credentials.
         </p>
       </div>
       <div className="skills-grid">
@@ -1459,10 +1469,10 @@ const FAQSection = () => (
   <section id="faq" className="section-alt" aria-labelledby="faq-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">08 — FREQUENT QUESTIONS</span>
-        <h2 id="faq-heading" className="section-title">Frequently Asked Questions</h2>
+        <span className="section-eyebrow">08 — FAQ • HIRING A FREELANCE DIGITAL MARKETER IN INDIA</span>
+        <h2 id="faq-heading" className="section-title">Frequently Asked Questions About Freelance Performance Marketing in India</h2>
         <p className="section-subtitle">
-          Clear answers about my ₹35L+/mo paid media experience, digital marketing services across India, and how to get started.
+          Direct, transparent answers on retainer models, expected ROAS, timelines, ad budgets, and pan-India remote collaboration.
         </p>
       </div>
       <div className="faq-list">
@@ -1562,8 +1572,8 @@ const Footer = () => {
       <AnimatedSection className="container">
         <div className="footer-split">
           <div className="footer-left">
-            <span className="section-eyebrow">09 — GET IN TOUCH</span>
-            <h2 className="footer-title">Let&apos;s Build a High-ROI Acquisition Engine.</h2>
+            <span className="section-eyebrow">09 — HIRE INDIA'S TOP DIGITAL MARKETING FREELANCER</span>
+            <h2 className="footer-title">Ready to Scale Your Brand with India&apos;s Dedicated Growth Partner?</h2>
             <p className="footer-subtitle">
               Looking to scale your Google &amp; Meta Ads, rank #1 on Google, or hire an Executive Growth Lead managing ₹35L+/mo? Reach out directly on WhatsApp or submit your website for a free 24-hour audit.
             </p>
@@ -1747,12 +1757,14 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <p className="footer-seo-title">Pan-India &amp; Global Service Areas</p>
+            <p className="footer-seo-title">Freelance Service Hubs India</p>
             <ul className="footer-seo-list">
-              <li className="footer-seo-link">Kolkata, Mumbai, Delhi NCR &amp; Bengaluru</li>
-              <li className="footer-seo-link">Hyderabad, Pune, Chennai, Ahmedabad &amp; Jaipur</li>
-              <li className="footer-seo-link">All India &amp; Global Remote (UAE, UK, US)</li>
-              <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="footer-seo-link">WhatsApp / Call: +91 9263588321</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer in Delhi NCR</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Digital Marketing Freelancer Mumbai</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer Bengaluru</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Digital Marketing Freelancer Kolkata</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Google &amp; Meta Ads Specialist Hyderabad</a></li>
+              <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="footer-seo-link">WhatsApp Consultation: +91 9263588321</a></li>
             </ul>
           </div>
         </nav>
