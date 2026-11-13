@@ -9,14 +9,15 @@
   "entries": [
     {
       "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:web:home",
-      "displayName": "Ayaz Aftab — #1 Digital Marketing & Performance Marketing Freelancer India",
+      "displayName": "Ayaz Aftab — Digital Marketing Freelancer & Performance Marketing Freelancer India",
       "type": "text/html",
       "url": "https://ayaz-aftab-portfolio.vercel.app/",
-      "description": "Interactive portfolio of Ayaz Aftab, directing ₹35L+ combined monthly ad spend across Google & Meta Ads at 4.0x–4.5x ROAS, 9,452+ leads, and #1 Google SEO rankings.",
+      "description": "Interactive portfolio of Ayaz Aftab (Kolkata HQ, Pan-India), directing ₹35L+ combined monthly ad spend across Google & Meta Ads at 4.0x–4.5x ROAS, 9,452+ leads, and +30% Google organic SEO growth.",
       "tags": [
         "performance-marketing",
         "digital-marketing-freelancer",
         "india",
+        "kolkata",
         "meta-ads",
         "google-ads"
       ],
@@ -27,10 +28,86 @@
         "ServerSideTracking"
       ],
       "representativeQueries": [
-        "hire digital marketing freelancer in india",
-        "best performance marketing freelancer india",
-        "google ads and meta ads specialist india",
-        "freelance performance marketing lead portfolio"
+        "digital marketing freelancer india",
+        "performance marketing freelancer india",
+        "google ads freelancer india",
+        "meta ads freelancer india",
+        "digital marketing freelancer in kolkata"
+      ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:hub:google-ads-india",
+      "displayName": "Google Ads Freelancer India — Search, Performance Max & Shopping",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/google-ads-freelancer-india",
+      "description": "Dedicated pan-India landing page for hiring Ayaz Aftab as a Google Ads freelancer managing Search, Performance Max, Shopping, and Enhanced Conversions at 4.0x–4.5x ROAS.",
+      "tags": [
+        "google-ads",
+        "performance-max",
+        "google-shopping",
+        "india",
+        "ppc"
+      ],
+      "capabilities": [
+        "GoogleSearchAds",
+        "PerformanceMax",
+        "GoogleShoppingFeeds",
+        "EnhancedConversions"
+      ],
+      "representativeQueries": [
+        "google ads freelancer india",
+        "hire google ads expert india",
+        "performance max specialist india"
+      ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:hub:meta-ads-india",
+      "displayName": "Meta Ads Freelancer India — Facebook & Instagram CBO Scaling",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/meta-ads-freelancer-india",
+      "description": "Dedicated pan-India landing page for hiring Ayaz Aftab as a Meta Ads freelancer executing CBO/ABO scaling, 3–5 weekly creative hook tests, and server-side Meta CAPI.",
+      "tags": [
+        "meta-ads",
+        "facebook-ads",
+        "instagram-ads",
+        "india",
+        "capi"
+      ],
+      "capabilities": [
+        "MetaAdsCBO",
+        "WeeklyCreativeSprints",
+        "MetaConversionsAPI",
+        "D2CLeadAndSaleFunnels"
+      ],
+      "representativeQueries": [
+        "meta ads freelancer india",
+        "facebook ads freelancer india",
+        "instagram ads expert india"
+      ]
+    },
+    {
+      "identifier": "urn:air:ayaz-aftab-portfolio.vercel.app:hub:kolkata",
+      "displayName": "Digital Marketing Freelancer in Kolkata — Pan-India Performance & SEO Growth",
+      "type": "text/html",
+      "url": "https://ayaz-aftab-portfolio.vercel.app/digital-marketing-freelancer-in-kolkata",
+      "description": "Kolkata HQ commercial landing page offering local Kolkata Google Business Profile SEO (1,465+ buyer actions), Meta & Google Ads, and pan-India D2C e-commerce growth.",
+      "tags": [
+        "kolkata",
+        "local-seo",
+        "digital-marketing-freelancer",
+        "west-bengal",
+        "india"
+      ],
+      "capabilities": [
+        "KolkataLocalSEO",
+        "GoogleBusinessProfile",
+        "PaidMediaScaling",
+        "DirectFounderConsultation"
+      ],
+      "representativeQueries": [
+        "digital marketing freelancer in kolkata",
+        "performance marketing freelancer kolkata",
+        "local seo expert kolkata"
       ]
     },
     {

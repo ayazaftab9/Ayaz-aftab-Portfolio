@@ -66,6 +66,29 @@ export interface ServicePageData {
   faqs: { q: string; a: string }[];
 }
 
+export interface LandingPageData {
+  slug: string;
+  navLabel: string;
+  breadcrumbLabel: string;
+  eyebrow: string;
+  h1: string;
+  subtitle: string;
+  badge: string;
+  metrics: { value: string; label: string }[];
+  deliverablesTitle: string;
+  deliverables: string[];
+  workflowTitle: string;
+  workflowSteps: { title: string; detail: string }[];
+  localOrScopeTitle: string;
+  localOrScopeBody: string;
+  pricingTitle: string;
+  pricingSummary: string;
+  proofPoints: string[];
+  relatedCaseStudyIds: number[];
+  relatedServiceSlugs: string[];
+  faqs: { q: string; a: string }[];
+}
+
 const WHATSAPP_URL =
   'https://wa.me/919263588321?text=Hi%20Ayaz%2C%20I%20visited%20your%20website%20and%20want%20to%20discuss%20digital%20marketing%20services%20to%20scale%20our%20leads%20and%20sales.';
 
@@ -75,9 +98,9 @@ export const servicePagesData: ServicePageData[] = [
     slug: 'performance-marketing-meta-google-ads',
     shortName: 'Google Ads & Meta Ads (Facebook/Instagram)',
     eyebrow: 'Paid Media & Daily Lead Generation Services India',
-    title: 'Google Ads & Meta Ads Specialist in India: ₹35L+/Mo Combined Ad Spend Managed at 4.0x–4.5x ROAS',
+    title: 'Google Ads & Meta Ads Freelancer India: ₹35L+/Mo Combined Ad Spend Managed at 4.0x–4.5x ROAS',
     metaTitle: 'Google Ads & Meta Ads Freelancer India (₹35L+/Mo Managed) | Ayaz Aftab',
-    metaDescription: 'Hire India’s trusted Google Ads & Facebook/Instagram Ads specialist. Currently managing ₹35L+ combined monthly ad budgets at 4.0x–4.5x ROAS and 9,452+ leads at 35% lower CPA.',
+    metaDescription: 'Work directly with a senior Google Ads freelancer and Meta Ads freelancer in India managing ₹35L+ monthly ad budgets at 4.0x–4.5x ROAS and 9,452+ leads at 35% lower CPA.',
     heroSummary: 'Stop burning budget on clicks that never convert. I personally architect and scale high-converting Google Ads and Facebook/Instagram (Meta) Ads that deliver daily qualified leads, WhatsApp inquiries, and direct online orders—backed by ₹35L+ in combined monthly ad spend managed at a sustained 4.0x–4.5x ROAS.',
     keyMetricBadge: '₹35L+/Mo Combined • 4.0x–4.5x ROAS',
     targetAudience: 'Built for D2C brands, e-commerce stores, real estate developers, healthcare clinics, coaching institutes, and B2B enterprises across India (Kolkata, Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai) and global markets seeking predictable paid growth.',
@@ -129,7 +152,7 @@ export const servicePagesData: ServicePageData[] = [
       'Product Page & Mobile Checkout CRO to Lift Conversion Rates by +20%',
       'Automated WhatsApp & Email Cart Recovery to Win Back Abandoned Checkouts'
     ],
-    methodology: 'Paid ads only scale profitably when your store converts mobile visitors effortlessly. I pair fast, trust-rich Shopify and WooCommerce product pages, discovery set bundles, and streamlined checkouts with keyword-indexed Amazon A+ content.',
+    methodology: 'Paid ads only scale profitably when your store converts mobile visitors cleanly. I pair fast, trust-rich Shopify and WooCommerce product pages, discovery set bundles, and streamlined checkouts with keyword-indexed Amazon A+ content.',
     proofPoints: [
       'Leading end-to-end Shopify e-commerce operations, discovery sets, and checkout CRO for Decoy Luxury Perfumes (FFACE)',
       'Generated ₹7.95 Lakhs in direct GMV across WooCommerce and Amazon Seller Central for Jaffri Creations across 100+ SKUs',
@@ -155,12 +178,12 @@ export const servicePagesData: ServicePageData[] = [
     slug: 'seo-local-seo-youtube-growth',
     shortName: 'SEO, Google Maps & YouTube Ranking',
     eyebrow: 'Organic Search, Local Maps & Video Discovery Services',
-    title: 'SEO Services in India: Rank #1 on Google Search, Google Maps (Local SEO) & YouTube',
-    metaTitle: 'Best SEO Freelancer & Services in India | Google Ranking, Local SEO & YouTube — Ayaz Aftab',
-    metaDescription: 'Rank your business #1 on Google Search, Google Maps, and YouTube. Proven SEO specialist in India delivering +30% organic traffic, 247,000+ YouTube views, and 1,465+ local buyer actions.',
-    heroSummary: 'Capture high-intent customers 24/7 without paying for every click. I execute clean, compounding Technical SEO, On-Page SEO, Google Business Profile (Local Maps) ranking, and YouTube Video SEO so your business ranks #1 when customers across India search for your services.',
+    title: 'SEO Services in India: Page-1 Google Search, Local Maps (GBP) & YouTube Growth',
+    metaTitle: 'SEO Freelancer & Services in India | Google Search, Local Maps & YouTube — Ayaz Aftab',
+    metaDescription: 'Grow organic leads from Google Search, Google Maps, and YouTube. SEO specialist in India delivering +30% organic traffic, 247,000+ YouTube views, and 1,465+ local buyer actions.',
+    heroSummary: 'Capture high-intent customers 24/7 without paying for every click. I execute clean, compounding Technical SEO, On-Page SEO, Google Business Profile (Local Maps) optimization, and YouTube Video SEO so your business wins top-page visibility when buyers across India search for your services.',
     keyMetricBadge: '+30% Organic Traffic • 247K+ YouTube Views',
-    targetAudience: 'Designed for service businesses, D2C e-commerce brands, doctors & clinics, real estate firms, CA/financial practices, and multi-location businesses across India seeking sustainable #1 Google rankings.',
+    targetAudience: 'Designed for service businesses, D2C e-commerce brands, doctors & clinics, real estate firms, CA/financial practices, and multi-location businesses across India seeking compounding Google organic traffic.',
     deliverables: [
       'Complete Technical SEO Audit & 100/100 Core Web Vitals Speed Optimization',
       'Commercial Buyer Keyword Research & Competitor Gap Analysis via Semrush',
@@ -169,7 +192,7 @@ export const servicePagesData: ServicePageData[] = [
       'Schema.org JSON-LD Rich Results & AI Answer Engine Optimization (ChatGPT, Perplexity, Google AI)',
       'YouTube Video SEO (Search Trend Mapping, Titles, Chapters, Thumbnail CTR & Shorts Strategy)'
     ],
-    methodology: 'Modern organic dominance requires ranking across Google Web Search, Google Maps, AI Answer Engines, and YouTube simultaneously. I eliminate technical crawl bottlenecks first, deploy rich Schema.org structured data, and build authoritative pages around high-intent buyer searches.',
+    methodology: 'Modern organic visibility requires ranking across Google Web Search, Google Maps, AI Answer Engines, and YouTube together. I eliminate technical crawl bottlenecks first, deploy Schema.org structured data, and build clear service pages around commercial buyer searches.',
     proofPoints: [
       'Boosted organic website search traffic by +30% and Amazon organic discoverability by +40% for Jaffri Creations',
       'Scaled Jaffri Creations YouTube channel from scratch to 247,000+ organic views and 5,200+ watch hours with zero paid video spend',
@@ -183,11 +206,11 @@ export const servicePagesData: ServicePageData[] = [
       },
       {
         q: 'Do you optimize websites for AI search engines (ChatGPT, Perplexity, Google AI Overviews)?',
-        a: 'Yes. Every website I optimize includes Schema.org JSON-LD graphs, pre-rendered semantic HTML, llms.txt, and Agentic Resource Discovery (ard.json) so both Google and AI search engines recommend your business.'
+        a: 'Yes. Every website I optimize includes Schema.org JSON-LD graphs, pre-rendered semantic HTML, llms.txt, and Agentic Resource Discovery (ard.json) so both Google and AI search engines understand your business.'
       },
       {
         q: 'Can Local SEO help my business get more phone calls in my city?',
-        a: 'Absolutely. Optimizing your Google Business Profile for local commercial searches is proven to drive 1,465+ direct customer calls, map direction requests, and website visits.'
+        a: 'Absolutely. Optimizing your Google Business Profile for local commercial searches helped drive 1,465+ direct customer calls, map direction requests, and website visits.'
       }
     ]
   },
@@ -228,6 +251,213 @@ export const servicePagesData: ServicePageData[] = [
       {
         q: 'Do you build live Looker Studio reporting dashboards?',
         a: 'Yes. I build clean Looker Studio dashboards combining Google Ads, Meta Ads, GA4, and Search Console so you can monitor spend, ROAS, and leads in real time.'
+      }
+    ]
+  }
+];
+
+export const dedicatedLandingPagesData: LandingPageData[] = [
+  {
+    slug: 'google-ads-freelancer-india',
+    navLabel: 'Google Ads Freelancer India',
+    breadcrumbLabel: 'Google Ads Freelancer India',
+    eyebrow: 'GOOGLE ADS FREELANCER INDIA • SEARCH, PMAX & SHOPPING',
+    h1: 'Google Ads Freelancer India — High-Intent Search, Performance Max & Shopping',
+    subtitle: 'Work directly with a Google-certified Google Ads freelancer in India managing ₹35L+/mo combined ad spend across Search, Shopping, and Performance Max at 4.0x–4.5x ROAS—no agency markups, no junior handoffs.',
+    badge: '4.5x PMax ROAS • 34,900+ Commercial Clicks',
+    metrics: [
+      { value: '4.0x–4.5x', label: 'Google Ads ROAS' },
+      { value: '34,900+', label: 'Commercial Clicks' },
+      { value: '₹7.95L+', label: 'WooCommerce / Amazon GMV' },
+      { value: '₹0', label: 'Ad Spend Markup' }
+    ],
+    deliverablesTitle: '1. What You Get with My Google Ads Management in India',
+    deliverables: [
+      'Exact & Phrase Match Search Campaigns Built Around Buyer Intent + Negative Keyword Hygiene',
+      'Performance Max (PMax) Asset Group Segmentation with Brand Exclusion Rules So PMax Hunts Net-New Buyers',
+      'Google Merchant Center Feed Indexing, Custom Margin Labels & Shopping Bid Controls for Shopify / WooCommerce',
+      'GA4 Custom Events, Google Tag Manager (GTM) & Enhanced Conversions Signal Setup Before Scaling Spend',
+      'Call-Focused Local Search & Google Maps Ad Extensions for Clinics, Real Estate, Legal & Regional Retailers',
+      'Live Looker Studio Dashboards Tracking Spend, CPL, ROAS & Search Term Quality 24/7'
+    ],
+    workflowTitle: '2. How I Audit & Scale Indian Google Ads Accounts',
+    workflowSteps: [
+      {
+        title: 'Day 1–2: Wasted Spend & Tracking Audit (Free 24-Hour Review)',
+        detail: 'Before spending another rupee, I inspect search terms, broad-match bleed, PMax brand cannibalization, and GTM/GA4 Enhanced Conversions so conversion signals reach Google Smart Bidding cleanly.'
+      },
+      {
+        title: 'Week 1: Clean Intent Segmentation',
+        detail: 'Separate high-intent commercial exact-match Search from branded campaigns, prune junk placements, and split Google Shopping feeds by product margin and bestsellers.'
+      },
+      {
+        title: 'Ongoing Weekly Sprints: Landing Page CRO & Bid Scaling',
+        detail: 'Pair ad copy refinement and extension testing with +20% landing page CRO improvements so higher click volume translates into lower CPL (as proven at ₹49.86 CPL) and 4.0x–4.5x ROAS.'
+      }
+    ],
+    localOrScopeTitle: '3. Pan-India & International Google Ads Coverage',
+    localOrScopeBody: 'Based in Kolkata, I manage Google Search, Shopping, Performance Max, and YouTube campaigns for D2C stores and lead-gen businesses across Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, and international markets (UAE, UK, US). Certified in Google GA4, AI-Powered Performance Ads & Shopping.',
+    pricingTitle: 'Transparent Monthly Retainers & Zero Ad Markup',
+    pricingSummary: 'Monthly retainers for dedicated Google Ads management typically range from ₹35,000 to ₹75,000/month (or a performance-hybrid structure for qualifying D2C brands spending ₹2L+/mo). Media spend goes directly to Google from your own billing card with ₹0 markup and 100% account ownership.',
+    proofPoints: [
+      'Managed ₹2L/mo Google PMax & Search retargeting for Jaffri Creations at 4.5x ROAS across 34,900+ commercial clicks',
+      'Co-managed ₹35L+ combined monthly paid media budgets (Meta + Google) including FFACE mandates (Decoy Luxury Perfumes & GM Modular) at 4.0x ROAS',
+      'Delivered 9,452 verified acquisitions with -35% CPA reduction and +20% landing page CVR lift for MTEI Services'
+    ],
+    relatedCaseStudyIds: [1, 2, 3],
+    relatedServiceSlugs: ['performance-marketing-meta-google-ads', 'ga4-gtm-capi-tracking-cro'],
+    faqs: [
+      {
+        q: 'How do you stop Google Performance Max (PMax) from inflating ROAS on branded searches?',
+        a: 'I isolate branded queries into a separate exact-match Search campaign, attach brand exclusion lists to Performance Max, and configure customer acquisition settings so PMax focuses on cold commercial buyers rather than people already typing your company name.'
+      },
+      {
+        q: 'What is the ideal starting Google Ads budget in India?',
+        a: 'For focused B2B or local city lead generation in India, ₹50,000/month is a clean floor for reliable conversion data. For competitive national D2C e-commerce (Search + Shopping + PMax), ₹1,00,000–₹1,50,000/month lets Smart Bidding exit the learning phase faster.'
+      },
+      {
+        q: 'Do you set up Google Tag Manager and GA4 Enhanced Conversions?',
+        a: 'Yes. Every Google Ads retainer begins with verifying GTM, GA4 custom purchase/lead events, and Enhanced Conversions so bidding algorithms optimize for verified buyers and qualified phone/WhatsApp leads.'
+      },
+      {
+        q: 'How much does a Google Ads freelancer in India cost per month?',
+        a: 'Retainers typically fall between ₹35,000 and ₹75,000/month depending on account complexity and SKU/location count, with zero percentage markup on your Google Ads bill.'
+      }
+    ]
+  },
+  {
+    slug: 'meta-ads-freelancer-india',
+    navLabel: 'Meta Ads Freelancer India',
+    breadcrumbLabel: 'Meta Ads Freelancer India',
+    eyebrow: 'META ADS FREELANCER INDIA • FACEBOOK & INSTAGRAM CBO/ABO',
+    h1: 'Meta Ads Freelancer India — Profitable Facebook & Instagram CBO Scaling',
+    subtitle: 'Hire a Meta-certified Meta Ads freelancer in India managing ₹35L+/mo combined spend with weekly creative hook sprints, Shopify catalog scaling, server-side Meta CAPI, and sustained 4.0x–4.5x ROAS.',
+    badge: '9,452+ Leads at ₹49.86 CPL • 4.0x ROAS',
+    metrics: [
+      { value: '9,452+', label: 'Verified Meta Leads' },
+      { value: '₹49.86', label: 'Average CPL (-35% CPA)' },
+      { value: '3–5 / Wk', label: 'Creative Hook Tests' },
+      { value: '4.0x+', label: 'Luxury & D2C ROAS' }
+    ],
+    deliverablesTitle: '1. Complete Facebook & Instagram (Meta Ads) Execution Scope',
+    deliverables: [
+      'Structured CBO Scaling & ABO Testing Architecture Across Prospecting, Lookalikes & Dynamic Product Catalogs',
+      'Weekly Creative Sprints: 3–5 Ad Concepts Every Week (UGC Reels, Unboxing Hooks, Comparison Static Carousels)',
+      'Server-Side Meta Conversions API (CAPI) + Browser Pixel Deduplication to Recover Lost iOS 14.5+ Signals',
+      'Advantage+ Shopping & WhatsApp / Lead-Form Funnels Connected Directly to CRM Workflows',
+      'Decoy / Bundle / Discovery-Set Merchandising Feedback for Shopify & WooCommerce AOV Lift (+20% CVR)',
+      'Frequency Cap Monitoring & Thumb-Stop Ratio Optimization Before CPA Spikes'
+    ],
+    workflowTitle: '2. How I Scale Meta Ads Without Burning Creative Fatigue',
+    workflowSteps: [
+      {
+        title: 'Signal Repair First (Pixel + Server-Side Meta CAPI)',
+        detail: 'Standard browser pixels drop 25–35% of conversion events in India on iOS/ad-block browsers. I configure deduplicated CAPI so Meta sees real purchases and quality leads before raising budgets.'
+      },
+      {
+        title: 'Weekly 3–5 Creative Concept Pipeline',
+        detail: 'Creative is the primary targeting lever on Meta today. I script unboxing hooks, founder explainers, problem-solution carousels, and social-proof variations—rotating losers out before frequency inflates CPM.'
+      },
+      {
+        title: 'Controlled CBO + Storefront Conversion Alignment',
+        detail: 'Winning creatives graduate into consolidated CBO and Advantage+ Shopping campaigns paired with mobile-first landing pages and bundle offers for 4.0x+ sustained ROAS.'
+      }
+    ],
+    localOrScopeTitle: '3. D2C E-commerce & High-Volume Lead Gen Across India',
+    localOrScopeBody: 'From luxury fragrance and consumer electrical mandates at FFACE (₹6L+/mo flagship accounts inside a ₹35L+/mo combined portfolio) to 9,452 leads at ₹49.86 CPL for MTEI Services, every campaign is operated directly by Ayaz Aftab (Meta Certified Digital Marketing Associate) without junior delegation.',
+    pricingTitle: 'Clear Retainer Pricing & 100% Business Manager Ownership',
+    pricingSummary: 'Fixed monthly retainers range from ₹35,000 to ₹75,000/month (plus performance-hybrid structures for D2C brands spending ₹2L+/mo). Campaigns run exclusively inside your own Meta Business Manager, with full ad creative and audience history remaining yours permanently.',
+    proofPoints: [
+      'Generated 9,452 verified acquisitions at ₹49.86 CPL (-35% CPA reduction) and +20% landing page CVR for MTEI Services',
+      'Directing flagship FFACE Meta & Google mandates (Decoy Luxury Perfumes & GM Modular) at sustained 4.0x ROAS',
+      'Executed Shopify discovery-set offers and catalog dynamic ads driving repeat luxury orders and dealer demand'
+    ],
+    relatedCaseStudyIds: [1, 3, 2],
+    relatedServiceSlugs: ['performance-marketing-meta-google-ads', 'ecommerce-growth-shopify-woocommerce-amazon'],
+    faqs: [
+      {
+        q: 'Do you help script ad creatives or only click buttons in Meta Ads Manager?',
+        a: 'Ad creative drives most of Meta Ads performance. I provide weekly creative direction—covering 3–5 hook scripts, UGC unboxing shot lists, static comparison layouts, and copy angles tailored to Indian buyers.'
+      },
+      {
+        q: 'Why is Meta Conversions API (CAPI) necessary if we already installed the Meta Pixel?',
+        a: 'Browser-only pixels miss 25–35% of events on iOS devices and strict mobile browsers. Server-side CAPI with event deduplication raises Event Match Quality so Meta delivery finds actual buyers rather than cheap accidental clickers.'
+      },
+      {
+        q: 'Can you reduce junk leads on Instagram & Facebook Instant Forms?',
+        a: 'Yes. Using higher-intent conditional questions, OTP/custom greeting flows on WhatsApp clicks, or fast mobile landing pages with server-side CAPI Lead feedback cuts low-intent inquiries—as seen across 9,452 leads at ₹49.86 CPL.'
+      },
+      {
+        q: 'Do you own or touch our Meta Business Manager billing?',
+        a: 'Never. You add my agency/partner seat inside your Business Manager and pay Meta directly with your corporate card—zero ad markup and total security.'
+      }
+    ]
+  },
+  {
+    slug: 'digital-marketing-freelancer-in-kolkata',
+    navLabel: 'Digital Marketing Freelancer in Kolkata',
+    breadcrumbLabel: 'Digital Marketing Freelancer in Kolkata',
+    eyebrow: 'KOLKATA HQ • PAN-INDIA PERFORMANCE & SEO PARTNER',
+    h1: 'Digital Marketing Freelancer in Kolkata — Pan-India Performance & SEO Growth',
+    subtitle: 'Based in Kolkata, West Bengal — helping Kolkata founders and pan-India D2C brands scale daily leads, Google Search/Maps rankings, Meta & Google Ads (₹35L+/mo managed at 4.0x–4.5x ROAS), and Shopify/Amazon revenue.',
+    badge: 'Kolkata HQ • ₹35L+/Mo Managed • 1,465+ Local Actions',
+    metrics: [
+      { value: '5.5+ Yrs', label: 'Kolkata & Pan-India Exp' },
+      { value: '1,465+', label: 'Local GBP Buyer Actions' },
+      { value: '4.0x–4.5x', label: 'Multi-Channel ROAS' },
+      { value: '< 2 Hrs', label: 'Direct Founder Support' }
+    ],
+    deliverablesTitle: '1. Full-Stack Digital Marketing Services in Kolkata & Pan-India',
+    deliverables: [
+      'Kolkata & Eastern India Local SEO: Google Business Profile Optimization, Map Pack Visibility & Phone/Direction Actions',
+      'Google Ads (Search, PMax, Shopping) & Meta Ads (Facebook & Instagram CBO/ABO) Managed Hands-On at ₹35L+/Mo Scale',
+      'D2C E-commerce Growth: Shopify, WooCommerce & Amazon Seller Central (₹7.95L+ Verified GMV & +40% Amazon Reach)',
+      'Technical & On-Page SEO (+30% Website Organic Traffic) Plus YouTube Video SEO (247,000+ Organic Views)',
+      'Server-Side GA4, Google Tag Manager & Meta CAPI Setup Plus +20% Landing Page Conversion Optimization',
+      'In-Person Strategy Reviews in Kolkata (Salt Lake Sector V, Park Street, New Town) or Daily WhatsApp/Google Meet Remote'
+    ],
+    workflowTitle: '2. Why Kolkata Brands Choose a Senior Freelancer Over City Agencies',
+    workflowSteps: [
+      {
+        title: 'Direct Senior Strategist — Never Handed Off to Interns',
+        detail: 'Many local agencies win your retainer with a senior pitch and then delegate daily ad spend to junior trainees. In Kolkata and pan-India, I personally build, test, and report on your campaigns.'
+      },
+      {
+        title: 'Local Commercial Fluency + National D2C Scale',
+        detail: 'Whether driving patient/client phone calls across Salt Lake, Ballygunge, Park Street, and Howrah or scaling national D2C orders across Mumbai, Delhi NCR, and Bengaluru, campaigns match unit economics.'
+      },
+      {
+        title: 'Transparent ₹35K–₹75K Retainer & Live Looker Studio Access',
+        detail: 'Track every rupee spent, cost per lead, and net ROAS live. Media billing stays directly on your corporate card with ₹0 markup.'
+      }
+    ],
+    localOrScopeTitle: '3. Serving Kolkata Commercial Hubs & Founders Across India',
+    localOrScopeBody: 'Operating out of Kolkata, West Bengal (700001), I support clinics, real estate developers, coaching institutes, restaurants, B2B exporters, and D2C brands across Park Street, Salt Lake Sector V, New Town (Rajarhat), Ballygunge, Behala, and Howrah—alongside pan-India mandates (including FFACE in Kolkata, Jaffri Creations, MTEI Services, and HICO Tax Consultant) and global remote accounts in UAE, UK, and US.',
+    pricingTitle: 'Flexible Retainers Built for Growing Kolkata & Pan-India Teams',
+    pricingSummary: 'Monthly retainers range from ₹35,000 to ₹75,000/month depending on channel mix (Paid Ads, Local SEO, E-commerce Ops), with transparent 14-to-30 day notice terms and jurisdiction in Kolkata, West Bengal.',
+    proofPoints: [
+      'Performance Marketing & E-commerce Lead based in Kolkata currently directing ₹35L+ monthly ad spend at 4.0x–4.5x ROAS (FFACE — GM Modular & Decoy Luxury Perfumes)',
+      'Generated 1,465+ verified local buyer interactions via Google Business Profile alongside +30% website organic traffic growth',
+      'Scaled MTEI Services acquisition funnels to 9,452 leads at ₹49.86 CPL (-35% CPA) and built HICO Tax Consultant to +25% YoY SEO traffic'
+    ],
+    relatedCaseStudyIds: [1, 2, 3, 4],
+    relatedServiceSlugs: ['seo-local-seo-youtube-growth', 'performance-marketing-meta-google-ads'],
+    faqs: [
+      {
+        q: 'Can we meet in person in Kolkata to discuss our marketing audit and strategy?',
+        a: 'Yes. Because I am based in Kolkata, West Bengal, we can schedule an initial strategy review around Park Street, Salt Lake Sector V, or New Town—or kick off immediately via WhatsApp (+91 9263588321) and Google Meet with a free 24-hour audit.'
+      },
+      {
+        q: 'Do you only work with Kolkata businesses, or pan-India D2C brands too?',
+        a: 'While my home base is Kolkata, West Bengal, most active mandates span pan-India e-commerce and lead-gen brands across Mumbai, Delhi NCR, Bengaluru, Hyderabad, Pune, Chennai, and international remote clients in the UAE, UK, and US.'
+      },
+      {
+        q: 'How does Local SEO & Google Business Profile help Kolkata service businesses?',
+        a: 'Optimizing GBP categories, local citations, service landing pages, and review velocity drives high-intent phone calls and direction clicks—like the 1,465+ verified buyer actions delivered in past client work.'
+      },
+      {
+        q: 'What is included in your Free 24-Hour Growth Audit for Kolkata founders?',
+        a: 'Send your website URL and goals via WhatsApp or the audit form below. Within 24 hours, I share concrete findings across your Google Business Profile, website CRO leaks, and Meta/Google Ads structure.'
       }
     ]
   }
@@ -414,7 +644,7 @@ const processStepsData = [
   {
     step: '02 / Buyer Architecture',
     title: 'High-Intent Google & Meta Funnels',
-    description: 'Structuring high-ROAS Meta Ads (CBO/ABO), Google Search, Shopping & Performance Max campaigns alongside #1 Google SEO pages targeting ready-to-buy customers across India.'
+    description: 'Structuring high-ROAS Meta Ads (CBO/ABO), Google Search, Shopping & Performance Max campaigns alongside commercial SEO landing pages targeting ready-to-buy customers across India.'
   },
   {
     step: '03 / Creative & Store CRO',
@@ -447,7 +677,7 @@ const servicesData = [
   {
     id: 'service-consulting',
     title: 'Monthly Retainer & Full-Funnel CRO',
-    description: 'End-to-end performance marketing and conversion rate optimization retainer for brands looking to cut acquisition costs by 35%, rank #1 on Google, and scale monthly revenue.',
+    description: 'End-to-end performance marketing and conversion rate optimization retainer for brands looking to cut acquisition costs by 35%, strengthen Google organic visibility, and scale monthly revenue.',
     items: [
       'Full-Funnel Lead Generation & E-commerce P&L Scaling',
       'Landing Page & Checkout CRO (+20% Conversion Lift)',
@@ -490,7 +720,7 @@ const indiaIndustriesData = [
   },
   {
     title: 'Healthcare Clinics, Doctors & Hospitals',
-    badge: '#1 Google Maps & Patient Calls',
+    badge: 'Local Maps Pack & Patient Calls',
     description: 'Dominate local Google Search and Google Maps when patients search in your city, paired with call-focused Google Ads and WhatsApp appointment funnels.'
   },
   {
@@ -592,7 +822,7 @@ const allFaqsData: FAQItem[] = [
     category: 'seo-organic',
     categoryLabel: 'SEO & Organic Growth',
     question: 'What digital marketing and SEO services do you provide across India?',
-    answer: 'I deliver full-stack, execution-first freelance growth services across all of India: (1) Google Ads & Meta Ads (Facebook/Instagram) management for daily leads and sales, (2) Technical SEO, Local SEO (Google Maps), and YouTube Video SEO to rank #1 organically on Google, (3) Shopify, WooCommerce, and Amazon Seller Central store scaling with catalog CRO, and (4) Website Conversion Rate Optimization (CRO) with server-side GA4, GTM, and Meta CAPI tracking.'
+    answer: 'I deliver full-stack, execution-first freelance growth services across all of India: (1) Google Ads & Meta Ads (Facebook/Instagram) management for daily leads and sales, (2) Technical SEO, Local SEO (Google Maps), and YouTube Video SEO for page-one Google visibility, (3) Shopify, WooCommerce, and Amazon Seller Central store scaling with catalog CRO, and (4) Website Conversion Rate Optimization (CRO) with server-side GA4, GTM, and Meta CAPI tracking.'
   },
   {
     id: 'faq-seo-timeline',
@@ -641,7 +871,7 @@ const allFaqsData: FAQItem[] = [
     category: 'process',
     categoryLabel: 'Process & Onboarding',
     question: 'Which cities across India and global markets do you serve?',
-    answer: 'I provide remote freelance performance marketing and SEO services to founders and enterprises across all major Indian commercial hubs: Kolkata, Mumbai, Delhi NCR (Gurugram/Noida), Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, Surat, Lucknow, and Chandigarh, as well as international brands in the UAE, UK, and US. Daily communication is handled seamlessly via WhatsApp, Phone, and Google Meet.'
+    answer: 'I provide remote freelance performance marketing and SEO services to founders and enterprises across all major Indian commercial hubs: Kolkata, Mumbai, Delhi NCR (Gurugram/Noida), Bengaluru, Hyderabad, Pune, Chennai, Ahmedabad, Jaipur, Surat, Lucknow, and Chandigarh, as well as international brands in the UAE, UK, and US. Daily communication is handled directly via WhatsApp, Phone, and Google Meet.'
   },
   {
     id: 'faq-how-to-start',
@@ -926,6 +1156,9 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
         <nav className="menu-links" aria-label="Mobile Navigation Links">
           <a href="/#impact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="bar-chart-2" size={18} /> ₹35L+/Mo Proven Impact</a>
           <a href="/#services" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="settings" size={18} /> Digital Marketing Services</a>
+          <a href="/google-ads-freelancer-india" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Google Ads Freelancer India</a>
+          <a href="/meta-ads-freelancer-india" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Meta Ads Freelancer India</a>
+          <a href="/digital-marketing-freelancer-in-kolkata" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Digital Marketing Kolkata</a>
           <a href="/#projects" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="star" size={18} /> Case Studies</a>
           <a href="/#india-freelancer" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="check-circle" size={18} /> Pan-India Industries</a>
           <a href="/#process" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="tool" size={18} /> 4-Step Growth System</a>
@@ -1000,13 +1233,17 @@ const Hero = () => (
     <AnimatedSection className="container">
       <div className="hero-centered-layout">
         <div className="hero-kicker-glass">
-          <span>₹35L+ Monthly Ad Budget Managed Combined</span>
+          <span>Kolkata HQ • Pan-India • ₹35L+/Mo Managed</span>
         </div>
 
         <h1 className="hero-headline-centered">
-          Ayaz Aftab — Scaling Brands<br />
-          with Precision Paid Media &amp; SEO
+          Ayaz Aftab — Performance Marketing &amp;<br />
+          Digital Marketing Freelancer India
         </h1>
+
+        <p className="hero-subtitle-lead">
+          Direct-execution Google Ads freelancer India &amp; Meta Ads freelancer India (Kolkata HQ &amp; Pan-India) scaling 4.0x–4.5x ROAS, 9,452+ leads, and +20% conversion lift—request a free 24-hour growth audit.
+        </p>
 
         <div id="impact" className="glass-metrics-grid" aria-label="Audited Performance Metrics">
           <div className="glass-metric-card">
@@ -1060,7 +1297,7 @@ const Hero = () => (
           <span>•</span>
           <span>Verified Ad Accounts</span>
           <span>•</span>
-          <span>New Delhi, India</span>
+          <span>Kolkata, India (Pan-India)</span>
           <span>•</span>
           <span>Response &lt; 2 Hours</span>
         </div>
@@ -1128,7 +1365,7 @@ const Services = () => (
         <span className="section-eyebrow">02 — SERVICES • DIGITAL MARKETING FREELANCER IN INDIA</span>
         <h2 id="services-heading" className="section-title">Performance Marketing &amp; Digital Growth Services India</h2>
         <p className="section-subtitle">
-          Direct founder collaboration with India&apos;s dedicated performance marketing freelancer — delivering daily qualified leads, 4.0x–4.5x ROAS, and profitable store revenue without agency bloat.
+          Direct founder collaboration with a senior performance marketing freelancer India and digital marketing freelancer India — delivering daily qualified leads, 4.0x–4.5x ROAS, and profitable store revenue without agency bloat.
         </p>
       </div>
 
@@ -1202,12 +1439,12 @@ const IndiaFreelancerSection = () => (
   <section id="india-freelancer" className="section-alt" aria-labelledby="india-freelancer-heading">
     <AnimatedSection className="container">
       <div className="section-header">
-        <span className="section-eyebrow">03 — PAN-INDIA COVERAGE &amp; INDUSTRY EXPERTISE</span>
+        <span className="section-eyebrow">03 — PAN-INDIA COVERAGE &amp; SPECIALIZED CHANNEL HUBS</span>
         <h2 id="india-freelancer-heading" className="section-title">
-          Digital Marketing Freelancer Serving Founders Across All Major Indian Metros
+          Digital Marketing Freelancer in Kolkata &amp; Pan-India Growth Hubs
         </h2>
         <p className="section-subtitle">
-          Skip agency overhead and partner directly with a senior performance marketing freelancer managing ₹35L+/mo in paid media across Delhi NCR, Mumbai, Bengaluru, Kolkata, Hyderabad, Pune, Chennai, and Jaipur.
+          Skip agency overhead and work directly with a performance marketing freelancer India &amp; digital marketing freelancer in Kolkata managing ₹35L+/mo across Kolkata, Delhi NCR, Mumbai, Bengaluru, Hyderabad, Pune, Chennai, and Jaipur.
         </p>
       </div>
 
@@ -1221,14 +1458,49 @@ const IndiaFreelancerSection = () => (
         ))}
       </div>
 
+      <div className="dedicated-hubs-grid" aria-label="Specialized Channel &amp; Regional Growth Hubs">
+        {dedicatedLandingPagesData.map((lp) => (
+          <article key={lp.slug} className="dedicated-hub-card">
+            <div>
+              <span className="project-badge">{lp.badge}</span>
+            </div>
+            <h3 className="dedicated-hub-card-title">
+              <a href={`/${lp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                {lp.navLabel}
+              </a>
+            </h3>
+            <p className="dedicated-hub-card-desc">{lp.subtitle}</p>
+            <a
+              id={`hub-cta-${lp.slug}`}
+              href={`/${lp.slug}`}
+              className="btn btn-primary service-card-btn"
+            >
+              <span>Explore {lp.slug === 'digital-marketing-freelancer-in-kolkata' ? 'Digital Marketing Kolkata' : lp.breadcrumbLabel}</span>
+              <Icon name="arrow-right" size={15} />
+            </a>
+          </article>
+        ))}
+      </div>
+
       <div style={{ marginTop: '2rem', padding: '1.25rem', background: 'var(--glass-card-bg)', backdropFilter: 'blur(24px) saturate(180%)', WebkitBackdropFilter: 'blur(24px) saturate(180%)', border: 'var(--glass-card-border)', borderRadius: '14px', boxShadow: 'var(--glass-card-shadow)' }}>
         <p style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: '0.5rem' }}>
           Serving Founders, D2C Brands &amp; Growing Businesses Across All Major Hubs:
         </p>
         <div className="india-seo-pills" aria-label="Cities Served in India">
-          {indiaCitiesList.map((city) => (
-            <span key={city} className="india-seo-pill">{city}</span>
-          ))}
+          {indiaCitiesList.map((city) =>
+            city === 'Kolkata' ? (
+              <a
+                key={city}
+                href="/digital-marketing-freelancer-in-kolkata"
+                className="india-seo-pill india-seo-pill-link"
+              >
+                <span>Kolkata (HQ)</span>
+                <Icon name="arrow-right" size={12} />
+              </a>
+            ) : (
+              <span key={city} className="india-seo-pill">{city}</span>
+            )
+          )}
         </div>
       </div>
     </AnimatedSection>
@@ -1249,7 +1521,7 @@ const FeaturedProjects = ({ onProjectClick }: { onProjectClick: (project: Projec
           <span className="section-eyebrow">01 — CASE STUDIES • PERFORMANCE MARKETING FREELANCER INDIA</span>
           <h2 id="projects-heading" className="section-title">Featured Performance Marketing &amp; E-commerce Case Studies</h2>
           <p className="section-subtitle">
-            Detailed breakdowns of how India&apos;s top performance marketing freelancer scales Meta Ads, Google PMax, Shopify/WooCommerce CRO, Amazon, and YouTube SEO to ₹35L+/mo.
+            Detailed breakdowns of how a senior performance marketing freelancer in India scales Meta Ads, Google PMax, Shopify/WooCommerce CRO, Amazon, and YouTube SEO to ₹35L+/mo.
           </p>
         </div>
 
@@ -1697,10 +1969,10 @@ const Footer = () => {
       <AnimatedSection className="container">
         <div className="footer-split">
           <div className="footer-left">
-            <span className="section-eyebrow">09 — HIRE INDIA'S TOP DIGITAL MARKETING FREELANCER</span>
-            <h2 className="footer-title">Ready to Scale Your Brand with India&apos;s Dedicated Growth Partner?</h2>
+            <span className="section-eyebrow">09 — HIRE A PERFORMANCE MARKETING FREELANCER IN INDIA</span>
+            <h2 className="footer-title">Ready to Scale Your Brand with a Direct Growth Partner in India?</h2>
             <p className="footer-subtitle">
-              Looking to scale your Google &amp; Meta Ads, rank #1 on Google, or hire an Executive Growth Lead managing ₹35L+/mo? Reach out directly on WhatsApp or submit your website for a free 24-hour audit.
+              Looking to scale your Google &amp; Meta Ads, grow page-one Google organic traffic, or hire an Executive Growth Lead managing ₹35L+/mo? Reach out directly on WhatsApp or submit your website for a free 24-hour audit.
             </p>
 
             <div className="contact-direct-bar">
@@ -1887,11 +2159,11 @@ const Footer = () => {
           <div>
             <p className="footer-seo-title">Freelance Service Hubs India</p>
             <ul className="footer-seo-list">
-              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer in Delhi NCR</a></li>
-              <li><a href="/#india-freelancer" className="footer-seo-link">Digital Marketing Freelancer Mumbai</a></li>
-              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer Bengaluru</a></li>
-              <li><a href="/#india-freelancer" className="footer-seo-link">Digital Marketing Freelancer Kolkata</a></li>
-              <li><a href="/#india-freelancer" className="footer-seo-link">Google &amp; Meta Ads Specialist Hyderabad</a></li>
+              <li><a href="/google-ads-freelancer-india" className="footer-seo-link">Google Ads Freelancer India</a></li>
+              <li><a href="/meta-ads-freelancer-india" className="footer-seo-link">Meta Ads Freelancer India</a></li>
+              <li><a href="/digital-marketing-freelancer-in-kolkata" className="footer-seo-link">Digital Marketing Freelancer in Kolkata</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer in Delhi NCR &amp; Mumbai</a></li>
+              <li><a href="/#india-freelancer" className="footer-seo-link">Performance Marketer Bengaluru &amp; Hyderabad</a></li>
               <li><a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="footer-seo-link">WhatsApp Consultation: +91 9263588321</a></li>
             </ul>
           </div>
@@ -2320,7 +2592,7 @@ const FAQPage = () => {
 
           <span className="hero-role-kicker">08 — TRANSPARENCY &amp; DUE DILIGENCE • PAN-INDIA &amp; REMOTE</span>
           <h1 id="faq-page-title" className="section-title" style={{ marginBottom: '0.65rem' }}>
-            Frequently Asked Questions: Hiring India&apos;s Dedicated Performance Marketing Freelancer
+            Frequently Asked Questions: Hiring a Performance Marketing &amp; Digital Marketing Freelancer in India
           </h1>
           <p className="section-subtitle" style={{ maxWidth: '820px', marginBottom: '1.5rem' }}>
             Direct, candid answers regarding monthly retainers, ad budget scale (₹35L+/mo managed), sustained 4.0x–4.5x ROAS realities, 100% ad account ownership, tracking signal recovery (Meta CAPI / GA4), and pan-India remote collaboration.
@@ -2406,7 +2678,7 @@ const FAQPage = () => {
           <div className="legal-callout-card" style={{ marginTop: '3rem' }}>
             <div className="callout-header">
               <Icon name="help-circle" size={20} />
-              <h3 style={{ fontSize: '1.05rem', margin: 0 }}>Need Contractual or Legal Details?</h3>
+              <h2 style={{ fontSize: '1.05rem', margin: 0 }}>Need Contractual or Legal Details?</h2>
             </div>
             <p style={{ margin: '0.5rem 0 1rem', fontSize: '0.92rem', color: 'var(--text-secondary)' }}>
               Review our transparent client Master Services Agreement and privacy compliance standards before getting started.
@@ -2960,6 +3232,251 @@ const ServiceLandingPage = ({ service }: { service: ServicePageData }) => {
   );
 };
 
+const DedicatedLandingPage = ({ page }: { page: LandingPageData }) => {
+  const relatedStudies = projectsData.filter((p) => page.relatedCaseStudyIds.includes(p.id));
+  const siblingPages = dedicatedLandingPagesData.filter((l) => l.slug !== page.slug);
+  const relatedServices = servicePagesData.filter((s) => page.relatedServiceSlugs.includes(s.slug));
+
+  return (
+    <>
+      <section className="subpage-hero" aria-labelledby="landing-page-title">
+        <AnimatedSection className="container">
+          <nav aria-label="Breadcrumb">
+            <ol className="breadcrumb-nav">
+              <li><a href="/" className="breadcrumb-link">Home</a></li>
+              <li aria-hidden="true">/</li>
+              <li><a href="/#india-freelancer" className="breadcrumb-link">Pan-India Hubs</a></li>
+              <li aria-hidden="true">/</li>
+              <li className="breadcrumb-current" aria-current="page">{page.breadcrumbLabel}</li>
+            </ol>
+          </nav>
+
+          <span className="hero-role-kicker">{page.eyebrow}</span>
+          <h1 id="landing-page-title" className="section-title" style={{ marginBottom: '0.85rem' }}>
+            {page.h1}
+          </h1>
+          <p className="section-subtitle" style={{ marginBottom: '1.35rem', maxWidth: '820px' }}>
+            {page.subtitle}
+          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', alignItems: 'center' }}>
+            <span className="project-badge" style={{ fontSize: '0.84rem', padding: '0.35rem 0.9rem' }}>
+              Verified Benchmark: {page.badge}
+            </span>
+            <a href="#contact" id={`landing-${page.slug}-audit-cta`} className="btn btn-primary">
+              <span>Free 24-Hour Growth Audit</span>
+              <Icon name="arrow-right" size={15} />
+            </a>
+            <a
+              href={WHATSAPP_URL}
+              id={`landing-${page.slug}-whatsapp-cta`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-whatsapp"
+            >
+              <Icon name="whatsapp" size={16} />
+              <span>Chat on WhatsApp</span>
+            </a>
+            <a
+              href="tel:+919263588321"
+              id={`landing-${page.slug}-phone-cta`}
+              className="btn btn-secondary"
+            >
+              <Icon name="phone" size={15} />
+              <span>+91 9263588321</span>
+            </a>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="case-study-page-section">
+        <AnimatedSection className="container">
+          <div
+            className="glass-metrics-grid"
+            style={{ maxWidth: '100%', marginBottom: '2.25rem' }}
+            aria-label="Key Performance Benchmarks"
+          >
+            {page.metrics.map((m) => (
+              <div key={m.label} className="glass-metric-card">
+                <div className="glass-metric-value">{m.value}</div>
+                <div className="glass-metric-label">{m.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="modal-grid">
+            <div className="modal-main-content">
+              <div className="modal-section">
+                <h2 className="modal-section-title">{page.deliverablesTitle}</h2>
+                <ul className="service-list" style={{ marginTop: '0.85rem' }}>
+                  {page.deliverables.map((item, idx) => (
+                    <li key={idx} className="service-list-item">
+                      <Icon name="check" size={17} />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">{page.workflowTitle}</h2>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginTop: '0.85rem' }}>
+                  {page.workflowSteps.map((step, sIdx) => (
+                    <div key={step.title} className="industry-cell">
+                      <span className="process-step-num">Step 0{sIdx + 1}</span>
+                      <h3 className="industry-cell-title">{step.title}</h3>
+                      <p className="industry-cell-desc">{step.detail}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="modal-section">
+                <h2 className="modal-section-title">{page.localOrScopeTitle}</h2>
+                <p>{page.localOrScopeBody}</p>
+              </div>
+
+              <div className="modal-section pricing-transparency-box">
+                <div className="legal-summary-badge">
+                  <Icon name="check-circle" size={15} />
+                  <span>Zero Ad Spend Markup Guarantee</span>
+                </div>
+                <h2 className="modal-section-title" style={{ marginTop: '0.25rem' }}>{page.pricingTitle}</h2>
+                <p style={{ margin: 0 }}>{page.pricingSummary}</p>
+              </div>
+
+              <div className="modal-section" style={{ marginBottom: 0 }}>
+                <h2 className="modal-section-title">4. Frequently Asked Questions</h2>
+                <div className="faq-list" style={{ marginTop: '1rem' }}>
+                  {page.faqs.map((f, i) => (
+                    <details key={i} className="faq-item" open={i === 0}>
+                      <summary className="faq-question">
+                        <span>{f.q}</span>
+                        <span className="faq-icon">
+                          <Icon name="chevron-down" size={18} />
+                        </span>
+                      </summary>
+                      <div className="faq-answer">
+                        <p>{f.a}</p>
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <aside className="modal-sidebar" aria-label="Verified Client Proof Points">
+              <div className="modal-sidebar-box">
+                <h2 className="modal-section-title">Verified Track Record &amp; ROI</h2>
+                <ul className="modal-results-list">
+                  {page.proofPoints.map((pt, index) => (
+                    <li key={index} className="modal-result-item">
+                      <Icon name="check-circle" size={16} />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div style={{ marginTop: '1.5rem', paddingTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ width: '100%' }}>
+                    <Icon name="whatsapp" size={16} />
+                    <span>WhatsApp: +91 9263588321</span>
+                  </a>
+                  <a href="#contact" className="btn btn-primary" style={{ width: '100%' }}>
+                    <span>Request Free 24h Audit</span>
+                    <Icon name="arrow-right" size={15} />
+                  </a>
+                  <a href="/resume" className="btn btn-secondary" style={{ width: '100%' }}>
+                    <span>View Online Master Resume</span>
+                  </a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      <section className="section-alt" aria-labelledby="landing-related-heading">
+        <AnimatedSection className="container">
+          <div className="section-header">
+            <span className="section-eyebrow">Proven Execution &amp; Related Hubs</span>
+            <h2 id="landing-related-heading" className="section-title">Related Case Studies &amp; Growth Hubs</h2>
+          </div>
+
+          <div className={`projects-grid ${relatedStudies.length === 3 ? 'projects-grid-3' : ''}`}>
+            {relatedStudies.map((rel) => (
+              <article key={rel.id} className="project-card">
+                <a href={`/case-studies/${rel.slug}`} className="project-image-container">
+                  <img
+                    src={rel.imageUrl}
+                    alt={`${rel.title} — ${rel.client}`}
+                    className="project-image"
+                    loading="lazy"
+                    width="800"
+                    height="450"
+                  />
+                </a>
+                <div className="project-content">
+                  <div className="project-meta-row">
+                    <span className="project-client">{rel.client}</span>
+                    <span className="project-badge">{rel.keyResult}</span>
+                  </div>
+                  <h3 className="project-title">
+                    <a href={`/case-studies/${rel.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                      {rel.title}
+                    </a>
+                  </h3>
+                  <p className="project-summary">{rel.summary}</p>
+                  <a href={`/case-studies/${rel.slug}`} className="btn btn-secondary project-card-btn">
+                    <span>Read Full Case Study</span>
+                    <Icon name="arrow-right" size={15} />
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="service-pillars-grid" style={{ marginTop: '2.5rem', marginBottom: 0 }}>
+            {siblingPages.map((sp) => (
+              <article key={sp.slug} className="service-card">
+                <div style={{ marginBottom: '0.5rem' }}>
+                  <span className="project-badge">{sp.badge}</span>
+                </div>
+                <h3 className="service-card-title" style={{ fontSize: '1.15rem' }}>
+                  <a href={`/${sp.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {sp.navLabel}
+                  </a>
+                </h3>
+                <p className="service-card-description">{sp.subtitle}</p>
+                <a href={`/${sp.slug}`} className="btn btn-secondary service-card-btn">
+                  <span>Explore {sp.breadcrumbLabel}</span>
+                  <Icon name="arrow-right" size={15} />
+                </a>
+              </article>
+            ))}
+            {relatedServices.map((rs) => (
+              <article key={rs.slug} className="service-card">
+                <div style={{ marginBottom: '0.5rem' }}>
+                  <span className="project-badge">{rs.keyMetricBadge}</span>
+                </div>
+                <h3 className="service-card-title" style={{ fontSize: '1.15rem' }}>
+                  <a href={`/services/${rs.slug}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                    {rs.shortName}
+                  </a>
+                </h3>
+                <p className="service-card-description">{rs.heroSummary}</p>
+                <a href={`/services/${rs.slug}`} className="btn btn-secondary service-card-btn">
+                  <span>Explore {rs.shortName}</span>
+                  <Icon name="arrow-right" size={15} />
+                </a>
+              </article>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
+    </>
+  );
+};
+
 export const App = ({ initialPath }: { initialPath?: string } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -3036,6 +3553,8 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
     ? servicePagesData.find((s) => `/services/${s.slug}` === currentPath)
     : undefined;
 
+  const matchedLandingPage = dedicatedLandingPagesData.find((l) => `/${l.slug}` === currentPath);
+
   return (
     <>
       <Header
@@ -3057,6 +3576,8 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
           <CaseStudyPage project={matchedCaseStudy} />
         ) : matchedService ? (
           <ServiceLandingPage service={matchedService} />
+        ) : matchedLandingPage ? (
+          <DedicatedLandingPage page={matchedLandingPage} />
         ) : (
           <>
             <Hero />
