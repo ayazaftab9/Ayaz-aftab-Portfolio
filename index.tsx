@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -1063,77 +1063,175 @@ const AnimatedSection = ({ children, className = '' }: { children: React.ReactNo
 
 // --- CORE SECTIONS ---
 
+type NavSectionKey = 'home' | 'about' | 'services' | 'projects' | 'contact';
+
+const useIsomorphicLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect;
+
 const Header = ({
   onMenuClick,
   theme,
   onToggleTheme,
-  currentPath = '/'
+  currentPath = '/',
+  activeNavKey = 'home'
 }: {
   onMenuClick: () => void;
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
   currentPath?: string;
-}) => (
-  <header className="header">
-    <a href="#main-content" className="skip-link">Skip to main content</a>
-    <div className="container header-container">
-      <a href="/" id="nav-logo-link" className="logo-container">
-        <Logo />
-        <div className="logo-text-group">
-          <span className="logo-text">Ayaz Aftab</span>
-          <span className="logo-subtext">₹35L+/Mo Paid Media &amp; SEO</span>
-        </div>
-      </a>
+  activeNavKey?: NavSectionKey;
+}) => {
+  const navRowRef = useRef<HTMLDivElement>(null);
+  const linkRefs = useRef<Partial<Record<NavSectionKey, HTMLAnchorElement | null>>>({});
+  const [indicator, setIndicator] = useState<{ left: number; width: number; ready: boolean }>({
+    left: 0,
+    width: 0,
+    ready: false
+  });
 
-      <nav className="nav" aria-label="Primary Navigation">
-        <div className="nav-links-row">
-          <a
-            href="/"
-            id="nav-link-home"
-            className={`pill-nav-link ${currentPath === '/' ? 'active' : ''}`}
-            aria-current={currentPath === '/' ? 'page' : undefined}
+  const measureIndicator = () => {
+    const targetEl = linkRefs.current[activeNavKey];
+    const rowEl = navRowRef.current;
+    if (targetEl && rowEl) {
+      setIndicator({
+        left: targetEl.offsetLeft,
+        width: targetEl.offsetWidth,
+        ready: true
+      });
+    }
+  };
+
+  useIsomorphicLayoutEffect(() => {
+    measureIndicator();
+  }, [activeNavKey, currentPath]);
+
+  useEffect(() => {
+    const onResize = () => measureIndicator();
+    window.addEventListener('resize', onResize);
+    let cancelled = false;
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(() => {
+        if (!cancelled) measureIndicator();
+      });
+    }
+    return () => {
+      cancelled = true;
+      window.removeEventListener('resize', onResize);
+    };
+  }, [activeNavKey]);
+
+  return (
+    <header className="header">
+      <a href="#main-content" className="skip-link">Skip to main content</a>
+      <div className="container header-container">
+        <a href="/" id="nav-logo-link" className="logo-container">
+          <Logo />
+          <div className="logo-text-group">
+            <span className="logo-text">Ayaz Aftab</span>
+            <span className="logo-subtext">₹35L+/Mo Paid Media &amp; SEO</span>
+          </div>
+        </a>
+
+        <nav className={`nav ${indicator.ready ? 'has-indicator' : ''}`} aria-label="Primary Navigation">
+          <div className="nav-links-row" ref={navRowRef}>
+            {indicator.ready && (
+              <span
+                className="nav-glass-indicator"
+                aria-hidden="true"
+                style={{
+                  width: `${indicator.width}px`,
+                  transform: `translate3d(${indicator.left}px, 0, 0)`
+                }}
+              />
+            )}
+            <a
+              ref={(el) => {
+                linkRefs.current.home = el;
+              }}
+              href="/"
+              id="nav-link-home"
+              className={`pill-nav-link ${activeNavKey === 'home' ? 'active' : ''}`}
+              aria-current={currentPath === '/' ? 'page' : undefined}
+            >
+              Home
+            </a>
+            <a
+              ref={(el) => {
+                linkRefs.current.about = el;
+              }}
+              href="/#experience"
+              id="nav-link-about"
+              className={`pill-nav-link ${activeNavKey === 'about' ? 'active' : ''}`}
+            >
+              About
+            </a>
+            <a
+              ref={(el) => {
+                linkRefs.current.services = el;
+              }}
+              href="/#services"
+              id="nav-link-services"
+              className={`pill-nav-link ${activeNavKey === 'services' ? 'active' : ''}`}
+            >
+              Services
+            </a>
+            <a
+              ref={(el) => {
+                linkRefs.current.projects = el;
+              }}
+              href="/#projects"
+              id="nav-link-projects"
+              className={`pill-nav-link ${activeNavKey === 'projects' ? 'active' : ''}`}
+            >
+              Case Studies
+            </a>
+            <a
+              ref={(el) => {
+                linkRefs.current.contact = el;
+              }}
+              href="/#contact"
+              id="nav-link-contact"
+              className={`pill-nav-link ${activeNavKey === 'contact' ? 'active' : ''}`}
+            >
+              Contact
+            </a>
+          </div>
+        </nav>
+
+        <div className="header-actions">
+          <button
+            id="theme-toggle-btn"
+            type="button"
+            onClick={onToggleTheme}
+            className="theme-toggle-btn"
+            aria-label={theme === 'dark' ? 'Switch to Pearl Light Glass theme' : 'Switch to Obsidian Dark Glass theme'}
           >
-            Home
-          </a>
-          <a href="/#experience" id="nav-link-about" className="pill-nav-link">About</a>
-          <a href="/#services" id="nav-link-services" className="pill-nav-link">Services</a>
-          <a href="/#projects" id="nav-link-projects" className="pill-nav-link">Case Studies</a>
-          <a href="/#contact" id="nav-link-contact" className="pill-nav-link">Contact</a>
+            <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
+            <span>{theme === 'dark' ? 'Pearl' : 'Obsidian'}</span>
+          </button>
+          <button
+            id="open-mobile-menu-btn"
+            onClick={onMenuClick}
+            className="menu-icon"
+            aria-label="Open navigation menu"
+          >
+            <Icon name="menu" size={20} />
+          </button>
         </div>
-      </nav>
-
-      <div className="header-actions">
-        <button
-          id="theme-toggle-btn"
-          type="button"
-          onClick={onToggleTheme}
-          className="theme-toggle-btn"
-          aria-label={theme === 'dark' ? 'Switch to Pearl Light Glass theme' : 'Switch to Obsidian Dark Glass theme'}
-        >
-          <Icon name={theme === 'dark' ? 'sun' : 'moon'} size={14} />
-          <span>{theme === 'dark' ? 'Pearl' : 'Obsidian'}</span>
-        </button>
-        <button
-          id="open-mobile-menu-btn"
-          onClick={onMenuClick}
-          className="menu-icon"
-          aria-label="Open navigation menu"
-        >
-          <Icon name="menu" size={20} />
-        </button>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 const OffCanvasMenu = ({
   isOpen,
   onClose,
-  currentPath = '/'
+  currentPath = '/',
+  activeNavKey = 'home'
 }: {
   isOpen: boolean;
   onClose: () => void;
   currentPath?: string;
+  activeNavKey?: NavSectionKey;
 }) => {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
@@ -1178,27 +1276,27 @@ const OffCanvasMenu = ({
             href="/"
             id="mobile-nav-link-home"
             onClick={onClose}
-            className={`menu-link ${currentPath === '/' ? 'active' : ''}`}
+            className={`menu-link ${activeNavKey === 'home' ? 'active' : ''}`}
             aria-current={currentPath === '/' ? 'page' : undefined}
             tabIndex={isOpen ? 0 : -1}
           >
             <Icon name="home" size={18} /> Home
           </a>
           <a href="/#impact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="bar-chart-2" size={18} /> ₹35L+/Mo Proven Impact</a>
-          <a href="/#services" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="settings" size={18} /> Digital Marketing Services</a>
-          <a href="/google-ads-freelancer-india" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Google Ads Freelancer India</a>
-          <a href="/meta-ads-freelancer-india" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Meta Ads Freelancer India</a>
-          <a href="/digital-marketing-freelancer-in-kolkata" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Digital Marketing Kolkata</a>
-          <a href="/#projects" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="star" size={18} /> Case Studies</a>
+          <a href="/#services" onClick={onClose} className={`menu-link ${activeNavKey === 'services' && currentPath === '/' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="settings" size={18} /> Digital Marketing Services</a>
+          <a href="/google-ads-freelancer-india" onClick={onClose} className={`menu-link ${currentPath === '/google-ads-freelancer-india' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Google Ads Freelancer India</a>
+          <a href="/meta-ads-freelancer-india" onClick={onClose} className={`menu-link ${currentPath === '/meta-ads-freelancer-india' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Meta Ads Freelancer India</a>
+          <a href="/digital-marketing-freelancer-in-kolkata" onClick={onClose} className={`menu-link ${currentPath === '/digital-marketing-freelancer-in-kolkata' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Digital Marketing Kolkata</a>
+          <a href="/#projects" onClick={onClose} className={`menu-link ${activeNavKey === 'projects' && currentPath === '/' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="star" size={18} /> Case Studies</a>
           <a href="/#india-freelancer" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="check-circle" size={18} /> Pan-India Industries</a>
           <a href="/#process" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="tool" size={18} /> 4-Step Growth System</a>
-          <a href="/#experience" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="briefcase" size={18} /> 5.5+ Years Experience</a>
+          <a href="/#experience" onClick={onClose} className={`menu-link ${activeNavKey === 'about' && currentPath === '/' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="briefcase" size={18} /> About &amp; 5.5+ Years Experience</a>
           <a href="/#skills" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="award" size={18} /> Skills &amp; Certifications</a>
-          <a href="/resume" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="download" size={18} /> Online Master Resume</a>
-          <a href="/faq" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="help-circle" size={18} /> FAQ Directory (18+ Answers)</a>
-          <a href="/terms" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="file-text" size={18} /> Terms &amp; Conditions</a>
-          <a href="/privacy" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="shield" size={18} /> Privacy Policy</a>
-          <a href="/#contact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="mail" size={18} /> Book a Consultation</a>
+          <a href="/resume" onClick={onClose} className={`menu-link ${currentPath === '/resume' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="download" size={18} /> Online Master Resume</a>
+          <a href="/faq" onClick={onClose} className={`menu-link ${currentPath === '/faq' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="help-circle" size={18} /> FAQ Directory (18+ Answers)</a>
+          <a href="/terms" onClick={onClose} className={`menu-link ${currentPath === '/terms' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="file-text" size={18} /> Terms &amp; Conditions</a>
+          <a href="/privacy" onClick={onClose} className={`menu-link ${currentPath === '/privacy' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="shield" size={18} /> Privacy Policy</a>
+          <a href="/#contact" onClick={onClose} className={`menu-link ${activeNavKey === 'contact' ? 'active' : ''}`} tabIndex={isOpen ? 0 : -1}><Icon name="mail" size={18} /> Book a Consultation</a>
         </nav>
         <a
           href={WHATSAPP_URL}
@@ -3507,9 +3605,50 @@ const DedicatedLandingPage = ({ page }: { page: LandingPageData }) => {
   );
 };
 
+const normalizeRoutePath = (raw: string) => {
+  if (!raw || raw === '/') return '/';
+  return raw.length > 1 ? raw.replace(/\/+$/, '') : '/';
+};
+
+const getNavKeyForLocation = (path: string, hash = ''): NavSectionKey => {
+  if (path === '/') {
+    if (hash === '#experience' || hash === '#skills' || hash === '#faq' || hash === '#education') return 'about';
+    if (hash === '#services' || hash === '#india-freelancer' || hash === '#process') return 'services';
+    if (hash === '#projects') return 'projects';
+    if (hash === '#contact') return 'contact';
+    return 'home';
+  }
+  if (path === '/resume' || path === '/faq' || path === '/terms' || path === '/privacy') return 'about';
+  if (path.startsWith('/case-studies/')) return 'projects';
+  if (path.startsWith('/services/') || dedicatedLandingPagesData.some((l) => `/${l.slug}` === path)) {
+    return 'services';
+  }
+  return 'home';
+};
+
 export const App = ({ initialPath }: { initialPath?: string } = {}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [currentPath, setCurrentPath] = useState<string>(() =>
+    normalizeRoutePath(initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/'))
+  );
+  const [activeNavKey, setActiveNavKey] = useState<NavSectionKey>(() =>
+    getNavKeyForLocation(
+      normalizeRoutePath(initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/')),
+      typeof window !== 'undefined' ? window.location.hash : ''
+    )
+  );
+  const [routeTransitionId, setRouteTransitionId] = useState(0);
+  const [isPageTransitioning, setIsPageTransitioning] = useState(false);
+  const [isSectionTransitioning, setIsSectionTransitioning] = useState(false);
+
+  const pendingHashRef = useRef<string>('');
+  const scrollLockUntilRef = useRef<number>(0);
+  const scrollRafRef = useRef<number | null>(null);
+  const pageTimerRef = useRef<number | null>(null);
+  const sectionTimerRef = useRef<number | null>(null);
+  const spotlightTimerRef = useRef<number | null>(null);
+
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
     if (typeof document !== 'undefined') {
       try {
@@ -3534,8 +3673,96 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
     return 'light';
   });
 
-  const rawPath = initialPath || (typeof window !== 'undefined' ? window.location.pathname : '/');
-  const currentPath = rawPath.length > 1 ? rawPath.replace(/\/+$/, '') : '/';
+  // Measure layout offset independently of any active CSS scale/translate animations
+  const getDocumentOffsetTop = (el: HTMLElement): number => {
+    let top = 0;
+    let node: HTMLElement | null = el;
+    while (node) {
+      top += node.offsetTop;
+      node = node.offsetParent as HTMLElement | null;
+    }
+    return Math.max(0, top - 88);
+  };
+
+  const triggerSpotlight = (targetEl: HTMLElement | null) => {
+    if (typeof window === 'undefined' || !targetEl) return;
+    if (spotlightTimerRef.current !== null) {
+      window.clearTimeout(spotlightTimerRef.current);
+    }
+    document.querySelectorAll('.section-glass-spotlight').forEach((n) => n.classList.remove('section-glass-spotlight'));
+    void targetEl.offsetWidth;
+    targetEl.classList.add('section-glass-spotlight');
+    spotlightTimerRef.current = window.setTimeout(() => {
+      targetEl.classList.remove('section-glass-spotlight');
+      spotlightTimerRef.current = null;
+    }, 800);
+  };
+
+  const fluidScrollToY = (targetY: number, durationMs = 580) => {
+    if (typeof window === 'undefined') return;
+    if (scrollRafRef.current !== null) {
+      window.cancelAnimationFrame(scrollRafRef.current);
+      scrollRafRef.current = null;
+    }
+    const clampedTarget = Math.max(0, targetY);
+    const reduced = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    if (reduced || Math.abs(clampedTarget - window.scrollY) < 4) {
+      window.scrollTo({ top: clampedTarget, behavior: 'instant' as ScrollBehavior });
+      return;
+    }
+
+    const startY = window.scrollY;
+    const delta = clampedTarget - startY;
+    const startTime = performance.now();
+
+    const step = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(1, elapsed / durationMs);
+      // Fluid easeInOutCubic curve for silk-smooth transitions
+      const eased =
+        progress < 0.5
+          ? 4 * progress * progress * progress
+          : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+      window.scrollTo({
+        top: Math.round(startY + delta * eased),
+        behavior: 'instant' as ScrollBehavior
+      });
+      if (progress < 1) {
+        scrollRafRef.current = window.requestAnimationFrame(step);
+      } else {
+        scrollRafRef.current = null;
+      }
+    };
+
+    scrollRafRef.current = window.requestAnimationFrame(step);
+  };
+
+  const triggerPageGlassTransition = () => {
+    if (typeof window === 'undefined') return;
+    if (pageTimerRef.current !== null) {
+      window.clearTimeout(pageTimerRef.current);
+    }
+    setIsPageTransitioning(true);
+    pageTimerRef.current = window.setTimeout(() => {
+      setIsPageTransitioning(false);
+      pageTimerRef.current = null;
+    }, 480);
+  };
+
+  const triggerSectionGlassPulse = () => {
+    if (typeof window === 'undefined') return;
+    if (sectionTimerRef.current !== null) {
+      window.clearTimeout(sectionTimerRef.current);
+    }
+    setIsSectionTransitioning(false);
+    window.requestAnimationFrame(() => {
+      setIsSectionTransitioning(true);
+      sectionTimerRef.current = window.setTimeout(() => {
+        setIsSectionTransitioning(false);
+        sectionTimerRef.current = null;
+      }, 440);
+    });
+  };
 
   useEffect(() => {
     registerWebMCPTools();
@@ -3548,7 +3775,159 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
     } catch {
       // ignore storage restrictions
     }
+    return () => {
+      if (scrollRafRef.current !== null) window.cancelAnimationFrame(scrollRafRef.current);
+      if (pageTimerRef.current !== null) window.clearTimeout(pageTimerRef.current);
+      if (sectionTimerRef.current !== null) window.clearTimeout(sectionTimerRef.current);
+      if (spotlightTimerRef.current !== null) window.clearTimeout(spotlightTimerRef.current);
+    };
   }, []);
+
+  // Delegated same-origin click interceptor & popstate handler for fluid SPA route/section switching
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const target = (e.target as HTMLElement | null)?.closest('a[href]') as HTMLAnchorElement | null;
+      if (!target) return;
+      const rawHref = target.getAttribute('href') || '';
+      if (
+        !rawHref ||
+        rawHref.startsWith('mailto:') ||
+        rawHref.startsWith('tel:') ||
+        target.target === '_blank' ||
+        target.hasAttribute('download')
+      ) {
+        return;
+      }
+      if (rawHref === '#main-content') return;
+
+      let parsedUrl: URL;
+      try {
+        // Resolve relative to full current URL so `#contact` on a subpage stays on that subpage
+        parsedUrl = new URL(rawHref, window.location.href);
+      } catch {
+        return;
+      }
+      if (parsedUrl.origin !== window.location.origin || parsedUrl.pathname.endsWith('.pdf')) return;
+
+      e.preventDefault();
+      const nextPath = normalizeRoutePath(parsedUrl.pathname);
+      const nextHash = parsedUrl.hash || '';
+      const nextFullUrl = `${nextPath}${parsedUrl.search}${nextHash}`;
+
+      setIsMenuOpen(false);
+      setSelectedProject(null);
+
+      const navKey = getNavKeyForLocation(nextPath, nextHash);
+      setActiveNavKey(navKey);
+      scrollLockUntilRef.current = Date.now() + 860;
+
+      if (window.location.pathname + window.location.search + window.location.hash !== nextFullUrl) {
+        window.history.pushState({ path: nextPath, hash: nextHash }, '', nextFullUrl);
+      }
+
+      if (nextPath !== currentPath) {
+        pendingHashRef.current = nextHash;
+        triggerPageGlassTransition();
+        setCurrentPath(nextPath);
+        setRouteTransitionId((n) => n + 1);
+      } else if (!nextHash || nextHash === '#top') {
+        triggerSectionGlassPulse();
+        triggerSpotlight(document.getElementById('top'));
+        fluidScrollToY(0, 560);
+      } else {
+        const targetId = nextHash.slice(1);
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          triggerSectionGlassPulse();
+          triggerSpotlight(targetEl);
+          fluidScrollToY(getDocumentOffsetTop(targetEl), 600);
+        }
+      }
+    };
+
+    const handlePopState = () => {
+      const nextPath = normalizeRoutePath(window.location.pathname);
+      const nextHash = window.location.hash || '';
+      setIsMenuOpen(false);
+      setSelectedProject(null);
+      setActiveNavKey(getNavKeyForLocation(nextPath, nextHash));
+      scrollLockUntilRef.current = Date.now() + 860;
+      pendingHashRef.current = nextHash;
+      if (nextPath !== currentPath) {
+        triggerPageGlassTransition();
+      } else {
+        triggerSectionGlassPulse();
+      }
+      setCurrentPath(nextPath);
+      setRouteTransitionId((n) => n + 1);
+    };
+
+    document.addEventListener('click', handleClick, true);
+    window.addEventListener('popstate', handlePopState);
+    return () => {
+      document.removeEventListener('click', handleClick, true);
+      window.removeEventListener('popstate', handlePopState);
+    };
+  }, [currentPath]);
+
+  // Execute hash / top scroll cleanly after a route change commits to DOM
+  useEffect(() => {
+    if (routeTransitionId === 0) return;
+    const hash = pendingHashRef.current;
+    pendingHashRef.current = '';
+
+    if (hash) {
+      window.requestAnimationFrame(() => {
+        const el = document.getElementById(hash.slice(1));
+        if (el) {
+          triggerSpotlight(el);
+          fluidScrollToY(getDocumentOffsetTop(el), 560);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+        }
+      });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+    }
+  }, [currentPath, routeTransitionId]);
+
+  // Live scroll spy on Home route (/) so floating pill capsule glides along while scrolling
+  useEffect(() => {
+    if (currentPath !== '/' || typeof window === 'undefined') return;
+
+    const handleScrollSpy = () => {
+      if (Date.now() < scrollLockUntilRef.current) return;
+
+      const scrollBottom = window.scrollY + window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      if (scrollBottom >= docHeight - 120) {
+        setActiveNavKey('contact');
+        return;
+      }
+
+      const probeY = window.scrollY + 180;
+      const experienceEl = document.getElementById('experience');
+      const servicesEl = document.getElementById('services');
+      const projectsEl = document.getElementById('projects');
+      const contactEl = document.getElementById('contact');
+
+      if (contactEl && probeY >= contactEl.offsetTop - 80) {
+        setActiveNavKey('contact');
+      } else if (experienceEl && probeY >= experienceEl.offsetTop - 80) {
+        setActiveNavKey('about');
+      } else if (servicesEl && probeY >= servicesEl.offsetTop - 80) {
+        setActiveNavKey('services');
+      } else if (projectsEl && probeY >= projectsEl.offsetTop - 80) {
+        setActiveNavKey('projects');
+      } else {
+        setActiveNavKey('home');
+      }
+    };
+
+    window.addEventListener('scroll', handleScrollSpy, { passive: true });
+    return () => window.removeEventListener('scroll', handleScrollSpy);
+  }, [currentPath]);
 
   const handleToggleTheme = () => {
     const next = theme === 'light' ? 'dark' : 'light';
@@ -3585,6 +3964,45 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
 
   const matchedLandingPage = dedicatedLandingPagesData.find((l) => `/${l.slug}` === currentPath);
 
+  // Keep browser document title & meta description synced during SPA navigation
+  useEffect(() => {
+    if (typeof document === 'undefined' || routeTransitionId === 0) return;
+
+    let nextTitle = 'Ayaz Aftab — Digital Marketing Freelancer & Performance Marketing Freelancer India';
+    let nextDesc =
+      'Performance Marketing Freelancer India & Kolkata HQ Growth Lead managing ₹35L+/mo combined ad spend across Google & Meta Ads at 4.0x–4.5x ROAS.';
+
+    if (currentPath === '/resume') {
+      nextTitle = 'Ayaz Aftab Resume | Performance Marketing & E-commerce Growth Lead (₹35L+/Mo Managed)';
+    } else if (currentPath === '/faq') {
+      nextTitle = 'Frequently Asked Questions | Ayaz Aftab — Performance Marketing Freelancer India';
+    } else if (currentPath === '/terms') {
+      nextTitle = 'Terms & Conditions | Ayaz Aftab — Performance Marketing & Growth Consulting';
+    } else if (currentPath === '/privacy') {
+      nextTitle = 'Privacy Policy | Ayaz Aftab — Data Protection & Privacy Practices (DPDP Act 2023)';
+    } else if (matchedCaseStudy) {
+      nextTitle = `${matchedCaseStudy.title} | Ayaz Aftab Case Study`;
+      nextDesc = matchedCaseStudy.summary;
+    } else if (matchedService) {
+      nextTitle = matchedService.metaTitle;
+      nextDesc = matchedService.metaDescription;
+    } else if (matchedLandingPage) {
+      nextTitle = `${matchedLandingPage.navLabel} | Ayaz Aftab`;
+      nextDesc = matchedLandingPage.subtitle;
+    }
+
+    document.title = nextTitle;
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.setAttribute('content', nextDesc);
+  }, [currentPath, routeTransitionId, matchedCaseStudy, matchedService, matchedLandingPage]);
+
+  const mainStageClass = [
+    isPageTransitioning ? 'page-glass-transition' : '',
+    isSectionTransitioning ? 'section-glass-transition' : ''
+  ]
+    .filter(Boolean)
+    .join(' ');
+
   return (
     <>
       <Header
@@ -3592,40 +4010,44 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
         theme={theme}
         onToggleTheme={handleToggleTheme}
         currentPath={currentPath}
+        activeNavKey={activeNavKey}
       />
       <OffCanvasMenu
         isOpen={isMenuOpen}
         onClose={() => setIsMenuOpen(false)}
         currentPath={currentPath}
+        activeNavKey={activeNavKey}
       />
       <main id="main-content">
-        {currentPath === '/resume' ? (
-          <ResumePage />
-        ) : currentPath === '/faq' ? (
-          <FAQPage />
-        ) : currentPath === '/terms' ? (
-          <TermsPage />
-        ) : currentPath === '/privacy' ? (
-          <PrivacyPolicyPage />
-        ) : matchedCaseStudy ? (
-          <CaseStudyPage project={matchedCaseStudy} />
-        ) : matchedService ? (
-          <ServiceLandingPage service={matchedService} />
-        ) : matchedLandingPage ? (
-          <DedicatedLandingPage page={matchedLandingPage} />
-        ) : (
-          <>
-            <Hero />
-            <FeaturedProjects onProjectClick={handleProjectClick} />
-            <Services />
-            <IndiaFreelancerSection />
-            <GrowthProcess />
-            <ExperienceSection />
-            <Testimonials onProjectClick={handleProjectClick} />
-            <Skills />
-            <FAQSection />
-          </>
-        )}
+        <div key={currentPath} className={mainStageClass || undefined}>
+          {currentPath === '/resume' ? (
+            <ResumePage />
+          ) : currentPath === '/faq' ? (
+            <FAQPage />
+          ) : currentPath === '/terms' ? (
+            <TermsPage />
+          ) : currentPath === '/privacy' ? (
+            <PrivacyPolicyPage />
+          ) : matchedCaseStudy ? (
+            <CaseStudyPage project={matchedCaseStudy} />
+          ) : matchedService ? (
+            <ServiceLandingPage service={matchedService} />
+          ) : matchedLandingPage ? (
+            <DedicatedLandingPage page={matchedLandingPage} />
+          ) : (
+            <>
+              <Hero />
+              <FeaturedProjects onProjectClick={handleProjectClick} />
+              <Services />
+              <IndiaFreelancerSection />
+              <GrowthProcess />
+              <ExperienceSection />
+              <Testimonials onProjectClick={handleProjectClick} />
+              <Skills />
+              <FAQSection />
+            </>
+          )}
+        </div>
       </main>
       <Footer />
       {selectedProject && <ProjectModal project={selectedProject} onClose={handleCloseModal} />}
