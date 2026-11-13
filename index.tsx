@@ -1039,6 +1039,8 @@ const Icon = ({ name, size = 20 }: { name: string; size?: number }) => {
       return <svg {...props}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>;
     case 'shield':
       return <svg {...props}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>;
+    case 'home':
+      return <svg {...props}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>;
     default:
       return null;
   }
@@ -1064,11 +1066,13 @@ const AnimatedSection = ({ children, className = '' }: { children: React.ReactNo
 const Header = ({
   onMenuClick,
   theme,
-  onToggleTheme
+  onToggleTheme,
+  currentPath = '/'
 }: {
   onMenuClick: () => void;
   theme: 'light' | 'dark';
   onToggleTheme: () => void;
+  currentPath?: string;
 }) => (
   <header className="header">
     <a href="#main-content" className="skip-link">Skip to main content</a>
@@ -1083,6 +1087,14 @@ const Header = ({
 
       <nav className="nav" aria-label="Primary Navigation">
         <div className="nav-links-row">
+          <a
+            href="/"
+            id="nav-link-home"
+            className={`pill-nav-link ${currentPath === '/' ? 'active' : ''}`}
+            aria-current={currentPath === '/' ? 'page' : undefined}
+          >
+            Home
+          </a>
           <a href="/#experience" id="nav-link-about" className="pill-nav-link">About</a>
           <a href="/#services" id="nav-link-services" className="pill-nav-link">Services</a>
           <a href="/#projects" id="nav-link-projects" className="pill-nav-link">Case Studies</a>
@@ -1114,7 +1126,15 @@ const Header = ({
   </header>
 );
 
-const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+const OffCanvasMenu = ({
+  isOpen,
+  onClose,
+  currentPath = '/'
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  currentPath?: string;
+}) => {
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && isOpen) onClose();
@@ -1154,6 +1174,16 @@ const OffCanvasMenu = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
           </button>
         </div>
         <nav className="menu-links" aria-label="Mobile Navigation Links">
+          <a
+            href="/"
+            id="mobile-nav-link-home"
+            onClick={onClose}
+            className={`menu-link ${currentPath === '/' ? 'active' : ''}`}
+            aria-current={currentPath === '/' ? 'page' : undefined}
+            tabIndex={isOpen ? 0 : -1}
+          >
+            <Icon name="home" size={18} /> Home
+          </a>
           <a href="/#impact" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="bar-chart-2" size={18} /> ₹35L+/Mo Proven Impact</a>
           <a href="/#services" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="settings" size={18} /> Digital Marketing Services</a>
           <a href="/google-ads-freelancer-india" onClick={onClose} className="menu-link" tabIndex={isOpen ? 0 : -1}><Icon name="arrow-right" size={18} /> Google Ads Freelancer India</a>
@@ -3561,8 +3591,13 @@ export const App = ({ initialPath }: { initialPath?: string } = {}) => {
         onMenuClick={() => setIsMenuOpen(true)}
         theme={theme}
         onToggleTheme={handleToggleTheme}
+        currentPath={currentPath}
       />
-      <OffCanvasMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
+      <OffCanvasMenu
+        isOpen={isMenuOpen}
+        onClose={() => setIsMenuOpen(false)}
+        currentPath={currentPath}
+      />
       <main id="main-content">
         {currentPath === '/resume' ? (
           <ResumePage />

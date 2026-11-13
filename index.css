@@ -354,6 +354,17 @@ section {
   background-color: rgba(255, 255, 255, 0.08);
 }
 
+.pill-nav-link.active {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0.08);
+  font-weight: 600;
+}
+
+[data-theme='dark'] .pill-nav-link.active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
 .logo-container {
   display: none;
   align-items: center;
@@ -467,6 +478,19 @@ section {
   }
   .menu-icon {
     display: inline-flex;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 960px) {
+  .nav {
+    padding: 0.3rem 0.7rem;
+  }
+  .nav-links-row {
+    gap: 0.25rem;
+  }
+  .pill-nav-link {
+    font-size: 0.81rem;
+    padding: 0.4rem 0.72rem;
   }
 }
 
@@ -640,9 +664,14 @@ section {
   font-size: 0.9rem;
 }
 
-.menu-link:hover {
+.menu-link:hover,
+.menu-link.active {
   background-color: var(--bg-surface-elevated);
   color: var(--text-primary);
+}
+
+.menu-link.active {
+  font-weight: 600;
 }
 
 .menu-resume-btn {
